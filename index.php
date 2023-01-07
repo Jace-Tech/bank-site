@@ -30,8 +30,8 @@
     <meta charset="utf-8" />
 <script>let nodeID = 1;</script>
 <noscript><style>form.antibot * :not(.antibot-message) { display: none !important; }</style>
-</noscript><link rel="canonical" href="index.html" />
-<link rel="shortlink" href="index.html" />
+</noscript><link rel="canonical" href="index.php" />
+<link rel="shortlink" href="index.php" />
 <meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
 <meta name="MobileOptimized" content="width" />
 <meta name="HandheldFriendly" content="true" />
@@ -2543,7 +2543,7 @@ blockquote.top50 {
 
 /*** Notes ***/
 /*** &nbsp; article[about="/checking-accounts"]  ***/
-</style><link rel="icon" href="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/fub-shield-500x500.gif?VersionId=J4UtF3aO5ikZUUki1v0zOwvV9y5eU2Gr" type="image/gif" />
+</style><link rel="icon" href="/logo.png" type="image/gif" />
 <link rel="alternate" hreflang="en" href="index.html" />
 
     <title>Beko Federal Credit Union (BEKOFCU) - Checking Accounts, Mortgages, Loans &amp; More</title>
