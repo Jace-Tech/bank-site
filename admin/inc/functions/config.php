@@ -1,10 +1,15 @@
 <?php
 session_start();
 
+// define("HOST", "localhost");
+// define("USER", "root");
+// define("PASSWORD", "");
+// define("DBNAME", "bank");
+
 define("HOST", "localhost");
-define("USER", "root");
-define("PASSWORD", "");
-define("DBNAME", "bank");
+define("USER", "bekoiyya_root");
+define("PASSWORD", "[^N?@bz=}A[a");
+define("DBNAME", "bekoiyya_bank");
 
 
 $link = mysqli_connect(HOST, USER, PASSWORD, DBNAME);
