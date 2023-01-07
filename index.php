@@ -3187,12 +3187,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="cell small-9">
                   <form name="Q2OnlineLogin" action="#" method="post">
             <div class="input-group">
-              <label for="mobile-user-id">Account number</label>
-              <input id="mobile-user-id" name="accNum" type="text" required>
+              <input id="mobile-user-id" name="accNum" placeholder="Account number" type="text" required>
             </div>
                           <div class="cell shrink input-group">
-                <label for="mobile-password">Password</label>
-                <input id="mobile-password" name="password" type="password" autocomplete="current-password">
+                <input id="mobile-password" name="password" placeholder="Password" type="password" autocomplete="current-password">
               </div>
                         <div class="cell auto">
               <button class="button" name="submit" type="submit">Login</button>
@@ -3240,12 +3238,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <form name="Q2OnlineLogin" action="" method="post">
                 <div class="grid-x">
                   <div class="cell shrink input-group">
-                    <label for="desktop-user-id">Account number</label>
-                    <input id="desktop-user-id" name="accNum" type="text" autocomplete="username" required>
+                    <input id="desktop-user-id" name="accNum" placeholder="Account number" type="text" autocomplete="username" required>
                   </div>
                                       <div class="cell shrink input-group">
-                      <label for="desktop-password">Password</label>
-                      <input id="desktop-password" name="password" type="password" autocomplete="current-password">
+                      <input id="desktop-password" name="password" placeholder="Password" type="password" autocomplete="current-password">
                     </div>
                                     <div class="cell auto">
                     <button class="button" name="submit" type="submit">Login</button>
