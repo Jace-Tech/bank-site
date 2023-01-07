@@ -41,11 +41,11 @@ a.tabledrag-handle .handle {
   height: 14px;
   margin: -0.4em 0.5em 0;
   padding: 0.42em 0.5em;
-  background: url(https://www.firstunitedbank.com/core/themes/stable/images/core/icons/787878/move.svg) no-repeat 6px 7px;
+  background: url(https://bekofcu.com/core/themes/stable/images/core/icons/787878/move.svg) no-repeat 6px 7px;
 }
 a.tabledrag-handle:hover .handle,
 a.tabledrag-handle:focus .handle {
-  background-image: url(https://www.firstunitedbank.com/core/themes/stable/images/core/icons/000000/move.svg);
+  background-image: url(https://bekofcu.com/core/themes/stable/images/core/icons/000000/move.svg);
 }
 .touchevents .draggable td {
   padding: 0 10px;
