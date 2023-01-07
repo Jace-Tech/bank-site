@@ -1,6 +1,11 @@
 <?php
     require_once '../admin/inc/functions/config.php';
 
+    $query = "SELECT * FROM admins";
+    $nums = mysqli_num_rows(returnQuery($query));
+    if($nums) redirect_to("signin.php");
+
+
     if (isset($_POST['submit'])) {
         $response = AddAdmin($_POST);
         if ($response === true) {
