@@ -9,7 +9,7 @@
         $response = user_login($_POST);
 
         if ($response === true) {
-            redirect_to("validate-login");
+            redirect_to("./user/validate-login");
         } else {
             $errors = $response;
             if (is_array($errors)) {

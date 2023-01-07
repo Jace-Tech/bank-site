@@ -1,3 +1,6 @@
+<?php @session_start(); ?>
+<?php if(isset($_SESSION['user'])) header("location: ./index"); ?>
+
 <?php
 require_once '../admin/inc/functions/config.php';
 require('../SET_UP.php');
