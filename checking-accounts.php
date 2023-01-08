@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <script>
-    let nodeID = 1;
+    let nodeID = 23;
   </script>
   <noscript>
     <style>
@@ -13,8 +13,7 @@
       }
     </style>
   </noscript>
-  <link rel="canonical" href="index.php" />
-  <link rel="shortlink" href="index.php" />
+  <link rel="canonical" href="checking-accounts.php" />
   <meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
   <meta name="MobileOptimized" content="width" />
   <meta name="HandheldFriendly" content="true" />
@@ -2705,9 +2704,9 @@
     /*** &nbsp; article[about="/checking-accounts"]  ***/
   </style>
   <link rel="icon" href="/logo.png" type="image/gif" />
-  <link rel="alternate" hreflang="en" href="index.php" />
+  <link rel="alternate" hreflang="en" href="checking-accounts.php" />
 
-  <title>Beko Federal Credit Union (BEKOFCU) - Checking Accounts, Mortgages, Loans &amp; More</title>
+  <title>Checking Accounts | Beko Federal Credit Union (BEKOFCU)</title>
   <link rel="stylesheet" media="all" href="core/themes/stable/css/system/components/ajax-progress.module%EF%B9%96ro3e14.css" />
   <link rel="stylesheet" media="all" href="core/themes/stable/css/system/components/align.module%EF%B9%96ro3e14.css" />
   <link rel="stylesheet" media="all" href="core/themes/stable/css/system/components/autocomplete-loading.module%EF%B9%96ro3e14.css" />
@@ -2734,6 +2733,7 @@
   <link rel="stylesheet" media="all" href="core/themes/stable/css/filter/filter.caption%EF%B9%96ro3e14.css" />
   <link rel="stylesheet" media="all" href="core/themes/stable/css/media/filter.caption%EF%B9%96ro3e14.css" />
   <link rel="stylesheet" media="all" href="core/themes/stable/css/views/views.module%EF%B9%96ro3e14.css" />
+  <link rel="stylesheet" media="all" href="https://bekofcu.com/modules/custom/q2_product_guide/src/dist/css/q2_product_guide.css?ro3e14" />
   <link rel="stylesheet" media="all" href="modules/custom/q2_smart_search/src/dist/css/q2_smart_search%EF%B9%96ro3e14.css" />
   <link rel="stylesheet" media="all" href="modules/custom/q2_additional_logins/src/dist/css/q2_additional_logins%EF%B9%96ro3e14.css" />
   <link rel="stylesheet" media="all" href="modules/custom/q2_external_link/src/dist/css/q2_external_link%EF%B9%96ro3e14.css" />
@@ -2901,7 +2901,7 @@
 
 </head>
 
-<body class="path-home-page path-frontpage page-node-type-landing-page page-published">
+<body class="path-checking-accounts path-node page-node-type-page page-published">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T65FC2B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
@@ -2911,6 +2911,7 @@
   </a>
 
   <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+
     <div class="off-canvas position-top" id="off-canvas-other" data-off-canvas data-transition="overlap">
       <div class="oc-container">
         <div class="grid-x oc-top">
@@ -2938,97 +2939,33 @@
       </div>
     </div>
     <div class="off-canvas-content" data-off-canvas-content>
-      <?php include("./header.php"); ?>
-      <header class="landing-page-header ">
-        <?php include("./nav.php"); ?>
-      </header>
-
-      <main id="main-content" class="js-quickedit-main-content">
-
-
-        <div id="landing-banner">
-          <div class="orbit" data-q2-timer="5000" data-q2-auto="false" data-q2-fade="true" data-q2-random="true" data-q2-static="false">
-            <img class="orbit-load" src="sites/default/themes/firstunitedbank-com/images/loading.gif" alt="loading" />
-            <div class="orbit-wrapper">
-              <ul class="orbit-container">
-
-                <li class="orbit-slide">
-                  <figure class="orbit-figure">
-                    <div class="orbit-image" style="background-image: url(https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/background-v1_0_v2.jpg?VersionId=eUtjOydH0wjm9uyp_mqCF7oQ9PNXGsqK); background-position: 50% 50%;"></div>
-                    <figcaption class="orbit-caption">
-                      <div class="shield-title">
-                        <img class="banner-shield" alt="Beko Federal Credit Union (BEKOFCU) red shield logo" src="sites/default/themes/firstunitedbank-com/images/shield-red.svg" />
-                        <h2>Spend Life <span style="color: #A6B6CE">Together</span></h2>
-                      </div>
-                      <div class="smart-search">
-                        <form action="https://bekofcu.com/search">
-                          <div class="search-form-container">
-                            <div class="search-input-wrapper">
-                              <label class="sr-only" for="fuzzy_search">Search</label>
-                              <input type="search" aria-label="Enter search term" class="fuzzy-search" placeholder="How may we help you?" name="search_query" autocomplete="off" />
-                            </div>
-                            <div class="search-submit-wrapper">
-                              <button type="submit" class="search-submit">
-                                <i class="fas fa-search"></i>
-                                <span class="sr-only">Search</span>
-                              </button>
-                            </div>
-                          </div>
-                        </form>
-                        <ul class="banner-list">
-                          <li>
-                            <a href="checking-accounts.php">Checking Account</a>
-                            <a href="https://firstunitedteam.mymortgage-online.com/" rel="nofollow">Start a Mortgage</a>
-                            <a href="commercial-loans.php">Commercial Loans</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </li>
-
-                <li class="orbit-slide">
-                  <figure class="orbit-figure">
-                    <div class="orbit-image" style="background-image: url(https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/bank-anywhere-v2.jpg?VersionId=ntBrTG1HxodJCbOp9zNz8Wt0PCADwxst); background-position: 50% 50%;"></div>
-                    <figcaption class="orbit-caption">
-                      <div class="shield-title">
-                        <img class="banner-shield" alt="Beko Federal Credit Union (BEKOFCU) red shield logo" src="sites/default/themes/firstunitedbank-com/images/shield-red.svg" />
-                        <h2>Deposit Time Back Into Your Life</h2>
-                      </div>
-                      <div class="smart-search">
-                        <form action="https://bekofcu.com/search">
-                          <div class="search-form-container">
-                            <div class="search-input-wrapper">
-                              <label class="sr-only" for="fuzzy_search">Search</label>
-                              <input type="search" aria-label="Enter search term" class="fuzzy-search" placeholder="How may we help you?" name="search_query" autocomplete="off" />
-                            </div>
-                            <div class="search-submit-wrapper">
-                              <button type="submit" class="search-submit">
-                                <i class="fas fa-search"></i>
-                                <span class="sr-only">Search</span>
-                              </button>
-                            </div>
-                          </div>
-                        </form>
-                        <ul class="banner-list">
-                          <li>
-                            <a href="savings.php">Savings Plan</a>
-                            <a href="investment-management.php">Wealth Management</a>
-                            <a href="insurance.php">Insurance Services</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </li>
+    <?php include("./header.php") ?>
+      <header>
+        <?php include("./header.php"); ?>
+        <div class="internal-page-banner banner-img" style="background-image: url(https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/checkingoverview-banner-internal.jpg?VersionId=MLX4x7jp45BkvuNpSsNRJYd5fbuYYJn3); background-position: 50% 50%;">
+          <div class="grid-container">
+            <div class="internal-header">
 
 
-              </ul>
+              <h1> Checking Accounts</h1>
+              <p>Everyday life is filled with transactions – from groceries and utility bills to gift-giving and evenings out. Beko Federal Credit Union (BEKOFCU) offers a variety of checking options to give you easy, convenient access to your money.
+
+
+              </p>
+
             </div>
+
+            <div class="banner-button">
+              <p>Which is right for you?</p>
+
+              <a href="#compare-accounts" class="no-new-window button" aria-label="compare accounts">Compare Accounts</a>
+
+            </div>
+
           </div>
         </div>
-
-
+      </header>
+      <main id="main-content" class="js-quickedit-main-content">
         <div class="grid-container">
           <div class="small-12 cell">
 
@@ -3051,418 +2988,268 @@
                 <div id="block-firstunitedbank-content">
 
 
-                  <article role="article" about="/home-page">
+                  <article role="article" about="/checking-accounts" typeof="schema:WebPage">
 
 
+                    <span property="schema:name" content="Checking Accounts" class="hidden"></span>
 
 
 
                     <div>
 
 
-
-                      <div class="q2-section grid-section none callouts gutter-both">
+                      <div class="q2-section general-section gutter-top grey">
                         <div class="q2-wrap grid-container">
-                          <div class="grid-x grid-margin-x grid-margin-y">
 
-                            <div class="cell small-12 medium-6 large-4 callout">
-                              <div class="icon image">
-                                <div class="media-image">
+                          <div id="cards-intro">
+                            <h2>Benefits abound.</h2>
 
-                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/callout-checking-accounts-copy.png?VersionId=mreaGD4HWY5r6SNGQcTWged7ynOpzoxb" width="362" height="500" alt="Woman putting her arm around a man while he&#039;s sitting on a couch with his laptop" loading="lazy" typeof="foaf:Image" class="img-fluid" />
-
-
-
-                                </div>
-
-                              </div>
-                              <h2>Checking Accounts</h2>
-
-                              <p>We offer account options with features designed for the way you live.&nbsp;</p>
-
-
-
-                              <a href="checking-accounts.php" class="button" aria-label="Start here by going to our checking overview page. ">START HERE</a>
-
+                            <div class="section-summary">
+                              <p><br />
+                                No two financial journeys are the same. Whether you’re looking for a starter account or an opportunity to earn interest, the team at Beko Federal Credit Union has you covered with an account built&nbsp;to fit your needs.</p>
                             </div>
-
-                            <div class="cell small-12 medium-6 large-4 callout">
-                              <div class="icon image">
-                                <div class="media-image">
-
-                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/callout-mortgage-copy.png?VersionId=5.j_Nb5m8XIJ.iAvmdiGjFrPavNN8GKv" width="362" height="500" alt="Couple sitting down laughing and smiling with moving boxes behind them." loading="lazy" typeof="foaf:Image" class="img-fluid" />
-
-
-
-                                </div>
-
-                              </div>
-                              <h2>Mortgage</h2>
-
-                              <p>By getting to know you, we can build the right mortgage based on your needs.</p>
-
-
-
-                              <a href="https://firstunitedteam.mymortgage-online.com/" rel="nofollow" class="button" aria-label="Start here by going to our mortgage page. ">START HERE</a>
-
-                            </div>
-
-                            <div class="cell small-12 medium-6 large-4 callout">
-                              <div class="icon image">
-                                <div class="media-image">
-
-                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/callout-slw-copy.png?VersionId=Zog.i7Yh8sc9lZJtZ_XY0dMOnzph7Mqw" width="362" height="500" alt="Father teaching his young daughter how to skateboard" loading="lazy" typeof="foaf:Image" class="img-fluid" />
-
-
-
-                                </div>
-
-                              </div>
-                              <h2>Spend Life Wisely</h2>
-
-                              <p>We’re here to change the world, one customer, one family, one community at a time.</p>
-
-
-
-                              <a href="spendlifewisely-overview.php" class="button" aria-label="Start here by going to our Spend Life Wisely page. ">START HERE</a>
-
-                            </div>
-
-
-                          </div>
-                        </div>
-                      </div>
-
-
-                      <div class="q2-section journey-tabs gutter-both blue-pattern-bottom">
-                        <div class="q2-wrap grid-container">
-                          <div class="section-title">
-                            <h2>Your Journey to Financial Well-Being.</h2>
                           </div>
 
-                          <div class="section-summary">
-                            <p>The path to financial security and comfort for you and your family is a journey of small steps. Do you know where you are on the path? Are you taking the right steps to get where you want to be? Let us help you find your place on the path and empower you with the resources and tools you need to keep moving forward.</p>
-                          </div>
-                          <div class="tabs-container">
-                            <ul class="tabs" data-responsive-accordion-tabs="accordion medium-tabs large-tabs" data-multi-expand="false" data-allow-all-closed="true">
 
-
-                              <li class=" accordion-item is-active" data-accordion-item="data-accordion-item" data-q2-deep-link-id="-11">
-                                <a href="#" class="accordion-title">
-                                  <h3>
-                                    Personal
-                                  </h3>
-                                  <p>
-                                    Steps and stages for individuals and families.
-                                  </p>
-                                </a>
-                                <div class="accordion-content" data-tab-content="data-tab-content">
-                                  <div class="tab-bg">
-                                    <div>
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/horizontaltab_personal_562x644-copy-1.png?VersionId=llk9Cc21..besgauK7KiKjrmx.EZtLNR" alt="Personal background image" />
-                                    </div>
-                                  </div>
-                                  <div class="accordion-tab-content">
-                                    <div class="grid-x">
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Start</h3>
-
-                                        <p>Begin your journey on strong financial footing with these important early steps.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Grow</h3>
-
-                                        <p>The strategies you need to move forward and set yourself up for long term success.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Enhance</h3>
-
-                                        <p>Are you on track to hit your goals? Employ these strategies to help make it happen.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Enjoy</h3>
-
-                                        <p>You’ve worked hard to get here. Make sure your money works just as hard to keep you here.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Secure</h3>
-
-                                        <p>Evaluate your position and create a legacy that lasts.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <p><a aria-label="Explore Spend Life Wisely " class="button" href="spendlifewisely-overview.php" target="_blank" title="Explore Spend Life Wisely">Explore</a></p>
-
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-
-
-                              <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="-51">
-                                <a href="#" class="accordion-title">
-                                  <h3>
-                                    Business
-                                  </h3>
-                                  <p>
-                                    A map through the stages of healthy business growth.
-                                  </p>
-                                </a>
-                                <div class="accordion-content" data-tab-content="data-tab-content">
-                                  <div class="tab-bg">
-                                    <div>
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/horizontaltab_business_562x644-copy_0.png?VersionId=aBIEKaUkZ22sN5KgTr3YH6YivOIyIx0V" alt="Business background image" />
-                                    </div>
-                                  </div>
-                                  <div class="accordion-tab-content">
-                                    <div class="grid-x">
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Develop</h3>
-
-                                        <p>Laying the groundwork and building the structure of a thriving future company.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Start-Up</h3>
-
-                                        <p>Essential early steps in planning and finance to set your new business up for success from day one.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Grow</h3>
-
-                                        <p>Strategies for employee and customer happiness to ensure healthy growth and a vibrant workplace.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Enhance</h3>
-
-                                        <p>Sharpen practices and streamline operations in preparation for future expansion.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Expand</h3>
-
-                                        <p>Reap the rewards of smart planning and execution as your business continues its ascent.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <p><a aria-label="Explore Spend Life Wisely" class="button" href="spendlifewisely-overview.php" target="_blank" title="Explore Spend Life Wisely">Explore</a></p>
-
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-
-
-                            </ul>
-                          </div>
-                          <div class="button-container">
-                            <p></p>
-
-                          </div>
                         </div>
                       </div>
 
 
 
-
-                      <div class="q2-section uneven-section primary gutter-both">
+                      <div class="q2-section grid-section grey cards gutter-bottom">
                         <div class="q2-wrap grid-container">
                           <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="cell small-12 medium-4">
 
-                              <div class="align-center media-image">
+                            <div class="cell small-12 medium-6 large-4 card">
+                              <div class="icon image">
+                                <div class="media-image">
 
-                                <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/fubt-shield-large-oneofakind-copy.png?VersionId=eXD0vb8fAYD8vy021t0UOGY9YoWbuc7y" width="320" height="364" alt="Happy mom and daughter" loading="lazy" typeof="foaf:Image" class="img-fluid" />
+                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/personalchecking_card_360x171.png?VersionId=P00C5hc2u9unFxJSZXGI5bmNKqeuZpBe" width="360" height="171" alt="Man and woman smiling while working on laptop" loading="lazy" typeof="foaf:Image" class="img-fluid" />
+
+
+
+                                </div>
+
                               </div>
+                              <h2>Basic Checking</h2>
 
+                              <p>If simplicity and convenience is what you’re after, there’s no better choice than Basic Checking.&nbsp;</p>
 
+                              <div aria-label="How to waive" class="reveal" data-reveal="" id="details-modal8">
+                                <div class="row">
+                                  <div class="small-12 large-10 large-centered columns text-center">&nbsp;
+                                    <p>To waive the monthly maintenance fee for Basic Checking: Sign-up for eStatements, setup Direct Deposit, or Primary account holder maintains $10,000 or more in combined deposit accounts (Checking, savings, certificates of deposit) throughout the periodic statement cycle: on any given day of the periodic statement cycle; on the day the Monthly Maintenance fee may be charged. Automatically waived for accountholders 17 and under.</p>
 
-                            </div>
-                            <div class="cell small-12 medium-8">
-
-                              <h2>You’re one of a kind. Let’s keep it that way.</h2>
-
-                              <h3>Identity theft is on the rise. Secure Checking* with IDProtect® includes powerful built-in security tools that help better protect you and your entire family<sup>1</sup>. Open your secure account today in just 5 minutes.</h3>
-
-                              <p>&nbsp;</p>
+                                    <div class="row">
+                                      <div class="large-12 columns">
+                                        <div class="row ">
+                                          <div class="small-10 small-centered columns"><button aria-label="Close modal" class="close-button" data-close="" type="button"><span aria-hidden="true">×</span></button></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
 
                               <ul>
-                                <li>Online and Mobile Banking</li>
-                                <li>Identity Monitoring<sup>4</sup></li>
-                                <li>Credit File Monitoring<sup>3,4</sup></li>
-                                <li>Comprehensive Identity Theft Resolution Services</li>
-                                <li>Coverage for You and Your Entire Family</li>
-                                <li>3-in-1 Credit Report<sup>4</sup></li>
-                                <li>Identity Theft Expense Reimbursement Coverage<sup>2</sup></li>
+                                <li>Opening deposit: $100</li>
+                                <li>Interest earning: No</li>
+                                <li>Monthly maintenance fee: $3.50<sup>5</sup><br />
+                                  <a aria-label="how to waive" class="details8" href="#" onclick="return false" role="button" tabindex="0">How to waive</a>
+                                </li>
                               </ul>
 
-                              <p>&nbsp;</p>
 
 
-                              <div class="button-container">
-                                <span class="lead-text">Secure your identity, and your family.</span>
+                              <a href="https://bekofcu.com/basic-checking" class="button" aria-label="Learn more by going to our basic checking page">LEARN MORE</a>
 
-                                <a href="secure-checking.php" class="button" aria-label="Get started for secure checking">Get Started</a>
+                            </div>
+
+                            <div class="cell small-12 medium-6 large-4 card">
+                              <div class="icon image">
+                                <div class="media-image">
+
+                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/securechecking_card_360x171.png?VersionId=oXzdEIDDB7jxHjvdB9XVzCr4jnrXzNuF" width="360" height="171" alt="Couple smiling and sitting on the couch with their laptop" loading="lazy" typeof="foaf:Image" class="img-fluid" />
+
+
+
+                                </div>
 
                               </div>
+                              <h2>Secure Checking</h2>
+
+                              <p>There is only one you. SecureChecking with IDProtect® can help protect your identity<sup>4</sup>.&nbsp;</p>
+
+                              <ul>
+                                <li>Opening deposit: $100</li>
+                                <li>Interest earning: No</li>
+                                <li>Monthly maintenance fee: $6.95</li>
+                              </ul>
+
+
+
+                              <a href="secure-checking.php" class="button" aria-label="Learn more by going to our secure checking page">LEARN MORE</a>
+
                             </div>
+
+                            <div class="cell small-12 medium-6 large-4 card">
+                              <div class="icon image">
+                                <div class="media-image">
+
+                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/prestigechecking_card_360x171.png?VersionId=sKpSRu1Hcmf_Q_hMADOibjkdXRPLoviE" width="360" height="171" alt="Couple smiling and walking on the beach with their bikes" loading="lazy" typeof="foaf:Image" class="img-fluid" />
+
+
+
+                                </div>
+
+                              </div>
+                              <h2>Prestige Checking</h2>
+
+                              <p>Enjoy all the convenience of a checking account while earning interest on your money. &nbsp;</p>
+
+                              <div aria-label="How to waive" class="reveal" data-reveal="" id="details-modal2">
+                                <div class="row">
+                                  <div class="small-12 large-10 large-centered columns text-center">&nbsp;
+                                    <p>To waive the monthly maintenance fee for Prestige Checking you must have $1,000 min. daily balance.</p>
+
+                                    <div class="row">
+                                      <div class="large-12 columns">
+                                        <div class="row ">
+                                          <div class="small-10 small-centered columns"><button aria-label="Close modal" class="close-button" data-close="" type="button"><span aria-hidden="true">×</span></button></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <ul>
+                                <li>Opening deposit: $100</li>
+                                <li>Interest earning: Yes</li>
+                                <li>Monthly maintenance fee: $7.50<sup>6</sup><br />
+                                  <a aria-label="how to waive" class="details2" href="#" onclick="return false" role="button" tabindex="0">How to waive</a>
+                                </li>
+                              </ul>
+
+
+
+                              <a href="https://bekofcu.com/prestige-checking" class="button" aria-label="Learn more by going to our prestige checking page">LEARN MORE</a>
+
+                            </div>
+
+
                           </div>
                         </div>
                       </div>
 
 
 
-                      <div class="q2-section tabs-section blue-pattern-top gutter-both">
+                      <div class="q2-section accordion-section grey gutter-bottom">
                         <div class="q2-wrap grid-container">
                           <div class="grid-x grid-margin-y">
                             <div class="cell small-12 section-title">
-                              <h2>Spend Life Wisely</h2>
+                              <h2>Benefits abound.</h2>
                             </div>
                             <div class="section-summary">
-                              <p>Spending Life Wisely means taking small steps towards a life of love and impact. And we’re here to inspire and empower you along the way with information that educates, empowers, and inspires each person to reach their highest purpose and realize their greatest success. </p>
+                              <p>No two financial journeys are the same. Whether you’re looking for a starter account or an opportunity to earn interest, the team at Beko Federal Credit Union has you covered with an account built to fit your needs. </p>
                             </div>
                             <div class="cell small-12 ">
-                              <ul class="tabs" data-responsive-accordion-tabs="accordion medium-tabs large-tabs" data-multi-expand="false" data-allow-all-closed="true">
+                              <ul class="accordion" data-responsive-accordion-tabs="accordion" data-multi-expand="false" data-allow-all-closed="true">
 
 
-                                <li class=" accordion-item is-active" data-accordion-item="data-accordion-item" data-q2-deep-link-id="faith-6">
+                                <li class=" accordion-item is-active" data-accordion-item="data-accordion-item" data-q2-deep-link-id="basic-checking-358">
                                   <a href="#" class="accordion-title">
-                                    <span class="icon font-awesome">
-                                      <div class="fontawesome-icons">
-                                        <div class="fontawesome-icon">
-                                          <i class="fas fa-heart" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
-                                        </div>
-
-                                      </div>
-
-                                    </span>
-                                    <h2>
-                                      Faith
-                                    </h2>
+                                    <h3>
+                                      BASIC CHECKING
+                                    </h3>
                                   </a>
                                   <div class="accordion-content" data-tab-content="data-tab-content">
-                                    <div class="panel-bg-image">
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/pillartab_faith-copy.png?VersionId=Gb.spKMxUTfA9dtWiZrqwiTuW6aXqqHi" alt=" background image" />
-                                    </div>
                                     <div class="accordion-tab-content">
 
-                                      <h3>Treasure your faith.</h3>
+                                      <p>If simplicity and convenience is what you’re after, there’s no better choice than Basic Checking.&nbsp;</p>
 
-                                      <p>Allow God to guide your heart to a life of meaning and purpose, putting Him at the center of everything you do, inspiring you to serve others with love and compassion.</p>
+                                      <div class="reveal" data-reveal="" id="details-modal3">
+                                        <div class="row">
+                                          <div class="small-12 large-10 large-centered columns text-center">&nbsp;
+                                            <p>To waive the monthly maintenance fee for Basic Checking: Sign-up for eStatements, setup Direct Deposit, or Primary account holder maintains $10,000 or more in combined deposit accounts (Checking, savings, certificates of deposit) throughout the periodic statement cycle: on any given day of the periodic statement cycle; on the day the Monthly Maintenance fee may be charged. Automatically waived for accountholders 17 and under.</p>
 
+                                            <div class="row">
+                                              <div class="large-12 columns">
+                                                <div class="row ">
+                                                  <div class="small-10 small-centered columns"><button aria-label="Close modal" class="close-button" data-close="" type="button"><span aria-hidden="true">×</span></button></div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+
+                                      <ul>
+                                        <li>Opening deposit: $100</li>
+                                        <li>Interest earning: No</li>
+                                        <li>Monthly maintenance fee: $3.50<sup>5</sup><br />
+                                          <a aria-label="how to waive" class="details3" href="#" onclick="return false" role="button" tabindex="0">How to waive</a>
+                                        </li>
+                                      </ul>
+
+
+
+                                      <a href="https://bekofcu.com/basic-checking" class="button" aria-label="Learn more by going to our basic checking page">LEARN MORE</a>
 
                                     </div>
                                   </div>
                                 </li>
 
 
-                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="financial-well-being-7">
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="secure-checking-359">
                                   <a href="#" class="accordion-title">
-                                    <span class="icon font-awesome">
-                                      <div class="fontawesome-icons">
-                                        <div class="fontawesome-icon">
-                                          <i class="fas fa-landmark" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
-                                        </div>
-
-                                      </div>
-
-                                    </span>
-                                    <h2>
-                                      Financial Well-Being
-                                    </h2>
+                                    <h3>
+                                      SECURE CHECKING
+                                    </h3>
                                   </a>
                                   <div class="accordion-content" data-tab-content="data-tab-content">
-                                    <div class="panel-bg-image">
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/pillartab_finance-copy.png?VersionId=cmCDnXYzcxXbuA3oQ3E0hDnaKkWha.jG" alt=" background image" />
-                                    </div>
                                     <div class="accordion-tab-content">
 
-                                      <h3>Care for your money.</h3>
+                                      <p>There is only one you. SecureChecking with IDProtect® can help protect your identity<sup>4</sup>.&nbsp;</p>
 
-                                      <p>Be intentional with both your saving and spending to make the most of what you are given, gaining financial peace of mind to support yourself and those you love.</p>
+                                      <ul>
+                                        <li>Opening deposit: $100</li>
+                                        <li>Interest earning: No</li>
+                                        <li>Monthly maintenance fee: $6.95<br />
+                                          &nbsp;</li>
+                                      </ul>
 
+
+
+                                      <a href="secure-checking.php" class="button" aria-label="Learn more by going to our secure checking page">LEARN MORE</a>
 
                                     </div>
                                   </div>
                                 </li>
 
 
-                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="health-9">
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="prestige-checking-360">
                                   <a href="#" class="accordion-title">
-                                    <span class="icon font-awesome">
-                                      <div class="fontawesome-icons">
-                                        <div class="fontawesome-icon">
-                                          <i class="fas fa-apple-alt" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
-                                        </div>
-
-                                      </div>
-
-                                    </span>
-                                    <h2>
-                                      Health
-                                    </h2>
+                                    <h3>
+                                      PRESTIGE CHECKING
+                                    </h3>
                                   </a>
                                   <div class="accordion-content" data-tab-content="data-tab-content">
-                                    <div class="panel-bg-image">
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/pillartab_healthandwellness-copy_0.png?VersionId=2J_v2T.OyNlz_K8PxDquFzQ_9EElnYBB" alt=" background image" />
-                                    </div>
                                     <div class="accordion-tab-content">
 
-                                      <h3>Invest in your wellness.</h3>
+                                      <p>Enjoy all the convenience of a checking account while earning interest on your money. &nbsp;</p>
 
-                                      <p>Care for your physical, mental, and spiritual health in order to be at your best for yourself and others, living each day to its fullest.</p>
+                                      <ul>
+                                        <li>Opening deposit: $100</li>
+                                        <li>Interest earning: Yes</li>
+                                        <li>Monthly maintenance fee: $7.50<sup>6</sup><br />
+                                          <a aria-label="how to waive" class="details2" href="#" onclick="return false" role="button" tabindex="0">How to waive</a>
+                                        </li>
+                                      </ul>
 
 
-                                    </div>
-                                  </div>
-                                </li>
 
-
-                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="growth-10">
-                                  <a href="#" class="accordion-title">
-                                    <span class="icon font-awesome">
-                                      <div class="fontawesome-icons">
-                                        <div class="fontawesome-icon">
-                                          <i class="fas fa-book-reader" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
-                                        </div>
-
-                                      </div>
-
-                                    </span>
-                                    <h2>
-                                      Growth
-                                    </h2>
-                                  </a>
-                                  <div class="accordion-content" data-tab-content="data-tab-content">
-                                    <div class="panel-bg-image">
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/pillartab_personalgrowth-copy.png?VersionId=6K1iOFBX6mf3WLtz7ebfy75e5EVl3EqG" alt=" background image" />
-                                    </div>
-                                    <div class="accordion-tab-content">
-
-                                      <h3>Enrich your mind.</h3>
-
-                                      <p>Never stop learning and growing so that you may realize your fullest potential, live your purpose, and achieve your greatest success.</p>
-
+                                      <a href="https://bekofcu.com/prestige-checking" class="button" aria-label="Learn more by going to our prestige checking page">LEARN MORE</a>
 
                                     </div>
                                   </div>
@@ -3471,13 +3258,669 @@
 
                               </ul>
                             </div>
-                            <div class="button-container">
-                              <p>Small steps is all it takes. </p>
+                          </div>
+                        </div>
+                      </div>
 
-                              <a href="spendlifewisely-overview.php" class="button" aria-label="Find Inspiration by going to our Spend Life Wisely page">Find Inspiration</a>
 
+                      <div class="q2-section product-guide">
+                        <button class="js-start-over-button button start-over"><i class="fas fa-redo"></i> Start Over</button>
+                        <ul class="js-product-guide-container" data-equalizer data-q2-product-guide-id="2237" data-q2-product-required-features="personal_checking">
+                          <li class="js-product-guide-slide js-call-to-action product-guide-slide call-to-action">
+                            <h2>
+                              <div id="compare-pca">Find the account that's right for you.</div>
+                            </h2>
+                            <p>Try out our simple and speedy online Checking Selector Tool.&nbsp;</p>
+
+                            <button class="js-product-guide-start button">Get started</button>
+                          </li>
+
+
+
+                          <li class="js-product-guide-slide js-product-guide-question js-required product-guide-slide product-guide-question grid_of_buttons" data-q2-question-id="2234">
+                            <div class="title-container">
+                              <h2>Which do you prefer in a checking account? </h2>
+                            </div>
+                            <div class="answer-container">
+                              <ul>
+
+                                <li class="answer-1">
+                                  <button data-q2-feature="minimum_fees" class="js-product-guide-answer button answer">
+                                    Minimum Fees
+                                  </button>
+                                </li>
+                                <li class="answer-2">
+                                  <button data-q2-feature="maximum_benefits" class="js-product-guide-answer button answer">
+                                    Maximum Benefits
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="js-product-guide-answer js-no-answer button answer">None</button>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="navigation-container">
+                              <button class="js-previous-button button previous">Previous</button>
+                              <button class="js-next-button button next" disabled>Next</button>
+                              <button class="js-finish-button js-next-button button next finish" disabled>Finish</button>
+                            </div>
+                          </li>
+
+
+
+                          <li class="js-product-guide-slide js-product-guide-question js-required product-guide-slide product-guide-question grid_of_buttons" data-q2-question-id="2235">
+                            <div class="title-container">
+                              <h2>Are identity theft protection/features important to you?</h2>
+                            </div>
+                            <div class="answer-container">
+                              <ul>
+
+                                <li class="answer-1">
+                                  <button data-q2-feature="identity_theft_protection___yes" class="js-product-guide-answer button answer">
+                                    Yes
+                                  </button>
+                                </li>
+                                <li class="answer-2">
+                                  <button data-q2-feature="identity_theft_protection___no" class="js-product-guide-answer button answer">
+                                    No
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="js-product-guide-answer js-no-answer button answer">None</button>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="navigation-container">
+                              <button class="js-previous-button button previous">Previous</button>
+                              <button class="js-next-button button next" disabled>Next</button>
+                              <button class="js-finish-button js-next-button button next finish" disabled>Finish</button>
+                            </div>
+                          </li>
+
+
+
+                          <li class="js-product-guide-slide js-product-guide-question js-required product-guide-slide product-guide-question grid_of_buttons" data-q2-question-id="2236">
+                            <div class="title-container">
+                              <h2>Do you plan to keep a balance of at least $1000 in your checking account at all time?</h2>
+                            </div>
+                            <div class="answer-container">
+                              <ul>
+
+                                <li class="answer-1">
+                                  <button data-q2-feature="higher_balance___yes" class="js-product-guide-answer button answer">
+                                    Yes
+                                  </button>
+                                </li>
+                                <li class="answer-2">
+                                  <button data-q2-feature="higher_balance___no" class="js-product-guide-answer button answer">
+                                    No
+                                  </button>
+                                </li>
+                                <li>
+                                  <button class="js-product-guide-answer js-no-answer button answer">None</button>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="navigation-container">
+                              <button class="js-previous-button button previous">Previous</button>
+                              <button class="js-next-button button next" disabled>Next</button>
+                              <button class="js-finish-button js-next-button button next finish" disabled>Finish</button>
+                            </div>
+                          </li>
+
+
+                        </ul>
+                      </div>
+                      <div class="js-product-list">
+                        <div class="views-element-container">
+                          <div class="js-product-guide-block js-view-dom-id-8f791a1fa8cc56e8be2ed6ede6105029e179c44e84f8d387a8389a1967b057e5">
+
+
+
+
+
+
+
+
+                            <div class="js-product-wrapper">
+                              <div class="js-product-title">
+                                <h2>Basic Checking</h2>
+                              </div>
+                              <div class="js-product-button"><a href="https://bekofcu.com/basic-checking">Get started</a></div>
+                              <div class="js-product-button-aria">get started opening a basic checking account</div>
+                              <div class="js-product-description">
+                                <p>If simplicity and convenience is what you’re after, there’s no better choice than Basic Checking.&nbsp;</p>
+
+                                <ul>
+                                  <li>Opening deposit: $100</li>
+                                  <li>Interest earning: No</li>
+                                  <li>Monthly maintenance fee: $3.50<sup>5</sup><br />
+                                    <a aria-label="how to waive" data-open="waiverModal_basic" href="#" onclick="return false" role="button" tabindex="0">How to waive</a>
+                                  </li>
+                                </ul>
+
+                                <div aria-label="How to waive" aria-labelledby="waiverModal" class="reveal text-center" data-reveal="" id="waiverModal_basic">&nbsp;
+                                  <p>To waive the monthly maintenance fee for Basic Checking: Sign-up for eStatements, setup Direct Deposit, or Primary account holder maintains $10,000 or more in combined deposit accounts (Checking, savings, certificates of deposit) throughout the periodic statement cycle: on any given day of the periodic statement cycle; on the day the Monthly Maintenance fee may be charged. Automatically waived for accountholders 17 and under.</p>
+                                  <button aria-label="Close waiver modal" class="close-button" data-close="" type="button"><span aria-hidden="true">×</span></button>
+                                </div>
+                              </div>
+                              <div class="js-product-features">
+                                <ul>
+                                  <li>Personal Checking</li>
+                                  <li>Higher Balance - No</li>
+                                  <li>Minimum Fees</li>
+                                  <li>Identity Theft Protection - No</li>
+                                </ul>
+                              </div>
+                              <div class="js-product-icon-type">icon</div>
+                              <div class="js-product-fa-icon">
+                                <div class="fontawesome-icons">
+                                  <div class="fontawesome-icon">
+                                    <i class="fas fa-badge-dollar" data-fa-transform="" data-fa-mask="" style=""></i>
+                                  </div>
+
+                                </div>
+                              </div>
+                              <div class="js-product-image-icon"></div>
+                            </div>
+                            <div class="js-product-wrapper">
+                              <div class="js-product-title">
+                                <h2>Business Savings</h2>
+                              </div>
+                              <div class="js-product-button"><a href="https://bekofcu.com/business-savings">Get started</a></div>
+                              <div class="js-product-button-aria">get started opening a business savings account</div>
+                              <div class="js-product-description">
+                                <p>Interest-bearing account for businesses of all sizes.&nbsp;</p>
+
+                                <ul>
+                                  <li>Interest earned on all balances</li>
+                                  <li>Online and mobile banking</li>
+                                  <li>9 waived debits per quarter<sup>1</sup></li>
+                                </ul>
+                              </div>
+                              <div class="js-product-features">
+                                <ul>
+                                  <li>Business Savings</li>
+                                  <li>Lower Fees - Lower Interest</li>
+                                  <li>9 waived debits per quarter¹</li>
+                                </ul>
+                              </div>
+                              <div class="js-product-icon-type">icon</div>
+                              <div class="js-product-fa-icon">
+                                <div class="fontawesome-icons">
+                                  <div class="fontawesome-icon">
+                                    <i class="fas fa-badge-dollar" data-fa-transform="" data-fa-mask="" style=""></i>
+                                  </div>
+
+                                </div>
+                              </div>
+                              <div class="js-product-image-icon"></div>
+                            </div>
+                            <div class="js-product-wrapper">
+                              <div class="js-product-title">
+                                <h2>Prestige Checking</h2>
+                              </div>
+                              <div class="js-product-button"><a href="https://bekofcu.com/prestige-checking">Get started</a></div>
+                              <div class="js-product-button-aria">get started opening a prestige checking account</div>
+                              <div class="js-product-description">
+                                <p>Enjoy all the convenience of a checking account while earning interest on your money. &nbsp;</p>
+
+                                <ul>
+                                  <li>Opening deposit: $100</li>
+                                  <li>Interest earning: Yes</li>
+                                  <li>Monthly maintenance fee: $7.50<sup>6</sup><br />
+                                    <a aria-label="how to waive" class="details8" data-open="waiverModal_prestige" href="checking-accounts.php" onclick="return false">How to waive</a>
+                                  </li>
+                                </ul>
+
+                                <div aria-label="How to waive" aria-labelledby="waiverModal" class="reveal text-center" data-reveal="" id="waiverModal_prestige">&nbsp;
+                                  <p>To waive the monthly maintenance fee for Prestige Checking you must have $1,000 min. daily balance.</p>
+                                  <button aria-label="Close waiver modal" class="close-button" data-close="" type="button"><span aria-hidden="true">×</span></button>
+                                </div>
+                              </div>
+                              <div class="js-product-features">
+                                <ul>
+                                  <li>Personal Checking</li>
+                                  <li>Higher Balance - Yes</li>
+                                  <li>Maximum Benefits</li>
+                                  <li>Identity Theft Protection - No</li>
+                                </ul>
+                              </div>
+                              <div class="js-product-icon-type">icon</div>
+                              <div class="js-product-fa-icon">
+                                <div class="fontawesome-icons">
+                                  <div class="fontawesome-icon">
+                                    <i class="fas fa-award" data-fa-transform="" data-fa-mask="" style=""></i>
+                                  </div>
+
+                                </div>
+                              </div>
+                              <div class="js-product-image-icon"></div>
+                            </div>
+                            <div class="js-product-wrapper">
+                              <div class="js-product-title">
+                                <h2>Secure Checking</h2>
+                              </div>
+                              <div class="js-product-button"><a href="secure-checking.php">Get started</a></div>
+                              <div class="js-product-button-aria">get started opening a secure checking account</div>
+                              <div class="js-product-description">
+                                <p>There is only one you. SecureChecking with IDProtect® can help protect your identity<sup>4</sup>.&nbsp;</p>
+
+                                <ul>
+                                  <li>Opening deposit: $100</li>
+                                  <li>Interest earning: No</li>
+                                  <li>Monthly maintenance fee: $6.95</li>
+                                </ul>
+
+                              </div>
+                              <div class="js-product-features">
+                                <ul>
+                                  <li>Personal Checking</li>
+                                  <li>Higher Balance - Yes</li>
+                                  <li>Maximum Benefits</li>
+                                  <li>Identity Theft Protection - Yes</li>
+                                </ul>
+                              </div>
+                              <div class="js-product-icon-type">icon</div>
+                              <div class="js-product-fa-icon">
+                                <div class="fontawesome-icons">
+                                  <div class="fontawesome-icon">
+                                    <i class="fas fa-shield-alt" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+                                  </div>
+
+                                </div>
+                              </div>
+                              <div class="js-product-image-icon"></div>
+                            </div>
+                            <div class="js-product-wrapper">
+                              <div class="js-product-title">
+                                <h2>United Business Interest Checking</h2>
+                              </div>
+                              <div class="js-product-button"><a href="https://bekofcu.com/united-business-interest-checking">Get started</a></div>
+                              <div class="js-product-button-aria">get started opening a united business interest checking</div>
+                              <div class="js-product-description">
+                                <p>An account that pays interest to sole proprietors, public funds, trusts, nonprofits and other eligible fiduciary accounts.&nbsp;</p>
+
+                                <ul>
+                                  <li>Interest earned on all balances</li>
+                                  <li>Online and mobile banking</li>
+                                  <li>25 waived transactions per month<sup>2</sup></li>
+                                </ul>
+                              </div>
+                              <div class="js-product-features">
+                                <ul>
+                                  <li>Business Savings</li>
+                                  <li>Higher Fees - Higher Interest</li>
+                                  <li>25 waived transactions per month²</li>
+                                </ul>
+                              </div>
+                              <div class="js-product-icon-type">icon</div>
+                              <div class="js-product-fa-icon">
+                                <div class="fontawesome-icons">
+                                  <div class="fontawesome-icon">
+                                    <i class="fas fa-chart-line" data-fa-transform="" data-fa-mask="" style=""></i>
+                                  </div>
+
+                                </div>
+                              </div>
+                              <div class="js-product-image-icon"></div>
+                            </div>
+                            <div class="js-product-wrapper">
+                              <div class="js-product-title">
+                                <h2>United Business Money Market Gold</h2>
+                              </div>
+                              <div class="js-product-button"><a href="https://bekofcu.com/united-business-money-market-gold">Get Started</a></div>
+                              <div class="js-product-button-aria">get started opening a untied business money market gold account</div>
+                              <div class="js-product-description">
+                                <p>Interest-bearing account that provides additional cash access options.&nbsp;</p>
+
+                                <ul>
+                                  <li>Interest earned on all balances</li>
+                                  <li>Online and mobile banking</li>
+                                  <li>Access via check-writing and debit card&nbsp;</li>
+                                </ul>
+                              </div>
+                              <div class="js-product-features">
+                                <ul>
+                                  <li>Business Savings</li>
+                                  <li>Higher Fees - Higher Interest</li>
+                                  <li>Check-writing</li>
+                                </ul>
+                              </div>
+                              <div class="js-product-icon-type">icon</div>
+                              <div class="js-product-fa-icon">
+                                <div class="fontawesome-icons">
+                                  <div class="fontawesome-icon">
+                                    <i class="fas fa-ring" data-fa-transform="" data-fa-mask="" style=""></i>
+                                  </div>
+
+                                </div>
+                              </div>
+                              <div class="js-product-image-icon"></div>
+                            </div>
+
+
+
+
+
+
+
+
+                          </div>
+                        </div>
+
+                      </div>
+
+
+
+
+                      <div class="q2-section call-to-action-section secondary gutter-none">
+                        <div class="q2-wrap">
+                          <p>Need new checks? Order them using your account information.</p>
+
+                          <a href="https://www.ordermychecks.com/login_a.jsp" target="_blank" rel="nofollow" class="button" aria-label="Order checks by going to ordermychecks.com">Order Checks</a>
+
+                        </div>
+                      </div>
+
+
+                      <div class="q2-section general-section gutter-both ">
+                        <div class="q2-wrap grid-container">
+
+                          <div class="reveal" data-reveal="" id="zipCodeChallenge">
+                            <div class="row">
+                              <div class="small-12 large-10 large-centered columns text-center">
+                                <h2>What's your ZIP code?</h2>
+
+                                <p>We need this to give you the right info for your location.</p>
+
+                                <div class="row">
+                                  <div class="large-12 columns">
+                                    <div class="row ">
+                                      <div class="small-10 small-centered columns"><input id="userInputZip" placeholder="Your ZIP Code" type="text" /><button aria-label="Close modal" class="close-button" data-close="" type="button"><span aria-hidden="true">×</span></button></div>
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="small-10 small-centered columns"><button class="button radius large expand" id="userInputZipSend">Get Started</button>
+
+                                        <div class="align-center" id="odao-loader">&nbsp;</div>
+
+                                        <div class="align-center" id="odao-zip-error"><span><strong><i>Please enter a valid ZIP code.</i></strong></span></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
+
+                          <div id="compare-accounts">
+                            <h2>Find the personal account that's right for you.&nbsp;</h2>
+
+                            <div class="section-summary">
+                              <p><br />
+                                When it comes to checking, one size does not fit all. From IDProtect® to mobile check deposit, we offer account options with features designed around the way you live.</p>
+                            </div>
+
+                            <table>
+                              <caption class="sr-only">Compare Checking Accounts</caption>
+                              <thead>
+                                <tr>
+                                  <td class="sticky row-desktop">&nbsp;</td>
+                                  <th scope="col">Basic Checking
+                                    <div class="start-button"><a aria-label="start here for basic checking account opening" class="button addProduct checkingOverview_basic odao-overview" data-product="basic_checking" href="#odao" role="button" tabindex="0">Start <span class="hide-mobile">Here</span></a></div>
+
+                                    <div class="start-icon"><a aria-label="start here for basic checking account opening" class="addProduct checkingOverview_basic odao-overview" data-product="basic_checking" href="#odao" role="button" tabindex="0"><i class="fa fa-external-link-alt fa-2x">&nbsp;</i></a></div>
+                                  </th>
+                                  <th scope="col">Secure Checking
+                                    <div class="start-button"><a aria-label="start here for secure checking account opening" class="button addProduct checkingOverview_secure odao-overview" data-product="secure_checking" href="#odao" role="button" tabindex="0">Start <span class="hide-mobile">Here</span></a></div>
+
+                                    <div class="start-icon"><a aria-label="start here for secure checking account opening" class="addProduct checkingOverview_secure odao-overview" data-product="secure_checking" href="#odao" role="button" tabindex="0"><i class="fa fa-external-link-alt fa-2x">&nbsp;</i></a></div>
+                                  </th>
+                                  <th scope="col">Prestige Checking
+                                    <div class="start-button"><a aria-label="start here for prestige checking account opening" class="button addProduct checkingOverview_prestige odao-overview" data-product="prestige_checking" href="#odao" role="button" tabindex="0">Start <span class="hide-mobile">Here</span></a></div>
+
+                                    <div class="start-icon"><a aria-label="start here for prestige checking account opening" class="addProduct checkingOverview_prestige odao-overview" data-product="prestige_checking" href="#odao" role="button" tabindex="0"><i class="fa fa-external-link-alt fa-2x">&nbsp;</i></a></div>
+                                  </th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>Online &amp; Mobile Banking</strong><sup>1,9</sup></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>Online &amp; Mobile Banking</strong><sup>1,9</sup></th>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>No-Fee Foreign ATM Withdrawals</strong><sup>2</sup></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>No-Fee Foreign ATM Withdrawals</strong><sup>2</sup></th>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>Visa® Instant Issue Debit Card</strong><sup>3</sup></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>Visa® Instant Issue Debit Card</strong><sup>3</sup></th>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>Online Bill Pay</strong></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>Online Bill Pay</strong></th>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>Mobile Check Deposit</strong><sup>1</sup></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>Mobile Check Deposit</strong><sup>1</sup></th>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>Pay-a-Person</strong></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>Pay-a-Person</strong></th>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>e-Statements</strong><sup>9</sup></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>e-Statements</strong><sup>9</sup></th>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>$100 off Mortgage Closing</strong><sup>7</sup></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>$100 off Mortgage Closing</strong><sup>7</sup></th>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>Identity and Cell Phone Protection</strong><sup>4</sup></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>Identity and Cell Phone Protection</strong><sup>4</sup></th>
+                                  <td>
+                                    <p>‒</p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p>‒</p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>Credit File Monitoring</strong><sup>4</sup></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>Credit File Monitoring</strong><sup>4</sup></th>
+                                  <td>
+                                    <p>‒</p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p>‒</p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>ID Theft Resolution Services</strong><sup>4</sup></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>ID Theft Resolution Services</strong><sup>4</sup></th>
+                                  <td>
+                                    <p>‒</p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p>‒</p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong><a aria-label="YouFirst Personalized Debit Card page" href="https://bekofcu.com/personalized-debit" target="_blank">You<i>First</i> Personalized Debit Card</a></strong><sup>8</sup></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong><a aria-label="YouFirst Personalized Debit Card page" href="https://bekofcu.com/personalized-debit" target="_blank">You<i>First</i> Personalized Debit Card</a></strong><sup>8</sup></th>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                  <td>
+                                    <p><span class="tick">✔</span></p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>Earns Interest</strong></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>Earns Interest</strong></th>
+                                  <td>
+                                    <p>No</p>
+                                  </td>
+                                  <td>
+                                    <p>No</p>
+                                  </td>
+                                  <td>
+                                    <p>Yes</p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>Opening Deposit</strong></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>Opening Deposit</strong></th>
+                                  <td>
+                                    <p>$100</p>
+                                  </td>
+                                  <td>
+                                    <p>$100</p>
+                                  </td>
+                                  <td>
+                                    <p>$100</p>
+                                  </td>
+                                </tr>
+                                <tr class="row-mobile">
+                                  <th colspan="3" scope="row"><strong>Monthly Maintenance Fee</strong></th>
+                                </tr>
+                                <tr>
+                                  <th class="row-desktop" scope="row"><strong>Monthly Maintenance Fee</strong></th>
+                                  <td>
+                                    <p>$3.50<sup>5</sup><br />
+                                      <a aria-label="how to waive" class="details8" href="#" onclick="return false" role="button" tabindex="0">How to waive</a>
+                                    </p>
+                                  </td>
+                                  <td>
+                                    <p>$6.95</p>
+                                  </td>
+                                  <td>
+                                    <p>$7.50<sup>6</sup><br />
+                                      <a aria-label="how to waive" class="details2" href="#" onclick="return false" role="button" tabindex="0">How to waive</a>
+                                    </p>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+
+                          <p>&nbsp;</p>
+
+
                         </div>
                       </div>
 
@@ -3488,15 +3931,15 @@
 
                               <li class="orbit-slide">
                                 <figure class="orbit-figure">
-                                  <div class="orbit-image" style="background-image: url(https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/testimonial_bckgrnd1-1.png?VersionId=WsDvJ_n02gc0U0CTo3UN5uQbOcnuuLNo); background-position: 50% 50%;"></div>
+                                  <div class="orbit-image" style="background-image: url(https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/testimonial_securechecking.png?VersionId=SSz8vqOtWUXDE5mke.nIMRcdWpxdCkNr); background-position: 50% 50%;"></div>
                                   <figcaption class="orbit-caption grid-container">
                                     <div class="grid-x">
                                       <div class="quote-container cell small-12">
-                                        <h2 class="quote">"Working towards financial goals is very important to me, and I love helping others reach theirs!"</h2>
+                                        <h2 class="quote">"I love being a part of our customers' life, being able to make a difference is so heartwarming."</h2>
                                       </div>
                                       <div class="testimonial-name cell small-12">
-                                        Aaron
-                                        <div class="testimonial-sub">Relationship Banker at Beko Federal Credit Union (BEKOFCU) </div>
+                                        Sandra
+                                        <div class="testimonial-sub">Relationship Banker at Beko Federal Credit Union (BEKOFCU)</div>
                                       </div>
                                     </div>
                                   </figcaption>
@@ -3513,42 +3956,72 @@
 
 
 
-                      <div class="q2-section call-to-action-section secondary gutter-none">
-                        <div class="q2-wrap">
-                          <p>How may we help you along your journey?</p>
+                      <div class="q2-section uneven-section grey gutter-both">
+                        <div class="q2-wrap grid-container">
+                          <div class="grid-x grid-margin-x grid-margin-y">
+                            <div class="cell small-12 medium-5">
 
-                          <a href="contact-us.php" class="button" aria-label="contact us page">Contact Us</a>
+                              <div class="mobile-banking-img align-center media-image">
 
+                                <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/mobile-online-banking.png?VersionId=xY3AfF2KeraegTj0BIrjwdnl1FXio11U" width="361" height="250" alt="Gray smartphone with Beko Federal Credit Union (BEKOFCU) website on it" loading="lazy" typeof="foaf:Image" class="img-fluid" />
+                              </div>
+
+
+
+                            </div>
+                            <div class="cell small-12 medium-7">
+
+                              <h2>Online &amp; Mobile Banking</h2>
+
+                              <p>Beko Federal Credit Union makes it even easier to manage your personal accounts safely and conveniently with our&nbsp;Online and Mobile Banking. With simple-to-use navigation, online features and services, you can do your banking anytime, anywhere and save time and money.</p>
+
+                              <ul>
+                                <li>Mobile Deposits</li>
+                                <li>Apple® Watch App</li>
+                                <li>Bill Pay</li>
+                                <li>eStatements</li>
+                                <li>Funds Transfer</li>
+                                <li>Budgeting</li>
+                              </ul>
+
+                              <p>&nbsp;</p>
+
+                              <div class="button-container"><span class="lead-text">Available now.</span> <a aria-label="Download on the App Store" href="https://itunes.apple.com/us/app/first-united-bank-mobile/id1096940973?mt=8" rel="nofollow" target="_blank"><img alt="Download on the App Store" class="app-icon" src="https://q2-canvas-stg-files.s3.amazonaws.com/firstunitedbank/files/2021-04/appstore-icon.png" /></a> <a aria-label="Get it on Google Play" href="https://play.google.com/store/apps/details?id=com.firstunitedbank3715.mobile" rel="nofollow" target="_blank"><img alt="Get it on Google Play" class="app-icon" src="https://q2-canvas-stg-files.s3.amazonaws.com/firstunitedbank/files/2021-04/googleplay-icon.png" /></a></div>
+
+
+                              <div class="button-container">
+                                <span class="lead-text"></span>
+
+                              </div>
+                            </div>
+                          </div>
                         </div>
                       </div>
 
 
-                      <div class="q2-section general-section gutter-both primary">
+                      <div class="q2-section general-section gutter-both ">
                         <div class="q2-wrap grid-container">
 
-                          <p>*&nbsp; Monthly service charge&nbsp;of $6.95. $100 minimum opening deposit required.</p>
+                          <div id="disclosure">
+                            <p>1&nbsp; Message and data rates may apply. Such charges include those from your communications service provider.</p>
 
-                          <p>1&nbsp; Benefits are available to personal checking account owner(s), their joint account owners and their eligible family members subject to the terms and conditions for the applicable Benefits. Some Benefits require authentication, registration and/or activation. Benefits are not available to a “signer” on the account who is not an account owner or to businesses, clubs, trusts, organizations and/or churches and their members, or schools and their employees/students. Family Members include your spouse, persons qualifying as domestic partner, and children under 25 years of age and parent(s) of the account holder who are residents of the same household.<br />
-                            <br />
-                            2&nbsp; Special Program Notes: The descriptions herein are summaries only and do not include all terms, conditions, and exclusions of the Benefits described. Please refer to the actual Guide to Benefit and/or insurance documents for complete details of coverage and exclusions. Coverage is offered through the company named in the Guide to Benefit or on the certificate of insurance. Insurance products are not insured by FDIC or any Federal Government Agency; not a deposit of or guaranteed by the bank or any bank affiliate.<br />
-                            <br />
-                            3&nbsp; Credit file monitoring may take several days to begin following activation.<br />
-                            <br />
-                            4&nbsp; Registration/Activation Required
-                          </p>
+                            <p>2&nbsp; We'll waive 5 non-Beko Federal Credit Union (BEKOFCU) ATM cash withdrawal fees per month.</p>
 
+                            <p>3&nbsp; Additional replacement cards may be subject to a fee.</p>
 
-                        </div>
-                      </div>
+                            <p>4&nbsp; Terms and conditions apply, click the Secure Checking Start Here button for more information.</p>
 
+                            <p>5&nbsp; To waive the monthly maintenance fee for Basic Checking: Sign-up for eStatements, setup Direct Deposit, or Primary account holder maintains $10,000 or more in combined deposit accounts (Checking, savings, certificates of deposit) throughout the periodic statement cycle: on any given day of the periodic statement cycle; on the day the Monthly Maintenance fee may be charged. Automatically waived for accountholders 17 and under.</p>
 
+                            <p>6&nbsp; To waive the monthly maintenance fee for Prestige Checking you must have $1,000 min. daily balance.</p>
 
+                            <p>7&nbsp; Mortgage must be auto drafted from Beko Federal Credit Union (BEKOFCU) checking account.&nbsp;Applies to secondary market&nbsp;mortgage loan only.</p>
 
-                      <div class="q2-section call-to-action-section gutter-none">
-                        <div class="q2-wrap">
-                          <p>Looking to report a lost or stolen card?</p>
+                            <p>8&nbsp; $9.95 per card.</p>
 
-                          <a href="reporting-a-lost-card.php" class="button" aria-label="Start here by going to our Reporting a Lost or Stolen Card page">Start Here</a>
+                            <p>9&nbsp; Activation/registration required.</p>
+                          </div>
+
 
                         </div>
                       </div>
@@ -3764,15 +4237,16 @@
         "baseUrl": "\/",
         "scriptPath": null,
         "pathPrefix": "",
-        "currentPath": "node\/1",
+        "currentPath": "node\/23",
         "currentPathIsAdmin": false,
-        "isFront": true,
+        "isFront": false,
         "currentLanguage": "en"
       },
       "pluralDelimiter": "\u0003",
+      "q2_product_guide_path": "modules\/custom\/q2_product_guide",
       "q2_smart_search_list": {
         "#type": "inline_template",
-        "#template": "\u003Cul\u003E\n  \n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/business-checking-accounts\u0022\u003EBusiness Checking\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/business-savings-accounts\u0022\u003EBusiness Savings\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/spendlifewisely\/business-banking-services\u0022\u003EBusiness Banking\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/checking-accounts\u0022\u003EChecking Accounts\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/basic-checking\u0022\u003EBasic Checking\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/prestige-checking\u0022\u003EPrestige Checking\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/secure-checking\u0022\u003ESecure Checking\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/savings-accounts\u0022\u003ESavings Accounts\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/retirement-planning\u0022\u003ERetirement Planning\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/investment-management\u0022\u003EInvestment Management\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/estate-planning\u0022\u003EEstate Planning\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/trust-services\u0022\u003ETrust Services\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/locations\u0022\u003EATM\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/atm-precautions\u0022\u003EATM Precautions\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/certificate-deposit\u0022\u003ECD\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/cdoffer\u0022\u003ECD Rates\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/certificate-deposit\u0022\u003ECertificate of Deposit\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli title=\u0022Careers\u0022\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/careers\u0022\u003ECareers\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/insurance\u0022\u003EInsurance\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/personal-insurance\/personal-insurance-products\u0022\u003EPersonal Insurance\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/personal-insurance\/auto-insurance\u0022\u003EAuto Insurance\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/business-insurance\/commercial-insurance\u0022\u003ECommercial Insurance\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/personal-insurance\/homeowners-insurance\u0022\u003EHome Insurance\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/personal-insurance\/life-insurance\u0022\u003ELife Insurance\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/business-insurance\/employee-benefits\u0022\u003EEmployee Benefits\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/locations\u0022\u003ELocations\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/locations\u0022\u003EInsurance Locations\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 target=\u0022_blank\u0022 rel=\u0022nofollow\u0022 href=\u0022https:\/\/firstunitedteam.mymortgage-online.com\/\u0022\u003EMortgage\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/additional-services#overdraft-advantage\u0022\u003EOverdraft\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/additional-services#overdraft-advantage\u0022\u003EOverdraft Advantage\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/ppp-loan-update-main\u0022\u003EPPP\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/ppp-loan-update-main\u0022\u003EPPP Loan Update\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/ppploan-forgiveness-information\u0022\u003EPPP Loan Forgiveness\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/direct-deposit#direct-deposit\u0022\u003ERouting Number\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/direct-deposit#direct-deposit\u0022\u003ETexas routing number\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/direct-deposit#direct-deposit\u0022\u003EOklahoma routing number\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/direct-deposit#direct-deposit\u0022\u003EAccount Number\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/direct-deposit\u0022\u003EDirect Deposit\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/simple-switch\u0022\u003ESimple Switch\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/spendlifewisely-overview\u0022\u003ESpend Life Wisely\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/spendlifewisely\u0022\u003ESpend Life Wisely blogs\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/spendlifewisely\u0022\u003EBlogs\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 rel=\u0022nofollow\u0022 href=\u0022https:\/\/www.ordermychecks.com\/login_a.jsp\u0022\u003EOrder Checks\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003C\/ul\u003E\n"
+        "#template": "\u003Cul\u003E\n  \n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/business-checking-accounts\u0022\u003EBusiness Checking\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/business-savings-accounts\u0022\u003EBusiness Savings\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/spendlifewisely\/business-banking-services\u0022\u003EBusiness Banking\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022active\u0022 href=\u0022\/checking-accounts\u0022\u003EChecking Accounts\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/basic-checking\u0022\u003EBasic Checking\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/prestige-checking\u0022\u003EPrestige Checking\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/secure-checking\u0022\u003ESecure Checking\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/savings-accounts\u0022\u003ESavings Accounts\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/retirement-planning\u0022\u003ERetirement Planning\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/investment-management\u0022\u003EInvestment Management\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/estate-planning\u0022\u003EEstate Planning\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/trust-services\u0022\u003ETrust Services\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/locations\u0022\u003EATM\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/atm-precautions\u0022\u003EATM Precautions\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/certificate-deposit\u0022\u003ECD\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/cdoffer\u0022\u003ECD Rates\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/certificate-deposit\u0022\u003ECertificate of Deposit\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli title=\u0022Careers\u0022\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/careers\u0022\u003ECareers\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/insurance\u0022\u003EInsurance\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/personal-insurance\/personal-insurance-products\u0022\u003EPersonal Insurance\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/personal-insurance\/auto-insurance\u0022\u003EAuto Insurance\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/business-insurance\/commercial-insurance\u0022\u003ECommercial Insurance\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/personal-insurance\/homeowners-insurance\u0022\u003EHome Insurance\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/personal-insurance\/life-insurance\u0022\u003ELife Insurance\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/business-insurance\/employee-benefits\u0022\u003EEmployee Benefits\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/locations\u0022\u003ELocations\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/insurance\/locations\u0022\u003EInsurance Locations\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 target=\u0022_blank\u0022 rel=\u0022nofollow\u0022 href=\u0022https:\/\/firstunitedteam.mymortgage-online.com\/\u0022\u003EMortgage\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/additional-services#overdraft-advantage\u0022\u003EOverdraft\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/additional-services#overdraft-advantage\u0022\u003EOverdraft Advantage\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/ppp-loan-update-main\u0022\u003EPPP\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/ppp-loan-update-main\u0022\u003EPPP Loan Update\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/ppploan-forgiveness-information\u0022\u003EPPP Loan Forgiveness\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/direct-deposit#direct-deposit\u0022\u003ERouting Number\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/direct-deposit#direct-deposit\u0022\u003ETexas routing number\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/direct-deposit#direct-deposit\u0022\u003EOklahoma routing number\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/direct-deposit#direct-deposit\u0022\u003EAccount Number\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/direct-deposit\u0022\u003EDirect Deposit\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/simple-switch\u0022\u003ESimple Switch\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 href=\u0022\/spendlifewisely-overview\u0022\u003ESpend Life Wisely\u003C\/a\u003E\n    \n  \u003Cul\u003E\n      \n    \u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/spendlifewisely\u0022\u003ESpend Life Wisely blogs\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003Cli\u003E\n        \u003Ca class=\u0022\u0022 href=\u0022\/spendlifewisely\u0022\u003EBlogs\u003C\/a\u003E\n        \n      \u003C\/li\u003E\n\u003C\/ul\u003E\n\u003C\/li\u003E\n\u003Cli\u003E\n    \u003Ca class=\u0022\u0022 rel=\u0022nofollow\u0022 href=\u0022https:\/\/www.ordermychecks.com\/login_a.jsp\u0022\u003EOrder Checks\u003C\/a\u003E\n    \n  \u003C\/li\u003E\n\u003C\/ul\u003E\n"
       },
       "q2_add_logins": {
         "admin": false,
@@ -3843,6 +4317,7 @@
   <script src="modules/custom/q2_admin_overrides/src/dist/js/q2_admin_scripts.min%EF%B9%96ro3e14.js"></script>
   <script src="https://www.firstunitedbank.com/core/assets/vendor/js-cookie/js.cookie.min.js?v=3.0.1"></script>
   <script src="https://www.firstunitedbank.com/sites/default/themes/firstunitedbank-com/dist/js/scripts.min.js?v=1.x"></script>
+  <script src="https://bekofcu.com/modules/custom/q2_product_guide/src/dist/js/q2_product_guide_scripts.js?ro3e14"></script>
   <script src="https://www.firstunitedbank.com/modules/custom/q2_smart_search/src/dist/js/q2_smart_search_scripts.min.js?ro3e14"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
   <script src="https://www.firstunitedbank.com/modules/custom/q2_additional_logins/src/dist/js/q2_additional_logins_scripts.js?ro3e14"></script>

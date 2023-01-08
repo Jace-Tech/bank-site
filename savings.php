@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <script>
-    let nodeID = 1;
+    let nodeID = 38;
   </script>
   <noscript>
     <style>
@@ -13,8 +13,7 @@
       }
     </style>
   </noscript>
-  <link rel="canonical" href="index.php" />
-  <link rel="shortlink" href="index.php" />
+  <link rel="canonical" href="savings.php" />
   <meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
   <meta name="MobileOptimized" content="width" />
   <meta name="HandheldFriendly" content="true" />
@@ -2705,9 +2704,9 @@
     /*** &nbsp; article[about="/checking-accounts"]  ***/
   </style>
   <link rel="icon" href="/logo.png" type="image/gif" />
-  <link rel="alternate" hreflang="en" href="index.php" />
+  <link rel="alternate" hreflang="en" href="savings.php" />
 
-  <title>Beko Federal Credit Union (BEKOFCU) - Checking Accounts, Mortgages, Loans &amp; More</title>
+  <title>Open a Savings Bank Account Online | Beko Federal Credit Union (BEKOFCU)</title>
   <link rel="stylesheet" media="all" href="core/themes/stable/css/system/components/ajax-progress.module%EF%B9%96ro3e14.css" />
   <link rel="stylesheet" media="all" href="core/themes/stable/css/system/components/align.module%EF%B9%96ro3e14.css" />
   <link rel="stylesheet" media="all" href="core/themes/stable/css/system/components/autocomplete-loading.module%EF%B9%96ro3e14.css" />
@@ -2901,7 +2900,7 @@
 
 </head>
 
-<body class="path-home-page path-frontpage page-node-type-landing-page page-published">
+<body class="path-savings path-node page-node-type-page page-published">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T65FC2B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
@@ -2911,6 +2910,7 @@
   </a>
 
   <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+
     <div class="off-canvas position-top" id="off-canvas-other" data-off-canvas data-transition="overlap">
       <div class="oc-container">
         <div class="grid-x oc-top">
@@ -2939,96 +2939,29 @@
     </div>
     <div class="off-canvas-content" data-off-canvas-content>
       <?php include("./header.php"); ?>
-      <header class="landing-page-header ">
+      <header>
         <?php include("./nav.php"); ?>
-      </header>
-
-      <main id="main-content" class="js-quickedit-main-content">
-
-
-        <div id="landing-banner">
-          <div class="orbit" data-q2-timer="5000" data-q2-auto="false" data-q2-fade="true" data-q2-random="true" data-q2-static="false">
-            <img class="orbit-load" src="sites/default/themes/firstunitedbank-com/images/loading.gif" alt="loading" />
-            <div class="orbit-wrapper">
-              <ul class="orbit-container">
-
-                <li class="orbit-slide">
-                  <figure class="orbit-figure">
-                    <div class="orbit-image" style="background-image: url(https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/background-v1_0_v2.jpg?VersionId=eUtjOydH0wjm9uyp_mqCF7oQ9PNXGsqK); background-position: 50% 50%;"></div>
-                    <figcaption class="orbit-caption">
-                      <div class="shield-title">
-                        <img class="banner-shield" alt="Beko Federal Credit Union (BEKOFCU) red shield logo" src="sites/default/themes/firstunitedbank-com/images/shield-red.svg" />
-                        <h2>Spend Life <span style="color: #A6B6CE">Together</span></h2>
-                      </div>
-                      <div class="smart-search">
-                        <form action="https://bekofcu.com/search">
-                          <div class="search-form-container">
-                            <div class="search-input-wrapper">
-                              <label class="sr-only" for="fuzzy_search">Search</label>
-                              <input type="search" aria-label="Enter search term" class="fuzzy-search" placeholder="How may we help you?" name="search_query" autocomplete="off" />
-                            </div>
-                            <div class="search-submit-wrapper">
-                              <button type="submit" class="search-submit">
-                                <i class="fas fa-search"></i>
-                                <span class="sr-only">Search</span>
-                              </button>
-                            </div>
-                          </div>
-                        </form>
-                        <ul class="banner-list">
-                          <li>
-                            <a href="checking-accounts.php">Checking Account</a>
-                            <a href="https://firstunitedteam.mymortgage-online.com/" rel="nofollow">Start a Mortgage</a>
-                            <a href="commercial-loans.php">Commercial Loans</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </li>
-
-                <li class="orbit-slide">
-                  <figure class="orbit-figure">
-                    <div class="orbit-image" style="background-image: url(https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/bank-anywhere-v2.jpg?VersionId=ntBrTG1HxodJCbOp9zNz8Wt0PCADwxst); background-position: 50% 50%;"></div>
-                    <figcaption class="orbit-caption">
-                      <div class="shield-title">
-                        <img class="banner-shield" alt="Beko Federal Credit Union (BEKOFCU) red shield logo" src="sites/default/themes/firstunitedbank-com/images/shield-red.svg" />
-                        <h2>Deposit Time Back Into Your Life</h2>
-                      </div>
-                      <div class="smart-search">
-                        <form action="https://bekofcu.com/search">
-                          <div class="search-form-container">
-                            <div class="search-input-wrapper">
-                              <label class="sr-only" for="fuzzy_search">Search</label>
-                              <input type="search" aria-label="Enter search term" class="fuzzy-search" placeholder="How may we help you?" name="search_query" autocomplete="off" />
-                            </div>
-                            <div class="search-submit-wrapper">
-                              <button type="submit" class="search-submit">
-                                <i class="fas fa-search"></i>
-                                <span class="sr-only">Search</span>
-                              </button>
-                            </div>
-                          </div>
-                        </form>
-                        <ul class="banner-list">
-                          <li>
-                            <a href="savings.php">Savings Plan</a>
-                            <a href="investment-management.php">Wealth Management</a>
-                            <a href="insurance.php">Insurance Services</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </li>
+        <div class="internal-page-banner banner-img" style="background-image: url(https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/banner-internal-savings.jpg?VersionId=cyZAx.KnhuAj8ygGz4E7WT_I5WiOPFnc); background-position: 50% 50%;">
+          <div class="grid-container">
+            <div class="internal-header">
 
 
-              </ul>
+              <h1> Savings</h1>
+              <p>Life isn’t always a straight path. A Savings Account from Beko Federal Credit Union gives you the flexibility to save for the future you’re envisioning, whether you’re thinking ahead a few months, a few years or a lifetime.</p>
+
             </div>
+
+            <div class="banner-button">
+              <p>Open an account in less than 5 minutes. </p>
+
+              <a href="#odao" class="odao savings1 tabindex-button button" aria-label="START HERE">START HERE</a>
+
+            </div>
+
           </div>
         </div>
-
-
+      </header>
+      <main id="main-content" class="js-quickedit-main-content">
         <div class="grid-container">
           <div class="small-12 cell">
 
@@ -3051,17 +2984,58 @@
                 <div id="block-firstunitedbank-content">
 
 
-                  <article role="article" about="/home-page">
+                  <article role="article" about="/savings" typeof="schema:WebPage">
 
 
+                    <span property="schema:name" content="Savings" class="hidden"></span>
 
 
 
                     <div>
 
 
+                      <div class="q2-section general-section gutter-top grey">
+                        <div class="q2-wrap grid-container">
 
-                      <div class="q2-section grid-section none callouts gutter-both">
+                          <div class="reveal" data-reveal="" id="zipCodeChallenge">
+                            <div class="row">
+                              <div class="small-12 large-10 large-centered columns text-center">
+                                <h2>What's your ZIP&nbsp;code?</h2>
+
+                                <p>We need this to give you the right info for your location.</p>
+
+                                <div class="row">
+                                  <div class="large-12 columns">
+                                    <div class="row ">
+                                      <div class="small-10 small-centered columns"><input id="userInputZip" placeholder="Your ZIP Code" type="text" /><button aria-label="Close modal" class="close-button" data-close="" type="button"><span aria-hidden="true">×</span></button></div>
+                                    </div>
+
+                                    <div class="row">
+                                      <div class="small-10 small-centered columns"><button class="button radius large expand addProduct" data-product="basic_savings" id="userInputZipSend">Get Started</button>
+                                        <div class="align-center" id="odao-loader">&nbsp;</div>
+                                        <div class="align-center" id="odao-zip-error"><span><strong><i>Please enter a valid ZIP code.</i></strong></span></div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <h2>Invest in yourself.&nbsp;</h2>
+
+                          <div class="section-summary">
+                            <p><br />
+                              With no monthly service charge and an array of features, here’s an account that offers all the essentials. Simply and conveniently.</p>
+                          </div>
+
+
+                        </div>
+                      </div>
+
+
+
+                      <div class="q2-section grid-section grey callouts gutter-bottom">
                         <div class="q2-wrap grid-container">
                           <div class="grid-x grid-margin-x grid-margin-y">
 
@@ -3069,20 +3043,17 @@
                               <div class="icon image">
                                 <div class="media-image">
 
-                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/callout-checking-accounts-copy.png?VersionId=mreaGD4HWY5r6SNGQcTWged7ynOpzoxb" width="362" height="500" alt="Woman putting her arm around a man while he&#039;s sitting on a couch with his laptop" loading="lazy" typeof="foaf:Image" class="img-fluid" />
+                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/callout-getstarted-3-1.png?VersionId=3lPgDapbwBf3BSq5tIHovIJodyFFa8hW" width="362" height="500" alt="Happy woman putting coin in blue piggy bank" loading="lazy" typeof="foaf:Image" class="img-fluid" />
 
 
 
                                 </div>
 
                               </div>
-                              <h2>Checking Accounts</h2>
+                              <h2>Easy to get started</h2>
 
-                              <p>We offer account options with features designed for the way you live.&nbsp;</p>
+                              <p>Open your account with a $100 deposit.</p>
 
-
-
-                              <a href="checking-accounts.php" class="button" aria-label="Start here by going to our checking overview page. ">START HERE</a>
 
                             </div>
 
@@ -3090,20 +3061,17 @@
                               <div class="icon image">
                                 <div class="media-image">
 
-                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/callout-mortgage-copy.png?VersionId=5.j_Nb5m8XIJ.iAvmdiGjFrPavNN8GKv" width="362" height="500" alt="Couple sitting down laughing and smiling with moving boxes behind them." loading="lazy" typeof="foaf:Image" class="img-fluid" />
+                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/callout-zeromonthly-1-1.png?VersionId=Go9pzVHcnkw80zJ.G7dx3IGiWQbbKb.L" width="362" height="500" alt="Calendar and laptop on a desk" loading="lazy" typeof="foaf:Image" class="img-fluid" />
 
 
 
                                 </div>
 
                               </div>
-                              <h2>Mortgage</h2>
+                              <h2>$0 Monthly</h2>
 
-                              <p>By getting to know you, we can build the right mortgage based on your needs.</p>
+                              <p>No monthly service charge.<sup>3</sup></p>
 
-
-
-                              <a href="https://firstunitedteam.mymortgage-online.com/" rel="nofollow" class="button" aria-label="Start here by going to our mortgage page. ">START HERE</a>
 
                             </div>
 
@@ -3111,20 +3079,17 @@
                               <div class="icon image">
                                 <div class="media-image">
 
-                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/callout-slw-copy.png?VersionId=Zog.i7Yh8sc9lZJtZ_XY0dMOnzph7Mqw" width="362" height="500" alt="Father teaching his young daughter how to skateboard" loading="lazy" typeof="foaf:Image" class="img-fluid" />
+                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/callout-onlinemobilebanking-2.png?VersionId=Uxx5NEu4Ed8vihni67YWOrCApDhE90HZ" width="362" height="500" alt="Happy man on his cellphone " loading="lazy" typeof="foaf:Image" class="img-fluid" />
 
 
 
                                 </div>
 
                               </div>
-                              <h2>Spend Life Wisely</h2>
+                              <h2>Online/Mobile Banking</h2>
 
-                              <p>We’re here to change the world, one customer, one family, one community at a time.</p>
+                              <p>Bank on your terms. Anytime, anywhere.&nbsp;</p>
 
-
-
-                              <a href="spendlifewisely-overview.php" class="button" aria-label="Start here by going to our Spend Life Wisely page. ">START HERE</a>
 
                             </div>
 
@@ -3134,149 +3099,130 @@
                       </div>
 
 
-                      <div class="q2-section journey-tabs gutter-both blue-pattern-bottom">
+
+
+                      <div class="q2-section uneven-section grey gutter-bottom">
                         <div class="q2-wrap grid-container">
-                          <div class="section-title">
-                            <h2>Your Journey to Financial Well-Being.</h2>
+                          <div class="grid-x grid-margin-x grid-margin-y">
+                            <div class="cell small-12 medium-7">
+
+
+                            </div>
+                            <div class="cell small-12 medium-5">
+
+                              <div class="button-container">
+                                <span class="lead-text">Get started today. </span>
+
+                                <a href="#odao" class="odao savings2 tabindex-button button" aria-label="START HERE">START HERE</a>
+
+                              </div>
+                            </div>
                           </div>
-
-                          <div class="section-summary">
-                            <p>The path to financial security and comfort for you and your family is a journey of small steps. Do you know where you are on the path? Are you taking the right steps to get where you want to be? Let us help you find your place on the path and empower you with the resources and tools you need to keep moving forward.</p>
-                          </div>
-                          <div class="tabs-container">
-                            <ul class="tabs" data-responsive-accordion-tabs="accordion medium-tabs large-tabs" data-multi-expand="false" data-allow-all-closed="true">
+                        </div>
+                      </div>
 
 
-                              <li class=" accordion-item is-active" data-accordion-item="data-accordion-item" data-q2-deep-link-id="-11">
-                                <a href="#" class="accordion-title">
-                                  <h3>
-                                    Personal
-                                  </h3>
-                                  <p>
-                                    Steps and stages for individuals and families.
-                                  </p>
-                                </a>
-                                <div class="accordion-content" data-tab-content="data-tab-content">
-                                  <div class="tab-bg">
-                                    <div>
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/horizontaltab_personal_562x644-copy-1.png?VersionId=llk9Cc21..besgauK7KiKjrmx.EZtLNR" alt="Personal background image" />
-                                    </div>
+                      <div class="q2-section general-section gutter-top ">
+                        <div class="q2-wrap grid-container">
+
+                          <h2>Savings made simple.</h2>
+
+                          <p>&nbsp;</p>
+
+
+                        </div>
+                      </div>
+
+
+
+                      <div class="q2-section grid-section columns gutter-bottom mobile-center">
+                        <div class="q2-wrap grid-container">
+                          <div class="grid-x grid-margin-x grid-margin-y">
+
+                            <div class="cell small-12 medium-6 large-3 column no-image">
+                              <div class="icon font-awesome">
+                                <div class="fontawesome-icons">
+                                  <div class="fontawesome-icon">
+                                    <i class="fas fa-laptop fa-lg" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
                                   </div>
-                                  <div class="accordion-tab-content">
-                                    <div class="grid-x">
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Start</h3>
 
-                                        <p>Begin your journey on strong financial footing with these important early steps.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Grow</h3>
-
-                                        <p>The strategies you need to move forward and set yourself up for long term success.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Enhance</h3>
-
-                                        <p>Are you on track to hit your goals? Employ these strategies to help make it happen.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Enjoy</h3>
-
-                                        <p>You’ve worked hard to get here. Make sure your money works just as hard to keep you here.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Secure</h3>
-
-                                        <p>Evaluate your position and create a legacy that lasts.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <p><a aria-label="Explore Spend Life Wisely " class="button" href="spendlifewisely-overview.php" target="_blank" title="Explore Spend Life Wisely">Explore</a></p>
-
-                                      </div>
-                                    </div>
-                                  </div>
                                 </div>
-                              </li>
 
+                              </div>
+                              <h2>Online Banking<sup>1,2</sup></h2>
 
-                              <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="-51">
-                                <a href="#" class="accordion-title">
-                                  <h3>
-                                    Business
-                                  </h3>
-                                  <p>
-                                    A map through the stages of healthy business growth.
-                                  </p>
-                                </a>
-                                <div class="accordion-content" data-tab-content="data-tab-content">
-                                  <div class="tab-bg">
-                                    <div>
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/horizontaltab_business_562x644-copy_0.png?VersionId=aBIEKaUkZ22sN5KgTr3YH6YivOIyIx0V" alt="Business background image" />
-                                    </div>
+                            </div>
+
+                            <div class="cell small-12 medium-6 large-3 column no-image">
+                              <div class="icon font-awesome">
+                                <div class="fontawesome-icons">
+                                  <div class="fontawesome-icon">
+                                    <i class="fas fa-coins fa-lg" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
                                   </div>
-                                  <div class="accordion-tab-content">
-                                    <div class="grid-x">
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Develop</h3>
 
-                                        <p>Laying the groundwork and building the structure of a thriving future company.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Start-Up</h3>
-
-                                        <p>Essential early steps in planning and finance to set your new business up for success from day one.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Grow</h3>
-
-                                        <p>Strategies for employee and customer happiness to ensure healthy growth and a vibrant workplace.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Enhance</h3>
-
-                                        <p>Sharpen practices and streamline operations in preparation for future expansion.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Expand</h3>
-
-                                        <p>Reap the rewards of smart planning and execution as your business continues its ascent.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <p><a aria-label="Explore Spend Life Wisely" class="button" href="spendlifewisely-overview.php" target="_blank" title="Explore Spend Life Wisely">Explore</a></p>
-
-                                      </div>
-                                    </div>
-                                  </div>
                                 </div>
-                              </li>
 
+                              </div>
+                              <h2>Earns Interest</h2>
 
-                            </ul>
-                          </div>
-                          <div class="button-container">
-                            <p></p>
+                            </div>
+
+                            <div class="cell small-12 medium-6 large-3 column no-image">
+                              <div class="icon font-awesome">
+                                <div class="fontawesome-icons">
+                                  <div class="fontawesome-icon">
+                                    <i class="fas fa-fingerprint fa-lg" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+                                  </div>
+
+                                </div>
+
+                              </div>
+                              <h2>Touch/Face ID Mobile Banking<sup>1,2</sup></h2>
+
+                            </div>
+
+                            <div class="cell small-12 medium-6 large-3 column no-image">
+                              <div class="icon font-awesome">
+                                <div class="fontawesome-icons">
+                                  <div class="fontawesome-icon">
+                                    <i class="fas fa-file-pdf fa-lg" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+                                  </div>
+
+                                </div>
+
+                              </div>
+                              <h2>e-Statements<sup>2</sup></h2>
+
+                            </div>
+
+                            <div class="cell small-12 medium-6 large-3 column no-image">
+                              <div class="icon font-awesome">
+                                <div class="fontawesome-icons">
+                                  <div class="fontawesome-icon">
+                                    <i class="fas fa-camera fa-lg" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+                                  </div>
+
+                                </div>
+
+                              </div>
+                              <h2>Mobile Check Deposit</h2>
+
+                            </div>
+
+                            <div class="cell small-12 medium-6 large-3 column no-image">
+                              <div class="icon font-awesome">
+                                <div class="fontawesome-icons">
+                                  <div class="fontawesome-icon">
+                                    <i class="fas fa-hand-holding-usd fa-lg" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+                                  </div>
+
+                                </div>
+
+                              </div>
+                              <h2>No-Fee Foreign ATM Withdrawals<sup>4</sup></h2>
+
+                            </div>
+
 
                           </div>
                         </div>
@@ -3284,15 +3230,132 @@
 
 
 
+                      <div class="q2-section v-tabs-section grey gutter-both">
+                        <div class="q2-wrap grid-container">
+                          <div class="grid-x grid-margin-y">
+                            <div class="cell small-12 section-title">
+                              <h2>A different kind of bank.</h2>
+                            </div>
+                            <div class="section-summary">
+                              <p>Beko Federal Credit Union (BEKOFCU) is a financial services organization dedicated to helping you protect and make the most of your assets. But we’re a lot more than that. Banking and finance are what we do, not who we are. We invite you to discover what makes us unique. </p>
+                            </div>
+                            <div class="cell small-12 v-tabs">
+                              <ul class="v-tabs vertical" data-responsive-accordion-tabs="accordion medium-tabs large-tabs" data-multi-expand="false" data-allow-all-closed="true">
 
-                      <div class="q2-section uneven-section primary gutter-both">
+
+                                <li class=" accordion-item is-active" data-accordion-item="data-accordion-item" data-q2-deep-link-id="driven-by-values-392">
+                                  <a href="#" class="accordion-title">
+                                    <span class="icon font-awesome">
+                                      <div class="fontawesome-icons">
+                                        <div class="fontawesome-icon">
+                                          <i class="fas fa-dove" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+                                        </div>
+
+                                      </div>
+
+                                    </span>
+                                    <h3>
+                                      DRIVEN BY VALUES
+                                    </h3>
+                                  </a>
+                                  <div class="accordion-content" data-tab-content="data-tab-content">
+                                    <div class="panel-bg-image">
+                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-04/accoustic_drivebyvalues.jpg?VersionId=RpJooml.pZM4ExscB8Ptla9j.vT1YWTR" alt=" background image" />
+                                    </div>
+                                    <div class="accordion-tab-content">
+
+                                      <p>Extending LOVE. Making IMPACT. These are the values that drive our organization forward everyday and fuel us in supporting our customers</p>
+
+
+
+                                      <a href="about-us.php" class="button" aria-label="View our Purpose &amp; Values on our About Us page">Our Purpose &amp; Values</a>
+
+                                    </div>
+                                  </div>
+                                </li>
+
+
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="holistic-approach-393">
+                                  <a href="#" class="accordion-title">
+                                    <span class="icon font-awesome">
+                                      <div class="fontawesome-icons">
+                                        <div class="fontawesome-icon">
+                                          <i class="fas fa-spa" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+                                        </div>
+
+                                      </div>
+
+                                    </span>
+                                    <h3>
+                                      HOLISTIC APPROACH
+                                    </h3>
+                                  </a>
+                                  <div class="accordion-content" data-tab-content="data-tab-content">
+                                    <div class="panel-bg-image">
+                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-04/accoustic_holisticapproach_0.jpg?VersionId=qxlKMM0CL33j4R6LTUnRrjHpSeT0usm8" alt=" background image" />
+                                    </div>
+                                    <div class="accordion-tab-content">
+
+                                      <p>We exist to help you find your unique path to success. We believe success requires a balance of faith, financial well-being, health and personal growth.&nbsp;</p>
+
+
+
+                                      <a href="spendlifewisely-overview.php" class="button" aria-label="Spend Life Wisely">Spend Life Wisely</a>
+
+                                    </div>
+                                  </div>
+                                </li>
+
+
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="culture-of-care-394">
+                                  <a href="#" class="accordion-title">
+                                    <span class="icon font-awesome">
+                                      <div class="fontawesome-icons">
+                                        <div class="fontawesome-icon">
+                                          <i class="fas fa-hand-holding-heart" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
+                                        </div>
+
+                                      </div>
+
+                                    </span>
+                                    <h3>
+                                      CULTURE OF CARE
+                                    </h3>
+                                  </a>
+                                  <div class="accordion-content" data-tab-content="data-tab-content">
+                                    <div class="panel-bg-image">
+                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-04/accoustic_cultureofcare.jpg?VersionId=ZvZhCPcLR9EJpBVXUSgV9ZKF7SVZGwrH" alt=" background image" />
+                                    </div>
+                                    <div class="accordion-tab-content">
+
+                                      <p>No two financial journeys are the same. We’ll meet you where you are, and help get you where you want to be. In business and in life.&nbsp;</p>
+
+
+
+                                      <a href="contact-us.php" class="button" aria-label="Start a Relationship">Start a Relationship</a>
+
+                                    </div>
+                                  </div>
+                                </li>
+
+
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+                      <div class="q2-section uneven-section blue-pattern-top gutter-both">
                         <div class="q2-wrap grid-container">
                           <div class="grid-x grid-margin-x grid-margin-y">
                             <div class="cell small-12 medium-4">
 
                               <div class="align-center media-image">
 
-                                <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/fubt-shield-large-oneofakind-copy.png?VersionId=eXD0vb8fAYD8vy021t0UOGY9YoWbuc7y" width="320" height="364" alt="Happy mom and daughter" loading="lazy" typeof="foaf:Image" class="img-fluid" />
+                                <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/fubt-shield-large-spendnexchapterwisely-copy.png?VersionId=NcBcqJIFsPwB8E2hlU1SyDE0pTQG0x0n" width="320" height="364" alt="Happy senior couple " loading="lazy" typeof="foaf:Image" class="img-fluid" />
                               </div>
 
 
@@ -3300,29 +3363,20 @@
                             </div>
                             <div class="cell small-12 medium-8">
 
-                              <h2>You’re one of a kind. Let’s keep it that way.</h2>
+                              <div id="slw-section">
+                                <h2>Spend <span class="slw-tag">your next chapter</span>&nbsp;Wisely. &nbsp;</h2>
+                                &nbsp;
 
-                              <h3>Identity theft is on the rise. Secure Checking* with IDProtect® includes powerful built-in security tools that help better protect you and your entire family<sup>1</sup>. Open your secure account today in just 5 minutes.</h3>
-
-                              <p>&nbsp;</p>
-
-                              <ul>
-                                <li>Online and Mobile Banking</li>
-                                <li>Identity Monitoring<sup>4</sup></li>
-                                <li>Credit File Monitoring<sup>3,4</sup></li>
-                                <li>Comprehensive Identity Theft Resolution Services</li>
-                                <li>Coverage for You and Your Entire Family</li>
-                                <li>3-in-1 Credit Report<sup>4</sup></li>
-                                <li>Identity Theft Expense Reimbursement Coverage<sup>2</sup></li>
-                              </ul>
+                                <p>One of my favorite sayings is 'You don’t know what you don’t know.' There is so much truth in this statement! Wouldn’t it be great if we were all given the opportunity to go back in time to give our younger selves some financial advice to make life run a little smoother as we are growing up?</p>
+                              </div>
 
                               <p>&nbsp;</p>
 
 
                               <div class="button-container">
-                                <span class="lead-text">Secure your identity, and your family.</span>
+                                <span class="lead-text">Explore</span>
 
-                                <a href="secure-checking.php" class="button" aria-label="Get started for secure checking">Get Started</a>
+                                <a href="https://bekofcu.com/spendlifewisely/advice-my-younger-self" class="button" aria-label="FINANCIAL WELL BEING">FINANCIAL WELL BEING</a>
 
                               </div>
                             </div>
@@ -3331,224 +3385,19 @@
                       </div>
 
 
-
-                      <div class="q2-section tabs-section blue-pattern-top gutter-both">
-                        <div class="q2-wrap grid-container">
-                          <div class="grid-x grid-margin-y">
-                            <div class="cell small-12 section-title">
-                              <h2>Spend Life Wisely</h2>
-                            </div>
-                            <div class="section-summary">
-                              <p>Spending Life Wisely means taking small steps towards a life of love and impact. And we’re here to inspire and empower you along the way with information that educates, empowers, and inspires each person to reach their highest purpose and realize their greatest success. </p>
-                            </div>
-                            <div class="cell small-12 ">
-                              <ul class="tabs" data-responsive-accordion-tabs="accordion medium-tabs large-tabs" data-multi-expand="false" data-allow-all-closed="true">
-
-
-                                <li class=" accordion-item is-active" data-accordion-item="data-accordion-item" data-q2-deep-link-id="faith-6">
-                                  <a href="#" class="accordion-title">
-                                    <span class="icon font-awesome">
-                                      <div class="fontawesome-icons">
-                                        <div class="fontawesome-icon">
-                                          <i class="fas fa-heart" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
-                                        </div>
-
-                                      </div>
-
-                                    </span>
-                                    <h2>
-                                      Faith
-                                    </h2>
-                                  </a>
-                                  <div class="accordion-content" data-tab-content="data-tab-content">
-                                    <div class="panel-bg-image">
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/pillartab_faith-copy.png?VersionId=Gb.spKMxUTfA9dtWiZrqwiTuW6aXqqHi" alt=" background image" />
-                                    </div>
-                                    <div class="accordion-tab-content">
-
-                                      <h3>Treasure your faith.</h3>
-
-                                      <p>Allow God to guide your heart to a life of meaning and purpose, putting Him at the center of everything you do, inspiring you to serve others with love and compassion.</p>
-
-
-                                    </div>
-                                  </div>
-                                </li>
-
-
-                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="financial-well-being-7">
-                                  <a href="#" class="accordion-title">
-                                    <span class="icon font-awesome">
-                                      <div class="fontawesome-icons">
-                                        <div class="fontawesome-icon">
-                                          <i class="fas fa-landmark" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
-                                        </div>
-
-                                      </div>
-
-                                    </span>
-                                    <h2>
-                                      Financial Well-Being
-                                    </h2>
-                                  </a>
-                                  <div class="accordion-content" data-tab-content="data-tab-content">
-                                    <div class="panel-bg-image">
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/pillartab_finance-copy.png?VersionId=cmCDnXYzcxXbuA3oQ3E0hDnaKkWha.jG" alt=" background image" />
-                                    </div>
-                                    <div class="accordion-tab-content">
-
-                                      <h3>Care for your money.</h3>
-
-                                      <p>Be intentional with both your saving and spending to make the most of what you are given, gaining financial peace of mind to support yourself and those you love.</p>
-
-
-                                    </div>
-                                  </div>
-                                </li>
-
-
-                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="health-9">
-                                  <a href="#" class="accordion-title">
-                                    <span class="icon font-awesome">
-                                      <div class="fontawesome-icons">
-                                        <div class="fontawesome-icon">
-                                          <i class="fas fa-apple-alt" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
-                                        </div>
-
-                                      </div>
-
-                                    </span>
-                                    <h2>
-                                      Health
-                                    </h2>
-                                  </a>
-                                  <div class="accordion-content" data-tab-content="data-tab-content">
-                                    <div class="panel-bg-image">
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/pillartab_healthandwellness-copy_0.png?VersionId=2J_v2T.OyNlz_K8PxDquFzQ_9EElnYBB" alt=" background image" />
-                                    </div>
-                                    <div class="accordion-tab-content">
-
-                                      <h3>Invest in your wellness.</h3>
-
-                                      <p>Care for your physical, mental, and spiritual health in order to be at your best for yourself and others, living each day to its fullest.</p>
-
-
-                                    </div>
-                                  </div>
-                                </li>
-
-
-                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="growth-10">
-                                  <a href="#" class="accordion-title">
-                                    <span class="icon font-awesome">
-                                      <div class="fontawesome-icons">
-                                        <div class="fontawesome-icon">
-                                          <i class="fas fa-book-reader" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
-                                        </div>
-
-                                      </div>
-
-                                    </span>
-                                    <h2>
-                                      Growth
-                                    </h2>
-                                  </a>
-                                  <div class="accordion-content" data-tab-content="data-tab-content">
-                                    <div class="panel-bg-image">
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/pillartab_personalgrowth-copy.png?VersionId=6K1iOFBX6mf3WLtz7ebfy75e5EVl3EqG" alt=" background image" />
-                                    </div>
-                                    <div class="accordion-tab-content">
-
-                                      <h3>Enrich your mind.</h3>
-
-                                      <p>Never stop learning and growing so that you may realize your fullest potential, live your purpose, and achieve your greatest success.</p>
-
-
-                                    </div>
-                                  </div>
-                                </li>
-
-
-                              </ul>
-                            </div>
-                            <div class="button-container">
-                              <p>Small steps is all it takes. </p>
-
-                              <a href="spendlifewisely-overview.php" class="button" aria-label="Find Inspiration by going to our Spend Life Wisely page">Find Inspiration</a>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="q2-section testimonial-section">
-                        <div id="testimonial-orbit" class="orbit" role="region" data-orbit data-auto-play="false" data-use-m-u-i="false">
-                          <div class="orbit-wrapper">
-                            <ul class="orbit-container">
-
-                              <li class="orbit-slide">
-                                <figure class="orbit-figure">
-                                  <div class="orbit-image" style="background-image: url(https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/testimonial_bckgrnd1-1.png?VersionId=WsDvJ_n02gc0U0CTo3UN5uQbOcnuuLNo); background-position: 50% 50%;"></div>
-                                  <figcaption class="orbit-caption grid-container">
-                                    <div class="grid-x">
-                                      <div class="quote-container cell small-12">
-                                        <h2 class="quote">"Working towards financial goals is very important to me, and I love helping others reach theirs!"</h2>
-                                      </div>
-                                      <div class="testimonial-name cell small-12">
-                                        Aaron
-                                        <div class="testimonial-sub">Relationship Banker at Beko Federal Credit Union (BEKOFCU) </div>
-                                      </div>
-                                    </div>
-                                  </figcaption>
-                                </figure>
-                              </li>
-
-
-
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-
-
-
-
-                      <div class="q2-section call-to-action-section secondary gutter-none">
-                        <div class="q2-wrap">
-                          <p>How may we help you along your journey?</p>
-
-                          <a href="contact-us.php" class="button" aria-label="contact us page">Contact Us</a>
-
-                        </div>
-                      </div>
-
-
-                      <div class="q2-section general-section gutter-both primary">
+                      <div class="q2-section general-section gutter-both grey">
                         <div class="q2-wrap grid-container">
 
-                          <p>*&nbsp; Monthly service charge&nbsp;of $6.95. $100 minimum opening deposit required.</p>
+                          <div id="disclosure">
+                            <p>1&nbsp; Message and data rates may apply. Such charges include those from your communications service provider.</p>
 
-                          <p>1&nbsp; Benefits are available to personal checking account owner(s), their joint account owners and their eligible family members subject to the terms and conditions for the applicable Benefits. Some Benefits require authentication, registration and/or activation. Benefits are not available to a “signer” on the account who is not an account owner or to businesses, clubs, trusts, organizations and/or churches and their members, or schools and their employees/students. Family Members include your spouse, persons qualifying as domestic partner, and children under 25 years of age and parent(s) of the account holder who are residents of the same household.<br />
-                            <br />
-                            2&nbsp; Special Program Notes: The descriptions herein are summaries only and do not include all terms, conditions, and exclusions of the Benefits described. Please refer to the actual Guide to Benefit and/or insurance documents for complete details of coverage and exclusions. Coverage is offered through the company named in the Guide to Benefit or on the certificate of insurance. Insurance products are not insured by FDIC or any Federal Government Agency; not a deposit of or guaranteed by the bank or any bank affiliate.<br />
-                            <br />
-                            3&nbsp; Credit file monitoring may take several days to begin following activation.<br />
-                            <br />
-                            4&nbsp; Registration/Activation Required
-                          </p>
+                            <p>2&nbsp; Registration/Activation Required.</p>
 
+                            <p>3&nbsp; $4 Excessive Activity charge per debit in excess of 9 per quarter.</p>
 
-                        </div>
-                      </div>
+                            <p>4&nbsp; We'll waive 5 non-Beko Federal Credit Union (BEKOFCU) ATM cash withdrawal fees per month.</p>
+                          </div>
 
-
-
-
-                      <div class="q2-section call-to-action-section gutter-none">
-                        <div class="q2-wrap">
-                          <p>Looking to report a lost or stolen card?</p>
-
-                          <a href="reporting-a-lost-card.php" class="button" aria-label="Start here by going to our Reporting a Lost or Stolen Card page">Start Here</a>
 
                         </div>
                       </div>
@@ -3764,9 +3613,9 @@
         "baseUrl": "\/",
         "scriptPath": null,
         "pathPrefix": "",
-        "currentPath": "node\/1",
+        "currentPath": "node\/38",
         "currentPathIsAdmin": false,
-        "isFront": true,
+        "isFront": false,
         "currentLanguage": "en"
       },
       "pluralDelimiter": "\u0003",

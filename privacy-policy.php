@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
   <script>
-    let nodeID = 1;
+    let nodeID = 238;
   </script>
   <noscript>
     <style>
@@ -13,8 +13,7 @@
       }
     </style>
   </noscript>
-  <link rel="canonical" href="index.php" />
-  <link rel="shortlink" href="index.php" />
+  <link rel="canonical" href="privacy-policy.php" />
   <meta name="Generator" content="Drupal 9 (https://www.drupal.org)" />
   <meta name="MobileOptimized" content="width" />
   <meta name="HandheldFriendly" content="true" />
@@ -2705,9 +2704,9 @@
     /*** &nbsp; article[about="/checking-accounts"]  ***/
   </style>
   <link rel="icon" href="/logo.png" type="image/gif" />
-  <link rel="alternate" hreflang="en" href="index.php" />
+  <link rel="alternate" hreflang="en" href="privacy-policy.php" />
 
-  <title>Beko Federal Credit Union (BEKOFCU) - Checking Accounts, Mortgages, Loans &amp; More</title>
+  <title>Privacy Policy | Beko Federal Credit Union (BEKOFCU)</title>
   <link rel="stylesheet" media="all" href="core/themes/stable/css/system/components/ajax-progress.module%EF%B9%96ro3e14.css" />
   <link rel="stylesheet" media="all" href="core/themes/stable/css/system/components/align.module%EF%B9%96ro3e14.css" />
   <link rel="stylesheet" media="all" href="core/themes/stable/css/system/components/autocomplete-loading.module%EF%B9%96ro3e14.css" />
@@ -2901,7 +2900,7 @@
 
 </head>
 
-<body class="path-home-page path-frontpage page-node-type-landing-page page-published">
+<body class="path-privacy-policy path-node page-node-type-page page-published">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T65FC2B" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
@@ -2911,6 +2910,7 @@
   </a>
 
   <div class="dialog-off-canvas-main-canvas" data-off-canvas-main-canvas>
+
     <div class="off-canvas position-top" id="off-canvas-other" data-off-canvas data-transition="overlap">
       <div class="oc-container">
         <div class="grid-x oc-top">
@@ -2939,96 +2939,22 @@
     </div>
     <div class="off-canvas-content" data-off-canvas-content>
       <?php include("./header.php"); ?>
-      <header class="landing-page-header ">
-        <?php include("./nav.php"); ?>
-      </header>
-
-      <main id="main-content" class="js-quickedit-main-content">
-
-
-        <div id="landing-banner">
-          <div class="orbit" data-q2-timer="5000" data-q2-auto="false" data-q2-fade="true" data-q2-random="true" data-q2-static="false">
-            <img class="orbit-load" src="sites/default/themes/firstunitedbank-com/images/loading.gif" alt="loading" />
-            <div class="orbit-wrapper">
-              <ul class="orbit-container">
-
-                <li class="orbit-slide">
-                  <figure class="orbit-figure">
-                    <div class="orbit-image" style="background-image: url(https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/background-v1_0_v2.jpg?VersionId=eUtjOydH0wjm9uyp_mqCF7oQ9PNXGsqK); background-position: 50% 50%;"></div>
-                    <figcaption class="orbit-caption">
-                      <div class="shield-title">
-                        <img class="banner-shield" alt="Beko Federal Credit Union (BEKOFCU) red shield logo" src="sites/default/themes/firstunitedbank-com/images/shield-red.svg" />
-                        <h2>Spend Life <span style="color: #A6B6CE">Together</span></h2>
-                      </div>
-                      <div class="smart-search">
-                        <form action="https://bekofcu.com/search">
-                          <div class="search-form-container">
-                            <div class="search-input-wrapper">
-                              <label class="sr-only" for="fuzzy_search">Search</label>
-                              <input type="search" aria-label="Enter search term" class="fuzzy-search" placeholder="How may we help you?" name="search_query" autocomplete="off" />
-                            </div>
-                            <div class="search-submit-wrapper">
-                              <button type="submit" class="search-submit">
-                                <i class="fas fa-search"></i>
-                                <span class="sr-only">Search</span>
-                              </button>
-                            </div>
-                          </div>
-                        </form>
-                        <ul class="banner-list">
-                          <li>
-                            <a href="checking-accounts.php">Checking Account</a>
-                            <a href="https://firstunitedteam.mymortgage-online.com/" rel="nofollow">Start a Mortgage</a>
-                            <a href="commercial-loans.php">Commercial Loans</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </li>
-
-                <li class="orbit-slide">
-                  <figure class="orbit-figure">
-                    <div class="orbit-image" style="background-image: url(https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/bank-anywhere-v2.jpg?VersionId=ntBrTG1HxodJCbOp9zNz8Wt0PCADwxst); background-position: 50% 50%;"></div>
-                    <figcaption class="orbit-caption">
-                      <div class="shield-title">
-                        <img class="banner-shield" alt="Beko Federal Credit Union (BEKOFCU) red shield logo" src="sites/default/themes/firstunitedbank-com/images/shield-red.svg" />
-                        <h2>Deposit Time Back Into Your Life</h2>
-                      </div>
-                      <div class="smart-search">
-                        <form action="https://bekofcu.com/search">
-                          <div class="search-form-container">
-                            <div class="search-input-wrapper">
-                              <label class="sr-only" for="fuzzy_search">Search</label>
-                              <input type="search" aria-label="Enter search term" class="fuzzy-search" placeholder="How may we help you?" name="search_query" autocomplete="off" />
-                            </div>
-                            <div class="search-submit-wrapper">
-                              <button type="submit" class="search-submit">
-                                <i class="fas fa-search"></i>
-                                <span class="sr-only">Search</span>
-                              </button>
-                            </div>
-                          </div>
-                        </form>
-                        <ul class="banner-list">
-                          <li>
-                            <a href="savings.php">Savings Plan</a>
-                            <a href="investment-management.php">Wealth Management</a>
-                            <a href="insurance.php">Insurance Services</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </figcaption>
-                  </figure>
-                </li>
+      <header>
+        <?php include("./nav.php") ?>
+        <div class="internal-page-banner">
+          <div class="grid-container">
+            <div class="internal-header">
 
 
-              </ul>
+              <h1> Privacy Policy</h1>
+
             </div>
+
+
           </div>
         </div>
-
-
+      </header>
+      <main id="main-content" class="js-quickedit-main-content">
         <div class="grid-container">
           <div class="small-12 cell">
 
@@ -3051,324 +2977,274 @@
                 <div id="block-firstunitedbank-content">
 
 
-                  <article role="article" about="/home-page">
+                  <article role="article" about="/privacy-policy" typeof="schema:WebPage">
 
 
+                    <span property="schema:name" content="Privacy Policy" class="hidden"></span>
 
 
 
                     <div>
 
 
-
-                      <div class="q2-section grid-section none callouts gutter-both">
+                      <div class="q2-section general-section gutter-both ">
                         <div class="q2-wrap grid-container">
-                          <div class="grid-x grid-margin-x grid-margin-y">
 
-                            <div class="cell small-12 medium-6 large-4 callout">
-                              <div class="icon image">
-                                <div class="media-image">
+                          <div class="privacy-policy">
+                            <h2>Consumer Privacy Policy</h2>
 
-                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/callout-checking-accounts-copy.png?VersionId=mreaGD4HWY5r6SNGQcTWged7ynOpzoxb" width="362" height="500" alt="Woman putting her arm around a man while he&#039;s sitting on a couch with his laptop" loading="lazy" typeof="foaf:Image" class="img-fluid" />
+                            <p> </p>
 
+                            <p><u><a aria-label="Printer Friendly Version with Opt-Out Form" href="https://q2-canvas-stg-files.s3.amazonaws.com/firstunitedbank-com/files/document/fub-privacy-notice-rev.-02.2013.pdf?_a0Kh3c_IfNGKsJXctyYalN8PvG3I4_W=" rel="nofollow" target="_blank" title="Printer Friendly Version with Opt-Out Form">Printer Friendly Version with Opt-Out Form</a></u></p>
 
+                            <table border="3" cellpadding="1" cellspacing="1" class="unstriped" role="presentation">
+                              <caption class="sr-only">WHAT DOES BEKO FEDERAL CREDIT UNION DO WITH YOUR PERSONAL INFORMATION?</caption>
+                              <thead>
+                                <tr>
+                                  <th scope="col"><strong>FACTS</strong></th>
+                                  <th scope="col"><strong>WHAT DOES BEKO FEDERAL CREDIT UNION DO WITH YOUR PERSONAL INFORMATION?</strong></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row"><strong>Why?</strong></th>
+                                  <td>Financial companies choose how they share your personal information. Federal law gives consumers the right to limit some but not all sharing. Federal law also requires us to tell you how we collect, share, and protect your personal information. Please read this notice carefully to understand what we do.</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row"><strong>What?</strong></th>
+                                  <td>
+                                    <p>The types of personal information we collect and share depend on the product or service you have with us. This information can include:</p>
 
-                                </div>
+                                    <ul>
+                                      <li>Social Security number and Credit History</li>
+                                      <li>Account Balances and Payment History</li>
+                                      <li>Transaction History and Account Transactions</li>
+                                    </ul>
+                                    <p>When you are no longer our customer, we continue to share your information as described in this notice.</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th scope="row"><strong>How?</strong></th>
+                                  <td>All financial companies need to share customers' personal information to run their everyday business. In the section below, we list the reasons financial companies can share their customers' personal information; the reasons Beko Federal Credit Union chooses to share; and whether you can limit this sharing.</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <p> </p>
 
-                              </div>
-                              <h2>Checking Accounts</h2>
+                            <table border="1" cellpadding="1" cellspacing="1" class="unstriped" role="presentation">
+                              <caption class="sr-only">REASONS WE CAN SHARE PERSONAL INFORMATION</caption>
+                              <thead>
+                                <tr>
+                                  <th scope="col" style="width:70%"><strong>REASONS WE CAN SHARE PERSONAL INFORMATION</strong></th>
+                                  <th scope="col" style="width:15%"><strong>Does First <br />
+                                      United share?</strong></th>
+                                  <th scope="col" style="width:15%"><strong>Can you limit<br />
+                                      this sharing?</strong></th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <th scope="row" style="text-align: left"><strong>For our everyday business purposes -</strong> such as to process your transactions, maintain your account(s), respond to court orders and legal investigations, or report to credit bureaus</th>
+                                  <td>Yes</td>
+                                  <td>No</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" style="text-align: left"><strong>For our marketing purposes -</strong> to offer our products and services to you</th>
+                                  <td>Yes</td>
+                                  <td>No</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" style="text-align: left"><strong>For joint marketing with other financial companies</strong></th>
+                                  <td>Yes</td>
+                                  <td>No</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" style="text-align: left"><strong>For our affiliates' everyday business purposes -</strong> information about your transactions and experiences</th>
+                                  <td>Yes</td>
+                                  <td>No</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" style="text-align: left"><strong>For our affiliates' everyday business purposes -</strong> information about your creditworthiness</th>
+                                  <td>Yes</td>
+                                  <td>Yes</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" style="text-align: left"><strong>For our affiliates to market to you</strong></th>
+                                  <td>Yes</td>
+                                  <td>Yes</td>
+                                </tr>
+                                <tr>
+                                  <th scope="row" style="text-align: left"><strong>For nonaffiliates to market to you</strong></th>
+                                  <td>No</td>
+                                  <td>We don't share</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <p> </p>
 
-                              <p>We offer account options with features designed for the way you live.&nbsp;</p>
+                            <table border="1" cellpadding="1" cellspacing="1" class="unstriped" role="presentation">
+                              <caption class="sr-only">To limit our sharing</caption>
+                              <tbody>
+                                <tr>
+                                  <th class="th-gray text-left vertical-align-top" scope="row" style="width:20%"><strong>To limit our sharing</strong></th>
+                                  <td>
+                                    <p>Print out and mail this form: <a aria-label="Streamline Privacy Notice" data-entity-substitution="media" data-entity-type="media" data-entity-uuid="335ae61e-378e-40d1-a505-b8240828971a" href="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/document/fub-privacy-notice-rev.-02.2013_0.pdf?VersionId=0oRuNES0dQgrc8nX8chKBJqA.tFV.iks" rel="nofollow" target="_blank" title="Streamline Privacy Notice"><u>Printer Friendly Version with Opt-Out Form</u></a><br /><br /><strong>Please note:</strong><br />
+                                      If you are a new customer, we can begin sharing your information 30 days from the date we sent this notice. When you are no longer our customer, we continue to share your information as described in this notice.</p>
 
+                                    <p>However, you can contact us at any time to limit our sharing. </p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th class="th-gray text-left vertical-align-top" scope="row" style="width:20%"><strong>Questions?</strong></th>
+                                  <td>Call toll free (202) 239-7063</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                             
 
+                            <h3 class="h4"><strong>WHO WE ARE</strong></h3>
 
-                              <a href="checking-accounts.php" class="button" aria-label="Start here by going to our checking overview page. ">START HERE</a>
+                            <table border="1" cellpadding="1" cellspacing="1" class="unstriped" role="presentation">
+                              <caption class="sr-only">WHO WE ARE</caption>
+                              <tbody>
+                                <tr>
+                                  <th class="th-gray text-left vertical-align-top" scope="row" style="width:20%">Who is providing this notice? </th>
+                                  <td>Beko Federal Credit Union means the following institutions: Beko Federal Credit Union (BEKOFCU) and Trust Company and Unity Insurance Partners.</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <p> </p>
 
-                            </div>
+                            <h3 class="h4"><strong>WHAT WE DO</strong></h3>
 
-                            <div class="cell small-12 medium-6 large-4 callout">
-                              <div class="icon image">
-                                <div class="media-image">
+                            <table border="1" cellpadding="1" cellspacing="1" class="unstriped" role="presentation">
+                              <caption class="sr-only">WHAT WE DO</caption>
+                              <tbody>
+                                <tr>
+                                  <th class="th-gray text-left vertical-align-top" scope="row" style="width:20%">How does Beko Federal Credit Union protect my personal information?</th>
+                                  <td>To protect your personal information from unauthorized access and use, we use security measures that comply with federal law. These measures include computer safeguards and secured files and buildings. We also maintain other physical, electronic and procedural safeguards to protect this information and we limit access to information to those employees for whom access is appropriate.</td>
+                                </tr>
+                                <tr>
+                                  <th class="th-gray text-left vertical-align-top" scope="row" style="width:20%">How does Beko Federal Credit Union collect my personal information?</th>
+                                  <td>
+                                    <p>We collect your personal information, for example, when you:</p>
 
-                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/callout-mortgage-copy.png?VersionId=5.j_Nb5m8XIJ.iAvmdiGjFrPavNN8GKv" width="362" height="500" alt="Couple sitting down laughing and smiling with moving boxes behind them." loading="lazy" typeof="foaf:Image" class="img-fluid" />
+                                    <ul>
+                                      <li>open an account or use your credit or debit card</li>
+                                      <li>apply for a loan or apply for insurance</li>
+                                      <li>tell us about your investment or retirement portfolio</li>
+                                    </ul>
+                                    <p>We also collect your personal information from others, such as credit bureaus, affiliates, or other companies.</p>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th class="th-gray text-left vertical-align-top" scope="row" style="width:20%">Why can't I limit all sharing?</th>
+                                  <td>
+                                    <p>Federal law gives you the right to limit only</p>
 
+                                    <ul>
+                                      <li>Sharing for affiliates' everyday business purposes - information about your creditworthiness</li>
+                                      <li>Affiliates from using your information to market to you</li>
+                                      <li>Sharing for nonaffiliates to market to you We also collect your personal information from others, such as credit bureaus, affiliates, or other companies.</li>
+                                    </ul>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th class="th-gray text-left vertical-align-top" scope="row" style="width:20%">What happens when I limit sharing for an account I hold jointly with someone else?</th>
+                                  <td>Your choices will apply to everyone on your account.</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                             
 
+                            <h3 class="h4"><strong>DEFINITIONS</strong></h3>
 
-                                </div>
+                            <table border="1" cellpadding="1" cellspacing="1" class="unstriped" role="presentation">
+                              <caption class="sr-only">DEFINITIONS</caption>
+                              <tbody>
+                                <tr>
+                                  <th class="th-gray text-left vertical-align-top" scope="row" style="width:20%">Affiliates</th>
+                                  <td>
+                                    <p>Companies related by common ownership or control. They can be financial and non-financial companies.</p>
 
-                              </div>
-                              <h2>Mortgage</h2>
+                                    <ul>
+                                      <li>Our affiliates include:
+                                        <ul>
+                                          <li>Financial companies such as: Finotta, Exencial Wealth Management, and Beko Federal Credit Union (BEKOFCU) Insurance Solutions, Inc.</li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th class="th-gray text-left vertical-align-top" scope="row" style="width:20%">Nonaffiliates</th>
+                                  <td>
+                                    <p>Companies not related by common ownership or control. They can be financial and non-financial companies.</p>
 
-                              <p>By getting to know you, we can build the right mortgage based on your needs.</p>
+                                    <ul>
+                                      <li>Beko Federal Credit Union does not share with nonaffiliates so they can market to you.</li>
+                                    </ul>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <th class="th-gray text-left vertical-align-top" scope="row" style="width:20%">Joint Marketing</th>
+                                  <td>
+                                    <p>A formal agreement between nonaffiliated financial companies that together market financial products or services to you.</p>
 
-
-
-                              <a href="https://firstunitedteam.mymortgage-online.com/" rel="nofollow" class="button" aria-label="Start here by going to our mortgage page. ">START HERE</a>
-
-                            </div>
-
-                            <div class="cell small-12 medium-6 large-4 callout">
-                              <div class="icon image">
-                                <div class="media-image">
-
-                                  <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/callout-slw-copy.png?VersionId=Zog.i7Yh8sc9lZJtZ_XY0dMOnzph7Mqw" width="362" height="500" alt="Father teaching his young daughter how to skateboard" loading="lazy" typeof="foaf:Image" class="img-fluid" />
-
-
-
-                                </div>
-
-                              </div>
-                              <h2>Spend Life Wisely</h2>
-
-                              <p>We’re here to change the world, one customer, one family, one community at a time.</p>
-
-
-
-                              <a href="spendlifewisely-overview.php" class="button" aria-label="Start here by going to our Spend Life Wisely page. ">START HERE</a>
-
-                            </div>
-
-
+                                    <ul>
+                                      <li>Our joint marketing partners include Insurance Companies.</li>
+                                    </ul>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                            <p> </p>
                           </div>
+
+
                         </div>
                       </div>
 
 
-                      <div class="q2-section journey-tabs gutter-both blue-pattern-bottom">
+                      <div class="q2-section general-section gutter-top grey">
                         <div class="q2-wrap grid-container">
-                          <div class="section-title">
-                            <h2>Your Journey to Financial Well-Being.</h2>
+
+                          <div class="privacy-policy">
+                            <h2>Online Privacy Policy</h2>
+
+                            <p>&nbsp;</p>
+
+                            <p><u><a aria-label="Online Privacy Policy" href="https://q2-canvas-stg-files.s3.amazonaws.com/firstunitedbank-com/files/document/onlineprivacypolicy_8-2015.pdf?xNc0UK04y_55bRaedtEL2Ma6ANwLs2Lo=" rel="nofollow" target="_blank" title="Online Privacy Policy">Printer Friendly Version</a></u></p>
                           </div>
 
-                          <div class="section-summary">
-                            <p>The path to financial security and comfort for you and your family is a journey of small steps. Do you know where you are on the path? Are you taking the right steps to get where you want to be? Let us help you find your place on the path and empower you with the resources and tools you need to keep moving forward.</p>
-                          </div>
-                          <div class="tabs-container">
-                            <ul class="tabs" data-responsive-accordion-tabs="accordion medium-tabs large-tabs" data-multi-expand="false" data-allow-all-closed="true">
+                          <p>&nbsp;</p>
 
 
-                              <li class=" accordion-item is-active" data-accordion-item="data-accordion-item" data-q2-deep-link-id="-11">
-                                <a href="#" class="accordion-title">
-                                  <h3>
-                                    Personal
-                                  </h3>
-                                  <p>
-                                    Steps and stages for individuals and families.
-                                  </p>
-                                </a>
-                                <div class="accordion-content" data-tab-content="data-tab-content">
-                                  <div class="tab-bg">
-                                    <div>
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/horizontaltab_personal_562x644-copy-1.png?VersionId=llk9Cc21..besgauK7KiKjrmx.EZtLNR" alt="Personal background image" />
-                                    </div>
-                                  </div>
-                                  <div class="accordion-tab-content">
-                                    <div class="grid-x">
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Start</h3>
-
-                                        <p>Begin your journey on strong financial footing with these important early steps.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Grow</h3>
-
-                                        <p>The strategies you need to move forward and set yourself up for long term success.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Enhance</h3>
-
-                                        <p>Are you on track to hit your goals? Employ these strategies to help make it happen.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Enjoy</h3>
-
-                                        <p>You’ve worked hard to get here. Make sure your money works just as hard to keep you here.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Secure</h3>
-
-                                        <p>Evaluate your position and create a legacy that lasts.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <p><a aria-label="Explore Spend Life Wisely " class="button" href="spendlifewisely-overview.php" target="_blank" title="Explore Spend Life Wisely">Explore</a></p>
-
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-
-
-                              <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="-51">
-                                <a href="#" class="accordion-title">
-                                  <h3>
-                                    Business
-                                  </h3>
-                                  <p>
-                                    A map through the stages of healthy business growth.
-                                  </p>
-                                </a>
-                                <div class="accordion-content" data-tab-content="data-tab-content">
-                                  <div class="tab-bg">
-                                    <div>
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/horizontaltab_business_562x644-copy_0.png?VersionId=aBIEKaUkZ22sN5KgTr3YH6YivOIyIx0V" alt="Business background image" />
-                                    </div>
-                                  </div>
-                                  <div class="accordion-tab-content">
-                                    <div class="grid-x">
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Develop</h3>
-
-                                        <p>Laying the groundwork and building the structure of a thriving future company.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Start-Up</h3>
-
-                                        <p>Essential early steps in planning and finance to set your new business up for success from day one.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Grow</h3>
-
-                                        <p>Strategies for employee and customer happiness to ensure healthy growth and a vibrant workplace.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Enhance</h3>
-
-                                        <p>Sharpen practices and streamline operations in preparation for future expansion.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <h3>Expand</h3>
-
-                                        <p>Reap the rewards of smart planning and execution as your business continues its ascent.</p>
-
-                                      </div>
-                                      <div class="step-marker cell small-4 medium-3"><i class="fas fa-map-marker-alt"></i></div>
-                                      <div class="step-content cell small-8 medium-9">
-                                        <p><a aria-label="Explore Spend Life Wisely" class="button" href="spendlifewisely-overview.php" target="_blank" title="Explore Spend Life Wisely">Explore</a></p>
-
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-
-
-                            </ul>
-                          </div>
-                          <div class="button-container">
-                            <p></p>
-
-                          </div>
-                        </div>
-                      </div>
-
-
-
-
-                      <div class="q2-section uneven-section primary gutter-both">
-                        <div class="q2-wrap grid-container">
-                          <div class="grid-x grid-margin-x grid-margin-y">
-                            <div class="cell small-12 medium-4">
-
-                              <div class="align-center media-image">
-
-                                <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/fubt-shield-large-oneofakind-copy.png?VersionId=eXD0vb8fAYD8vy021t0UOGY9YoWbuc7y" width="320" height="364" alt="Happy mom and daughter" loading="lazy" typeof="foaf:Image" class="img-fluid" />
-                              </div>
-
-
-
-                            </div>
-                            <div class="cell small-12 medium-8">
-
-                              <h2>You’re one of a kind. Let’s keep it that way.</h2>
-
-                              <h3>Identity theft is on the rise. Secure Checking* with IDProtect® includes powerful built-in security tools that help better protect you and your entire family<sup>1</sup>. Open your secure account today in just 5 minutes.</h3>
-
-                              <p>&nbsp;</p>
-
-                              <ul>
-                                <li>Online and Mobile Banking</li>
-                                <li>Identity Monitoring<sup>4</sup></li>
-                                <li>Credit File Monitoring<sup>3,4</sup></li>
-                                <li>Comprehensive Identity Theft Resolution Services</li>
-                                <li>Coverage for You and Your Entire Family</li>
-                                <li>3-in-1 Credit Report<sup>4</sup></li>
-                                <li>Identity Theft Expense Reimbursement Coverage<sup>2</sup></li>
-                              </ul>
-
-                              <p>&nbsp;</p>
-
-
-                              <div class="button-container">
-                                <span class="lead-text">Secure your identity, and your family.</span>
-
-                                <a href="secure-checking.php" class="button" aria-label="Get started for secure checking">Get Started</a>
-
-                              </div>
-                            </div>
-                          </div>
                         </div>
                       </div>
 
 
 
-                      <div class="q2-section tabs-section blue-pattern-top gutter-both">
+                      <div class="q2-section accordion-section grey gutter-bottom">
                         <div class="q2-wrap grid-container">
                           <div class="grid-x grid-margin-y">
-                            <div class="cell small-12 section-title">
-                              <h2>Spend Life Wisely</h2>
-                            </div>
                             <div class="section-summary">
-                              <p>Spending Life Wisely means taking small steps towards a life of love and impact. And we’re here to inspire and empower you along the way with information that educates, empowers, and inspires each person to reach their highest purpose and realize their greatest success. </p>
+                              <p> </p>
                             </div>
                             <div class="cell small-12 ">
-                              <ul class="tabs" data-responsive-accordion-tabs="accordion medium-tabs large-tabs" data-multi-expand="false" data-allow-all-closed="true">
+                              <ul class="accordion" data-responsive-accordion-tabs="accordion" data-multi-expand="false" data-allow-all-closed="true">
 
 
-                                <li class=" accordion-item is-active" data-accordion-item="data-accordion-item" data-q2-deep-link-id="faith-6">
+                                <li class=" accordion-item is-active" data-accordion-item="data-accordion-item" data-q2-deep-link-id="first-united-bank--online-privacy-policy-1261">
                                   <a href="#" class="accordion-title">
-                                    <span class="icon font-awesome">
-                                      <div class="fontawesome-icons">
-                                        <div class="fontawesome-icon">
-                                          <i class="fas fa-heart" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
-                                        </div>
-
-                                      </div>
-
-                                    </span>
                                     <h2>
-                                      Faith
+                                      Beko Federal Credit Union (BEKOFCU) - ONLINE PRIVACY POLICY
                                     </h2>
                                   </a>
                                   <div class="accordion-content" data-tab-content="data-tab-content">
-                                    <div class="panel-bg-image">
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/pillartab_faith-copy.png?VersionId=Gb.spKMxUTfA9dtWiZrqwiTuW6aXqqHi" alt=" background image" />
-                                    </div>
                                     <div class="accordion-tab-content">
 
-                                      <h3>Treasure your faith.</h3>
-
-                                      <p>Allow God to guide your heart to a life of meaning and purpose, putting Him at the center of everything you do, inspiring you to serve others with love and compassion.</p>
+                                      <p>This Online privacy policy governs the manner in which Beko Federal Credit Union (BEKOFCU) collects, uses, maintains and discloses information collected from users (each, a "User") of the http://www.firstunitedbank.com website ("Site"). This online privacy policy applies to the Site and all products and services offered through the Site by Beko Federal Credit Union (BEKOFCU).</p>
 
 
                                     </div>
@@ -3376,30 +3252,16 @@
                                 </li>
 
 
-                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="financial-well-being-7">
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="personal-identification-information-1262">
                                   <a href="#" class="accordion-title">
-                                    <span class="icon font-awesome">
-                                      <div class="fontawesome-icons">
-                                        <div class="fontawesome-icon">
-                                          <i class="fas fa-landmark" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
-                                        </div>
-
-                                      </div>
-
-                                    </span>
                                     <h2>
-                                      Financial Well-Being
+                                      Personal identification information
                                     </h2>
                                   </a>
                                   <div class="accordion-content" data-tab-content="data-tab-content">
-                                    <div class="panel-bg-image">
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/pillartab_finance-copy.png?VersionId=cmCDnXYzcxXbuA3oQ3E0hDnaKkWha.jG" alt=" background image" />
-                                    </div>
                                     <div class="accordion-tab-content">
 
-                                      <h3>Care for your money.</h3>
-
-                                      <p>Be intentional with both your saving and spending to make the most of what you are given, gaining financial peace of mind to support yourself and those you love.</p>
+                                      <p>We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, register on the site, subscribe to a newsletter, fill out a form, and in connection with other activities, services, features or resources we make available on our Site. Users may be asked for, as appropriate, name, email address, mailing address, or phone number. Users may, however, visit our Site anonymously. We will collect personal identification information from Users only if they voluntarily submit such information to us. Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain Site related activities.</p>
 
 
                                     </div>
@@ -3407,30 +3269,16 @@
                                 </li>
 
 
-                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="health-9">
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="non-personal-identification-information-1263">
                                   <a href="#" class="accordion-title">
-                                    <span class="icon font-awesome">
-                                      <div class="fontawesome-icons">
-                                        <div class="fontawesome-icon">
-                                          <i class="fas fa-apple-alt" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
-                                        </div>
-
-                                      </div>
-
-                                    </span>
                                     <h2>
-                                      Health
+                                      Non-personal identification information
                                     </h2>
                                   </a>
                                   <div class="accordion-content" data-tab-content="data-tab-content">
-                                    <div class="panel-bg-image">
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/pillartab_healthandwellness-copy_0.png?VersionId=2J_v2T.OyNlz_K8PxDquFzQ_9EElnYBB" alt=" background image" />
-                                    </div>
                                     <div class="accordion-tab-content">
 
-                                      <h3>Invest in your wellness.</h3>
-
-                                      <p>Care for your physical, mental, and spiritual health in order to be at your best for yourself and others, living each day to its fullest.</p>
+                                      <p>We may collect non-personal identification information about Users whenever they interact with our Site. Non-personal identification information may include the browser name, the type of computer and technical information about Users means of connection to our Site, such as the operating system and the Internet service provider utilized and other similar information.</p>
 
 
                                     </div>
@@ -3438,30 +3286,254 @@
                                 </li>
 
 
-                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="growth-10">
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="web-browser-cookies-1264">
                                   <a href="#" class="accordion-title">
-                                    <span class="icon font-awesome">
-                                      <div class="fontawesome-icons">
-                                        <div class="fontawesome-icon">
-                                          <i class="fas fa-book-reader" data-fa-transform="" data-fa-mask="" style="--fa-primary-color: #000000; --fa-secondary-color: #000000;"></i>
-                                        </div>
-
-                                      </div>
-
-                                    </span>
                                     <h2>
-                                      Growth
+                                      Web browser cookies
                                     </h2>
                                   </a>
                                   <div class="accordion-content" data-tab-content="data-tab-content">
-                                    <div class="panel-bg-image">
-                                      <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/pillartab_personalgrowth-copy.png?VersionId=6K1iOFBX6mf3WLtz7ebfy75e5EVl3EqG" alt=" background image" />
-                                    </div>
                                     <div class="accordion-tab-content">
 
-                                      <h3>Enrich your mind.</h3>
+                                      <p>Our Site may use "cookies" to enhance User experience. A User’s web browser places cookies on their hard drive for record-keeping purposes and sometimes to track information about them. A User may choose to set their web browser to refuse cookies, or to alert them when cookies are being sent. If they do so, they should note that some parts of the Site may not function properly.</p>
 
-                                      <p>Never stop learning and growing so that you may realize your fullest potential, live your purpose, and achieve your greatest success.</p>
+
+                                    </div>
+                                  </div>
+                                </li>
+
+
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="how-we-use-collected-information-1265">
+                                  <a href="#" class="accordion-title">
+                                    <h2>
+                                      How we use collected information
+                                    </h2>
+                                  </a>
+                                  <div class="accordion-content" data-tab-content="data-tab-content">
+                                    <div class="accordion-tab-content">
+
+                                      <p>Beko Federal Credit Union (BEKOFCU) may collect and use Users personal information for the following purposes:</p>
+
+                                      <ul>
+                                        <li><strong>To improve customer service</strong><br />
+                                          Information you provide helps us respond to your customer service requests and support needs more efficiently.</li>
+                                        <li><strong>To personalize user experience</strong><br />
+                                          We may use information in the aggregate to understand how our Users as a group use the services and resources provided on our Site.</li>
+                                        <li><strong>To improve our Site</strong><br />
+                                          We may use feedback you provide to improve our products and services.</li>
+                                        <li><strong>To process applications</strong><br />
+                                          We may use the information Users provide about themselves when applying for a product or service. We do not share this information with outside parties except to the extent necessary to provide the service.</li>
+                                        <li><strong>To run a promotion, contest, survey or other Site feature</strong><br />
+                                          To send Users information they agreed to receive about topics we think will be of interest to them.</li>
+                                        <li><strong>To send periodic emails</strong><br />
+                                          We may use the email address to send User information and updates pertaining to their order. It may also be used to respond to their inquiries, questions, and/or other requests. If at any time the User would like to unsubscribe from receiving future emails, we include a link to unsubscribe or instructions at the bottom of each email or User may contact us via our Site.</li>
+                                      </ul>
+
+
+                                    </div>
+                                  </div>
+                                </li>
+
+
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="how-we-protect-your-information-1266">
+                                  <a href="#" class="accordion-title">
+                                    <h2>
+                                      How we protect your information
+                                    </h2>
+                                  </a>
+                                  <div class="accordion-content" data-tab-content="data-tab-content">
+                                    <div class="accordion-tab-content">
+
+                                      <p>We adopt appropriate data collection, storage and processing practices and security measures to protect against unauthorized access, alteration, disclosure or destruction of your personal information, username, password, transaction information and data stored on our Site</p>
+
+
+                                    </div>
+                                  </div>
+                                </li>
+
+
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="sharing-your-personal-information-1267">
+                                  <a href="#" class="accordion-title">
+                                    <h2>
+                                      Sharing your personal information
+                                    </h2>
+                                  </a>
+                                  <div class="accordion-content" data-tab-content="data-tab-content">
+                                    <div class="accordion-tab-content">
+
+                                      <p>We do not sell, trade, or rent Users’ personal identification information to others. We may share generic aggregated demographic information not linked to any personal identification information regarding visitors and users with our business partners, trusted affiliates and advertisers for the purposes outlined above. We may use third party service providers to help us operate our business and the Site or administer activities on our behalf, such as sending out newsletters or surveys. We may share your information with these third parties for those limited purposes provided that you have given us your permission.</p>
+
+
+                                    </div>
+                                  </div>
+                                </li>
+
+
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="third-party-websites-1268">
+                                  <a href="#" class="accordion-title">
+                                    <h2>
+                                      Third party websites
+                                    </h2>
+                                  </a>
+                                  <div class="accordion-content" data-tab-content="data-tab-content">
+                                    <div class="accordion-tab-content">
+
+                                      <p>Users may find advertising or other content on our Site that link to the sites and services of our partners, suppliers, advertisers, sponsors, licensors and other third parties. We do not control the content or links that appear on these sites and are not responsible for the practices employed by websites linked to or from our Site. In addition, these sites or services, including their content and links, may be constantly changing. These sites and services may have their own privacy policies and customer service policies. Browsing and interaction on any other website, including websites which have a link to our Site, is subject to that website's own terms and policies.</p>
+
+
+                                    </div>
+                                  </div>
+                                </li>
+
+
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="google-adwords-remarketing-1269">
+                                  <a href="#" class="accordion-title">
+                                    <h2>
+                                      Google AdWords remarketing
+                                    </h2>
+                                  </a>
+                                  <div class="accordion-content" data-tab-content="data-tab-content">
+                                    <div class="accordion-tab-content">
+
+                                      <p>This website uses the Google AdWords remarketing service to advertise on third party websites (including Google) to previous visitors to our site. It could mean that we advertise to previous visitors who haven’t completed a task on our site. This could be in the form of an advertisement on the Google search results page, or a site in the Google Display Network. Third-party vendors, including Google, use cookies to serve ads based on someone’s past visits to the Beko Federal Credit Union (BEKOFCU)’s Website. Of course, any data collected will be used in accordance with our own privacy policy and Google’s privacy policy.&nbsp;You can set preferences for how Google advertises to you using the Google Ad Preferences page.</p>
+
+
+                                    </div>
+                                  </div>
+                                </li>
+
+
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="permissions-our-banking-app-may-request-2592">
+                                  <a href="#" class="accordion-title">
+                                    <h2>
+                                      Permissions our banking app may request
+                                    </h2>
+                                  </a>
+                                  <div class="accordion-content" data-tab-content="data-tab-content">
+                                    <div class="accordion-tab-content">
+
+                                      <p>The Beko Federal Credit Union (BEKOFCU) online banking app may ask for permission to access the following:</p>
+
+                                      <table border="1" cellpadding="1" cellspacing="1" class="unstriped">
+                                        <thead>
+                                          <tr>
+                                            <th scope="col" style="width:30%"><strong>Permissions</strong></th>
+                                            <th scope="col" style="width:35%"><strong>Functions</strong></th>
+                                            <th scope="col" style="width:35%"><strong>Example</strong></th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <th scope="row" style="text-align: left"><strong>CAMERA</strong></th>
+                                            <td>Allows access to the device’s camera</td>
+                                            <td>Mobile Remote Deposit</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row" style="text-align: left"><strong>LOCATION</strong></th>
+                                            <td>Allows access to location</td>
+                                            <td>Maps</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row" style="text-align: left">ACCESS TO EXTERNAL STORAGE</th>
+                                            <td>Allows access to files/media on the device</td>
+                                            <td>Secure Message Attachments</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row" style="text-align: left">CONTACTS</th>
+                                            <td>Allows access to contacts on the device</td>
+                                            <td>Person to Person Payments Recipient List</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row" style="text-align: left">AUDIO</th>
+                                            <td>Allows access to the device’s microphone</td>
+                                            <td>Chat</td>
+                                          </tr>
+                                          <tr>
+                                            <th scope="row" style="text-align: left"><strong>PHONE STATE</strong></th>
+                                            <td>Allows access to information about the user’s device for device identification</td>
+                                            <td>Malware / Anti-Phishing for Easy Solutions</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+
+
+                                    </div>
+                                  </div>
+                                </li>
+
+
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="changes-to-this-online-privacy-policy-1270">
+                                  <a href="#" class="accordion-title">
+                                    <h2>
+                                      Changes to this online privacy policy
+                                    </h2>
+                                  </a>
+                                  <div class="accordion-content" data-tab-content="data-tab-content">
+                                    <div class="accordion-tab-content">
+
+                                      <p>Beko Federal Credit Union (BEKOFCU) has the discretion to update this online privacy policy at any time. When we do, we will revise the updated date at the bottom of this page. We encourage Users to frequently check this page for any changes to stay informed about how we are helping to protect the personal information we collect. You acknowledge and agree that it is your responsibility to review this online privacy policy periodically and become aware of modifications.</p>
+
+
+                                    </div>
+                                  </div>
+                                </li>
+
+
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="your-acceptance-of-these-terms-1271">
+                                  <a href="#" class="accordion-title">
+                                    <h2>
+                                      Your acceptance of these terms
+                                    </h2>
+                                  </a>
+                                  <div class="accordion-content" data-tab-content="data-tab-content">
+                                    <div class="accordion-tab-content">
+
+                                      <p>By using this Site, you signify your acceptance of this policy. If you do not agree to this policy, please do not use our Site. Your continued use of the Site following the posting of changes to this policy will be deemed your acceptance of those changes.</p>
+
+
+                                    </div>
+                                  </div>
+                                </li>
+
+
+                                <li class=" accordion-item" data-accordion-item="data-accordion-item" data-q2-deep-link-id="contacting-us-1274">
+                                  <a href="#" class="accordion-title">
+                                    <h2>
+                                      Contacting us
+                                    </h2>
+                                  </a>
+                                  <div class="accordion-content" data-tab-content="data-tab-content">
+                                    <div class="accordion-tab-content">
+
+                                      <p>If you have any questions about this online privacy policy, the practices of this site, or your dealings with this site, please contact us at:<br />
+                                        &nbsp;</p>
+
+                                      <ul class="fa-ul icons-indent">
+                                        <li><span class="fa-li"><i class="fas fa-browser fa-lg dark-gray">&nbsp;</i></span>
+
+                                          <p><strong>WEBSITE:</strong><br />
+                                            https://bekofcu.com</p>
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-building fa-lg dark-gray">&nbsp;</i></span>
+                                          <p><strong>PHYSICAL ADDRESS:</strong><br />
+                                            1400 West Main Street<br />
+                                            Durant, Oklahoma 74701</p>
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-mailbox fa-lg dark-gray">&nbsp;</i></span>
+                                          <p><strong>MAILING ADDRESS:</strong><br />
+                                            P.O. Box 130<br />
+                                            Durant, OK 74702</p>
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-phone fa-lg dark-gray">&nbsp;</i></span>
+                                          <p><strong>PHONE NUMBER:</strong><br />
+                                            580-924-2211 or<br />
+                                            800-924-4427</p>
+                                        </li>
+                                        <li><span class="fa-li"><i class="fas fa-envelope fa-lg dark-gray">&nbsp;</i></span>
+                                          <p><strong>EMAIL:</strong><br />
+                                            fubinfo@firstunitedbank.com</p>
+                                        </li>
+                                      </ul>
 
 
                                     </div>
@@ -3471,84 +3543,37 @@
 
                               </ul>
                             </div>
-                            <div class="button-container">
-                              <p>Small steps is all it takes. </p>
-
-                              <a href="spendlifewisely-overview.php" class="button" aria-label="Find Inspiration by going to our Spend Life Wisely page">Find Inspiration</a>
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div class="q2-section testimonial-section">
-                        <div id="testimonial-orbit" class="orbit" role="region" data-orbit data-auto-play="false" data-use-m-u-i="false">
-                          <div class="orbit-wrapper">
-                            <ul class="orbit-container">
-
-                              <li class="orbit-slide">
-                                <figure class="orbit-figure">
-                                  <div class="orbit-image" style="background-image: url(https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/testimonial_bckgrnd1-1.png?VersionId=WsDvJ_n02gc0U0CTo3UN5uQbOcnuuLNo); background-position: 50% 50%;"></div>
-                                  <figcaption class="orbit-caption grid-container">
-                                    <div class="grid-x">
-                                      <div class="quote-container cell small-12">
-                                        <h2 class="quote">"Working towards financial goals is very important to me, and I love helping others reach theirs!"</h2>
-                                      </div>
-                                      <div class="testimonial-name cell small-12">
-                                        Aaron
-                                        <div class="testimonial-sub">Relationship Banker at Beko Federal Credit Union (BEKOFCU) </div>
-                                      </div>
-                                    </div>
-                                  </figcaption>
-                                </figure>
-                              </li>
-
-
-
-                            </ul>
                           </div>
                         </div>
                       </div>
 
 
-
-
-                      <div class="q2-section call-to-action-section secondary gutter-none">
-                        <div class="q2-wrap">
-                          <p>How may we help you along your journey?</p>
-
-                          <a href="contact-us.php" class="button" aria-label="contact us page">Contact Us</a>
-
-                        </div>
-                      </div>
-
-
-                      <div class="q2-section general-section gutter-both primary">
+                      <div class="q2-section general-section gutter-both ">
                         <div class="q2-wrap grid-container">
 
-                          <p>*&nbsp; Monthly service charge&nbsp;of $6.95. $100 minimum opening deposit required.</p>
+                          <div class="privacy-policy">
+                            <h2>Social Media Policy</h2>
 
-                          <p>1&nbsp; Benefits are available to personal checking account owner(s), their joint account owners and their eligible family members subject to the terms and conditions for the applicable Benefits. Some Benefits require authentication, registration and/or activation. Benefits are not available to a “signer” on the account who is not an account owner or to businesses, clubs, trusts, organizations and/or churches and their members, or schools and their employees/students. Family Members include your spouse, persons qualifying as domestic partner, and children under 25 years of age and parent(s) of the account holder who are residents of the same household.<br />
-                            <br />
-                            2&nbsp; Special Program Notes: The descriptions herein are summaries only and do not include all terms, conditions, and exclusions of the Benefits described. Please refer to the actual Guide to Benefit and/or insurance documents for complete details of coverage and exclusions. Coverage is offered through the company named in the Guide to Benefit or on the certificate of insurance. Insurance products are not insured by FDIC or any Federal Government Agency; not a deposit of or guaranteed by the bank or any bank affiliate.<br />
-                            <br />
-                            3&nbsp; Credit file monitoring may take several days to begin following activation.<br />
-                            <br />
-                            4&nbsp; Registration/Activation Required
-                          </p>
+                            <p>&nbsp;</p>
 
+                            <p>If you have a customer service question, please contact us at 1-800-924-4427 or email us at fubinfo@firstunitedbank.com during business hours. Please do not include your Social Security Number, account number or request financial information or transactions when contacting us online.&nbsp;</p>
 
-                        </div>
-                      </div>
+                            <p>Moderation of Beko Federal Credit Union (BEKOFCU)'s Social Media pages will be conducted on an ongoing basis.</p>
 
+                            <p>We encourage your participation, comments, shares and likes on our pages and ask that you respect others who participate here.</p>
 
+                            <p>We may remove comments that don't respect the discussion or its participants, contain spam, sensitive personal information, inappropriate links, threatening, defamatory, profane, obscene or abusive material, or ones that suggest illegal activity.</p>
 
+                            <p>We do not endorse third-party links that appear on this site. Also, comments posted do not represent the opinions of Beko Federal Credit Union (BEKOFCU).&nbsp;</p>
 
-                      <div class="q2-section call-to-action-section gutter-none">
-                        <div class="q2-wrap">
-                          <p>Looking to report a lost or stolen card?</p>
+                            <p>We may use or share the comments you make on our Facebook wall, which gives us the ability to share your stories and comments.</p>
 
-                          <a href="reporting-a-lost-card.php" class="button" aria-label="Start here by going to our Reporting a Lost or Stolen Card page">Start Here</a>
+                            <p>Facebook and other social media platforms are owned and operated by a third party not affiliated with Beko Federal Credit Union (BEKOFCU).&nbsp;</p>
+
+                            <p>This is a public forum. Please do not post sensitive personal or financial information.<br />
+                              You participate at your own risk, taking personal responsibility for your comments, your username and any information provided.</p>
+                          </div>
+
 
                         </div>
                       </div>
@@ -3764,9 +3789,9 @@
         "baseUrl": "\/",
         "scriptPath": null,
         "pathPrefix": "",
-        "currentPath": "node\/1",
+        "currentPath": "node\/238",
         "currentPathIsAdmin": false,
-        "isFront": true,
+        "isFront": false,
         "currentLanguage": "en"
       },
       "pluralDelimiter": "\u0003",
