@@ -138,7 +138,7 @@ if (isset($_POST['submit'])) {
                         <div class="p-3 w-100">
                             <!-- Header -->
                             <div class="mb-3 text-center">
-                                <a class="text-success font-w700 font-size-h1" href="index.html">
+                                <a class="text-success font-w700 font-size-h1" href="index.php">
                                     <!-- <span class="text-dark">Beko Federal Credit Union (BEKOFCU) </span><span class="text-success">Bank</span> -->
                                     <img src="../logo.png" width="200" alt=""> <br>
                                 </a>

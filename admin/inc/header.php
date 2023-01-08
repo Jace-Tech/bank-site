@@ -110,7 +110,7 @@ foreach ($admin_details as $admin) {
             <div class="bg-header-dark">
                 <div class="content-header bg-white-10">
                     <!-- Logo -->
-                    <a class="font-w600 text-white tracking-wide" href="index.html">
+                    <a class="font-w600 text-white tracking-wide" href="index.php">
                         <span class="smini-visible">
                             <span class="opacity-75">x</span>
                         </span>

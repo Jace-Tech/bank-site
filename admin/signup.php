@@ -125,7 +125,7 @@
                         <div class="p-3 w-100">
                             <!-- Header -->
                             <div class="mb-3 text-center">
-                                <a class="link-fx text-success font-w700 font-size-h1" href="index.html">
+                                <a class="link-fx text-success font-w700 font-size-h1" href="index.php">
                                     <span class="text-dark">BCA</span><span class="text-success">Mellon</span>
                                 </a>
                                 <p class="text-uppercase font-w700 font-size-sm text-muted">Create New Account</p>

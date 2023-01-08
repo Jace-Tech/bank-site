@@ -54,7 +54,7 @@ The CKEditor 4 npm package comes in the `standard-all` preset, so it includes al
 
 * [CKEditor 4 demo](https://ckeditor.com/ckeditor-4/)
 * [Documentation](https://ckeditor.com/docs/ckeditor4/latest/)
-* [API documentation](https://ckeditor.com/docs/ckeditor4/latest/api/index.html)
+* [API documentation](https://ckeditor.com/docs/ckeditor4/latest/api/index.php)
 * [Configuration reference](https://ckeditor.com/docs/ckeditor4/latest/api/CKEDITOR_config.html)
 * [CKEditor SDK with more samples](https://sdk.ckeditor.com/)
 

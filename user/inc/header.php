@@ -165,7 +165,7 @@ if ($title == "transfer" && $access == 0) {
             <div class="smini-visible-block">
                 <div class="content-header bg-header-dark">
                     <!-- Logo -->
-                    <a class="font-w600 text-white tracking-wide" href="index.html">
+                    <a class="font-w600 text-white tracking-wide" href="index.php">
                         D<span class="opacity-75">x</span>
                     </a>
                     <!-- END Logo -->
@@ -177,7 +177,7 @@ if ($title == "transfer" && $access == 0) {
             <div class="smini-hidden">
                 <div class="content-header justify-content-lg-center bg-header-dark">
                     <!-- Logo -->
-                    <a class="font-w600 text-white tracking-wide" href="index.html">
+                    <a class="font-w600 text-white tracking-wide" href="index.php">
                         Beko Federal<span class="opacity-75"> Credit...</span>
                     </a>
                     <!-- END Logo -->
