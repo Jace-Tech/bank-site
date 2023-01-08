@@ -5,6 +5,12 @@
   }
 </script>
 
+<style>
+  .input-group.q2-login-selector-container {
+    display: none !important;
+  }
+</style>
+
 <div>
   <div class="views-element-container" id="block-firstunitedbank-views-block-alerts-block-1">
     <div>
