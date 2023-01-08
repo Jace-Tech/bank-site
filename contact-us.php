@@ -3008,7 +3008,7 @@
                                     <div class="small-text black note"><strong>(Do not include Account or Social Security Number)</strong></div>
                                   </div>
 
-                                  <div class="g-recaptcha g-form-rc" data-sitekey="6LfsBMEbAAAAAE241wV0uHBbGGNbcRtgrZsnoqcN">&nbsp;</div>
+                                  <!-- <div class="g-recaptcha g-form-rc" data-sitekey="6LfsBMEbAAAAAE241wV0uHBbGGNbcRtgrZsnoqcN">&nbsp;</div> -->
                                   <label><input class="button radius expand align-right" name="submit" type="submit" value="Send Now" /> </label>
                                 </form>
                               </div>
