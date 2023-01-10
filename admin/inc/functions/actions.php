@@ -103,7 +103,7 @@ function AddAdmin($post) {
         $errors[] = "Enter preferred password!"  . "<br>";
     }
 
-    if (!$errors) {
+    if (!count($errors)) {
         $sql = "INSERT INTO admins (name, email, password) VALUES ('$name', '$mail', '$password')";
 
         $result = returnQuery($sql);

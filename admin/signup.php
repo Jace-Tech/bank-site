@@ -7,7 +7,7 @@
 
 
     if (isset($_POST['submit'])) {
-        print_r($_POST);
+        // print_r($_POST);
         $response = AddAdmin($_POST);
         print_r($response);
         if ($response === true) {
