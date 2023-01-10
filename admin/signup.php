@@ -5,26 +5,19 @@
     $nums = mysqli_num_rows(returnQuery($query));
     if($nums) redirect_to("signin.php");
 
-    function handleReg($data){
-        extract($data);
-        if($confirm_pwd != $password) {
-            echo "<script>alert('Passwords do not match')</script>";
-            return;
-        }
-
-        $sql = "INSERT INTO admins (name, email, password) VALUES ('$name', '$email', '$password')";
-        $response = returnQuery($sql);
-        if ($response) {
-            echo "<script>alert('entered')</script>";
-            redirect_to("signin.php");
-        } else {
-            echo "<script>alert('error')</script>";
-        }
-    }
-
 
     if (isset($_POST['submit'])) {
-       handleReg($_POST);
+        $response = AddAdmin($_POST);
+        if ($response === true) {
+            // echo "<script>alert('entered')</script>";
+            redirect_to("signin.php");
+        } else {
+            // echo "<script>alert('error')</script>";
+            $errors = $response;
+            foreach($errors as $err) {
+                echo "<script>alert($err)</script>";
+            }
+        }
     }
 
 
@@ -142,9 +135,9 @@
                                                 <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="signin.php">
                                                     <i class="fa fa-sign-in-alt text-muted mr-1"></i> Sign In
                                                 </a>
-                                                <!-- <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="" data-toggle="modal" data-target="#modal-terms">
+                                                <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="" data-toggle="modal" data-target="#modal-terms">
                                                     <i class="fa fa-book text-muted mr-1"></i> Read Terms
-                                                </a> -->
+                                                </a>
                                             </p>
                                         </div>
                                     </form>
