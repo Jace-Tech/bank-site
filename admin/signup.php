@@ -5,10 +5,14 @@
     $nums = mysqli_num_rows(returnQuery($query));
     if($nums) redirect_to("signin.php");
 
-
-    if (isset($_POST['submit'])) {
-        // print_r($_POST);
-        $sql = "INSERT INTO admins (name, email, password) VALUES ('$name', '$mail', '$password')";;
+    function handleReg(){
+        extract($_POST);
+        if($confirm_pwd != $password) {
+            echo "<script>alert('Passwords do not match')</script>";
+            return;
+        }
+        
+        $sql = "INSERT INTO admins (name, email, password) VALUES ('$name', '$email', '$password')";;
         $response =  returnQuery($sql);
         if ($response) {
             echo "<script>alert('entered')</script>";
@@ -16,6 +20,11 @@
         } else {
             echo "<script>alert('error')</script>";
         }
+    }
+
+
+    if (isset($_POST['submit'])) {
+       handleReg();
     }
 
 
