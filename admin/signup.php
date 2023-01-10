@@ -11,7 +11,7 @@
             echo "<script>alert('Passwords do not match')</script>";
             return;
         }
-
+        $password = encrypt($password);
         $sql = "INSERT INTO admins (fullname, email, password) VALUES ('$name', '$email', '$password')";
         $response = returnQuery($sql);
         if ($response) {
