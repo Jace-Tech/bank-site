@@ -31,6 +31,7 @@ if (isset($_GET['bill'])) {
 }
 
 
+$accountTypes = executeQuery("SELECT * FROM account_type");
 
 ?>
 <!-- END Header -->
@@ -114,6 +115,12 @@ if (isset($_GET['bill'])) {
                            
                             <select name="type" name="type" class="form-control">
                                 <option value="" selected disabled>Select account type</option>
+                                <?php foreach($accountTypes as $accountType): ?>
+                                    <option value="<?= $accountType['type']?>"> 
+                                        <?= $accountType['type'] ?>
+                                    </option>
+                                <?php endforeach; ?>
+<!-- 
                                 <option value="personal">Personal (Savings)</option>
                                 <option value="current">Current</option>
                                 <option value="checking">Checking</option>
@@ -121,7 +128,7 @@ if (isset($_GET['bill'])) {
                                 <option value="non_resident">Non Resident</option>
                                 <option value="online_banking">Online Banking</option>
                                 <option value="domiciliary_account">Domicialry Account</option>
-                                <option value="joint_account">Joint Account</option>
+                                <option value="joint_account">Joint Account</option> -->
                             </select>
                             
                         </div>

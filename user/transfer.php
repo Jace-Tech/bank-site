@@ -50,7 +50,8 @@ if (isset($_POST['submit'])) {
                                     <i class="far fa-user"></i>
                                 </span>
                             </div>
-                            <input type="text" name="recipent" onblur="getRecipent()" class="form-control" id="account_number" placeholder="Account Number">
+                            <!-- <input type="text" name="recipent" onblur="getRecipent()" class="form-control" id="account_number" placeholder="Account Number"> -->
+                            <input type="text" name="recipent" class="form-control" id="account_number" placeholder="Account Number">
                         </div>
                     </div>
 
@@ -91,7 +92,7 @@ if (isset($_POST['submit'])) {
                     </div>
 
                     <hr>
-                    <div class="form-group" id="make_transfer" style="display: none;">
+                    <div class="form-group" id="make_transfer">
                         <div class="input-group">
                             <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver">
                             <div class="input-group-append">

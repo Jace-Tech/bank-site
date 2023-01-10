@@ -26,6 +26,8 @@ if (isset($_POST['submit'])) {
     }
 }
 
+$accountTypes = executeQuery("SELECT * FROM account_type");
+
 ?>
 <!-- END Header -->
 
@@ -50,7 +52,8 @@ if (isset($_POST['submit'])) {
                                     <i class="fa fa-address-card"></i>
                                 </span>
                             </div>
-                            <input type="text" name="recipent" onblur="getRecipent()" class="form-control" id="account_number" placeholder="Account Number">
+                            <!-- <input type="text" name="recipent" onblur="getRecipent()" class="form-control" id="account_number" placeholder="Account Number"> -->
+                            <input type="text" name="recipent" class="form-control" id="account_number" placeholder="Account Number">
                         </div>
                     </div>
 
@@ -108,14 +111,11 @@ if (isset($_POST['submit'])) {
                            
                             <select name="type" name="type" class="form-control">
                                 <option value="" selected disabled>Select account type</option>
-                                <option value="personal">Personal (Savings)</option>
-                                <option value="current">Current</option>
-                                <option value="checking">Checking</option>
-                                <option value="fixed_deposit">Fixed Deposit</option>
-                                <option value="non_resident">Non Resident</option>
-                                <option value="online_banking">Online Banking</option>
-                                <option value="domiciliary_account">Domicialry Account</option>
-                                <option value="joint_account">Joint Account</option>
+                                <?php foreach($accountTypes as $accountType): ?>
+                                    <option value="<?= $accountType['type']?>"> 
+                                        <?= $accountType['type'] ?>
+                                    </option>
+                                <?php endforeach; ?>
                             </select>
                             
                         </div>
@@ -149,7 +149,7 @@ if (isset($_POST['submit'])) {
                     <input type="hidden" id="user" value="<?= $_SESSION['user']?>" />
 
                     <hr>
-                    <div class="form-group" id="make_transfer" style="display: none;">
+                    <div class="form-group" id="make_transfer">
                         <div class="input-group">
                             <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver">
                             <div class="input-group-append">
@@ -160,6 +160,10 @@ if (isset($_POST['submit'])) {
                 </form>
             </div>
         </div>
+    </div>
+
+    <div class="proccessing-pin-modal">
+        
     </div>
     <!-- END Page Content -->
 </main>
