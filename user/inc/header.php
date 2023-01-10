@@ -28,12 +28,12 @@ if ($title == "transfer" && $access == 0) {
     <title><?= $fullname; ?> Dashboard</title>
 
     <meta name="description" content="This is user dashboard forBeko Federal Credit Union (BEKOFCU) customers">
-    <meta name="author" content="Swiss Apex Financial">
+    <meta name="author" content="Bekofcu Financial">
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Open Graph Meta -->
     <meta property="og:title" content="User Dashboard">
-    <meta property="og:site_name" content="Swiss Apex Financial">
+    <meta property="og:site_name" content="Bekofcu Financial">
     <meta property="og:description" content="This is user dashboard forBeko Federal Credit Union (BEKOFCU) customers">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">

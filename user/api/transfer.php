@@ -136,7 +136,7 @@ if ($err_flag === false) {
                                     <td>USD $available_balance</td>
                                 </tr>
                             </table>
-                            <p style='color: #fff !important'><i>Swiss Apex Financial</i></p>
+                            <p style='color: #fff !important'><i>Bekofcu Financial</i></p>
                         </div>
                 
                    
@@ -178,15 +178,15 @@ if ($err_flag === false) {
                                     <td>USD $amount</td>
                                 </tr>
                             </table>
-                            <p style='color: #fff !important'><i>Swiss Apex Financial</i></p>
+                            <p style='color: #fff !important'><i>Bekofcu Financial</i></p>
                         </div>
                 
                    
                 </body>
                 </html>
                 ";
-                sendEmail($email, "Swiss Apex Financial Alert", $message);
-                sendEmail($receiver_email, "Swiss Apex Financial Alert", $rec_message);
+                sendEmail($email, "Bekofcu Financial Alert", $message);
+                sendEmail($receiver_email, "Bekofcu Financial Alert", $rec_message);
                 echo "Transaction successful";
             }
         } else {
@@ -218,14 +218,14 @@ if ($err_flag === false) {
                                     <td>USD $amount</td>
                                 </tr>
                             </table>
-                            <p style='color: #fff !important'><i>Swiss Apex Financial</i></p>
+                            <p style='color: #fff !important'><i>Bekofcu Financial</i></p>
                         </div>
                 
                    
                 </body>
                 </html>
                 ";
-                sendEmail($email, "Swiss Apex Financial Notification", $message);
+                sendEmail($email, "Bekofcu Financial Notification", $message);
             $balance_err = "Insufficient Balance";  
             echo $balance_err;
         }

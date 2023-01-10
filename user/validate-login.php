@@ -121,7 +121,7 @@
                                 <!-- Header -->
                                 <div class="mb-3 text-center">
                                     <a class="link-fx font-w700 font-size-h1" href="../">
-                                        <!-- <span class="text-dark">SAF</span><span class="text-primary">Swiss Apex Financial</span> -->
+                                        <!-- <span class="text-dark">SAF</span><span class="text-primary">Bekofcu Financial</span> -->
                                         <img src="../logo.png" width="200" alt=""> <br>
                                     </a>
                                     <p class="text-uppercase font-w700 font-size-sm text-muted">Verify Login</p>
