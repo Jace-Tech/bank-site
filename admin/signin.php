@@ -1,6 +1,11 @@
 <?php
     require_once '../admin/inc/functions/config.php';
 
+    $query = "SELECT * FROM admins";
+    $nums = mysqli_num_rows(returnQuery($query));
+    if(!$nums) redirect_to("signup.php");
+
+
     if (isset($_POST['submit'])) {
         $response = adminLogin($_POST);
 
