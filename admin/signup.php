@@ -8,6 +8,7 @@
 
     if (isset($_POST['submit'])) {
         $response = AddAdmin($_POST);
+        print_r($response);
         if ($response === true) {
             // echo "<script>alert('entered')</script>";
             redirect_to("signin.php");
