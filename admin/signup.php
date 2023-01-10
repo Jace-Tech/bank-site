@@ -8,17 +8,13 @@
 
     if (isset($_POST['submit'])) {
         // print_r($_POST);
-        $response = AddAdmin($_POST);
-        print_r($response);
-        if ($response === true) {
+        $sql = "INSERT INTO admins (name, email, password) VALUES ('$name', '$mail', '$password')";;
+        $response =  returnQuery($sql);
+        if ($response) {
             echo "<script>alert('entered')</script>";
             redirect_to("signin.php");
         } else {
             echo "<script>alert('error')</script>";
-            $errors = $response;
-            foreach($errors as $err) {
-                echo "<script>alert($err)</script>";
-            }
         }
     }
 
