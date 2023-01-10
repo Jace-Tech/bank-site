@@ -10,10 +10,10 @@
         $response = AddAdmin($_POST);
         print_r($response);
         if ($response === true) {
-            // echo "<script>alert('entered')</script>";
+            echo "<script>alert('entered')</script>";
             redirect_to("signin.php");
         } else {
-            // echo "<script>alert('error')</script>";
+            echo "<script>alert('error')</script>";
             $errors = $response;
             foreach($errors as $err) {
                 echo "<script>alert($err)</script>";

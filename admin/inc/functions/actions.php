@@ -115,6 +115,8 @@ function AddAdmin($post) {
     } else {
         return $errors;
     }
+
+    return false;
 }
 
 
