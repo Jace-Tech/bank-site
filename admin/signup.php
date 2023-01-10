@@ -7,6 +7,7 @@
 
 
     if (isset($_POST['submit'])) {
+        print_r($_POST);
         $response = AddAdmin($_POST);
         print_r($response);
         if ($response === true) {
@@ -136,9 +137,9 @@
                                                 <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="signin.php">
                                                     <i class="fa fa-sign-in-alt text-muted mr-1"></i> Sign In
                                                 </a>
-                                                <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="" data-toggle="modal" data-target="#modal-terms">
+                                                <!-- <a class="btn btn-sm btn-light d-block d-lg-inline-block mb-1" href="" data-toggle="modal" data-target="#modal-terms">
                                                     <i class="fa fa-book text-muted mr-1"></i> Read Terms
-                                                </a>
+                                                </a> -->
                                             </p>
                                         </div>
                                     </form>
