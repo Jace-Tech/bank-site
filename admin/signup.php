@@ -110,7 +110,7 @@
                                             </div>
                                             <div class="form-group">
                                                 <label for="email" class="form-label">Email</label>
-                                                <input type="email" id="email" class="form-control form-control form-control-alt" name="email" />
+                                                <input type="email" id="email" class="form-control form-control form-control-alt form-input-cus" name="email" />
                                             </div>
                                             <div class="form-group">
                                                 <label for="password" class="form-label">Password</label>
