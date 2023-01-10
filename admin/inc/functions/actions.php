@@ -106,7 +106,7 @@ function AddAdmin($post) {
     if (!$errors) {
         $sql = "INSERT INTO admins (name, email, password) VALUES ('$name', '$mail', '$password')";
 
-        $result = validateQuery($sql);
+        $result = returnQuery($sql);
         if ($result) {
             return true;
         } else {
