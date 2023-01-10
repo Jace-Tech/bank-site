@@ -31,16 +31,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 
-    <title>Sign Up | SAF Bank</title>
+    <title>Sign Up | BEKOFCU</title>
 
-    <meta name="description" content="Sign Up | SAF Bank">
+    <meta name="description" content="Sign Up | BEKOFCU">
     <meta name="author" content="pixelcave">
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Open Graph Meta -->
-    <meta property="og:title" content="Sign Up | SAF Bank">
+    <meta property="og:title" content="Sign Up | BEKOFCU">
     <meta property="og:site_name" content="SAF">
-    <meta property="og:description" content="Sign Up | SAF Bank">
+    <meta property="og:description" content="Sign Up | BEKOFCU">
     <meta property="og:type" content="website">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
@@ -60,58 +60,23 @@
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
     <!-- <link rel="stylesheet" id="css-theme" href="../admin/assets/css/themes/xwork.min.css"> -->
     <!-- END Stylesheets -->
+    <style>
+        .form-label{
+            display: block !important;
+            margin-bottom: .5rem !important;
+        }
+
+        .form-input-cus {
+            display: flex !important;
+            align-items: center !important;
+            padding: .8rem 1rem !important;
+            min-height: 50px !important;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- Page Container -->
-    <!--
-            Available classes for #page-container:
-
-        GENERIC
-
-            'enable-cookies'                            Remembers active color theme between pages (when set through color theme helper Template._uiHandleTheme())
-
-        SIDEBAR & SIDE OVERLAY
-
-            'sidebar-r'                                 Right Sidebar and left Side Overlay (default is left Sidebar and right Side Overlay)
-            'sidebar-mini'                              Mini hoverable Sidebar (screen width > 991px)
-            'sidebar-o'                                 Visible Sidebar by default (screen width > 991px)
-            'sidebar-o-xs'                              Visible Sidebar by default (screen width < 992px)
-            'sidebar-dark'                              Dark themed sidebar
-
-            'side-overlay-hover'                        Hoverable Side Overlay (screen width > 991px)
-            'side-overlay-o'                            Visible Side Overlay by default
-
-            'enable-page-overlay'                       Enables a visible clickable Page Overlay (closes Side Overlay on click) when Side Overlay opens
-
-            'side-scroll'                               Enables custom scrolling on Sidebar and Side Overlay instead of native scrolling (screen width > 991px)
-
-        HEADER
-
-            ''                                          Static Header if no class is added
-            'page-header-fixed'                         Fixed Header
-
-
-        Footer
-
-            ''                                          Static Footer if no class is added
-            'page-footer-fixed'                         Fixed Footer (please have in mind that the footer has a specific height when is fixed)
-
-        HEADER STYLE
-
-            ''                                          Classic Header style if no class is added
-            'page-header-dark'                          Dark themed Header
-            'page-header-glass'                         Light themed Header with transparency by default
-                                                        (absolute position, perfect for light images underneath - solid light background on scroll if the Header is also set as fixed)
-            'page-header-glass page-header-dark'         Dark themed Header with transparency by default
-                                                        (absolute position, perfect for dark images underneath - solid dark background on scroll if the Header is also set as fixed)
-
-        MAIN CONTENT LAYOUT
-
-            ''                                          Full width Main Content if no class is added
-            'main-content-boxed'                        Full width Main Content with a specific maximum width (screen width > 1200px)
-            'main-content-narrow'                       Full width Main Content with a percentage width (screen width > 1200px)
-        -->
+   
     <div id="page-container">
 
         <!-- Main Container -->
@@ -140,16 +105,20 @@
                                     <form action="" method="POST">
                                         <div class="py-3">
                                             <div class="form-group">
-                                                <input type="text" class="form-control form-control form-control-alt" name="name" placeholder="Username">
+                                                <label for="name" class="form-label">Username</label>
+                                                <input type="text" id="name" class="form-control form-control form-control-alt form-input-cus" name="name" />
                                             </div>
                                             <div class="form-group">
-                                                <input type="email" class="form-control form-control form-control-alt" name="email" placeholder="Email">
+                                                <label for="email" class="form-label">Email</label>
+                                                <input type="email" id="email" class="form-control form-control form-control-alt" name="email" />
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" class="form-control form-control-lg form-control-alt" name="password" placeholder="Password">
+                                                <label for="password" class="form-label">Password</label>
+                                                <input type="password" id="password" class="form-control form-control-lg form-control-alt form-input-cus" name="password" />
                                             </div>
                                             <div class="form-group">
-                                                <input type="password" class="form-control form-control-lg form-control-alt" name="confirm_pwd" placeholder="Confirm Password">
+                                                <label for="confirm-password" class="form-label">Confirm Password</label>
+                                                <input type="password" id="confirm-password" class="form-control form-control-lg form-control-alt form-input-cus" name="confirm_pwd" />
                                             </div>
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox custom-control-primary">

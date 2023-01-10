@@ -142,13 +142,13 @@ if (isset($_POST['submit'])) {
 
                             Trademark Notices
 
-                            Chase is the marketing name for the retail financial services activities of JPMorgan SAF & Co. and its subsidiaries and affiliates in the United States. "SAF," "JPMorgan," "JPMorgan Chase," the JPMorgan SAF logo and the Octagon Symbol are trademarks of JPMorgan SAF Bank, N.A., a wholly-owned subsidiary of JPMorgan SAF & Co. Other featured words or symbols, used to identify the source of goods and services, may be the trademarks of their respective owners.
+                            Chase is the marketing name for the retail financial services activities of JPMorgan SAF & Co. and its subsidiaries and affiliates in the United States. "SAF," "JPMorgan," "JPMorgan Chase," the JPMorgan SAF logo and the Octagon Symbol are trademarks of JPMorgan BEKOFCU, N.A., a wholly-owned subsidiary of JPMorgan SAF & Co. Other featured words or symbols, used to identify the source of goods and services, may be the trademarks of their respective owners.
 
                             Web Content and Materials
 
                             The information on this Website is for information purposes only. It is believed to be reliable, but JPMorgan SAF does not warrant its completeness, timeliness or accuracy. The information on the Website is not intended as an offer or solicitation for the purchase of JPMorgan SAF stock, any other security or any financial instrument.
 
-                            Securities (including mutual funds and variable life insurance), annuities and insurance products are not bank deposits and are not insured by the FDIC or any other agency of the United States, nor are they obligations of, nor insured or guaranteed by, JPMorgan SAF Bank, N.A., CISC, CIA, CMIA or their affiliates. Securities (including mutual funds and variable life insurance) and annuities involve investment risks, including the possible loss of value.
+                            Securities (including mutual funds and variable life insurance), annuities and insurance products are not bank deposits and are not insured by the FDIC or any other agency of the United States, nor are they obligations of, nor insured or guaranteed by, JPMorgan BEKOFCU, N.A., CISC, CIA, CMIA or their affiliates. Securities (including mutual funds and variable life insurance) and annuities involve investment risks, including the possible loss of value.
 
                             The information and materials contained in this Website-and the terms and conditions of the access to and use of such information and materials-are subject to change without notice. Products and services described, as well as, associated fees, charges, interest rates, and balance requirements may differ among geographic locations. Not all products and services are offered at all locations.
 
