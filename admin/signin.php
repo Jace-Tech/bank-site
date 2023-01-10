@@ -109,7 +109,7 @@ if (isset($_POST['submit'])) {
                                                 <input type="email" class="form-control form-control-alt form-input-cus" id="email" name="email" />
                                             </div>
                                             <div class="form-group">
-                                                <label for="email" class="form-label">Email</label>
+                                                <label for="email" class="form-label">Password</label>
                                                 <input type="password" class="form-control form-control-alt form-input-cus" name="password" />
                                             </div>
                                         </div>
