@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include('logic.php') ?> <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
