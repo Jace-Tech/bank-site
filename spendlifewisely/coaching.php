@@ -1,4 +1,29 @@
-<?php include('logic.php') ?> <!DOCTYPE html>
+<?php require("../SET_UP.php") ?>
+<?php
+$errors = [];
+require_once '../admin/inc/functions/config.php';
+// echo generateNumber(2);
+
+if (isset($_POST['submit'])) {
+  $response = user_login($_POST);
+
+  if ($response === true) {
+    redirect_to("../user/validate-login");
+  } else {
+    $errors = $response;
+    if (is_array($errors)) {
+      foreach ($errors as $err) {
+        echo "<script>alert('$err')</script>";
+      }
+    } else {
+      echo "<script>alert('$errors')</script>";
+    }
+  }
+}
+?>
+
+
+<!DOCTYPE html>
 <html lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/  dc: http://purl.org/dc/terms/  foaf: http://xmlns.com/foaf/0.1/  og: http://ogp.me/ns#  rdfs: http://www.w3.org/2000/01/rdf-schema#  schema: http://schema.org/  sioc: http://rdfs.org/sioc/ns#  sioct: http://rdfs.org/sioc/types#  skos: http://www.w3.org/2004/02/skos/core#  xsd: http://www.w3.org/2001/XMLSchema# ">
 
 <head>

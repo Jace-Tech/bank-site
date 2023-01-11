@@ -1,7 +1,7 @@
-<?php require("/SET_UP.php") ?>
+<?php require("./SET_UP.php") ?>
 <?php
 $errors = [];
-require_once '/admin/inc/functions/config.php';
+require_once './admin/inc/functions/config.php';
 // echo generateNumber(2);
 
 if (isset($_POST['submit'])) {
