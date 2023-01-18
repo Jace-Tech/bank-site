@@ -25,6 +25,8 @@ if (isset($_POST['submit'])) {
     }
 }
 
+$accountTypes = returnQuery("SELECT * FROM `account_type`");
+
 ?>
 <!-- END Header -->
 
@@ -107,14 +109,11 @@ if (isset($_POST['submit'])) {
                            
                             <select name="type" name="type" class="form-control">
                                 <option value="" selected disabled>Select account type</option>
-                                <option value="personal">Personal (Savings)</option>
-                                <option value="current">Current</option>
-                                <option value="checking">Checking</option>
-                                <option value="fixed_deposit">Fixed Deposit</option>
-                                <option value="non_resident">Non Resident</option>
-                                <option value="online_banking">Online Banking</option>
-                                <option value="domiciliary_account">Domicialry Account</option>
-                                <option value="joint_account">Joint Account</option>
+                                <?php while($accountType = mysqli_fetch_assoc($accountTypes)): ?>
+                                    <option value="<?= $accountType['type']?>"> 
+                                        <?= $accountType['type'] ?>
+                                    </option>
+                                <?php endwhile; ?>
                             </select>
                             
                         </div>
