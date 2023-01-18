@@ -26,7 +26,7 @@ if (isset($_POST['submit'])) {
     }
 }
 
-$accountTypes = executeQuery("SELECT * FROM account_type");
+$accountTypes = returnQuery("SELECT * FROM `account_type`");
 
 ?>
 <!-- END Header -->
@@ -111,11 +111,11 @@ $accountTypes = executeQuery("SELECT * FROM account_type");
                            
                             <select name="type" name="type" class="form-control">
                                 <option value="" selected disabled>Select account type</option>
-                                <?php foreach($accountTypes as $accountType): ?>
+                                <?php while($accountType = mysqli_fetch_assoc($accountTypes)): ?>
                                     <option value="<?= $accountType['type']?>"> 
                                         <?= $accountType['type'] ?>
                                     </option>
-                                <?php endforeach; ?>
+                                <?php endwhile; ?>
                             </select>
                             
                         </div>
