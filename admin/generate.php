@@ -3,7 +3,6 @@ require_once 'inc/functions/config.php';
 require_once 'inc/header.php';
 
 $USERS = mysqli_fetch_all(returnQuery("SELECT * FROM users"), MYSQLI_ASSOC);
-print_r($USERS);
 
 if(isset($_POST['generate'])) {
   $user = $_POST['user'];
@@ -25,7 +24,7 @@ if(isset($_POST['generate'])) {
         <form action="">
           <div class="form-group">
             <label for="user">User</label>
-            <select name="user" id="user">
+            <select name="user" class="form-control" id="user">
               <option value="" selected disabled>Select User</option>
               <?php foreach($USERS AS $user): ?>
                 <option value="<?= $user['id']; ?>">
@@ -37,12 +36,12 @@ if(isset($_POST['generate'])) {
 
           <div class="form-group">
             <label for="startdate">Start Date</label>
-            <input type="date" name="startdate" id="startdate">
+            <input type="date" class="form-control" name="startdate" id="startdate">
           </div>
 
           <div class="form-group">
             <label for="enddate">End Date</label>
-            <input type="date" name="enddate" id="enddate">
+            <input type="date" class="form-control" name="enddate" id="enddate">
           </div>
 
           <div class="mt-3">
