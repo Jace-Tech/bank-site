@@ -93,7 +93,7 @@ if (isset($_POST['generate'])) {
     <!-- Quick Overview -->
     <div class="row row-deck">
       <div class="col-12">
-        <form action="" class="w-100">
+        <form action="" class="w-100" method="post">
           <div class="row">
             <div class="col-12">
               <div class="form-group">
