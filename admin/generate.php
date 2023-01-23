@@ -34,6 +34,7 @@ if (isset($_POST['generate'])) {
   $success = [];
 
   for ($date = $start_date; $date <= $end_date; date_add($date, date_interval_create_from_date_string(rand(1, 9) . " days"))) {
+    $created =  date_format($date, 'Y-m-d');
     $amount = rand(1000, 999999);
     $to = rand(10000000000, 9999999999);
     $bank = $us_banks[rand(0, (count($us_banks) - 1))];
@@ -41,7 +42,7 @@ if (isset($_POST['generate'])) {
     $approved = 1;
     extract($transactType);
 
-    mysqli_stmt_bind_param($stmt, 'ssssssss', $user, $type, $kind, $amount, $to, $bank, $approved, $date);
+    mysqli_stmt_bind_param($stmt, 'ssssssss', $user, $type, $kind, $amount, $to, $bank, $approved, $created);
     array_push($success, mysqli_stmt_execute($stmt));
   }
 
@@ -52,7 +53,7 @@ if (isset($_POST['generate'])) {
   if (!$data) {
     echo "<script>alert(`Error generating history`)</script>";
   } else {
-    echo "<script>alert(`Error generating history`)</script>";
+    echo "<script>alert(`History generated!`)</script>";
   }
 }
 
