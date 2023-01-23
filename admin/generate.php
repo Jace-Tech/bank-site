@@ -41,7 +41,7 @@ if (isset($_POST['generate'])) {
     $approved = 1;
     extract($transactType);
 
-    mysqli_stmt_bind_param($stmt, 'ssssssss', $user, $type, $kind, $to, $bank, $approved, $date);
+    mysqli_stmt_bind_param($stmt, 'ssssssss', $user, $type, $kind, $amount, $to, $bank, $approved, $date);
     array_push($success, mysqli_stmt_execute($stmt));
   }
 
