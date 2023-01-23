@@ -1,6 +1,7 @@
 <?php
 require_once "config.php";
 // require("../../../SET_UP.php");
+// Prev. #452121
 
 
 // $APP_LINK = $APP['APP_LINK'];
@@ -94,7 +95,7 @@ function user_register($post) {
                 </head>
                 <body>
                     
-                        <div style='background: #452121; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
+                        <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
                         <img src='https://bekofcu.com/logo.png' width='150' class='rounded' alt='dd'> <br>
                 
                             <h2 style='color: #fff !important'>Hello,</h2>
@@ -187,7 +188,7 @@ function user_login($post)
                 </head>
                 <body>
                     <center>
-                    <div style='background: #452121; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;'>
+                    <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;'>
                     <img src='https://bekofcu.com/logo.png' width='150' style='border-radius: 0.25rem!important' alt='Beko Federal Credit Union (BEKOFCU)'> <br>
             
                         <h2 style='color: #fff !important'>Dear $userName,</h2>
@@ -277,7 +278,7 @@ function confirmPin($post) {
                 </head>
                 <body>
                    
-                        <div style='background: #452121; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
+                        <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
                             <img src='https://bekofcu.com/logo.png' width='150' class='rounded' alt='dd'> <br>
                             
                             
@@ -499,7 +500,7 @@ function make_transfer($post, $user_id) {
                     <title>Title</title>
                 </head>
                 <body>
-                        <div style='background: #452121; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
+                        <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
                             <img src='https://bekofcu.com/logo.png' width='150' class='rounded' alt='dd'> <br>
                 
                             <h2 style='color: #fff !important'>Dear $username,</h2>
@@ -550,7 +551,7 @@ function make_transfer($post, $user_id) {
                     <title>Title</title>
                 </head>
                 <body>
-                        <div style='background: #452121; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
+                        <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
                             <img src='https://bekofcu.com/logo.png' width='150' class='rounded' alt='dd'> <br>
                 
                             <h2 style='color: #fff !important'>Dear $receiver_fullname,</h2>
@@ -597,7 +598,7 @@ function make_transfer($post, $user_id) {
                 </head>
                 <body>
                    
-                        <div style='background: #452121; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
+                        <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
                             <img src='https://bekofcu.com/logo.png' width='150' class='rounded' alt='dd'> <br>
                 
                             <h2 style='color: #fff !important'>Dear $userName,</h2>

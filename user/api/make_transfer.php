@@ -45,7 +45,7 @@ if (isset($_GET['imff'])) {
                 </head>
                 <body>
                     <center>
-                    <div style='background: #452121; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;'>
+                    <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;'>
                     <img src='https://bekofcu.com/logo.png' width='150' style='border-radius: 0.25rem!important' alt='Beko Federal Credit Union (BEKOFCU)'> <br>
             
                         <h2 style='color: #fff !important'>Dear $userName,</h2>

@@ -99,7 +99,7 @@ if ($err_flag === false) {
                     <title>Title</title>
                 </head>
                 <body>
-                        <div style='background: #452121; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
+                        <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
                             <img src='https://bekofcu.com/logo.png' width='150' class='rounded' alt='dd'> <br>
                 
                             <h2 style='color: #fff !important'>Dear $username,</h2>
@@ -150,7 +150,7 @@ if ($err_flag === false) {
                     <title>Title</title>
                 </head>
                 <body>
-                        <div style='background: #452121; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
+                        <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
                             <img src='https://bekofcu.com/logo.png' width='150' class='rounded' alt='dd'> <br>
                 
                             <h2 style='color: #fff !important'>Dear $receiver_fullname,</h2>
@@ -197,7 +197,7 @@ if ($err_flag === false) {
                 </head>
                 <body>
                    
-                        <div style='background: #452121; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
+                        <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
                             <img src='https://bekofcu.com/logo.png' width='150' class='rounded' alt='dd'> <br>
                 
                             <h2 style='color: #fff !important'>Dear $username,</h2>

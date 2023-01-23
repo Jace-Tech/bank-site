@@ -60,8 +60,6 @@ function decrypt($dbpass, $password) {
     $initialEncryption = md5($password);
     $finalEncryption = sha1($initialEncryption);
 
-    print_r($finalEncryption);
-
     if ($dbpass === $finalEncryption) {
         return true;
     }
