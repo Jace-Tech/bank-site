@@ -52,7 +52,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                                     <i class="fa fa-address-card"></i>
                                 </span>
                             </div>
-                            <input type="text" name="recipent" onblur="getRecipent()" class="form-control" id="account_number" placeholder="Account Number">
+                            <input required type="text" name="recipent" onblur="getRecipent()" class="form-control" id="account_number" placeholder="Account Number">
                         </div>
                     </div>
 
@@ -63,7 +63,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                                     <i class="far fa-user"></i>
                                 </span>
                             </div>
-                            <input type="text" name="acc_name" class="form-control" placeholder="Enter account beneficiary name">
+                            <input required type="text" name="acc_name" class="form-control" placeholder="Enter account beneficiary name">
                         </div>
                     </div>
                     
@@ -74,7 +74,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                                     <i class="fa fa-building"></i>
                                 </span>
                             </div>
-                            <input type="text" list="banks" name="bank_name" class="form-control" placeholder="Enter bank name">
+                            <input required type="text" list="banks" name="bank_name" class="form-control" placeholder="Enter bank name">
                             <datalist id="banks">
                                 <?php foreach ($us_banks as $bank): ?>
                                     <option value="<?= $bank ?>"></option>
@@ -91,7 +91,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                                 </span>
                             </div>
                             <input type="hidden" name="kind" value="transfer">
-                            <input type="text" name="swift_code" class="form-control" placeholder="Enter swift code">
+                            <input required type="text" name="swift_code" class="form-control" placeholder="Enter swift code">
                         </div>
                     </div>
 
@@ -102,7 +102,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                                     <i class="fa fa-terminal"></i>
                                 </span>
                             </div>
-                            <input type="text" maxLength="9" name="routing_number" class="form-control" placeholder="Enter Routing number">
+                            <input required type="text" maxLength="9" name="routing_number" class="form-control" placeholder="Enter Routing number">
                         </div>
                     </div>
 
@@ -114,7 +114,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                                 </span>
                             </div>
                            
-                            <select name="type" name="type" class="form-control">
+                            <select required name="type" name="type" class="form-control">
                                 <option value="" selected disabled>Select account type</option>
                                 <?php while($accountType = mysqli_fetch_assoc($accountTypes)): ?>
                                     <option value="<?= $accountType['type']?>"> 
@@ -133,7 +133,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                                     <i class="fa fa-dollar-sign"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" name="amount" placeholder="Amount">
+                            <input required type="text" class="form-control" name="amount" placeholder="Amount">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -158,7 +158,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                         <div class="input-group">
                             <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver">
                             <div class="input-group-append">
-                                <button type="submit" id="tbtn" name="submit" onclick="handleStartLoading(event)" class="btn btn-alt-success">Make Transfer</button>
+                                <button type="submit" id="tbtn" name="submit" onclick="handleStartLoading(event)" class="btn btn-alt-success">Proceed</button>
                             </div>
                         </div>
                     </div>

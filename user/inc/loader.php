@@ -1,4 +1,3 @@
-<script src="https: //unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <style>
   .load-overlay {
     position: fixed;
@@ -8,6 +7,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, .75);
     display: none;
+    z-index: 99999;
     align-items: center;
     justify-content: center;
   }
@@ -36,9 +36,13 @@
   <div class="loader"></div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+
 <script>
   const handleStartLoading = (e) => {
     if(e) e.preventDefault();
+    document.querySelector('form').reportValidity()
     document.querySelector(".load-overlay").classList.add("show")
     setTimeout(() => {
       handleNextSection()

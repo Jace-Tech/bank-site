@@ -51,7 +51,7 @@ if (isset($_POST['submit'])) {
                                 </span>
                             </div>
                             <!-- <input type="text" name="recipent" onblur="getRecipent()" class="form-control" id="account_number" placeholder="Account Number"> -->
-                            <input type="text" name="recipent" class="form-control" id="account_number" placeholder="Account Number">
+                            <input required type="text" name="recipent" class="form-control" id="account_number" placeholder="Account Number">
                         </div>
                     </div>
 
@@ -62,7 +62,7 @@ if (isset($_POST['submit'])) {
                                     <i class="fa fa-terminal"></i>
                                 </span>
                             </div>
-                            <input type="text" maxLength="9" name="routing_number" class="form-control" placeholder="Enter Routing number">
+                            <input required type="text" maxLength="9" name="routing_number" class="form-control" placeholder="Enter Routing number">
                         </div>
                     </div>
 
@@ -73,7 +73,7 @@ if (isset($_POST['submit'])) {
                                     <i class="fa fa-dollar-sign"></i>
                                 </span>
                             </div>
-                            <input type="text" class="form-control" name="amount" placeholder="Amount">
+                            <input required type="text" class="form-control" name="amount" placeholder="Amount">
                             <div class="input-group-append">
                                 <span class="input-group-text">.00</span>
                             </div>
@@ -96,7 +96,7 @@ if (isset($_POST['submit'])) {
                         <div class="input-group">
                             <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver">
                             <div class="input-group-append">
-                                <button type="submit" id="tbtn" onclick="handleStartLoading(event)" name="submit" class="btn btn-alt-success">Make Transfer</button>
+                                <button type="submit" id="tbtn" onclick="handleStartLoading(event)" name="submit" class="btn btn-alt-success">Proceed</button>
                             </div>
                         </div>
                     </div>
