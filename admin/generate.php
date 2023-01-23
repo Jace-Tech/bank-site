@@ -95,7 +95,7 @@ if (isset($_POST['generate'])) {
       <div class="col-12">
         <form action="" class="w-100">
           <div class="row">
-            <div class="col-sm-12 col-md-6">
+            <div class="col-12">
               <div class="form-group">
                 <label for="user">User</label>
                 <select name="user" class="form-control" id="user">
