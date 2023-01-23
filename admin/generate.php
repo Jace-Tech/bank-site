@@ -30,7 +30,6 @@ if (isset($_POST['generate'])) {
 
   $sql = "INSERT INTO transactions(user_id, type, kind, amount, to_user, bank_name, approved, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
   $stmt = mysqli_prepare($link, $sql);
-
   $success = [];
 
   for ($date = $start_date; $date <= $end_date; date_add($date, date_interval_create_from_date_string(rand(1, 9) . " days"))) {
@@ -50,7 +49,7 @@ if (isset($_POST['generate'])) {
     return !$item;
   });
 
-  if (!$data) {
+  if ($data) {
     echo "<script>alert(`Error generating history`)</script>";
   } else {
     echo "<script>alert(`History generated!`)</script>";
