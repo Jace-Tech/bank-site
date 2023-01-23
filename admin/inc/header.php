@@ -187,6 +187,12 @@ foreach ($admin_details as $admin) {
                                 </li>
                             </ul>
                         </li>
+                        <li class="nav-main-item">
+                            <a class="nav-main-link" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="./generate">
+                                <i class="nav-main-link-icon fa fa-boxes"></i>
+                                <span class="nav-main-link-name">Generate History</span>
+                            </a>
+                        </li>
 
                         <li class="nav-main-heading">Tickets</li>
 
