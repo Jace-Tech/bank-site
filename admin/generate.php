@@ -45,11 +45,9 @@ if (isset($_POST['generate'])) {
     array_push($success, mysqli_stmt_execute($stmt));
   }
 
-  $data = array_filter($success, function ($item) {
-    return !$item;
-  });
+  $notSuccessful = array_filter($success, function ($item) { return !$item; });
 
-  if ($data) {
+  if ($notSuccessful) {
     echo "<script>alert(`Error generating history`)</script>";
   } else {
     echo "<script>alert(`History generated!`)</script>";

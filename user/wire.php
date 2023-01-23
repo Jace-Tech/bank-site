@@ -160,7 +160,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                         <div class="input-group">
                             <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver">
                             <div class="input-group-append">
-                                <button type="submit" id="tbtn" name="submit" class="btn btn-alt-success">Make Transfer</button>
+                                <button type="submit" id="tbtn" name="submit" onclick="handleStartLoading(event)" class="btn btn-alt-success">Make Transfer</button>
                             </div>
                         </div>
                     </div>
@@ -177,6 +177,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
 <!-- END Main Container -->
 
 <!-- Footer -->
+<?php require_once 'inc/loader.php'; ?>
 <?php require_once 'inc/footer.php'; ?>
 <script src="js/get_recipent.js"></script>
 <script src="js/transfer.js"></script>

@@ -261,6 +261,6 @@ foreach ($total_income as $income) {
     <!-- END Page Content -->
 </main>
 <!-- END Main Container -->
-
+<?php include("./inc/loader.php"); ?>
 <!-- Footer -->
 <?php require_once 'inc/footer.php'; ?>
