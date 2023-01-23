@@ -100,6 +100,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                                     <i class="fa fa-terminal"></i>
                                 </span>
                             </div>
+                            <input type="hidden" name="kind" value="bill payment">
                             <input type="text" maxLength="9" name="routing_number" class="form-control" placeholder="Enter Routing number">
                         </div>
                     </div>

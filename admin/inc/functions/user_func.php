@@ -490,7 +490,7 @@ function make_transfer($post, $user_id) {
             $receiver_fullname = $rec_result['fullname'];
 
             if ($amount <= $total_balance) {
-                $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, description, routing_number, created_at) VALUES ($user_id, 1, $amount, '$acc_number', '$desc', '$routing_number', now())";
+                $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, description, routing_number, created_at, kind) VALUES ($user_id, 1, $amount, '$acc_number', '$desc', '$routing_number', now(), 'transfer')";
                 $query2 = validateQuery($sql2);
 
                 if ($query2) {
@@ -703,7 +703,7 @@ function wire_transfer($post, $user_id) {
             $total_balance = $details['acc_balance'];
 
             if ($amount <= $total_balance) {
-                $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, created_at) VALUES ($user_id, 1, $amount, '$acc_number', now())";
+                $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, created_at, kind) VALUES ($user_id, 1, $amount, '$acc_number', now(), '$kind')";
                 $query2 = validateQuery($sql2);
 
                 if ($query2) {
@@ -751,7 +751,7 @@ function credit_account($post, $user_id) {
             $result = validateQuery($sql);
 
             if ($result) {
-                $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, approved, created_at) VALUES ($user_id, 0, $amount, $acc_number, 1, now())";
+                $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, approved, created_at, kind) VALUES ($user_id, 0, $amount, $acc_number, 1, now(), 'deposit')";
                 $query2 = validateQuery($sql2);
 
                 if ($query2) {

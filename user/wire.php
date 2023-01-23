@@ -1,5 +1,6 @@
 <?php
 require_once '../admin/inc/functions/config.php';
+require_once("./inc/banks.php");
 $title = "transfer";
 require_once 'inc/header.php';
 
@@ -69,13 +70,19 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                     </div>
                     
                     <div class="form-group">
+                        <input type="hidden" name="kind" value="wire transfer">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
                                     <i class="fa fa-building"></i>
                                 </span>
                             </div>
-                            <input type="text" name="bank_name" class="form-control" placeholder="Enter bank name">
+                            <input type="text" list="banks" name="bank_name" class="form-control" placeholder="Enter bank name">
+                            <datalist id="banks">
+                                <?php foreach ($us_banks as $bank): ?>
+                                    <option value="<?= $bank ?>"></option>
+                                <?php endforeach; ?>
+                            </datalist>
                         </div>
                     </div>
                     
