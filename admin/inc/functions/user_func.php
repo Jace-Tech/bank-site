@@ -84,9 +84,10 @@ function user_register($post) {
         $imf = generateNumber(4);
 
         $sql = "INSERT INTO users (fullname, email, username, phone, address, dob, acc_type, acc_number, password, acc_pin, cot, imf, created_at, updated_at) VALUES ('$fullname', '$email', '$username', '$phone', '$address', '$dob', '$acc_type', '$account_number', '$password', '$account_pin', '$cot', '$imf', now(), now())";
-
         $result = validateQuery($sql);
         if ($result === true) {
+            // Add the second account
+            $query = "";
 
                 $message = "
                 <html>

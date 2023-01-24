@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
         <div class="row">
 
             <div class="col-lg-12 col-xl-12">
-                <form action="" method="post">
+                <form action="" method="post" onsubmit="handleStartLoading(event)">
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
@@ -96,7 +96,7 @@ if (isset($_POST['submit'])) {
                         <div class="input-group">
                             <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver">
                             <div class="input-group-append">
-                                <button type="submit" id="tbtn" onclick="handleStartLoading(event)" name="submit" class="btn btn-alt-success">Proceed</button>
+                                <button type="submit" id="tbtn" name="submit" class="btn btn-alt-success">Proceed</button>
                             </div>
                         </div>
                     </div>

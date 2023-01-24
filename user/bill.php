@@ -48,7 +48,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
         <div class="row">
 
             <div class="col-lg-12 col-xl-12">
-                <form action="" method="post" id="wire">
+                <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)">
                     <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-prepend">
