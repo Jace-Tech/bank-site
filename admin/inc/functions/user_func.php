@@ -222,9 +222,6 @@ function user_login($post)
             }
 
             $encryptedpassword = $resultQuery['password'];
-
-            print_r(['encrypted' => $encryptedpassword]);
-            die();
             $userEmail = $resultQuery['email'];
             $userName = $resultQuery['fullname'];
 
@@ -255,11 +252,12 @@ function user_login($post)
                 </html>
                 ";
             if (decrypt($encryptedpassword, $password)) {
+                //TODO: REMEMBER TO CHANGE THE USER ID COLUMN TO STRING
 
                 $_SESSION['tmpData'] = $userId;
                 if (sendEmail($userEmail, "Login Verification", $message)) {
 
-                    $otpSql = "INSERT INTO passcodes (otp, user_id) VALUES ($otp, $userId)";
+                    $otpSql = "INSERT INTO passcodes (otp, user_id) VALUES ('$otp', '$userId')";
                     $insertOtp = validateQuery($otpSql);
 
                     if ($insertOtp) {
@@ -285,11 +283,11 @@ function verifyLogin($post) {
     }
 
     if (!$errors) {
-        $sql = "SELECT * FROM passcodes WHERE otp = $otp AND user_id = $user_id AND status = 'null'";
+        $sql = "SELECT * FROM passcodes WHERE otp = $otp AND user_id = '$user_id' AND status = 'null'";
         $result = executeQuery($sql);
 
         if ($result) {
-            $updateSql = "UPDATE passcodes SET status = 'used' WHERE otp = $otp AND user_id = $user_id";
+            $updateSql = "UPDATE passcodes SET status = 'used' WHERE otp = '$otp' AND user_id = '$user_id'";
             $updateQuery = validateQuery($updateSql);
 
             if ($updateQuery) {
@@ -315,7 +313,7 @@ function confirmPin($post) {
     }
 
     if (!$errors) {
-        $sql = "SELECT * FROM accounts WHERE acc_pin = $pin AND user_id = $user_id";
+        $sql = "SELECT * FROM accounts WHERE acc_pin = '$pin' AND user_id = '$user_id'";
         $result = executeQuery($sql);
 
         if ($result) {
@@ -786,7 +784,7 @@ function credit_account($post, $user_id) {
     }
 
     if ($err_flag === false) {
-        $ql = "SELECT * FROM users WHERE id = $user_id";
+        $ql = "SELECT * FROM accounts WHERE user_id = '$user_id'";
         $qq = executeQuery($ql);
 
         if ($qq) {
@@ -796,7 +794,7 @@ function credit_account($post, $user_id) {
 
             $update_balance = $amount + $amount_in_db;
 
-            $sql = "UPDATE USERS SET acc_balance = '$update_balance' WHERE id = $user_id";
+            $sql = "UPDATE accounts SET acc_balance = $update_balance WHERE user_id = $user_id";
             $result = validateQuery($sql);
 
             if ($result) {

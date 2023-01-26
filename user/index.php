@@ -177,7 +177,7 @@ foreach ($total_income as $income) {
         </h2>
         <div class="row">
             <?php
-            $accounts = whereQuote("users", "email", $email);
+            $accounts = whereQuote("accounts", "user_id", $email);
             foreach ($accounts as $account) { ?>
 
                 <div class="col-lg-6 invisible" data-toggle="appear">
@@ -245,7 +245,7 @@ foreach ($total_income as $income) {
                         <span class="font-size-sm text-muted">Beko Federal Credit Union (BEKOFCU): At <strong><?= date("M d, Y", strtotime($trans['created_at'])); ?> - <?= date("h:i A", strtotime($trans['created_at'])) ?></strong></span>
                     </div>
                 </a>
-        <?php }
+        <?php }              
         } ?>
 
         <!-- END Latest Transactions -->
