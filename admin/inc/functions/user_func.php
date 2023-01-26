@@ -112,7 +112,7 @@ function user_register($post) {
             $queryStmt = mysqli_prepare($link, $query);
             $success = [];
             foreach($accounts as $account) {
-                mysqli_stmt_bind_param($queryStmt, "ssss", $account['accountNumber'], $userId, $account['accountType'], $account['accountPin'], $account['accountCot'], $account['accountImf'], $now);
+                mysqli_stmt_bind_param($queryStmt, "sssssss", $account['accountNumber'], $userId, $account['accountType'], $account['accountPin'], $account['accountCot'], $account['accountImf'], $now);
                 array_push($success,  mysqli_stmt_execute($queryStmt));
             }
             
