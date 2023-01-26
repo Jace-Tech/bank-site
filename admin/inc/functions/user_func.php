@@ -79,7 +79,7 @@ function user_register($post) {
 
     if (!$errors || empty($errors)) {   
         $userId = generateID("usr_", 9);
-        $now = "now()";
+        $now = date("Y-m-d H:i:s");
         $access = 1;
 
         // Add new user
