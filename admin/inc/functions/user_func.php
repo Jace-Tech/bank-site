@@ -216,9 +216,6 @@ function user_login($post)
             $query = "SELECT * FROM users WHERE id = '$userId'";
             $resultQuery = executeQuery($query);
 
-            print_r($resultQuery);
-            die();
-
             if(!$resultQuery) {
                 $errors[] = "No user found";
                 return $errors;
