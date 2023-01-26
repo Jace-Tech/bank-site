@@ -8,6 +8,7 @@ require_once "config.php";
 
 
 function user_register($post) {
+    global $link;
     extract($_POST);
     $errors = [];
 
