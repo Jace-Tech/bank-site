@@ -76,64 +76,98 @@ function user_register($post) {
     }
 
 
-    if (!$errors || empty($errors)) {
-        // generating account number...
-        $account_number = generateNumber(10);
-        $account_pin = generateNumber(5);
-        $cot = generateNumber(4);
-        $imf = generateNumber(4);
+    if (!$errors || empty($errors)) {   
+        $userId = generateID("usr_", 9);
+        $now = "now()";
+        $access = 1;
 
-        $sql = "INSERT INTO users (fullname, email, username, phone, address, dob, acc_type, acc_number, password, acc_pin, cot, imf, created_at, updated_at) VALUES ('$fullname', '$email', '$username', '$phone', '$address', '$dob', '$acc_type', '$account_number', '$password', '$account_pin', '$cot', '$imf', now(), now())";
-        $result = validateQuery($sql);
+        // Add new user
+        $sql = "INSERT INTO `users`(`id`, `fullname`, `email`, `username`, `phone`, `address`, `dob`, `password`, `access`, `created_at`, `updated_at`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $stmt = mysqli_prepare($link, $sql);
+        mysqli_stmt_bind_param($stmt, 'ssssssssdss', $userId, $fullname, $email, $username, $phone, $address, $dob, $password, $access, $now, $now);
+        $result = mysqli_stmt_execute($stmt);
+        
         if ($result === true) {
+            // GENERATE ACCOUNTS
+            $accounts = [
+                [
+                    "accountNumber" => generateNumber(10),
+                    "accountPin" => generateNumber(5),
+                    "accountCot" => generateNumber(4),
+                    "accountImf" => generateNumber(4),
+                    "accountType" => $acc_type
+                ],
+                [
+                    "accountNumber" => generateNumber(10),
+                    "accountPin" => generateNumber(5),
+                    "accountCot" => generateNumber(4),
+                    "accountImf" => generateNumber(4),
+                    "accountType" => "Savings Account"
+                ]
+                ];
+
             // Add the second account
-            $query = "";
+            $query = "INSERT INTO `accounts`(`acc_number`, `user_id`, `acc_type`, `acc_pin`, `cot`, `imf`, `created_at`) VALUES (?, ?, ?, ?, ?, ?, ?)";
+            $queryStmt = mysqli_prepare($link, $query);
+            $success = [];
+            foreach($accounts as $account) {
+                mysqli_stmt_bind_param($queryStmt, "ssss", $account['accountNumber'], $userId, $account['accountType'], $account['accountPin'], $account['accountCot'], $account['accountImf'], $now);
+                array_push($success,  mysqli_stmt_execute($queryStmt));
+            }
+            
+            $notSuccessful = array_filter($success, function ($item) { return !$item; });
+
+            if($notSuccessful) {
+                $errors[] = "Error creating account";
+                return $errors;
+            }
+
+            foreach($accounts as $account) {
+                extract($account);
 
                 $message = "
-                <html>
-                <head>
-                    <title>Title</title>
-                </head>
-                <body>
+                    <html>
+                        <head>
+                            <title>Title</title>
+                        </head>
+                        <body>
+                            <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
+                            <img src='https://bekofcu.com/logo.png' width='150' class='rounded' alt='dd'> <br>
                     
-                        <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
-                        <img src='https://bekofcu.com/logo.png' width='150' class='rounded' alt='dd'> <br>
-                
-                            <h2 style='color: #fff !important'>Hello,</h2>
-                            <h3 style='color: #fff !important'>Welcome to bekofcu.com. The bank that serves all customers equally on a daily basis</h3> 
-                            <i>Your details are as follows:</i> <hr>
-                            
-                
-                            <table style='width: 100%; padding-top: 10px;' border='1'>
-                                <tr>
-                                    <th style='padding: 7px;'>Account number</th>
-                                    <td>$account_number</td>
-                                </tr>
-                                <tr>
-                                    <th style='padding: 7px;'>Account Pin</th>
-                                    <td>$account_pin</td>
-                                </tr>
-                                <tr>
-                                    <th style='padding: 7px;'>Account COT</th>
-                                    <td>$cot</td>
-                                </tr>
-                                <tr>
-                                    <th style='padding: 7px;'>Account IMF</th>
-                                    <td>$imf</td>
-                                </tr>
-                                <tr>
-                                    <th style='padding: 7px;'>Account Type</th>
-                                    <td>$acc_type</td>
-                                </tr>
-                            </table>
-                            <p style='color: #fff !important'><i>Thank you for choosingBeko Federal Credit Union (BEKOFCU)</i></p>
-                        </div>
-                
-                 
-                </body>
-                </html>
+                                <h2 style='color: #fff !important'>Hello,</h2>
+                                <h3 style='color: #fff !important'>Welcome to bekofcu.com. The bank that serves all customers equally on a daily basis</h3> 
+                                <i>Your details are as follows:</i> <hr>
+                                
+                    
+                                <table style='width: 100%; padding-top: 10px;' border='1'>
+                                    <tr>
+                                        <th style='padding: 7px;'>Account number</th>
+                                        <td>$accountNumber</td>
+                                    </tr>
+                                    <tr>
+                                        <th style='padding: 7px;'>Account Pin</th>
+                                        <td>$accountPin</td>
+                                    </tr>
+                                    <tr>
+                                        <th style='padding: 7px;'>Account COT</th>
+                                        <td>$accountCot</td>
+                                    </tr>
+                                    <tr>
+                                        <th style='padding: 7px;'>Account IMF</th>
+                                        <td>$accountImf</td>
+                                    </tr>
+                                    <tr>
+                                        <th style='padding: 7px;'>Account Type</th>
+                                        <td>$accountType</td>
+                                    </tr>
+                                </table>
+                                <p style='color: #fff !important'><i>Thank you for choosingBeko Federal Credit Union (BEKOFCU)</i></p>
+                            </div>
+                        </body>
+                    </html>
                 ";
                 sendEmail($email, "Welcome toBeko Federal Credit Union (BEKOFCU)", $message);
+            }
             return true;
         } else {
             $errors[] = "Check form inputs";
@@ -173,13 +207,24 @@ function user_login($post)
 
     //The Sql Statement...
     if (!$errors) {
-        $sql = "SELECT * FROM users WHERE acc_number = '$accNum'";
+        $sql = "SELECT * FROM accounts WHERE acc_number = '$accNum'";
         $result = executeQuery($sql);
         if ($result) {
-            $encryptedpassword = $result['password'];
-            $userEmail = $result['email'];
-            $userName = $result['fullname'];
-            $user_id = $result['id'];
+            // Get users details
+            $userId = $result['user_id'];
+
+            $query = "SELECT * FROM users WHERE id = '$userId'";
+            $resultQuery = executeQuery($query);
+
+            if(!$resultQuery) {
+                $errors[] = "No user found";
+                return $errors;
+            }
+
+            $encryptedpassword = $resultQuery['password'];
+            $userEmail = $resultQuery['email'];
+            $userName = $resultQuery['fullname'];
+
             $otp = generateNumber(4);
 
                 $message = "
@@ -208,10 +253,10 @@ function user_login($post)
                 ";
             if (decrypt($encryptedpassword, $password)) {
 
-                $_SESSION['tmpData'] = $user_id;
+                $_SESSION['tmpData'] = $userId;
                 if (sendEmail($userEmail, "Login Verification", $message)) {
 
-                    $otpSql = "INSERT INTO passcodes (otp, user_id) VALUES ($otp, $user_id)";
+                    $otpSql = "INSERT INTO passcodes (otp, user_id) VALUES ($otp, $userId)";
                     $insertOtp = validateQuery($otpSql);
 
                     if ($insertOtp) {
@@ -267,7 +312,7 @@ function confirmPin($post) {
     }
 
     if (!$errors) {
-        $sql = "SELECT * FROM users WHERE acc_pin = $pin AND id = $user_id";
+        $sql = "SELECT * FROM accounts WHERE acc_pin = $pin AND user_id = $user_id";
         $result = executeQuery($sql);
 
         if ($result) {

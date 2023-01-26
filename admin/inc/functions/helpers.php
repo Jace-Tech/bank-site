@@ -63,6 +63,13 @@ function get_image_path(Array $file = null,  &$err)
     }return false;
 }
 
+function generateID ($prefix = "id_", $len = 7) {
+    for($i = 0; $i < $len; $i++) {
+        $prefix .= rand(0, 9);
+    }
+    return $prefix;
+}
+
 function sendEmail($email, $subject, $msg) {
     $headers = "MIME-Version: 1.0" . "\r\n";
     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
