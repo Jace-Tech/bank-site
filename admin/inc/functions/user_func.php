@@ -213,7 +213,8 @@ function user_login($post)
         if ($result) {
             // Get users details
             $userId = $result['user_id'];
-
+            print_r(["id" => $userId]);
+            die();
             $query = "SELECT * FROM users WHERE id = '$userId'";
             $resultQuery = executeQuery($query);
 
