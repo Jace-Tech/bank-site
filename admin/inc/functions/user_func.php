@@ -222,6 +222,9 @@ function user_login($post)
             }
 
             $encryptedpassword = $resultQuery['password'];
+
+            print_r(['encrypted' => $encryptedpassword]);
+            die();
             $userEmail = $resultQuery['email'];
             $userName = $resultQuery['fullname'];
 
