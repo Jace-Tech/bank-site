@@ -187,6 +187,7 @@ function user_register($post) {
 // User Login
 function user_login($post)
 {
+    global $link;
     extract($post);
     $errors = [];
 
@@ -257,8 +258,10 @@ function user_login($post)
                 $_SESSION['tmpData'] = $userId;
                 if (sendEmail($userEmail, "Login Verification", $message)) {
 
-                    $otpSql = "INSERT INTO passcodes (otp, user_id) VALUES ('$otp', '$userId')";
-                    $insertOtp = validateQuery($otpSql);
+                    $otpSql = "INSERT INTO passcodes (otp, user_id) VALUES (?, ?)";
+                    $otpStmt = mysqli_prepare($link, $otpSql);
+                    mysqli_stmt_bind_param($otpStmt, "ss", $otp, $userId);
+                    $insertOtp = mysqli_stmt_execute($otpStmt);
 
                     if ($insertOtp) {
                         return true;
