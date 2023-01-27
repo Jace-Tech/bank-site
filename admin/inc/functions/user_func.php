@@ -824,7 +824,7 @@ function Transactions($user_id, $status) {
     $result = returnQuery($sql);
 
     if ($result) {
-        return $result;
+        return mysqli_fetch_all($result, MYSQLI_ASSOC);
     } else {
         return false;
     }

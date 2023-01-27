@@ -39,34 +39,47 @@ require_once 'inc/header.php';
                                 <tbody>
                                     <?php
                                     $all_transactions = Transactions($user_id, 1);
-                                    foreach ($all_transactions as $transaction) {
-                                        extract($transaction); ?>
+                                    if (count($all_transactions)) {
+                                        foreach ($all_transactions as $transaction) {
+                                            extract($transaction); ?>
 
-                                        <tr>
-                                            <td class="text-center font-size-sm">
-                                                <a class="font-w600" href="be_pages_ecom_product_edit.html">
-                                                    <strong>TID00<?= $id; ?></strong>
-                                                </a>
-                                            </td>
-                                            <td class="d-none d-sm-table-cell text-center font-size-sm"><?= $created_at; ?></td>
-                                            
-                                            <td>
-                                                <?php if ($type == 0) { ?>
-                                                    <span class="badge badge-success p-2"><?= $to_user; ?></span>
-                                                <?php } else { ?>
-                                                    <span class="badge badge-danger p-2"><?= $to_user; ?></span>
-                                                <?php } ?>
-                                            </td>
-                                            <td class=" d-none d-sm-table-cell font-size-sm">
-                                            <?php if ($type == 0) { ?>
-                                                <strong class="text-success">$<?= number_format($amount); ?></strong>
-                                                <?php } else { ?>
-                                                    <strong class="text-danger">$<?= number_format($amount); ?></strong>
-                                                <?php } ?>
-                                            </td>
-                                        </tr>
+                                            <tr>
+                                                <td class="text-center font-size-sm">
+                                                    <a class="font-w600" href="be_pages_ecom_product_edit.html">
+                                                        <strong>TID00<?= $id; ?></strong>
+                                                    </a>
+                                                </td>
+                                                <td class="d-none d-sm-table-cell text-center font-size-sm"><?= $created_at; ?></td>
 
-                                    <?php } ?>
+                                                <td>
+                                                    <?php if ($type == 0) { ?>
+                                                        <span class="badge badge-success p-2"><?= $to_user; ?></span>
+                                                    <?php } else { ?>
+                                                        <span class="badge badge-danger p-2"><?= $to_user; ?></span>
+                                                    <?php } ?>
+                                                </td>
+                                                <td class=" d-none d-sm-table-cell font-size-sm">
+                                                    <?php if ($type == 0) { ?>
+                                                        <strong class="text-success">$<?= number_format($amount); ?></strong>
+                                                    <?php } else { ?>
+                                                        <strong class="text-danger">$<?= number_format($amount); ?></strong>
+                                                    <?php } ?>
+                                                </td>
+                                            </tr>
+
+                                        <?php }
+                                    } else {
+                                        ?>
+                                            <tr>
+                                                <td colspan="4" class="text-center text-muted p-3">
+                                                   No transactions found 
+                                                </td>   
+                                            </tr>
+                                        <?php
+                                    }
+                                    ?>
+
+
                                 </tbody>
                             </table>
                         </div>
