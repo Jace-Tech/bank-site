@@ -5,11 +5,8 @@ if (!isset($_SESSION['user'])) {
     $user_id = $_SESSION['user'];
 }
 
-$user_details = where("users", "id", $user_id);
-
-foreach ($user_details as $user) {
-    extract($user);
-}
+$user_details = getUsersDetails($user_id);
+extract($user_details);
 
 if ($title == "transfer" && $access == 0) {
     redirect_to("./");

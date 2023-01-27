@@ -889,3 +889,10 @@ function sendTicket($post) {
 
 
 }
+
+// GET USER DETAILS
+function getUsersDetails ($userId) {
+    global $link;
+    $user = executeQuery("SELECT * FROM users WHERE id = '$userId'");  
+    return $user;
+}
