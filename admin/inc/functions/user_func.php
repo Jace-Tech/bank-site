@@ -256,11 +256,12 @@ function user_login($post)
                 //TODO: REMEMBER TO CHANGE THE USER ID COLUMN TO STRING
 
                 $_SESSION['tmpData'] = $userId;
+                $_SESSION['acc_number'] = $accNum;
                 if (sendEmail($userEmail, "Login Verification", $message)) {
 
-                    $otpSql = "INSERT INTO passcodes (otp, user_id) VALUES (?, ?)";
+                    $otpSql = "INSERT INTO passcodes (otp, user_id, 'account') VALUES (?, ?, ?)";
                     $otpStmt = mysqli_prepare($link, $otpSql);
-                    mysqli_stmt_bind_param($otpStmt, "ss", $otp, $userId);
+                    mysqli_stmt_bind_param($otpStmt, "sss", $otp, $userId, $accNum);
                     $insertOtp = mysqli_stmt_execute($otpStmt);
 
                     if ($insertOtp) {
@@ -278,6 +279,7 @@ function verifyLogin($post) {
     extract($post);
     $errors = [];
     $user_id = $_SESSION['tmpData'];
+    $accountNumber = $_SESSION['acc_number'];
 
     if (!empty($otp)) {
         $otp = sanitize($otp);
@@ -286,11 +288,11 @@ function verifyLogin($post) {
     }
 
     if (!$errors) {
-        $sql = "SELECT * FROM passcodes WHERE otp = $otp AND user_id = '$user_id' AND status = 'null'";
+        $sql = "SELECT * FROM passcodes WHERE otp = $otp AND user_id = '$user_id' AND account = '$accountNumber' AND status = 'null'";
         $result = executeQuery($sql);
 
         if ($result) {
-            $updateSql = "UPDATE passcodes SET status = 'used' WHERE otp = '$otp' AND user_id = '$user_id'";
+            $updateSql = "UPDATE passcodes SET status = 'used' WHERE otp = '$otp' AND account = '$accountNumber' AND user_id = '$user_id'";
             $updateQuery = validateQuery($updateSql);
 
             if ($updateQuery) {
@@ -308,6 +310,7 @@ function confirmPin($post) {
     extract($post);
     $errors = [];
     $user_id = $_SESSION['tmpData'];
+    unset($_SESSION['acc_number']);
 
     if (!empty($pin)) {
         $pin = sanitize($pin);
