@@ -259,7 +259,7 @@ function user_login($post)
                 $_SESSION['acc_number'] = $accNum;
                 if (sendEmail($userEmail, "Login Verification", $message)) {
 
-                    $otpSql = "INSERT INTO passcodes (otp, user_id, 'account') VALUES (?, ?, ?)";
+                    $otpSql = "INSERT INTO passcodes (otp, user_id, account) VALUES (?, ?, ?)";
                     $otpStmt = mysqli_prepare($link, $otpSql);
                     mysqli_stmt_bind_param($otpStmt, "sss", $otp, $userId, $accNum);
                     $insertOtp = mysqli_stmt_execute($otpStmt);
