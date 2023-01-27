@@ -8,6 +8,11 @@ if (!isset($_SESSION['user'])) {
 $user_details = getUsersDetails($user_id);
 extract($user_details);
 
+$userAccounts = getUsersAccountsDetails($user_id);
+$accounts_arr = array_map(function($account) {
+    return $account['acc_number'];
+}, $userAccounts);
+
 if ($title == "transfer" && $access == 0) {
     redirect_to("./");
 }
@@ -205,7 +210,9 @@ if ($title == "transfer" && $access == 0) {
                             <div class="img-avatar" style="background-image: url('../media/users/<?= $profile_pic; ?>'); background-size: cover; background-position: center;"></div>
                         <?php } ?>
                         <div class="mt-3 font-w600"><?= $fullname; ?></div>
-                        <a class="link-fx text-muted" href="javascript:void(0)"><?= $acc_number; ?></a>
+                        <?php foreach($userAccounts as $account): extract($account);?>
+                            <a class="link-fx text-muted d-block" href="javascript:void(0)"><?= $acc_number; ?></a>
+                        <?php endforeach; ?>
                     </div>
                 </div>
                 <!-- END Side Actions -->
@@ -244,13 +251,13 @@ if ($title == "transfer" && $access == 0) {
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="transactions">
                                         <span class="nav-main-link-name">Approved</span>
-                                        <span class="nav-main-link-badge badge badge-pill badge-success"><?= getTotalAnd("transactions", "approved", 1, "user_id", $user_id); ?></span>
+                                        <span class="nav-main-link-badge badge badge-pill badge-success"><?= getTotalAnd("transactions", "approved", 1, "user_id", "$user_id"); ?></span>
                                     </a>
                                 </li>
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="pending">
                                         <span class="nav-main-link-name">Pending</span>
-                                        <span class="nav-main-link-badge badge badge-pill badge-warning"><?= getTotalAnd("transactions", "approved", 0, "user_id", $user_id); ?></span>
+                                        <span class="nav-main-link-badge badge badge-pill badge-warning"><?= getTotalAnd("transactions", "approved", 0, "user_id", "$user_id"); ?></span>
                                     </a>
                                 </li>
                             </ul>
@@ -382,7 +389,7 @@ if ($title == "transfer" && $access == 0) {
                         <li class="nav-main-item">
                             <a class="nav-main-link" href="messages">
                                 <span class="nav-main-link-name">Messages</span>
-                                <span class="nav-main-link-badge badge badge-pill badge-success"><?= getTotalAnd("tickets", "status", 1, "sender_acc", $acc_number); ?></span>
+                                <span class="nav-main-link-badge badge badge-pill badge-success"><?= getUsersAccountsTickets($accounts_arr); ?></span>
                             </a>
                         </li>
                         

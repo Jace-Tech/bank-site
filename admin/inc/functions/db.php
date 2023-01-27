@@ -87,6 +87,17 @@ function fetch_transactions($type, $user_id) {
     }
 }
 
+function fetchUsersTransactions($type, $user_id, $account) {
+    $sql = "SELECT sum(amount) as total FROM transactions WHERE type = $type AND user_id = '$user_id' AND account_from = '$account'";
+    $result = returnQuery($sql);
+
+    if ($result) {
+        return mysqli_fetch_assoc($result)['total'];
+    } else {
+        return false;
+    }
+}
+
 function fetch_all_transactions() {
     $sql = "SELECT sum(amount) as total FROM transactions";
     $result = returnQuery($sql);
@@ -134,7 +145,7 @@ function fetchAllDesc($table, $preferredOrder = null, $limit1 = null, $limit2 = 
 
 function fetchAllWhere($table, $where, $whereValue, $orderBy, $limit = null, $limit2 = null) {
 
-    $sql = "SELECT * FROM $table WHERE $where = $whereValue ORDER BY $orderBy DESC LIMIT $limit, $limit2";
+    $sql = "SELECT * FROM $table WHERE $where = '$whereValue' ORDER BY $orderBy DESC LIMIT $limit, $limit2";
     $result = returnQuery($sql);
 
     if ($result) {
@@ -146,7 +157,7 @@ function fetchAllWhere($table, $where, $whereValue, $orderBy, $limit = null, $li
 
 function get_transactions($table, $where, $where2, $whereValue, $whereValue2, $orderBy, $limit = null, $limit2 = null) {
 
-    $sql = "SELECT * FROM $table WHERE $where = $whereValue OR $where2 = $whereValue2 ORDER BY $orderBy DESC LIMIT $limit, $limit2";
+    $sql = "SELECT * FROM $table WHERE $where =' $whereValue' OR $where2 = '$whereValue2' ORDER BY $orderBy DESC LIMIT $limit, $limit2";
     $result = returnQuery($sql);
 
     if ($result) {
@@ -158,9 +169,9 @@ function get_transactions($table, $where, $where2, $whereValue, $whereValue2, $o
 
 function where($table, $where, $whereValue, $limit = null) {
     if (!is_null($limit)) {
-        $sql = "SELECT * FROM $table WHERE $where = $whereValue LIMIT $limit";
+        $sql = "SELECT * FROM $table WHERE $where = '$whereValue' LIMIT $limit";
     } else {
-        $sql = "SELECT * FROM $table WHERE $where = $whereValue";
+        $sql = "SELECT * FROM $table WHERE $where = '$whereValue'";
     }
     $result = returnQuery($sql);
 

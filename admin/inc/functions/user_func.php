@@ -892,7 +892,19 @@ function sendTicket($post) {
 
 // GET USER DETAILS
 function getUsersDetails ($userId) {
-    global $link;
     $user = executeQuery("SELECT * FROM users WHERE id = '$userId'");  
     return $user;
+}
+
+function getUsersAccountsDetails ($userId) {
+    $query = returnQuery("SELECT * FROM accounts WHERE user_id = '$userId'");  
+    return mysqli_fetch_all($query, MYSQLI_ASSOC);
+}
+
+function getUsersAccountsTickets ($accounts) {
+    $queryString = join(" OR ", array_map(function($account) {
+        return "sender_acc = '$account'";
+    }, $accounts));
+    $query = returnQuery("SELECT * FROM tickets WHERE `status` = 1 AND " . $queryString);  
+    return mysqli_num_rows($query);
 }

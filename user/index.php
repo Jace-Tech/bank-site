@@ -4,13 +4,15 @@ $title = "User Dashboard";
 
 require_once 'inc/header.php';
 
-$total_transfer = fetch_transactions(1, $user_id);
-foreach ($total_transfer as $transfer) {
-}
+// $total_transfer = fetch_transactions(1, "$user_id");
+// foreach ($total_transfer as $transfer) {
+// }
 
-$total_income = fetch_transactions(0, $user_id);
-foreach ($total_income as $income) {
-}
+
+
+// $total_income = fetch_transactions(0, "$user_id");
+// foreach ($total_income as $income) {
+// }
 
 ?>
 <!-- END Header -->
@@ -53,31 +55,32 @@ foreach ($total_income as $income) {
                 </div>
             </div>
         <?php } ?>
-
-        <div class="block block-rounded invisible" data-toggle="appear">
-            <div class="block-content block-content-full">
-                <div class="row text-center">
-                    <div class="col-md-4 py-3">
-                        <div class="font-size-h1 font-w300 text-black mb-1">
-                            USD $<?= number_format($acc_balance); ?>
+        <?php foreach($userAccounts as $account): ?>
+            <div class="block block-rounded invisible" data-toggle="appear">
+                <div class="block-content block-content-full">
+                    <div class="row text-center">
+                        <div class="col-md-4 py-3">
+                            <div class="font-size-h1 font-w300 text-black mb-1">
+                                USD $<?= number_format($acc_balance); ?>
+                            </div>
+                            <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Available Balance</a>
                         </div>
-                        <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Available Balance</a>
-                    </div>
-                    <div class="col-md-4 py-3">
-                        <div class="font-size-h1 font-w300 text-success mb-1">
-                            USD $<?= number_format($income['total']); ?>
+                        <div class="col-md-4 py-3">
+                            <div class="font-size-h1 font-w300 text-success mb-1">
+                                USD $<?= number_format(fetchUsersTransactions(0, $user_id, $account['acc_number'])); ?>
+                            </div>
+                            <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Current Balance</a>
                         </div>
-                        <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Current Balance</a>
-                    </div>
-                    <div class="col-md-4 py-3">
-                        <div class="font-size-h1 font-w300 text-danger mb-1">
-                            USD -$<?= number_format($transfer['total']); ?>
+                        <div class="col-md-4 py-3">
+                            <div class="font-size-h1 font-w300 text-danger mb-1">
+                                USD -$<?= number_format(fetchUsersTransactions(1, $user_id, $account['acc_number'])); ?>
+                            </div>
+                            <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Recent Transfer</a>
                         </div>
-                        <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Recent Transfer</a>
                     </div>
                 </div>
             </div>
-        </div>
+        <?php endforeach; ?>
         <!-- END Quick Overview -->
 
         <!-- Cards -->
@@ -97,89 +100,89 @@ foreach ($total_income as $income) {
                 </h2>
             </div>
         </div>
-        <div class="row">
 
-            <div class="col-lg-4 invisible" data-toggle="appear">
-                <!-- Bank Account #1 -->
-                <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
-                    <div class="block-content block-content-full d-flex align-items-center justify-content-between">
-                        <div>
-                            <p class="font-size-lg font-w600 mb-0">
-                                <span class="text-default"><?= $acc_number; ?></span>
-                            </p>
-                            <p class="text-muted mb-0">
-                                Account Number
-                            </p>
-                        </div>
-                        <div class="ml-3">
-                            <i class="fa fa-piggy-bank fa-2x text-gray"></i>
-                        </div>
-                    </div>
-                    <div class="block-content block-content-full block-content-sm text-center bg-body-light">
-                        <span class="font-size-sm text-muted">Beko Federal Credit Union (BEKOFCU)</span>
-                    </div>
-                </a>
-                <!-- END Bank Account #1 -->
-            </div>
 
-            <div class="col-lg-4 invisible" data-toggle="appear">
-                <!-- Bank Account #1 -->
-                <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
-                    <div class="block-content block-content-full d-flex align-items-center justify-content-between">
-                        <div>
-                            <p class="font-size-lg font-w600 mb-0">
-                                <span class="text-default"><?= $fullname; ?></span>
-                            </p>
-                            <p class="text-muted mb-0">
-                                Account Holder
-                            </p>
+        <?php foreach($userAccounts as $account): ?>
+            <div class="row">
+                <div class="col-lg-4 invisible" data-toggle="appear">
+                    <!-- Bank Account #1 -->
+                    <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                        <div class="block-content block-content-full d-flex align-items-center justify-content-between">
+                            <div>
+                                <p class="font-size-lg font-w600 mb-0">
+                                    <span class="text-default"><?= $account['acc_number']; ?></span>
+                                </p>
+                                <p class="text-muted mb-0">
+                                    Account Number
+                                </p>
+                            </div>
+                            <div class="ml-3">
+                                <i class="fa fa-piggy-bank fa-2x text-gray"></i>
+                            </div>
                         </div>
-                        <div class="ml-3">
-                            <i class="fa fa-piggy-bank fa-2x text-gray"></i>
+                        <div class="block-content block-content-full block-content-sm text-center bg-body-light">
+                            <span class="font-size-sm text-muted">Beko Federal Credit Union (BEKOFCU)</span>
                         </div>
-                    </div>
-                    <div class="block-content block-content-full block-content-sm text-center bg-body-light">
-                        <span class="font-size-sm text-muted">Beko Federal Credit Union (BEKOFCU)</span>
-                    </div>
-                </a>
-                <!-- END Bank Account #1 -->
+                    </a>
+                    <!-- END Bank Account #1 -->
+                </div>
+
+                <div class="col-lg-4 invisible" data-toggle="appear">
+                    <!-- Bank Account #1 -->
+                    <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                        <div class="block-content block-content-full d-flex align-items-center justify-content-between">
+                            <div>
+                                <p class="font-size-lg font-w600 mb-0">
+                                    <span class="text-default"><?= $fullname; ?></span>
+                                </p>
+                                <p class="text-muted mb-0">
+                                    Account Holder
+                                </p>
+                            </div>
+                            <div class="ml-3">
+                                <i class="fa fa-piggy-bank fa-2x text-gray"></i>
+                            </div>
+                        </div>
+                        <div class="block-content block-content-full block-content-sm text-center bg-body-light">
+                            <span class="font-size-sm text-muted">Beko Federal Credit Union (BEKOFCU)</span>
+                        </div>
+                    </a>
+                    <!-- END Bank Account #1 -->
+                </div>
+                
+                <div class="col-lg-4 invisible" data-toggle="appear">
+                    <!-- Bank Account #1 -->
+                    <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                        <div class="block-content block-content-full d-flex align-items-center justify-content-between">
+                            <div>
+                                <p class="font-size-lg font-w600 mb-0">
+                                    <span class="text-default"><?= $account['acc_type']; ?></span>
+                                </p>
+                                <p class="text-muted mb-0">
+                                    Account Type
+                                </p>
+                            </div>
+                            <div class="ml-3">
+                                <i class="fa fa-piggy-bank fa-2x text-gray"></i>
+                            </div>
+                        </div>
+                        <div class="block-content block-content-full block-content-sm text-center bg-body-light">
+                            <span class="font-size-sm text-muted">Beko Federal Credit Union (BEKOFCU)</span>
+                        </div>
+                    </a>
+                    <!-- END Bank Account #1 -->
+                </div>
             </div>
-            
-            <div class="col-lg-4 invisible" data-toggle="appear">
-                <!-- Bank Account #1 -->
-                <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
-                    <div class="block-content block-content-full d-flex align-items-center justify-content-between">
-                        <div>
-                            <p class="font-size-lg font-w600 mb-0">
-                                <span class="text-default"><?= $acc_type; ?></span>
-                            </p>
-                            <p class="text-muted mb-0">
-                                Account Type
-                            </p>
-                        </div>
-                        <div class="ml-3">
-                            <i class="fa fa-piggy-bank fa-2x text-gray"></i>
-                        </div>
-                    </div>
-                    <div class="block-content block-content-full block-content-sm text-center bg-body-light">
-                        <span class="font-size-sm text-muted">Beko Federal Credit Union (BEKOFCU)</span>
-                    </div>
-                </a>
-                <!-- END Bank Account #1 -->
-            </div>
-          
-        </div>
+        <?php endforeach; ?>
         <!-- END Account Deatails -->
 
         <!-- Bank Accounts -->
         <h2 class="content-heading">
-            <i class="fa fa-angle-right text-muted mr-1"></i> Bank Accounts (<?= getTotalQuote("users", "email", $email); ?>)
+            <i class="fa fa-angle-right text-muted mr-1"></i> Bank Accounts (<?= count($userAccounts); ?>)
         </h2>
         <div class="row">
             <?php
-            $accounts = whereQuote("accounts", "user_id", $email);
-            foreach ($accounts as $account) { ?>
-
+            foreach ($userAccounts as $account) { ?>
                 <div class="col-lg-6 invisible" data-toggle="appear">
                     <!-- Bank Account #1 -->
                     <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
@@ -212,7 +215,7 @@ foreach ($total_income as $income) {
             <i class="fa fa-angle-right text-muted mr-1"></i> Latest Transactions
         </h2>
         <?php
-        $transc = fetchAllWhere("transactions", "user_id", $user_id, "id", 0, 10);
+        $transc = fetchAllWhere("transactions", "user_id", "$user_id", "id", 0, 10);
         foreach ($transc as $trans) {
             if ($trans['type'] == 0) {
                 $class_style = "border-success";
