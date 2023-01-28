@@ -106,6 +106,8 @@ if ($title == "transfer" && $access == 0) {
 
         .form-input-field {
             display: flex;
+            flex: 1;
+            width: 100%;
             padding: .8rem 1rem;
             font-size: .9rem;
         }

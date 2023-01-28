@@ -42,11 +42,11 @@ if (isset($_POST['submit'])) {
         <div class="row">
 
             <div class="col-lg-12 col-xl-12">
-                <form action="" method="post" onsubmit="handleStartLoading(event)">
+                <form action="" method="post" onsubmit="handleStartLoading(event)" class="p-3 bg-white">
                 
                     <div class="form-group">
                         <label for="" class="form-input-label">Sender's Account</label>
-                        <select required name="sender_account" id="" class="form-input-field">
+                        <select required name="sender_account" id="" class="form-control form-input-field">
                             <?php foreach($userAccounts as $account): ?>
                                 <option value="<?= $account['acc_number'] ?>">
                                     <?= $account['acc_number'] ?>
