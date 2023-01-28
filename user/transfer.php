@@ -49,7 +49,7 @@ if (isset($_POST['submit'])) {
                         <select required name="sender_account" id="" class="form-control form-input-field">
                             <?php foreach($userAccounts as $account): ?>
                                 <option value="<?= $account['acc_number'] ?>">
-                                    <?= $account['acc_number'] ?>
+                                    <?= $account['acc_number'] . " - " . $account['acc_type'] ?>
                                 </option>
                             <?php endforeach; ?>
                         </select>
