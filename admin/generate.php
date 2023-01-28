@@ -107,6 +107,16 @@ if (isset($_POST['generate'])) {
               </div>
             </div>
 
+            <div class="col-12">
+              <div class="form-group">
+                <label for="user-accounts">User Accounts</label>
+                <select name="user" class="form-control" id="user-accounts">
+                  <option value="" selected disabled>Select User Account</option>
+                  
+                </select>
+              </div>
+            </div>
+
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
                 <label for="startdate">Start Date</label>
