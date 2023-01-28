@@ -96,7 +96,7 @@ if (isset($_POST['generate'])) {
             <div class="col-12">
               <div class="form-group">
                 <label for="user">User</label>
-                <select name="user" class="form-control" id="user">
+                <select name="user" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
                   <option value="" selected disabled>Select User</option>
                   <?php foreach ($USERS as $user) : ?>
                     <option value="<?= $user['id']; ?>">
