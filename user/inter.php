@@ -112,7 +112,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                     <input type="hidden" id="user" value="<?= $_SESSION['user']?>" />
 
                     <hr>
-                    <div class="form-group" id="make_transfer" style="display: none;">
+                    <div class="form-group" id="make_transfer">
                         <div class="input-group">
                             <!-- <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver"> -->
                             <div class="input-group-append">
