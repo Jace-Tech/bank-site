@@ -843,7 +843,7 @@ function updateProfileImage($post, $user_id) {
     }
 
     if (!$errors) {
-        $sql = "UPDATE users SET profile_pic = '$profileImage' WHERE id = $user_id";
+        $sql = "UPDATE users SET profile_pic = '$profileImage' WHERE id = '$user_id'";
         $query = validateQuery($sql);
 
         if ($query) {

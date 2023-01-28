@@ -142,6 +142,7 @@ function credit_user_account($post) {
         $ql = "SELECT * FROM users WHERE acc_number = $acc_number";
         $qq = returnQuery($ql);
 
+        // TODO: REMEMBER TO ADD THE ACCOUNT_NUM HERE IN TRANSACTION TABLE
         if (mysqli_num_rows($qq) > 0) {
             $details = mysqli_fetch_assoc($qq);
             $amount_in_db = $details['acc_balance'];
@@ -149,7 +150,7 @@ function credit_user_account($post) {
 
             $update_balance = $amount + $amount_in_db;
 
-            $sql = "UPDATE users SET acc_balance = '$update_balance' WHERE acc_number = $acc_number";
+            $sql = "UPDATE users SET acc_balance = '$update_balance' WHERE acc_number = '$acc_number'";
             $result = validateQuery($sql);
 
             if ($result) {
