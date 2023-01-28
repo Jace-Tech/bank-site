@@ -143,6 +143,7 @@ if (isset($_POST['generate'])) {
   </div>
   <!-- END Page Content -->
 </main>
+<script src="./js/get_recipent.js"></script>
 <!-- END Main Container -->
 
 <!-- Footer -->
