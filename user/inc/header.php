@@ -110,6 +110,8 @@ if ($title == "transfer" && $access == 0) {
             width: 100%;
             padding: .8rem 1rem;
             font-size: .9rem;
+            height: fit-content !important;
+            min-height: 40px;
         }
     </style>
 </head>

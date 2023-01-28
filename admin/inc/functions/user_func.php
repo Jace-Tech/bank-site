@@ -494,6 +494,13 @@ function make_transfer($post, $user_id) {
     $errors = [];
     $err_flag = false;
 
+    if (!empty($sender_account)) {
+        $sender_account = sanitize($sender_account);
+    } else {
+        $err_flag = true;
+        $errors[] = "Choose account you want to send from!";
+    }
+
     if (!empty($recipent)) {
         $acc_number = sanitize($recipent);
     } else {
@@ -523,15 +530,21 @@ function make_transfer($post, $user_id) {
     }
 
     if ($err_flag === false) {
-        $sql1 = "SELECT * FROM users WHERE id = $user_id";
+        $sql1 = "SELECT * FROM accounts WHERE user_id = '$user_id' AND acc_number = '$sender_account'";
         $query1 = executeQuery($sql1);
 
-        $rec_sql = "SELECT * FROM users WHERE acc_number = '$acc_number'";
+        $sql2 = "SELECT * FROM users WHERE id = '$user_id'";
+        $query2 = executeQuery($sql2);
+
+        $rec_sql = "SELECT * FROM accounts WHERE acc_number = '$acc_number'";
         $rec_result = executeQuery($rec_sql);
+        $receipent_id = $rec_result['user_id'];
+
+        $recipent_details = executeQuery("SELECT * FROM users WHERE id = '$receipent_id'");
 
         if ($query1) {
-            $details = $query1;
-            $total_balance = $details['acc_balance'];
+            $details = $query2;
+            $total_balance = $query1['acc_balance'];
             $email = $details['email'];
             $available_balance = $total_balance - $amount;
             $date = date("Y/m/d");
@@ -540,10 +553,10 @@ function make_transfer($post, $user_id) {
 
             //Receiver details
             $receiver_email = $rec_result['email'];
-            $receiver_fullname = $rec_result['fullname'];
+            $receiver_fullname = $recipent_details['fullname'];
 
             if ($amount <= $total_balance) {
-                $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, description, routing_number, created_at, kind) VALUES ($user_id, 1, $amount, '$acc_number', '$desc', '$routing_number', now(), 'transfer')";
+                $sql2 = "INSERT INTO transactions (user_id, type, account_num, amount, to_user, description, routing_number, created_at, kind) VALUES ($user_id, 1, '$sender_account', $amount, '$acc_number', '$desc', '$routing_number', now(), 'transfer')";
                 $query2 = validateQuery($sql2);
 
                 if ($query2) {
@@ -732,6 +745,13 @@ function wire_transfer($post, $user_id) {
         $errors[] = "Enter account type!";
     }
     
+    if (!empty($sender_account)) {
+        $sender_account = sanitize($sender_account);
+    } else {
+        $err_flag = true;
+        $errors[] = "Choose account you want to send from!";
+    }
+    
     if (!empty($amount)) {
         $amount = sanitize($amount);
     } else {
@@ -748,15 +768,17 @@ function wire_transfer($post, $user_id) {
     
 
     if ($err_flag === false) {
-        $sql1 = "SELECT * FROM users WHERE id = $user_id";
+        $sql1 = "SELECT * FROM users WHERE id = '$user_id'";
         $query1 = executeQuery($sql1);
 
+        $accountDetails = executeQuery("SELECT * FROM accounts WHERE user_id = '$user_id'");
+
+
         if ($query1) {
-            $details = $query1;
-            $total_balance = $details['acc_balance'];
+            $total_balance = $accountDetails['acc_balance'];
 
             if ($amount <= $total_balance) {
-                $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, created_at, kind) VALUES ($user_id, 1, $amount, '$acc_number', now(), '$kind')";
+                $sql2 = "INSERT INTO transactions (user_id, type, amount, account_num, to_user, created_at, kind) VALUES ('$user_id', 1, $amount, '$sender_account', '$acc_number', now(), '$kind')";
                 $query2 = validateQuery($sql2);
 
                 if ($query2) {

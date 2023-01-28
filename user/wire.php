@@ -45,112 +45,69 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
         <div class="row">
 
             <div class="col-lg-12 col-xl-12">
-                <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)">
+                <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-address-card"></i>
-                                </span>
-                            </div>
-                            <!-- <input type="text" name="recipent" onblur="getRecipent()" class="form-control" id="account_number" placeholder="Account Number"> -->
-                            <input required type="text" name="recipent" class="form-control" id="account_number" placeholder="Account Number">
-                        </div>
+                        <label for="sender" class="form-input-label">Sender's Account</label>
+                        <select required name="sender_account" id="sender" class="form-control form-input-field">
+                            <?php foreach($userAccounts as $account): ?>
+                                <option value="<?= $account['acc_number'] ?>">
+                                    <?= $account['acc_number'] ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="far fa-user"></i>
-                                </span>
-                            </div>
-                            <input required type="text" name="acc_name" class="form-control" placeholder="Enter account beneficiary name">
-                        </div>
+                        <label for="recipent" class="form-input-label">Recipent's Account</label>
+                        <input required type="text" name="recipent" class="form-control form-input-field" id="recipent" />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="account_name" class="form-input-label">Account Name</label>
+                        <input required type="text" name="acc_name" id="account_name" class="form-control form-input-field" />
                     </div>
                     
                     <div class="form-group">
                         <input type="hidden" name="kind" value="wire transfer">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-building"></i>
-                                </span>
-                            </div>
-                            <input required type="text" list="banks" name="bank_name" class="form-control" placeholder="Enter bank name">
-                            <datalist id="banks">
-                                <?php foreach ($us_banks as $bank): ?>
-                                    <option value="<?= $bank ?>"></option>
-                                <?php endforeach; ?>
-                            </datalist>
-                        </div>
+                        <label for="bank" class="form-input-label">Bank Name</label>
+                        <input required type="text" list="banks" id="bank" name="bank_name" class="form-control form-input-field">
+                        <datalist id="banks">
+                            <?php foreach ($us_banks as $bank): ?>
+                                <option value="<?= $bank ?>"></option>
+                            <?php endforeach; ?>
+                        </datalist>
                     </div>
                     
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-terminal"></i>
-                                </span>
-                            </div>
-                            <input type="text" required name="swift_code" class="form-control" placeholder="Enter swift code">
-                        </div>
+                        <label for="swift" class="form-input-label">Swift Code</label>
+                        <input type="text" required name="swift_code" id="swift" class="form-control form-input-field" >
                     </div>
 
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-terminal"></i>
-                                </span>
-                            </div>
-                            <input type="text" required maxLength="9" name="routing_number" class="form-control" placeholder="Enter Routing number">
-                        </div>
+                        <label for="routing" class="form-input-label">Routing Number</label> 
+                        <input type="text" required maxLength="9" id="routing" name="routing_number" class="form-control form-input-field">
                     </div>
 
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-piggy-bank"></i>
-                                </span>
-                            </div>
-                           
-                            <select name="type" required name="type" class="form-control">
-                                <option value="" selected disabled>Select account type</option>
-                                <?php while($accountType = mysqli_fetch_assoc($accountTypes)): ?>
-                                    <option value="<?= $accountType['type']?>"> 
-                                        <?= $accountType['type'] ?>
-                                    </option>
-                                <?php endwhile; ?>
-                            </select>
-                            
-                        </div>
+                        <label for="type" class="form-input-label">Account Type</label> 
+                        <select name="type" id="type" required name="type" class="form-control form-input-field">
+                            <option value="" selected disabled>Select account type</option>
+                            <?php while($accountType = mysqli_fetch_assoc($accountTypes)): ?>
+                                <option value="<?= $accountType['type']?>"> 
+                                    <?= $accountType['type'] ?>
+                                </option>
+                            <?php endwhile; ?>
+                        </select>
                     </div>
 
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-dollar-sign"></i>
-                                </span>
-                            </div>
-                            <input type="text" required class="form-control" name="amount" placeholder="Amount">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
+                        <label for="account" class="form-input-label">Account</label> 
+                        <input type="text" id="account" required class="form-control form-input-field" name="amount">
                     </div>
 
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-edit"></i>
-                                </span>
-                            </div>
-                            <textarea name="desc" class="form-control" placeholder="Enter transaction description"></textarea>
-                        </div>
+                        <label for="desc" class="form-input-label">Description</label> 
+                        <textarea name="desc" id="desc" class="form-control form-input-field"></textarea>
                     </div>
 
                     <input type="hidden" id="user" value="<?= $_SESSION['user']?>" />
@@ -158,7 +115,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                     <hr>
                     <div class="form-group" id="make_transfer">
                         <div class="input-group">
-                            <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver">
+                            <!-- <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver"> -->
                             <div class="input-group-append">
                                 <button type="submit" id="tbtn" name="submit"  class="btn btn-alt-success">Proceed</button>
                             </div>

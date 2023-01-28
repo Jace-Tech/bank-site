@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
         <div class="row">
 
             <div class="col-lg-12 col-xl-12">
-                <form action="" method="post" onsubmit="handleStartLoading(event)" class="p-3 bg-white">
+                <form action="" method="post" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
                 
                     <div class="form-group">
                         <label for="" class="form-input-label">Sender's Account</label>
