@@ -15,7 +15,7 @@ require_once 'inc/header.php';
     foreach ($users as $user) {
         extract($user);
         
-        
+        $accountDetails = getUsersAccountsDetails($id);
         
         ?>
 
@@ -31,7 +31,15 @@ require_once 'inc/header.php';
                     </h1>
                     <p class="text-muted">
                         <i class="fa fa-award text-warning mr-1"></i>
-                        <?= $acc_number; ?>
+                        <div class="d-flex align-items-center" style="gap: .5rem;">
+                            <?php for ($i = 0; $i < count($accountDetails); $i++): ?>
+                                <?php if($i >= (count($accountDetails) - 1)): ?>
+                                    <?= $accountDetails[$i]['acc_number']; ?> 
+                                <?php  else: ?>
+                                    <?= $accountDetails[$i]['acc_number']; ?> <span style="height: 25px; width: 1px; background-color: #ccc;"></span>
+                                <?php  endif; ?>
+                            <?php endfor; ?>
+                        </div>
                     </p>
                     
                     <a style="cursor: pointer;" data-id="<?= $id; ?>" onclick="deleteUser(this)" class="bg-danger p-2 shadow rounded text-light">Remove User</a>
@@ -47,12 +55,12 @@ require_once 'inc/header.php';
             </div>
             <div class="block-content bg-body-dark text-center">
                 <div class="text-center items-push text-uppercase">
-
-                    <div>
-                        <div class="font-w600 text-dark mb-1">Total Balance</div>
-                        <a class="link-fx font-size-h5" href="javascript:void(0)"><b>$<?= number_format($acc_balance); ?></b></a>
-                    </div>
-
+                    <?php foreach($accountDetails as $account): ?>
+                        <div>
+                            <div class="font-w600 text-dark mb-1">Total Balance - <?= $account['acc_type']; ?></div>
+                            <a class="link-fx font-size-h5" href="javascript:void(0)"><b>$<?= number_format($account['acc_balance']); ?></b></a>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </div>
