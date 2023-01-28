@@ -95,6 +95,20 @@ if ($title == "transfer" && $access == 0) {
             color: #000;
             background-color: #fff;
         }
+
+
+        .form-input-label {
+            display: flex;
+            font-weight: 500;
+            font-size: .85rem;
+            margin-bottom: .5rem;
+        }
+
+        .form-input-field {
+            display: flex;
+            padding: .8rem 1rem;
+            font-size: .9rem;
+        }
     </style>
 </head>
 

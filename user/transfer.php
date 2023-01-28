@@ -43,58 +43,42 @@ if (isset($_POST['submit'])) {
 
             <div class="col-lg-12 col-xl-12">
                 <form action="" method="post" onsubmit="handleStartLoading(event)">
+                
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="far fa-user"></i>
-                                </span>
-                            </div>
-                            <!-- <input type="text" name="recipent" onblur="getRecipent()" class="form-control" id="account_number" placeholder="Account Number"> -->
-                            <input required type="text" name="recipent" class="form-control" id="account_number" placeholder="Account Number">
-                        </div>
+                        <label for="" class="form-input-label">Sender's Account</label>
+                        <select required name="sender_account" id="" class="form-input-field">
+                            <?php foreach($userAccounts as $account): ?>
+                                <option value="<?= $account['acc_number'] ?>">
+                                    <?= $account['acc_number'] ?>
+                                </option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="" class="form-input-label">Recipent's Account</label>
+                        <input required type="text" name="recipent" class="form-control form-input-field" id="account_number">
                     </div>
 
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-terminal"></i>
-                                </span>
-                            </div>
-                            <input required type="text" maxLength="9" name="routing_number" class="form-control" placeholder="Enter Routing number">
-                        </div>
+                        <label for="" class="form-input-label">Routing Number</label>
+                        <input required type="text" maxLength="9" name="routing_number" class="form-control form-input-field">
                     </div>
 
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-dollar-sign"></i>
-                                </span>
-                            </div>
-                            <input required type="text" class="form-control" name="amount" placeholder="Amount">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
+                        <label for="" class="form-input-label">Amount</label>
+                        <input required type="text" class="form-control form-input-field" name="amount" />
                     </div>
 
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-edit"></i>
-                                </span>
-                            </div>
-                            <textarea name="desc" class="form-control" placeholder="Enter transaction description"></textarea>
-                        </div>
+                        <label for="desc" class="form-input-label">Description</label>
+                        <textarea name="desc" class="form-control" placeholder="Enter transaction description"></textarea>
                     </div>
 
                     <hr>
                     <div class="form-group" id="make_transfer">
                         <div class="input-group">
-                            <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver">
+                            <!-- <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver"> -->
                             <div class="input-group-append">
                                 <button type="submit" id="tbtn" name="submit" class="btn btn-alt-success">Proceed</button>
                             </div>
