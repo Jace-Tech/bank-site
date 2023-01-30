@@ -43,3 +43,11 @@ const revStr = (str = '') => {
 }
 
 console.log(revStr("ab-rts+usE-Eok-H"))
+
+
+
+const numbers = [2, 5, 78, 32, 54, 69]
+const func = (num) => {
+  return num % 2 == 0
+}
+console.log(numbers.filter(func))

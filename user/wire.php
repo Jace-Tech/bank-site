@@ -101,7 +101,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                     </div>
 
                     <div class="form-group">
-                        <label for="account" class="form-input-label">Account</label> 
+                        <label for="account" class="form-input-label">Amount</label> 
                         <input type="text" id="account" required class="form-control form-input-field" name="amount">
                     </div>
 

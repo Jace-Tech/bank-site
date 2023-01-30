@@ -112,7 +112,6 @@ if (isset($_POST['generate'])) {
                 <label for="user-accounts">User Accounts</label>
                 <select name="user" class="form-control" id="user-accounts">
                   <option value="" selected disabled>Select User Account</option>
-                  
                 </select>
               </div>
             </div>

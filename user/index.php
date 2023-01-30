@@ -59,6 +59,11 @@ require_once 'inc/header.php';
             <div class="block block-rounded invisible" data-toggle="appear">
                 <div class="block-content block-content-full">
                     <div class="row text-center">
+                        <div class="col-12">
+                            <h2 class="font-w600">
+                                <?= $account['acc_type']; ?>
+                            </h2>
+                        </div>
                         <div class="col-md-4 py-3">
                             <div class="font-size-h1 font-w300 text-black mb-1">
                                 USD $<?= number_format($acc_balance); ?>
