@@ -27,15 +27,15 @@ const handleFetchUsersAccount = async (event) => {
     console.log(accounts)
     const select = document.getElementById("user-accounts")
 
-    if(!accounts?.length) return
+    // if(!accounts?.length) return
 
-    accounts?.forEach(account => {
-        select.innerHTML = `<option value="" selected disabled>Select User Account</option>`
+    // accounts?.forEach(account => {
+    //     select.innerHTML = `<option value="" selected disabled>Select User Account</option>`
 
-        const option = document.createElement("option")
-        option.value = account.acc_number
-        option.innerHTML = `${account.acc_number} - ${account.acc_type}`
+    //     const option = document.createElement("option")
+    //     option.value = account.acc_number
+    //     option.innerHTML = `${account.acc_number} - ${account.acc_type}`
 
-        select.appendChild(option)
-    })
+    //     select.appendChild(option)
+    // })
 }
