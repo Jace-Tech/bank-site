@@ -5,12 +5,10 @@ if (!isset($_SESSION['admin'])) {
     $admin_id = $_SESSION['admin'];
 }
 
-$admin_details = where("admins", "id", $admin_id);
+$admin_details = executeQuery("SELECT * FROM `admin` WHERE `admin_id` = $admin_id");
+extract($admin);
+$fullname = $name;
 
-foreach ($admin_details as $admin) {
-    extract($admin);
-    $fullname = $name;
-}
 
 
 ?>
