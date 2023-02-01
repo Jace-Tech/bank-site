@@ -23,7 +23,7 @@ const handleFetchUsersAccount = async (event) => {
     const id = event.target.value.trim()
     if(!id) return;
 
-    const accounts = JSON.parse(document.querySelector("#accounts").value)
+    const accounts = document.querySelector("#accounts").value
     console.log(accounts)
     const select = document.getElementById("user-accounts")
 
