@@ -23,7 +23,8 @@ const handleFetchUsersAccount = async (event) => {
     const id = event.target.value.trim()
     if(!id) return;
 
-    const accounts = await getUserAccount(id)
+    const accounts = JSON.parse(document.querySelector("#accounts").value)
+    console.log(accounts)
     const select = document.getElementById("user-accounts")
 
     if(!accounts?.length) return
