@@ -86,6 +86,9 @@ if (isset($_POST['generate'])) {
 
 <!-- Main Container -->
 <main id="main-container">
+  <?php  
+    print_r($ACCOUNTS);
+  ?>
 
   <!-- Page Content -->
   <div class="content">
