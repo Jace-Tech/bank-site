@@ -6,11 +6,7 @@ if (!isset($_SESSION['admin'])) {
 }
 
 $admin_details = executeQuery("SELECT * FROM `admins` WHERE `id` = '$admin_id'");
-print_r($admin_details);
 extract($admin_details);
-$fullname = $name;
-
-
 
 ?>
 

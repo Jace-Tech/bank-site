@@ -6,6 +6,8 @@ require_once "../user/inc/banks.php";
 $USERS = mysqli_fetch_all(returnQuery("SELECT * FROM users"), MYSQLI_ASSOC);
 $ACCOUNTS = mysqli_fetch_all(returnQuery("SELECT * FROM accounts"), MYSQLI_ASSOC);
 
+print_r($ACCOUNTS);
+
 if (isset($_POST['generate'])) {
   $user = $_POST['user'];
   $start_date = $_POST['startdate'];
