@@ -6,7 +6,7 @@ if (!isset($_SESSION['admin'])) {
 }
 
 $admin_details = executeQuery("SELECT * FROM `admins` WHERE `id` = $admin_id");
-extract($admin);
+extract($admin_details);
 $fullname = $name;
 
 
