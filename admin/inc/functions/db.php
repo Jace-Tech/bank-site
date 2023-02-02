@@ -157,7 +157,7 @@ function fetchAllWhere($table, $where, $whereValue, $orderBy, $limit = null, $li
 
 function get_transactions($table, $where, $where2, $whereValue, $whereValue2, $orderBy, $limit = null, $limit2 = null) {
 
-    $sql = "SELECT * FROM $table WHERE $where =' $whereValue' OR $where2 = '$whereValue2' ORDER BY $orderBy DESC LIMIT $limit, $limit2";
+    $sql = "SELECT * FROM $table WHERE $where = '$whereValue' OR $where2 = '$whereValue2' ORDER BY $orderBy DESC LIMIT $limit, $limit2";
     $result = returnQuery($sql);
 
     if ($result) {

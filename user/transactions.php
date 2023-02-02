@@ -38,7 +38,7 @@ require_once 'inc/header.php';
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $all_transactions = Transactions($user_id, 1);
+                                    $all_transactions = Transactions($user_id, "approved");
                                     if (count($all_transactions)) {
                                         foreach ($all_transactions as $transaction) {
                                             extract($transaction); ?>

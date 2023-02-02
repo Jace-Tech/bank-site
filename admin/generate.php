@@ -17,7 +17,8 @@ if (isset($_POST['generate'])) {
   $transactionType = [
     [
       "kind" => "deposit",
-      "type" => 0
+      "type" => 0,
+      "narratives" => [""]
     ],
     [
       "kind" => "transfer",
@@ -29,17 +30,17 @@ if (isset($_POST['generate'])) {
     ],
   ];
 
-  $sql = "INSERT INTO transactions(user_id, type, kind, amount, to_user, bank_name, approved, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+  $sql = "INSERT INTO transactions(user_id, type, kind, amount, to_user, bank_name, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
   $stmt = mysqli_prepare($link, $sql);
   $success = [];
 
   for ($date = $start_date; $date <= $end_date; date_add($date, date_interval_create_from_date_string(rand(1, 9) . " days"))) {
     $created =  date_format($date, 'Y-m-d');
     $amount = rand(1000, 999999);
-    $to = rand(10000000000, 9999999999);
+    $to = generateNumber(10);
     $bank = $us_banks[rand(0, (count($us_banks) - 1))];
     $transactType = $transactionType[rand(0, (count($transactionType) - 1))];
-    $approved = 1;
+    $approved = "approved";
     extract($transactType);
 
     mysqli_stmt_bind_param($stmt, 'ssssssss', $user, $type, $kind, $amount, $to, $bank, $approved, $created);
