@@ -60,8 +60,8 @@ if (isset($_GET['acc'])) {
               </div>
             </div>
             <div class="col-12">
-              <!-- <div class="table-responsive"> -->
-              <table class="table table-responsive table-striped">
+              <div class="table-responsive">
+              <table class="table w-100 table-striped">
                 <thead>
                   <tr>
                     <td>Account</td>
@@ -96,7 +96,7 @@ if (isset($_GET['acc'])) {
                 </tbody>
 
               </table>
-              <!-- </div> -->
+              </div>
             </div>
           <?php endif; ?>
 
