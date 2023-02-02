@@ -29,12 +29,12 @@ const handleFetchUsersAccount = async (event) => {
 
     if(!accounts?.length) return
 
+    select.innerHTML = `<option value="" selected disabled>Select User Account</option>`
     accounts.filter(account => account.user_id == id).forEach(account => {
-        select.innerHTML = `<option value="" selected disabled>Select User Account</option>`
         const option = document.createElement("option")
         option.value = account.acc_number
         option.innerHTML = `${account.acc_number} - ${account.acc_type}`
 
-        select.appendChild(option)
+        select.append(option)
     })
 }
