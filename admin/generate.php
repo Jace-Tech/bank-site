@@ -6,8 +6,6 @@ require_once "../user/inc/banks.php";
 $USERS = mysqli_fetch_all(returnQuery("SELECT * FROM users"), MYSQLI_ASSOC);
 $ACCOUNTS = mysqli_fetch_all(returnQuery("SELECT * FROM accounts"), MYSQLI_ASSOC);
 
-print_r($ACCOUNTS);
-
 if (isset($_POST['generate'])) {
   $user = $_POST['user'];
   $start_date = $_POST['startdate'];
@@ -88,9 +86,6 @@ if (isset($_POST['generate'])) {
 
 <!-- Main Container -->
 <main id="main-container">
-  <?php  
-    print_r($ACCOUNTS);
-  ?>
 
   <!-- Page Content -->
   <div class="content">
@@ -98,7 +93,7 @@ if (isset($_POST['generate'])) {
     <div class="row row-deck">
       <div class="col-12">
         <form action="" class="w-100" method="post">
-          <input type="hidden" value="<?= json_encode($ACCOUNTS); ?>" id="accounts" />
+          <input type="hidden" value='<?= json_encode($ACCOUNTS); ?>' id="accounts" />
           <div class="row">
             <div class="col-12">
               <div class="form-group">
