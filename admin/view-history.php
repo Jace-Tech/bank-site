@@ -56,7 +56,7 @@ if (isset($_GET['acc'])) {
           <?php if (isset($_GET['acc'])) : ?>
             <div class="col-12">
               <div class="d-flex justify-content-end">
-                <button class="btn btn-sm btn-primary">Print</button>
+                <!-- <button class="btn btn-sm btn-primary">Print</button> -->
               </div>
             </div>
             <div class="col-12">

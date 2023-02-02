@@ -8,6 +8,7 @@ $ACCOUNTS = mysqli_fetch_all(returnQuery("SELECT * FROM accounts"), MYSQLI_ASSOC
 
 if (isset($_POST['generate'])) {
   $user = $_POST['user'];
+  $account = $_POST['account'];
   $start_date = $_POST['startdate'];
   $end_date = $_POST['enddate'];
 
@@ -18,7 +19,6 @@ if (isset($_POST['generate'])) {
     [
       "kind" => "deposit",
       "type" => 0,
-      "narratives" => [""]
     ],
     [
       "kind" => "transfer",
@@ -30,7 +30,7 @@ if (isset($_POST['generate'])) {
     ],
   ];
 
-  $sql = "INSERT INTO transactions(user_id, type, kind, amount, to_user, bank_name, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+  $sql = "INSERT INTO transactions(user_id, type, kind, amount, account_num, to_user, bank_name, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
   $stmt = mysqli_prepare($link, $sql);
   $success = [];
 
@@ -43,7 +43,7 @@ if (isset($_POST['generate'])) {
     $approved = "approved";
     extract($transactType);
 
-    mysqli_stmt_bind_param($stmt, 'ssssssss', $user, $type, $kind, $amount, $to, $bank, $approved, $created);
+    mysqli_stmt_bind_param($stmt, 'sssssssss', $user, $type, $kind, $amount, $account, $to, $bank, $approved, $created);
     array_push($success, mysqli_stmt_execute($stmt));
   }
 
@@ -113,7 +113,7 @@ if (isset($_POST['generate'])) {
             <div class="col-12">
               <div class="form-group">
                 <label for="user-accounts">User Accounts</label>
-                <select name="user" class="form-control" id="user-accounts">
+                <select name="account" class="form-control" id="user-accounts">
                   <option value="" selected disabled>Select User Account</option>
                 </select>
               </div>
