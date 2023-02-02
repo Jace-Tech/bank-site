@@ -54,52 +54,49 @@ if (isset($_GET['acc'])) {
           </div>
 
           <?php if (isset($_GET['acc'])) : ?>
-            <div class="row">
-              <div class="col-12">
-                <div class="d-flex justify-content-end">
-                  <button class="btn btn-sm btn-primary">Print</button>
-                </div>
+            <div class="col-12">
+              <div class="d-flex justify-content-end">
+                <button class="btn btn-sm btn-primary">Print</button>
               </div>
-              <div class="col-12">
-                <!-- <div class="table-responsive"> -->
-                  <table class="table table-responsive table-striped">
-                    <thead>
+            </div>
+            <div class="col-12">
+              <!-- <div class="table-responsive"> -->
+              <table class="table table-responsive table-striped">
+                <thead>
+                  <tr>
+                    <td>Account</td>
+                    <td>Amount</td>
+                    <td>Type</td>
+                    <td>Status</td>
+                    <td>Date</td>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <?php if (count($TRANSACTIONS)) : ?>
+                    <?php foreach ($TRANSACTIONS as $transaction) : ?>
                       <tr>
-                        <td>Account</td>
-                        <td>Amount</td>
-                        <td>Type</td>
-                        <td>Status</td>
-                        <td>Date</td>
+                        <td> <?= $transaction['to_user']; ?> </td>
+                        <td> <?= $transaction['amount']; ?> </td>
+                        <td> <?= $transaction['type']; ?> </td>
+                        <td>
+                          <?php $badge = ($transaction['status'] == "approved" ? "badge-success" : ($transaction['status'] == "pending" ? "badge-warning" : "badge-danger")) ?>
+                          <span class="badge <?= $badge ?>"><?= $transaction['status']; ?></span>
+                        </td>
+                        <td>
+                          <?= date("d M Y", strtotime($transaction['created_at'])) ?>
+                        </td>
                       </tr>
-                    </thead>
+                    <?php endforeach; ?>
+                  <?php else : ?>
+                    <tr>
+                      <td class="py-4 text-center text-muted" colspan="5">No transaction records</td>
+                    </tr>
+                  <?php endif; ?>
+                </tbody>
 
-                    <tbody>
-                      <?php if (count($TRANSACTIONS)) : ?>
-                        <?php foreach ($TRANSACTIONS as $transaction) : ?>
-                          <tr>
-                            <td> <?= $transaction['to_user']; ?> </td>
-                            <td> <?= $transaction['amount']; ?> </td>
-                            <td> <?= $transaction['type']; ?> </td>
-                            <td> 
-                              <?php $badge = ($transaction['status'] == "approved" ? "badge-success" : 
-                                         ($transaction['status'] == "pending" ? "badge-warning" : "badge-danger"))?>
-                              <span class="badge <?= $badge ?>"><?= $transaction['status']; ?></span>
-                            </td>
-                            <td> 
-                              <?= date("d M Y", strtotime($transaction['created_at'])) ?>
-                            </td>
-                          </tr>
-                        <?php endforeach; ?>
-                      <?php else : ?>
-                        <tr>
-                          <td class="py-4 text-muted" colspan="5">No transaction records</td>
-                        </tr>
-                      <?php endif; ?>
-                    </tbody>
-
-                  </table>
-                <!-- </div> -->
-              </div>
+              </table>
+              <!-- </div> -->
             </div>
           <?php endif; ?>
 
