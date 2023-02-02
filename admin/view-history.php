@@ -48,7 +48,7 @@ if (isset($_GET['acc'])) {
             </div>
             <div class="col-12">
               <div class="mt-3">
-                <button type="submit" name="generate" class="btn btn-primary">View History</button>
+                <button type="submit" name="generate" class="btn btn-sm btn-primary">View History</button>
               </div>
             </div>
           </div>
@@ -57,12 +57,12 @@ if (isset($_GET['acc'])) {
             <div class="row">
               <div class="col-12">
                 <div class="d-flex justify-content-end">
-                  <button class="btn-primary">Print</button>
+                  <button class="btn btn-sm btn-primary">Print</button>
                 </div>
               </div>
               <div class="col-12">
-                <div class="table-responsive">
-                  <table class="table-responsive-lg table-striped">
+                <!-- <div class="table-responsive"> -->
+                  <table class="table table-responsive table-striped">
                     <thead>
                       <tr>
                         <td>Account</td>
@@ -98,7 +98,7 @@ if (isset($_GET['acc'])) {
                     </tbody>
 
                   </table>
-                </div>
+                <!-- </div> -->
               </div>
             </div>
           <?php endif; ?>
