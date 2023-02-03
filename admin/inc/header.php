@@ -48,6 +48,10 @@ extract($admin_details);
     <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
     <!-- END Stylesheets -->
     <style>
+        label {
+            font-size: .85rem !important;
+            font-weight: 500 !important;
+        }
         .form-control {
             min-height: 45px !important;
             font-size: .9rem !important;
