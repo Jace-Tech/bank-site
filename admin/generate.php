@@ -19,7 +19,7 @@ if (isset($_POST['generate'])) {
     [
       "kind" => "deposit",
       "type" => 0,
-      "narrative" => [""]
+      "narrative" => ["Make payment", "Add balance", "Deposit funds", "Top up account", "Increase balance", "Allocate resources", "Fund account"]
     ],
     [
       "kind" => "transfer",
@@ -39,7 +39,7 @@ if (isset($_POST['generate'])) {
 
   for ($date = $start_date; $date <= $end_date; date_add($date, date_interval_create_from_date_string(rand(1, 9) . " days"))) {
     $created =  date_format($date, 'Y-m-d');
-    $amount = rand(1000, 999999);
+    $amount = rand(1000, 99999);
     $to = generateNumber(10);
     $bank = $us_banks[rand(0, (count($us_banks) - 1))];
     $transactIndex = rand(0, (count($transactionType) - 1));
