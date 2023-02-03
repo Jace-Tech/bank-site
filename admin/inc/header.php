@@ -50,7 +50,7 @@ extract($admin_details);
     <style>
         label {
             font-size: .85rem !important;
-            font-weight: 500 !important;
+            font-weight: 600 !important;
         }
         .form-control {
             min-height: 45px !important;
