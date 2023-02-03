@@ -65,11 +65,11 @@ if (isset($_GET['acc'])) {
                 <!-- Amount | Type | Status | Date | Narrative -->
               <thead>
                   <tr>
-                    <td>Amount</td>
-                    <td>Type</td>
-                    <td>Status</td>
-                    <td>Date</td>
-                    <td>Narrative</td>
+                    <td style="font-weight: 600; font-size: 1rem;">Amount</td>
+                    <td style="font-weight: 600; font-size: 1rem;">Type</td>
+                    <td style="font-weight: 600; font-size: 1rem;">Status</td>
+                    <td style="font-weight: 600; font-size: 1rem;">Date</td>
+                    <td style="font-weight: 600; font-size: 1rem;">Narrative</td>
                   </tr>
                 </thead>
 
@@ -77,16 +77,16 @@ if (isset($_GET['acc'])) {
                   <?php if (count($TRANSACTIONS)) : ?>
                     <?php foreach ($TRANSACTIONS as $transaction) : ?>
                       <tr>
-                        <td class="font-weight-light font-size-h5"> $<?= number_format($transaction['amount']); ?> </td>
-                        <td class="font-weight-light font-size-h5"> <?= $transaction['kind']; ?> </td>
-                        <td class="font-weight-light font-size-h5">
+                        <td style="font-size: .9rem; font-weight: 500;"> $<?= number_format($transaction['amount']); ?> </td>
+                        <td style="font-size: .9rem; font-weight: 300;"> <?= ucfirst($transaction['kind']); ?> </td>
+                        <td style="font-size: .9rem; font-weight: 300;">
                           <?php $badge = ($transaction['status'] == "approved" ? "badge-success" : ($transaction['status'] == "pending" ? "badge-warning" : "badge-danger")) ?>
                           <span class="badge <?= $badge ?>"><?= $transaction['status'] == 'approved'? "success" : $transaction['status']; ?></span>
                         </td>
-                        <td class="font-weight-light font-size-h5">
+                        <td style="font-size: .9rem; font-weight: 300;">
                           <?= date("d M Y", strtotime($transaction['created_at'])) ?>
                         </td>
-                        <td class="font-weight-light font-size-h5"> <?= $transaction['description']; ?> </td>
+                        <td style="font-size: .9rem; font-weight: 300;"> <?= ucfirst($transaction['description']); ?> </td>
                       </tr>
                     <?php endforeach; ?>
                   <?php else : ?>
