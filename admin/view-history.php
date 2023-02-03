@@ -75,6 +75,7 @@ if (isset($_GET['acc'])) {
                 <tbody>
                   <?php if (count($TRANSACTIONS)) : ?>
                     <?php foreach ($TRANSACTIONS as $transaction) : ?>
+                      <?php  print_r($transaction); ?>
                       <tr>
                         <td> <?= $transaction['to_user']; ?> </td>
                         <td> <?= $transaction['amount']; ?> </td>
