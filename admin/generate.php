@@ -19,18 +19,21 @@ if (isset($_POST['generate'])) {
     [
       "kind" => "deposit",
       "type" => 0,
+      "narrative" => [""]
     ],
     [
       "kind" => "transfer",
-      "type" => 1
+      "type" => 1,
+      "narrative" => ["Buying a gift for Alice", "Making a travel purchase", "Investing in stocks", "Refunding Jerry", "Paying off debt", "Paying Rent", "Pending bills", "Transferring money to a loved one"]
     ],
     [
       "kind" => "wire transfer",
-      "type" => 1
+      "type" => 1,
+      "narrative" => ["Foreign Money Exchange", "Foreign Currency Exchange", "International Payment", "Global Funds Transfer", "Remittance Transfer"]
     ],
   ];
 
-  $sql = "INSERT INTO transactions(user_id, type, kind, amount, account_num, to_user, bank_name, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+  $sql = "INSERT INTO transactions(user_id, type, kind, amount, account_num, to_user, bank_name, description, status, created_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
   $stmt = mysqli_prepare($link, $sql);
   $success = [];
 
@@ -39,11 +42,13 @@ if (isset($_POST['generate'])) {
     $amount = rand(1000, 999999);
     $to = generateNumber(10);
     $bank = $us_banks[rand(0, (count($us_banks) - 1))];
-    $transactType = $transactionType[rand(0, (count($transactionType) - 1))];
+    $transactIndex = rand(0, (count($transactionType) - 1));
+    $transactType = $transactionType[$transactIndex];
     $approved = "approved";
     extract($transactType);
+    $desc = $narrative[rand(0, (count($narrative) - 1))];
 
-    mysqli_stmt_bind_param($stmt, 'sssssssss', $user, $type, $kind, $amount, $account, $to, $bank, $approved, $created);
+    mysqli_stmt_bind_param($stmt, 'ssssssssss', $user, $type, $kind, $amount, $account, $to, $bank, $desc, $approved, $created);
     array_push($success, mysqli_stmt_execute($stmt));
   }
 
