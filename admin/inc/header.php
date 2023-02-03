@@ -48,19 +48,23 @@ extract($admin_details);
     <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
     <!-- END Stylesheets -->
     <style>
-        label {
+        label, thead td, thead th {
             font-size: .85rem !important;
             font-weight: 600 !important;
         }
         button {
-            font-size: .8rem;
-            font-weight: 700;
+            font-size: .8rem !important;
+            font-weight: 700 !important;
         }
         .form-control {
             min-height: 45px !important;
             font-size: .9rem !important;
             font-weight: 400 !important;
             padding: .8rem 1rem !important;
+        }
+        tbody td {
+            font-size: .9rem !important; 
+            font-weight: 300 !important;
         }
     </style>
 </head>

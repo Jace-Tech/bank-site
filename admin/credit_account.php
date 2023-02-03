@@ -9,8 +9,10 @@ $ACCOUNTS = mysqli_fetch_all(returnQuery("SELECT * FROM accounts"), MYSQLI_ASSOC
 if (isset($_POST['submit'])) {
 	if (isset($_SESSION['user'])) {
 		$id = $_SESSION['user'];
+		$account = $_SESSION['account'];
+		$amount = $_SESSION['amount'];
 	}
-	$response = credit_user_account($_POST);
+	$response = credit_user_account(["id" => $id, "amount" => $amount, "account" => $account]);
 	if ($response === true) {
 		echo "<script>alert('Account have been credited!')</script>";
 	} else {
@@ -45,7 +47,7 @@ if (isset($_POST['submit'])) {
 					<div class="col-12">
 						<div class="form-group">
 							<label for="user" class="label">User</label>
-							<select name="" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
+							<select name="user" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
 								<option value="" selected disabled>Select User</option>
 								<?php foreach ($USERS as $user) : ?>
 									<option value="<?= $user['id']; ?>">
@@ -59,7 +61,7 @@ if (isset($_POST['submit'])) {
 					<div class="col-12">
 						<div class="form-group">
 							<label for="user-accounts" class="label">User Account</label>
-							<select name="acc" class="form-control" id="user-accounts">
+							<select name="account" class="form-control" id="user-accounts">
 								<option value="" selected disabled>Select User Account</option>
 							</select>
 						</div>
@@ -68,7 +70,7 @@ if (isset($_POST['submit'])) {
 					<div class="col-12">
 						<div class="form-group">
 							<label for="amount" class="label">Amount</label>
-							<input type="text" id="amount" class="form-control text-center" name="amount" placeholder="Amount">
+							<input type="text" id="amount" class="form-control" name="amount" placeholder="Amount">
 						</div>
 					</div>
 

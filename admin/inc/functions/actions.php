@@ -1,19 +1,20 @@
 <?php
 require_once "config.php";
 
-function get_client_ip() {
+function get_client_ip()
+{
     $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
         $ipaddress = getenv('HTTP_CLIENT_IP');
-    else if(getenv('HTTP_X_FORWARDED_FOR'))
+    else if (getenv('HTTP_X_FORWARDED_FOR'))
         $ipaddress = getenv('HTTP_X_FORWARDED_FOR');
-    else if(getenv('HTTP_X_FORWARDED'))
+    else if (getenv('HTTP_X_FORWARDED'))
         $ipaddress = getenv('HTTP_X_FORWARDED');
-    else if(getenv('HTTP_FORWARDED_FOR'))
+    else if (getenv('HTTP_FORWARDED_FOR'))
         $ipaddress = getenv('HTTP_FORWARDED_FOR');
-    else if(getenv('HTTP_FORWARDED'))
-       $ipaddress = getenv('HTTP_FORWARDED');
-    else if(getenv('REMOTE_ADDR'))
+    else if (getenv('HTTP_FORWARDED'))
+        $ipaddress = getenv('HTTP_FORWARDED');
+    else if (getenv('REMOTE_ADDR'))
         $ipaddress = getenv('REMOTE_ADDR');
     else
         $ipaddress = 'UNKNOWN';
@@ -42,7 +43,7 @@ function adminLogin($post)
     //Checking for password...
     if (!empty($password)) {
         $password = sanitize($password);
-    }else {
+    } else {
         $errors[] = "Please enter your password!";
     }
 
@@ -55,28 +56,28 @@ function adminLogin($post)
             $encryptedpassword = $result['password'];
             if (decrypt($encryptedpassword, $password)) {
                 $_SESSION['admin'] = $result['id'];
-                    // if (isset($rememberMe)) {
-                    //     setcookie("admin_password", $password, time() + (86400 * 30), "/");
-                    //     setcookie("admin_email", $mail, time() + (86400 * 30), "/");
-                    // }
+                // if (isset($rememberMe)) {
+                //     setcookie("admin_password", $password, time() + (86400 * 30), "/");
+                //     setcookie("admin_email", $mail, time() + (86400 * 30), "/");
+                // }
                 return true;
             }
         }
         $errors[] = "Invalid Login Details!";
     }
     return $errors;
-
 }
 
 
-function AddAdmin($post) {
+function AddAdmin($post)
+{
     extract($post);
     $errors = [];
 
 
     if (!empty($name)) {
         $name = sanitize($name);
-    }else {
+    } else {
         $errors[] = "Admin name is empty!"  . "<br>";
     }
 
@@ -99,7 +100,7 @@ function AddAdmin($post) {
     if (!empty($password)) {
         $tmp_password = sanitize($password);
         $password = encrypt($tmp_password);
-    }else {
+    } else {
         $errors[] = "Enter preferred password!"  . "<br>";
     }
 
@@ -120,13 +121,14 @@ function AddAdmin($post) {
 }
 
 
-function credit_user_account($post) {
+function credit_user_account($post)
+{
     extract($post);
     $err_flag = false;
     $errors = [];
 
-    if (!empty($recipent)) {
-        $acc_number = sanitize($recipent);
+    if (!empty($account)) {
+        $acc_number = sanitize($account);
     } else {
         $errors[] = "Enter account number!";
     }
@@ -139,22 +141,76 @@ function credit_user_account($post) {
     }
 
     if ($err_flag === false) {
-        $ql = "SELECT * FROM users WHERE acc_number = $acc_number";
+        $ql = "SELECT * FROM users WHERE id = $id";
+
         $qq = returnQuery($ql);
 
         // TODO: REMEMBER TO ADD THE ACCOUNT_NUM HERE IN TRANSACTION TABLE
         if (mysqli_num_rows($qq) > 0) {
-            $details = mysqli_fetch_assoc($qq);
-            $amount_in_db = $details['acc_balance'];
+            $user = mysqli_fetch_assoc($qq);
+            $account_info = executeQuery("SELECT * FROM accounts WHERE user_id = '$id' AND acc_number = '$account'");
+
+            $amount_in_db = $account_info['balance'];
             $userId = $details['id'];
 
             $update_balance = $amount + $amount_in_db;
 
-            $sql = "UPDATE users SET acc_balance = '$update_balance' WHERE acc_number = '$acc_number'";
+            $sql = "UPDATE accounts SET balance = '$update_balance' WHERE acc_number = '$acc_number' AND user_id = '$id'";
             $result = validateQuery($sql);
 
+            $username = $user['fullname'];
+            $date = date("d-M-Y");
+            $time = date("H:i:s: A");
+
             if ($result) {
-                $insertTrans = "INSERT INTO transactions (user_id, type, amount, to_user, approved, created_at) VALUES ($userId, 0, $amount, '$acc_number', 1, now())";
+                // SEND EMAIL
+                $message = "
+                <html>
+                    <head>
+                        <title>Title</title>
+                    </head>
+                    <body>
+                        <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
+                            <img src='https://bekofcu.com/logo.png' width='150' class='rounded' alt='dd'> <br>
+                            <h2 style='color: #fff !important'>Dear $username,</h2>
+                            <h3 style='color: #fff !important'>You account was credited!</h3> 
+                            <h3 style='margin-top: 2rem; font-color: #fff;'>Transaction Details</h3> 
+                
+                            <table style='width: 100%; padding-top: 10px;' border='1'>
+                                <tr>
+                                    <th style='padding: 7px;'>Credit/Debit</th>
+                                    <td>Credit</td>
+                                </tr>
+                                <tr>
+                                    <th style='padding: 7px;'>Account number</th>
+                                    <td>$account</td>
+                                </tr>
+                                <tr>
+                                    <th style='padding: 7px;'>Date</th>
+                                    <td>$date</td>
+                                </tr>
+                                <tr>
+                                    <th style='padding: 7px;'>Time</th>
+                                    <td>$time</td>
+                                </tr>
+                                <tr>
+                                    <th style='padding: 7px;'>Amount</th>
+                                    <td>USD$amount</td>
+                                </tr>
+                                <tr>
+                                    <th style='padding: 7px;'>Balance</th>
+                                    <td>USD $update_balance</td>
+                                </tr>
+                            </table>
+                            <p style='color: #fff !important'><i>Beko Federal Credit Union (BEKOFCU)</i></p>
+                        </div>
+                    </body>
+                </html>
+                ";
+
+                sendEmail($user['email'], "Beko Federal Credit Union (BEKOFCU) Transaction Notification", $message);
+
+                $insertTrans = "INSERT INTO transactions (user_id, type, amount, to_user, status, created_at) VALUES ('$userId', 0, $amount, '$acc_number', 'approved', now())";
                 $insertQuery = validateQuery($insertTrans);
 
                 if ($insertQuery) {
@@ -174,7 +230,8 @@ function credit_user_account($post) {
     }
 }
 
-function setPassword($post, $id) {
+function setPassword($post, $id)
+{
     extract($post);
     $err_flag = false;
     $errors = [];
@@ -202,7 +259,8 @@ function setPassword($post, $id) {
 }
 
 
-function backdate($post, $trans_id) {
+function backdate($post, $trans_id)
+{
     extract($post);
     $err_flag = false;
     $errors = [];
@@ -230,7 +288,8 @@ function backdate($post, $trans_id) {
     }
 }
 
-function replyTicket($post, $ticket_id) {
+function replyTicket($post, $ticket_id)
+{
     extract($post);
     $errors = [];
 
