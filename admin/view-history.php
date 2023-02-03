@@ -61,42 +61,46 @@ if (isset($_GET['acc'])) {
             </div>
             <div class="col-12">
               <div class="table-responsive table-responsive-lg mt-4">
-              <table class="table w-100 table-striped">
-                <!-- Amount | Type | Status | Date | Narrative -->
-              <thead>
-                  <tr>
-                    <td style="font-weight: 600; font-size: .9rem;">Amount</td>
-                    <td style="font-weight: 600; font-size: .9rem;">Type</td>
-                    <td style="font-weight: 600; font-size: .9rem;">Status</td>
-                    <td style="font-weight: 600; font-size: .9rem;">Date</td>
-                    <td style="font-weight: 600; font-size: .9rem;">Narrative</td>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <?php if (count($TRANSACTIONS)) : ?>
-                    <?php foreach ($TRANSACTIONS as $transaction) : ?>
-                      <tr>
-                        <td style="font-size: .9rem; font-weight: 500;"> $<?= number_format($transaction['amount']); ?> </td>
-                        <td style="font-size: .9rem; font-weight: 300;"> <?= ucfirst($transaction['kind']); ?> </td>
-                        <td style="font-size: .9rem; font-weight: 300;">
-                          <?php $badge = ($transaction['status'] == "approved" ? "badge-success" : ($transaction['status'] == "pending" ? "badge-warning" : "badge-danger")) ?>
-                          <span class="badge <?= $badge ?>"><?= $transaction['status'] == 'approved'? "success" : $transaction['status']; ?></span>
-                        </td>
-                        <td style="font-size: .9rem; font-weight: 300;">
-                          <?= date("d M Y", strtotime($transaction['created_at'])) ?>
-                        </td>
-                        <td style="font-size: .9rem; font-weight: 300;"> <?= ucfirst($transaction['description']); ?> </td>
-                      </tr>
-                    <?php endforeach; ?>
-                  <?php else : ?>
+                <table class="table w-100 table-striped">
+                  <thead>
                     <tr>
-                      <td class="py-4 text-center text-muted" colspan="5">No transaction records</td>
+                      <td style="font-weight: 600; font-size: .9rem;">Amount</td>
+                      <td style="font-weight: 600; font-size: .9rem;">Type</td>
+                      <td style="font-weight: 600; font-size: .9rem;">Status</td>
+                      <td style="font-weight: 600; font-size: .9rem;">Date</td>
+                      <td style="font-weight: 600; font-size: .9rem;">Narrative</td>
                     </tr>
-                  <?php endif; ?>
-                </tbody>
+                  </thead>
 
-              </table>
+                  <tbody>
+                    <?php if (count($TRANSACTIONS)) : ?>
+                      <?php foreach ($TRANSACTIONS as $transaction) : ?>
+                        <tr>
+                          <td style="font-size: .9rem; font-weight: 500;"> $<?= number_format($transaction['amount']); ?> </td>
+                          <td style="font-size: .9rem; font-weight: 300;"> <?= ucfirst($transaction['kind']); ?> </td>
+                          <td style="font-size: .9rem; font-weight: 300;">
+                            <?php $badge = ($transaction['status'] == "approved" ? "badge-success" : ($transaction['status'] == "pending" ? "badge-warning" : "badge-danger")) ?>
+                            <span class="badge <?= $badge ?>"><?= $transaction['status'] == 'approved' ? "success" : $transaction['status']; ?></span>
+                          </td>
+                          <td style="font-size: .9rem; font-weight: 300;">
+                            <?= date("d M Y", strtotime($transaction['created_at'])) ?>
+                          </td>
+                          <td style="font-size: .9rem; font-weight: 300;"> <?= ucfirst($transaction['description']); ?> </td>
+                        </tr>
+                      <?php endforeach; ?>
+                      <tr>
+                        <div class="d-flex justify-content-end py-5">
+                          <button class="btn btn-sm btn-primary" id="hide">Print</button>
+                        </div>
+                      </tr>
+                    <?php else : ?>
+                      <tr>
+                        <td class="py-4 text-center text-muted" colspan="5">No transaction records</td>
+                      </tr>
+                    <?php endif; ?>
+                  </tbody>
+
+                </table>
               </div>
             </div>
           <?php endif; ?>
@@ -105,10 +109,55 @@ if (isset($_GET['acc'])) {
       </div>
     </div>
   </div>
+
+  <div class="print-page container-lg">
+    <table class="table w-100 table-striped">
+      <thead>
+        <tr>
+          <td style="font-weight: 600; font-size: .9rem;">Amount</td>
+          <td style="font-weight: 600; font-size: .9rem;">Type</td>
+          <td style="font-weight: 600; font-size: .9rem;">Status</td>
+          <td style="font-weight: 600; font-size: .9rem;">Date</td>
+          <td style="font-weight: 600; font-size: .9rem;">Narrative</td>
+        </tr>
+      </thead>
+
+      <tbody>
+        <?php if (count($TRANSACTIONS)) : ?>
+          <?php foreach ($TRANSACTIONS as $transaction) : ?>
+            <tr>
+              <td style="font-size: .9rem; font-weight: 500;"> $<?= number_format($transaction['amount']); ?> </td>
+              <td style="font-size: .9rem; font-weight: 300;"> <?= ucfirst($transaction['kind']); ?> </td>
+              <td style="font-size: .9rem; font-weight: 300;">
+                <?php $badge = ($transaction['status'] == "approved" ? "badge-success" : ($transaction['status'] == "pending" ? "badge-warning" : "badge-danger")) ?>
+                <span class="badge <?= $badge ?>"><?= $transaction['status'] == 'approved' ? "success" : $transaction['status']; ?></span>
+              </td>
+              <td style="font-size: .9rem; font-weight: 300;">
+                <?= date("d M Y", strtotime($transaction['created_at'])) ?>
+              </td>
+              <td style="font-size: .9rem; font-weight: 300;"> <?= ucfirst($transaction['description']); ?> </td>
+            </tr>
+          <?php endforeach; ?>
+        <?php else : ?>
+          <tr>
+            <td class="py-4 text-center text-muted" colspan="5">No transaction records</td>
+          </tr>
+        <?php endif; ?>
+      </tbody>
+
+    </table>
+  </div>
   <!-- END Page Content -->
 </main>
 <script src="./js/get_recipent.js"></script>
 <!-- END Main Container -->
-
+<script>
+  const printBtn = document.querySelector("#hide")
+  printBtn.addEventListener("click", (e) => {
+    e.preventDefault()
+    printBtn.style.display = "none"
+    window.print()
+  })
+</script>
 <!-- Footer -->
 <?php require_once 'inc/footer.php'; ?>

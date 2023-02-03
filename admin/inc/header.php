@@ -48,6 +48,10 @@ extract($admin_details);
     <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
     <!-- END Stylesheets -->
     <style>
+        .print-page {
+            display: none;
+        }
+        
         label, thead td, thead th {
             font-size: .85rem !important;
             font-weight: 600 !important;
@@ -67,6 +71,7 @@ extract($admin_details);
             font-weight: 300 !important;
         }
     </style>
+    <link rel="stylesheet" href="print.css" media="print">
 </head>
 
 <body>
