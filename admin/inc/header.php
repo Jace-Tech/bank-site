@@ -47,6 +47,14 @@ extract($admin_details);
     <!-- You can include a specific file from css/themes/ folder to alter the default color theme of the template. eg: -->
     <!-- <link rel="stylesheet" id="css-theme" href="assets/css/themes/xwork.min.css"> -->
     <!-- END Stylesheets -->
+    <style>
+        input.form-control {
+            min-height: 45px !important;
+            font-size: .9rem !important;
+            font-weight: 400 !important;
+            padding: .8rem 1rem !important;
+        }
+    </style>
 </head>
 
 <body>

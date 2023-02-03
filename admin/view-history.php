@@ -40,7 +40,7 @@ if (isset($_GET['acc'])) {
 
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
-                <label for="user-accounts" class="label">User Accounts</label>
+                <label for="user-accounts" class="label">User Account</label>
                 <select name="acc" class="form-control" id="user-accounts">
                   <option value="" selected disabled>Select User Account</option>
                 </select>
