@@ -1,0 +1,7 @@
+div:not(.print-page) {
+  display: none !important;
+}
+
+div.print-page {
+  display: block !important;
+}
