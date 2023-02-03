@@ -60,16 +60,16 @@ if (isset($_GET['acc'])) {
               </div>
             </div>
             <div class="col-12">
-              <div class="table-responsive">
+              <div class="table-responsive table-responsive-lg mt-4">
               <table class="table w-100 table-striped">
                 <!-- Amount | Type | Status | Date | Narrative -->
               <thead>
                   <tr>
-                    <td style="font-weight: 600; font-size: 1rem;">Amount</td>
-                    <td style="font-weight: 600; font-size: 1rem;">Type</td>
-                    <td style="font-weight: 600; font-size: 1rem;">Status</td>
-                    <td style="font-weight: 600; font-size: 1rem;">Date</td>
-                    <td style="font-weight: 600; font-size: 1rem;">Narrative</td>
+                    <td style="font-weight: 600; font-size: .9rem;">Amount</td>
+                    <td style="font-weight: 600; font-size: .9rem;">Type</td>
+                    <td style="font-weight: 600; font-size: .9rem;">Status</td>
+                    <td style="font-weight: 600; font-size: .9rem;">Date</td>
+                    <td style="font-weight: 600; font-size: .9rem;">Narrative</td>
                   </tr>
                 </thead>
 
