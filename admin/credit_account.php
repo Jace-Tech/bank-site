@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
 
 			<div class="col-lg-12 col-xl-12">
 				<form action="" method="post" class="row">
-					<div class="col-sm-12 col-md-6">
+					<div class="col-12">
 						<div class="form-group">
 							<label for="user" class="label">User</label>
 							<select name="" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
 						</div>
 					</div>
 
-					<div class="col-sm-12 col-md-6">
+					<div class="col-12">
 						<div class="form-group">
 							<label for="user-accounts" class="label">User Account</label>
 							<select name="acc" class="form-control" id="user-accounts">
@@ -65,25 +65,10 @@ if (isset($_POST['submit'])) {
 						</div>
 					</div>
 
-					<div class="col-sm-12 col-md-6">
+					<div class="col-12">
 						<div class="form-group">
-							<input type="text" name="recipent" onblur="getRecipent()" class="form-control" id="account_number" placeholder="Account Number">
-						</div>
-					</div>
-
-					<div class="col-sm-12 col-md-6">
-						<div class="form-group">
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<span class="input-group-text">
-										<i class="fa fa-dollar-sign"></i>
-									</span>
-								</div>
-								<input type="text" amount class="form-control text-center" id="example-group2-input3" name="amount" placeholder="Amount">
-								<div class="input-group-append">
-									<span class="input-group-text">.00</span>
-								</div>
-							</div>
+							<label for="amount" class="label">Amount</label>
+							<input type="text" id="amount" class="form-control text-center" name="amount" placeholder="Amount">
 						</div>
 					</div>
 
