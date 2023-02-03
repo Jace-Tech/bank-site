@@ -52,6 +52,10 @@ extract($admin_details);
             font-size: .85rem !important;
             font-weight: 600 !important;
         }
+        button {
+            font-size: .8rem;
+            font-weight: 700;
+        }
         .form-control {
             min-height: 45px !important;
             font-size: .9rem !important;
