@@ -7,7 +7,7 @@ $USERS = mysqli_fetch_all(returnQuery("SELECT * FROM users"), MYSQLI_ASSOC);
 $ACCOUNTS = mysqli_fetch_all(returnQuery("SELECT * FROM accounts"), MYSQLI_ASSOC);
 if (isset($_GET['acc'])) {
   $acc_no = $_GET['acc'];
-  $TRANSACTIONS = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE account_num = '$acc_no'"));
+  $TRANSACTIONS = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE account_num = '$acc_no'"), MYSQLI_ASSOC);
 }
 
 ?>
@@ -75,7 +75,6 @@ if (isset($_GET['acc'])) {
                 <tbody>
                   <?php if (count($TRANSACTIONS)) : ?>
                     <?php foreach ($TRANSACTIONS as $transaction) : ?>
-                      <?php  print_r($transaction); ?>
                       <tr>
                         <td> <?= $transaction['to_user']; ?> </td>
                         <td> <?= $transaction['amount']; ?> </td>
