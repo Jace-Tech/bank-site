@@ -141,7 +141,7 @@ function credit_user_account($post)
     }
 
     if ($err_flag === false) {
-        $ql = "SELECT * FROM users WHERE id = $id";
+        $ql = "SELECT * FROM users WHERE id = '$id'";
 
         $qq = returnQuery($ql);
 
