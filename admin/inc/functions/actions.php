@@ -150,12 +150,12 @@ function credit_user_account($post)
             $user = mysqli_fetch_assoc($qq);
             $account_info = executeQuery("SELECT * FROM accounts WHERE user_id = '$id' AND acc_number = '$account'");
 
-            $amount_in_db = $account_info['balance'];
-            $userId = $details['id'];
+            $amount_in_db = $account_info['acc_balance'];
+            $userId = $user['id'];
 
             $update_balance = $amount + $amount_in_db;
 
-            $sql = "UPDATE accounts SET balance = '$update_balance' WHERE acc_number = '$acc_number' AND user_id = '$id'";
+            $sql = "UPDATE accounts SET acc_balance = '$update_balance' WHERE acc_number = '$acc_number' AND user_id = '$id'";
             $result = validateQuery($sql);
 
             $username = $user['fullname'];
