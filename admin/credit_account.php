@@ -7,11 +7,9 @@ $USERS = mysqli_fetch_all(returnQuery("SELECT * FROM users"), MYSQLI_ASSOC);
 $ACCOUNTS = mysqli_fetch_all(returnQuery("SELECT * FROM accounts"), MYSQLI_ASSOC);
 
 if (isset($_POST['submit'])) {
-	if (isset($_SESSION['user'])) {
-		$id = $_POST['user'];
-		$account = $_POST['account'];
-		$amount = $_POST['amount'];
-	}
+	$id = $_POST['user'];
+	$account = $_POST['account'];
+	$amount = $_POST['amount'];
 	$response = credit_user_account(["id" => $id, "amount" => $amount, "account" => $account]);
 	if ($response === true) {
 		echo "<script>alert('Account have been credited!')</script>";
