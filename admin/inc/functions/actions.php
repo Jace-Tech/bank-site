@@ -162,6 +162,9 @@ function credit_user_account($post)
             $date = date("d-M-Y");
             $time = date("H:i:s: A");
 
+            $formated_amount = number_format($amount);
+            $formated_bal = number_format($update_balance);
+
             if ($result) {
                 // SEND EMAIL
                 $message = "
@@ -173,7 +176,7 @@ function credit_user_account($post)
                         <div style='background: #1e1e1e; padding: 1rem; color: #fff !important; border-radius: 0.25rem!important; width: 500px; text-align: center!important; box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important; font-family: sans-serif;'>
                             <img src='https://bekofcu.com/logo.png' width='150' class='rounded' alt='dd'> <br>
                             <h2 style='color: #fff !important'>Dear $username,</h2>
-                            <h3 style='color: #fff !important'>You account was credited!</h3> 
+                            <h3 style='color: #fff !important'>Your account was credited!</h3> 
                             <h3 style='margin-top: 2rem; font-color: #fff;'>Transaction Details</h3> 
                 
                             <table style='width: 100%; padding-top: 10px;' border='1'>
@@ -195,11 +198,11 @@ function credit_user_account($post)
                                 </tr>
                                 <tr>
                                     <th style='padding: 7px;'>Amount</th>
-                                    <td>USD$amount</td>
+                                    <td>USD $formated_amount</td>
                                 </tr>
                                 <tr>
                                     <th style='padding: 7px;'>Balance</th>
-                                    <td>USD $update_balance</td>
+                                    <td>USD $formated_bal</td>
                                 </tr>
                             </table>
                             <p style='color: #fff !important'><i>Beko Federal Credit Union (BEKOFCU)</i></p>
