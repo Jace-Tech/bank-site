@@ -45,6 +45,7 @@ if (isset($_POST['submit'])) {
 			<div class="col-lg-12 col-xl-12">
 				<form action="" method="post" class="row">
 					<div class="col-12">
+						<input type="hidden" value='<?= json_encode($ACCOUNTS); ?>' id="accounts" />
 						<div class="form-group">
 							<label for="user" class="label">User</label>
 							<select name="user" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
