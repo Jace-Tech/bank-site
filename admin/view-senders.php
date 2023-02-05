@@ -6,8 +6,8 @@ require_once "../user/inc/banks.php";
 $USERS = mysqli_fetch_all(returnQuery("SELECT * FROM users"), MYSQLI_ASSOC);
 
 if (isset($_GET['user'])) {
-  $user = $_GET['user'];
-  $ALLOWEDS = mysqli_fetch_all(returnQuery("SELECT * FROM allowed WHERE user_id = '$user'"), MYSQLI_ASSOC);
+  $user_id = $_GET['user'];
+  $ALLOWEDS = mysqli_fetch_all(returnQuery("SELECT * FROM allowed WHERE user_id = '$user_id'"), MYSQLI_ASSOC);
 }
 
 if(isset($_POST['allow-id'])) {
@@ -66,10 +66,10 @@ if(isset($_POST['allow-id'])) {
                   <thead>
                     <tr>
                       <td style="font-weight: 600; font-size: .9rem;">User</td>
-                      <td style="font-weight: 600; font-size: .9rem;">Allowed Account</td>
-                      <td style="font-weight: 600; font-size: .9rem;">Allowed Bank</td>
-                      <td style="font-weight: 600; font-size: .9rem;">Error message</td>
-                    <td style="font-weight: 600; font-size: .9rem;">Error Title</td>
+                      <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Allowed Account</td>
+                      <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Allowed Bank</td>
+                      <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Error message</td>
+                    <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Error Title</td>
                     <td style="font-weight: 600; font-size: .9rem;"></td>
                     </tr>
                   </thead>
@@ -77,14 +77,14 @@ if(isset($_POST['allow-id'])) {
                   <tbody>
                     <?php if (count($ALLOWEDS)) : ?>
                       <?php foreach ($ALLOWEDS as $allow) : 
-                        $user_details = executeQuery("SELECT * FROM users WHERE id = '$user'");
+                        $user_details = executeQuery("SELECT * FROM users WHERE id = '$user_id'");
                       ?>
                         <tr>
-                          <td style="font-size: .9rem; font-weight: 500;"> <?= $user_details['fulllname']; ?> </td>
+                          <td style="font-size: .9rem; font-weight: 500; white-space: nowrap; text-overflow: ellipsis;"> <?= $user_details['fulllname']; ?> </td>
                           <td style="font-size: .9rem; font-weight: 300;"> <?= $allow['account']; ?> </td>
-                          <td style="font-size: .9rem; font-weight: 300;"> <?= $allow['bank']; ?> </td>
-                          <td style="font-size: .9rem; font-weight: 300;"> <?= $allow['error']; ?> </td>
-                          <td style="font-size: .9rem; font-weight: 300;"> <?= $allow['error_title']; ?> </td>
+                          <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['bank']; ?> </td>
+                          <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['error']; ?> </td>
+                          <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['error_title']; ?> </td>
                           <td style="font-size: .9rem; font-weight: 300;"> 
                             <form method="post">
                               <button class="btn btn-sm btn-danger" name="allow-id" value=" <?= $allow['id']; ?> ">delete</button>
