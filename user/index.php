@@ -69,7 +69,7 @@ $IS_ALLOWED = false;
                         </div>
                         <div class="col-md-4 py-3">
                             <div class="font-size-h1 font-w300 text-black mb-1">
-                                USD $<?= number_format($userAccounts['acc_balance']); ?>
+                                USD $<?= number_format($account['acc_balance']); ?>
                             </div>
                             <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Available Balance</a>
                         </div>
