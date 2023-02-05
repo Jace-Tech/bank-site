@@ -5,6 +5,8 @@ $title = "User Dashboard";
 require_once 'inc/header.php';
 
 $IS_ALLOWED = false;
+
+
 // $total_transfer = fetch_transactions(1, "$user_id");
 // foreach ($total_transfer as $transfer) {
 // }
@@ -67,7 +69,7 @@ $IS_ALLOWED = false;
                         </div>
                         <div class="col-md-4 py-3">
                             <div class="font-size-h1 font-w300 text-black mb-1">
-                                USD $<?= number_format($acc_balance); ?>
+                                USD $<?= number_format($userAccounts['acc_balance']); ?>
                             </div>
                             <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Available Balance</a>
                         </div>
