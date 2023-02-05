@@ -16,8 +16,10 @@ if (isset($_POST['submit'])) {
         $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' AND bank = '$bank'");
         $check = mysqli_num_rows($query);
 
-        if (!$check) {
+        $data = mysqli_fetch_assoc($query);
 
+        if (!$check) {
+            $IS_ALLOWED = true;
         } else {
             $response = wire_transfer($_POST, $id);
             if ($response === true) {
@@ -144,7 +146,12 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
 <!-- END Main Container -->
 
 <!-- Footer -->
-<?php require_once 'inc/loader.php'; ?>
+<?php if($IS_ALLOWED):?>
+    <input type="text" data-error-title value="<?php $data['error_title'] ?>">
+    <input type="text" data-error-msg value="<?php $data['error'] ?>">
+    <?php require_once 'inc/loader.php'; ?>
+<?php endif; ?>
+
 <?php require_once 'inc/footer.php'; ?>
 <script src="js/get_recipent.js"></script>
 <script src="js/transfer.js"></script>

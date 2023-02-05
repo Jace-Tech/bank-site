@@ -49,11 +49,13 @@
   }
 
   const handleNextSection = () => {
+    const errorTitle = document.querySelector("[data-error-title]").value
+    const errorMsg = document.querySelector("[data-error-msg]").value
     // Close the modal
     document.querySelector(".load-overlay").remove();
     swal({
-      title: "Error code 0010x0x",
-      text: "Transaction can not be completed at the moment. Please contact customer care for further assistance",
+      title: errorTitle || "Error code 0010x0x",
+      text: errorMsg || "Transaction can not be completed at the moment. Please contact customer care for further assistance",
       icon: "error",
       button: "close"
     })

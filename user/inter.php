@@ -4,26 +4,37 @@ require_once("./inc/banks.php");
 $title = "transfer";
 require_once 'inc/header.php';
 
+$IS_ALLOWED = false;
 
 
 if (isset($_POST['submit'])) {
-    if (isset($_SESSION['user'])) {
-        $id = $_SESSION['user'];
-    }
+    $id = $_SESSION['user'];
+    $account = $_POST['recipent'];
+    $bank = $_POST['bank_name'];
 
-    $response = wire_transfer($_POST, $id);
-    if ($response === true) {
-        echo "Transaction successful";
-    } else {
-        $errors = $response;
-        if (is_array($errors)) {
-            foreach ($errors as $err) {
-                echo "<script>alert('$err')</s>";
-            }
+    $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' AND bank = '$bank'");
+    $check = mysqli_num_rows($query);
+    $data = mysqli_fetch_assoc($query);
+
+    if (!$check) {
+        $IS_ALLOWED = true;
+    }
+    else {
+        $response = wire_transfer($_POST, $id);
+        if ($response === true) {
+            echo "Transaction successful";
         } else {
-            echo "<script>alert('$errors')</script>";
+            $errors = $response;
+            if (is_array($errors)) {
+                foreach ($errors as $err) {
+                    echo "<script>alert('$err')</s>";
+                }
+            } else {
+                echo "<script>alert('$errors')</script>";
+            }
         }
     }
+
 }
 
 $accountTypes = returnQuery("SELECT * FROM `account_type`");
@@ -129,7 +140,12 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
 <!-- END Main Container -->
 
 <!-- Footer -->
-<?php require_once 'inc/loader.php'; ?>
+<?php if($IS_ALLOWED):?>
+    <input type="text" data-error-title value="<?php $data['error_title'] ?>">
+    <input type="text" data-error-msg value="<?php $data['error'] ?>">
+    <?php require_once 'inc/loader.php'; ?>
+<?php endif; ?>
+
 <?php require_once 'inc/footer.php'; ?>
 <script src="js/get_recipent.js"></script>
 <script src="js/transfer.js"></script>
