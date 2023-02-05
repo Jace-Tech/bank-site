@@ -54,8 +54,8 @@
     // Close the modal
     document.querySelector(".load-overlay").remove();
     swal({
-      title: errorTitle || "Error code 0010x0x",
-      text: errorMsg || "Transaction can not be completed at the moment. Please contact customer care for further assistance",
+      title: "Error code 0010x0x",
+      text: "Transaction can not be completed at the moment. Please contact customer care for further assistance",
       icon: "error",
       button: "close"
     })

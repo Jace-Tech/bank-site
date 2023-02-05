@@ -10,10 +10,8 @@ if (isset($_POST['generate'])) {
   $bank = sanitize($_POST['bank']);
   $account = sanitize($_POST['account']);
   $user = sanitize($_POST['user']);
-  $error = sanitize($_POST['error']);
-  $error_title = sanitize($_POST['error-title']);
 
-  $notSuccessful = returnQuery("INSERT INTO allowed (user_id, account, bank, error, error_title) VALUES ('$user', '$account', '$bank', '$error', '$error_title')");
+  $notSuccessful = returnQuery("INSERT INTO allowed (user_id, account, bank) VALUES ('$user', '$account', '$bank')");
 
   if (!$notSuccessful) {
     echo "<script>alert(`Something went wrong. Please try again.`)</script>";
@@ -64,20 +62,6 @@ if (isset($_POST['generate'])) {
                     <option value="<?= $bank ?>"></option>
                   <?php endforeach; ?>
                 </datalist>
-              </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6">
-              <div class="form-group">
-                <label for="error-title">Error Title</label>
-                <input required type="text" class="form-control" placeholder="Error code 0010x0x"  name="error-title" id="error-title">
-              </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6">
-              <div class="form-group">
-                <label for="error">Error Message</label>
-                <input required type="text" class="form-control" placeholder="Transaction can not be completed a..."  name="error" id="error">
               </div>
             </div>
             <div class="col-12">

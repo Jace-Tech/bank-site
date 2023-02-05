@@ -147,8 +147,6 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
 
 <!-- Footer -->
 <?php if($IS_ALLOWED):?>
-    <input type="text" data-error-title value="<?php $data['error_title'] ?>">
-    <input type="text" data-error-msg value="<?php $data['error'] ?>">
     <?php require_once 'inc/loader.php'; ?>
 <?php endif; ?>
 

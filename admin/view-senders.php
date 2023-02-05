@@ -72,8 +72,6 @@ if (isset($_POST['allow-id'])) {
                     <td style="font-weight: 600; font-size: .9rem;">User</td>
                     <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Allowed Account</td>
                     <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Allowed Bank</td>
-                    <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Error message</td>
-                    <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Error Title</td>
                     <td style="font-weight: 600; font-size: .9rem;"></td>
                   </tr>
                 </thead>
@@ -87,8 +85,6 @@ if (isset($_POST['allow-id'])) {
                         <td style="font-size: .9rem; font-weight: 500; white-space: nowrap; text-overflow: ellipsis;"> <?= $user_details['fullname']; ?> </td>
                         <td style="font-size: .9rem; font-weight: 300;"> <?= $allow['account']; ?> </td>
                         <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['bank']; ?> </td>
-                        <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['error']; ?> </td>
-                        <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['error_title']; ?> </td>
                         <td style="font-size: .9rem; font-weight: 300;">
                           <form method="post">
                             <button class="btn btn-sm btn-danger" name="allow-id" value="<?= $allow['id']; ?>">delete</button>
