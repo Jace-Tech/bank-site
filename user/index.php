@@ -239,7 +239,7 @@ $IS_ALLOWED = false;
                 <div class="block-content block-content-full d-flex align-items-center justify-content-between">
                     <div>
                         <p class="font-size-lg font-w600 mb-0">
-                            <?= $symbol . $trans['amount']; ?> USD
+                            <?= $symbol . number_format($trans['amount']); ?> USD
                         </p>
                         <p class="text-muted mb-0">
                             <?= $trans['to_user']; ?>
