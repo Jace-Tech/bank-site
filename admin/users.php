@@ -36,7 +36,7 @@ require_once 'inc/header.php';
                                 <?php if($i >= (count($accountDetails) - 1)): ?>
                                     <div class="d-block">
                                         <p class="text-muted font-sm">
-                                            <?= $accountDetails['acc_type'] ?>
+                                            <?= $accountDetails[$i]['acc_type'] ?>
                                         </p>
                                         <p class="mt-1">
                                             <?= $accountDetails[$i]['acc_number']; ?> 
@@ -45,7 +45,7 @@ require_once 'inc/header.php';
                                 <?php  else: ?>
                                     <div class="d-block">
                                         <p class="text-muted font-sm">
-                                            <?= $accountDetails['acc_type'] ?>
+                                            <?= $accountDetails[$i]['acc_type'] ?>
                                         </p>
                                         <p class="mt-1">
                                             <?= $accountDetails[$i]['acc_number']; ?> 
