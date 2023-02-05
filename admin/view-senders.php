@@ -10,12 +10,11 @@ if (isset($_GET['user'])) {
   $ALLOWEDS = mysqli_fetch_all(returnQuery("SELECT * FROM allowed WHERE user_id = '$user_id'"), MYSQLI_ASSOC);
 }
 
-if(isset($_POST['allow-id'])) {
+if (isset($_POST['allow-id'])) {
   $id = $_POST['allow-id'];
-  if(returnQuery("DELETE FROM allowed WHERE id = $id")) {
+  if (returnQuery("DELETE FROM allowed WHERE id = $id")) {
     echo '<script>alert(`Config deleted`)</script>';
-  }
-  else {
+  } else {
     echo '<script>alert(`Failed to delete`)</script>';
   }
 }
@@ -53,6 +52,11 @@ if(isset($_POST['allow-id'])) {
               </div>
             </div>
           </div>
+        </form>
+      </div>
+
+      <div class="col-12">
+        <div class="row">
 
           <?php if (isset($_GET['user'])) : ?>
             <div class="col-12">
@@ -69,14 +73,14 @@ if(isset($_POST['allow-id'])) {
                       <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Allowed Account</td>
                       <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Allowed Bank</td>
                       <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Error message</td>
-                    <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Error Title</td>
-                    <td style="font-weight: 600; font-size: .9rem;"></td>
+                      <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Error Title</td>
+                      <td style="font-weight: 600; font-size: .9rem;"></td>
                     </tr>
                   </thead>
 
                   <tbody>
                     <?php if (count($ALLOWEDS)) : ?>
-                      <?php foreach ($ALLOWEDS as $allow) : 
+                      <?php foreach ($ALLOWEDS as $allow) :
                         $user_details = executeQuery("SELECT * FROM users WHERE id = '$user_id'");
                       ?>
                         <tr>
@@ -85,7 +89,7 @@ if(isset($_POST['allow-id'])) {
                           <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['bank']; ?> </td>
                           <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['error']; ?> </td>
                           <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['error_title']; ?> </td>
-                          <td style="font-size: .9rem; font-weight: 300;"> 
+                          <td style="font-size: .9rem; font-weight: 300;">
                             <form method="post">
                               <button class="btn btn-sm btn-danger" name="allow-id" value="<?= $allow['id']; ?>">delete</button>
                             </form>
@@ -103,8 +107,7 @@ if(isset($_POST['allow-id'])) {
               </div>
             </div>
           <?php endif; ?>
-
-        </form>
+        </div>
       </div>
     </div>
   </div>
