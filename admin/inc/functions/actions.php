@@ -150,6 +150,8 @@ function credit_user_account($post)
             $user = mysqli_fetch_assoc($qq);
             $account_info = executeQuery("SELECT * FROM accounts WHERE user_id = '$id' AND acc_number = '$account'");
 
+            $account_type = $account_info['acc_type'];
+
             $amount_in_db = $account_info['acc_balance'];
             $userId = $user['id'];
 
@@ -183,6 +185,10 @@ function credit_user_account($post)
                                 <tr>
                                     <th style='padding: 7px;'>Credit/Debit</th>
                                     <td>Credit</td>
+                                </tr>
+                                <tr>
+                                    <th style='padding: 7px;'>Account Type</th>
+                                    <td>$account_type</td>
                                 </tr>
                                 <tr>
                                     <th style='padding: 7px;'>Account number</th>
