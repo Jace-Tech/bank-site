@@ -66,7 +66,7 @@ $IS_ALLOWED = false;
                 <div class="block-content block-content-full">
                     <div class="row">
                         <div class="col-12">
-                            <h2 style="font-size: 1rem; text-align: left; text-transform: uppercase; font-weight: 700; " class="font-w600 text-muted">
+                            <h2 style="font-size: 1rem; text-align: left; text-transform: uppercase; font-weight: 700; color: #ccc; letter-spacing: 5px;">
                                 <?= $account['acc_type']; ?>
                             </h2>
                         </div>
