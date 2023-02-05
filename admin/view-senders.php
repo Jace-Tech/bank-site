@@ -87,7 +87,7 @@ if(isset($_POST['allow-id'])) {
                           <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['error_title']; ?> </td>
                           <td style="font-size: .9rem; font-weight: 300;"> 
                             <form method="post">
-                              <button class="btn btn-sm btn-danger" name="allow-id" value=" <?= $allow['id']; ?> ">delete</button>
+                              <button class="btn btn-sm btn-danger" name="allow-id" value="<?= $allow['id']; ?>">delete</button>
                             </form>
                           </td>
                         </tr>
