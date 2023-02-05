@@ -13,9 +13,8 @@ if (isset($_POST['submit'])) {
     
         $id = $_SESSION['user'];
         $account = $_POST['recipent'];
-        $bank = $_POST['bank_name'];
 
-        $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' AND bank = '$bank'");
+        $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account'");
         $check = mysqli_num_rows($query);
 
         if(!$check) {
