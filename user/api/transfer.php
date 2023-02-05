@@ -69,15 +69,15 @@ if (!empty($desc)) {
 
 
 if ($err_flag === false) {
-    $sql1 = "SELECT * FROM users WHERE id = $user_id";
+    $sql1 = "SELECT * FROM users WHERE id = '$user_id'";
     $query1 = executeQuery($sql1);
 
-    $rec_sql = "SELECT * FROM users WHERE acc_number = '$acc_number'";
+    $rec_sql = "SELECT * FROM accounts WHERE acc_number = '$acc_number'";
     $rec_result = executeQuery($rec_sql);
 
     if ($query1) {
         $details = $query1;
-        $total_balance = $details['acc_balance'];
+        $total_balance = $rec_result['acc_balance'];
         $email = $details['email'];
         $available_balance = $total_balance - $amount;
         $date = date("Y/m/d");
@@ -89,7 +89,7 @@ if ($err_flag === false) {
         $receiver_fullname = $rec_result['fullname'];
 
         if ($amount <= $total_balance) {
-            $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, beneficiary, bank_name, swift_code, routing_number, account_type, description, created_at) VALUES ($user_id, 1, $amount, '$acc_number', '$acc_name', '$bank_name', '$swift_code', '$routing_number', '$type', '$desc', now())";
+            $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, beneficiary, bank_name, swift_code, routing_number, account_type, description, created_at) VALUES ('$user_id', 1, $amount, '$acc_number', '$acc_name', '$bank_name', '$swift_code', '$routing_number', '$type', '$desc', now())";
             $query2 = validateQuery($sql2);
 
             if ($query2) {

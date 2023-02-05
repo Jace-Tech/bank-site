@@ -822,11 +822,11 @@ function credit_account($post, $user_id) {
 
             $update_balance = $amount + $amount_in_db;
 
-            $sql = "UPDATE accounts SET acc_balance = $update_balance WHERE user_id = $user_id";
+            $sql = "UPDATE accounts SET acc_balance = $update_balance WHERE user_id = '$user_id'";
             $result = validateQuery($sql);
 
             if ($result) {
-                $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, approved, created_at, kind) VALUES ($user_id, 0, $amount, $acc_number, 1, now(), 'deposit')";
+                $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, status, created_at, kind) VALUES ('$user_id', 0, $amount,' $acc_number', 'approved', now(), 'deposit')";
                 $query2 = validateQuery($sql2);
 
                 if ($query2) {
