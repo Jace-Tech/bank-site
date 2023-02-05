@@ -89,7 +89,7 @@ require_once 'inc/header.php';
                                                 <a href="users"><?= $account_num; ?></a>
                                             </td>
                                             <td class="d-none d-sm-table-cell">
-                                                <a href="users"><?= $user['fullname']; ?></a>
+                                                <a href="users" style="white-space: nowrap; text-overflow: ellipsis;"><?= $user['fullname']; ?></a>
                                             </td>
                                             <td>
                                                 <span class="<?= $class; ?>"><?= $message; ?></span>
@@ -98,7 +98,7 @@ require_once 'inc/header.php';
                                                 <a href="users"><?= $to_user; ?></a>
                                             </td>
                                             <td class="font-w600 text-right">$<?= number_format($amount); ?></td>
-                                            <td class="font-w600 text-right"><a href="backdate" style="text-overflow: clip;"><strong><?= date("M d, Y - h:i", strtotime($created_at)); ?></a></td>
+                                            <td class="font-w600 text-right"><a href="backdate" style="white-space: nowrap;"><strong><?= date("M d, Y - h:i", strtotime($created_at)); ?></a></td>
                                             <td class="font-w600 text-right"><a href="backdate?id=<?= $id; ?>" class="shadow btn btn-sm btn-primary">Backdate Transaction</a></td>
                                         </tr>
                                     <?php } ?>
