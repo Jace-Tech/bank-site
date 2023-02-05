@@ -857,6 +857,8 @@ function updateProfileImage($file, $user_id) {
 
     if (!empty($file['img'])) {
         $profileImage =  time(). sanitize($file['img']['name']);
+
+        print_r($file);
         $profileImageTmp = $file['img']['tmp_name'];
         move_uploaded_file($profileImageTmp, "../media/users/$profileImage");
     } else {

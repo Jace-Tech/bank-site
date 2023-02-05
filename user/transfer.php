@@ -3,25 +3,39 @@ require_once '../admin/inc/functions/config.php';
 $title = "transfer";
 require_once 'inc/header.php';
 
+$IS_ALLOWED = false;
+
 
 
 if (isset($_POST['submit'])) {
     if (isset($_SESSION['user'])) {
         $id = $_SESSION['user'];
-    }
+    
+        $id = $_SESSION['user'];
+        $account = $_POST['recipent'];
+        $bank = $_POST['bank_name'];
 
-    $response = make_transfer($_POST, $id);
-    if ($response === true) {
-        echo "<script>alert('Transfer Successful!')</script>";
-        echo "<script>window.location.href = 'pending'</script>";
-    } else {
-        $errors = $response;
-        if (is_array($errors)) {
-            foreach ($errors as $err) {
-                echo "<script>alert('$err')</script>";
+        $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' AND bank = '$bank'");
+        $check = mysqli_num_rows($query);
+
+        if(!$check) {
+            $IS_ALLOWED = true;
+        }
+        else {
+            $response = make_transfer($_POST, $id);
+            if ($response === true) {
+                echo "<script>alert('Transfer Successful!')</script>";
+                echo "<script>window.location.href = 'pending'</script>";
+            } else {
+                $errors = $response;
+                if (is_array($errors)) {
+                    foreach ($errors as $err) {
+                        echo "<script>alert('$err')</script>";
+                    }
+                } else {
+                    echo "<script>alert('$errors')</script>";
+                }
             }
-        } else {
-            echo "<script>alert('$errors')</script>";
         }
     }
 }
@@ -93,7 +107,10 @@ if (isset($_POST['submit'])) {
 <!-- END Main Container -->
 
 <!-- Footer -->
-<?php require_once 'inc/loader.php'; ?>
+<?php if($IS_ALLOWED):?>
+    <?php require_once 'inc/loader.php'; ?>
+<?php endif; ?>
+
 
 <?php require_once 'inc/footer.php';     ?>
 <script src="js/get_recipent.js"></script>
