@@ -66,7 +66,7 @@ if (isset($_POST['allow-id'])) {
             </div>
             <div class="col-12">
               <div class="table-responsive table-responsive-lg mt-4">
-                <table class="table w-100 table-striped">
+                <table class="table w-100 table-striped w-full">
                   <thead>
                     <tr>
                       <td style="font-weight: 600; font-size: .9rem;">User</td>
