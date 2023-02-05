@@ -34,9 +34,24 @@ require_once 'inc/header.php';
                         <div class="d-flex align-items-center justify-content-center" style="gap: .5rem;">
                             <?php for ($i = 0; $i < count($accountDetails); $i++): ?>
                                 <?php if($i >= (count($accountDetails) - 1)): ?>
-                                    <?= $accountDetails[$i]['acc_number']; ?> 
+                                    <div class="d-block">
+                                        <p class="text-muted font-sm">
+                                            <?= $accountDetails['acc_type'] ?>
+                                        </p>
+                                        <p class="mt-1">
+                                            <?= $accountDetails[$i]['acc_number']; ?> 
+                                        </p>
+                                    </div>
                                 <?php  else: ?>
-                                    <?= $accountDetails[$i]['acc_number']; ?> <span style="height: 25px; width: 1px; background-color: #ccc;"></span>
+                                    <div class="d-block">
+                                        <p class="text-muted font-sm">
+                                            <?= $accountDetails['acc_type'] ?>
+                                        </p>
+                                        <p class="mt-1">
+                                            <?= $accountDetails[$i]['acc_number']; ?> 
+                                        </p>
+                                    </div>
+                                    <span style="height: 25px; width: 1px; background-color: #ccc;"></span>
                                 <?php  endif; ?>
                             <?php endfor; ?>
                         </div>
