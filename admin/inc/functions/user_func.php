@@ -852,13 +852,12 @@ function Transactions($user_id, $status) {
     }
 }
 
-function updateProfileImage($post, $user_id) {
-    extract($post);
+function updateProfileImage($file, $user_id) {
     $errors = [];
 
-    if (!empty($_FILES['img'])) {
-        $profileImage =  time(). sanitize($_FILES['img']['name']);
-        $profileImageTmp = $_FILES['img']['tmp_name'];
+    if (!empty($file['img'])) {
+        $profileImage =  time(). sanitize($file['img']['name']);
+        $profileImageTmp = $file['img']['tmp_name'];
         move_uploaded_file($profileImageTmp, "../media/users/$profileImage");
     } else {
         $errors[] = "Profile Image is required";

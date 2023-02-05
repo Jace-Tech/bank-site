@@ -4,7 +4,7 @@ $title = "profile";
 require_once 'inc/header.php';
 
 if (isset($_POST['submit'])) {
-    $response = updateProfileImage($_POST, $id);
+    $response = updateProfileImage($_FILES, $id);
 
     if ($response === true) {
         echo "<script>alert('Profile Updated')</script>";
