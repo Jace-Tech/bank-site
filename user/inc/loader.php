@@ -45,7 +45,7 @@
     setTimeout(() => {
       handleNextSection()
     }, 10000)
-
+  
   }
 
   const handleNextSection = () => {
