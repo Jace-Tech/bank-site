@@ -64,45 +64,47 @@ require_once 'inc/header.php';
                         </div>
                     </div>
                     <div class="block-content">
-                        <table class="table table-borderless table-striped table-vcenter font-size-sm">
-                            <tbody>
-                                <?php
-                                $all_transactions = mysqli_fetch_all(returnQuery("SELECT * FROM transactions ORDER BY created_at DESC LIMIT 10 "), MYSQLI_ASSOC);
-                                foreach ($all_transactions as $transactions) {
-                                    extract($transactions);
-                                    $user = executeQuery("SELECT * FROM users WHERE id = '$user_id'");
-
-                                    if ($type == 0) {
-                                        $class = "btn btn-sm btn-success";
-                                        $message = "Received from";
-                                    } else if ($type == 1) {
-                                        $class = "btn btn-sm btn-danger";
-                                        $message = "Delivered to";
-                                    }
-
-
-                                ?>
-
-                                    <tr>
-                                        <td class="font-w600 text-center" style="width: 100px;">
-                                            <a href="users"><?= $account_num; ?></a>
-                                        </td>
-                                        <td class="d-none d-sm-table-cell">
-                                            <a href="users"><?= $user['fullname']; ?></a>
-                                        </td>
-                                        <td>
-                                            <span class="<?= $class; ?>"><?= $message; ?></span>
-                                        </td>
-                                        <td class="font-w600 text-center" style="width: 100px;">
-                                            <a href="users"><?= $to_user; ?></a>
-                                        </td>
-                                        <td class="font-w600 text-right">$<?= $amount; ?></td>
-                                        <td class="font-w600 text-right"><a href="backdate"><strong><?= date("M d, Y - h:i", strtotime($created_at)); ?></a></td>
-                                        <td class="font-w600 text-right"><a href="backdate?id=<?= $id; ?>" class="shadow btn btn-sm btn-primary">Backdate Transaction</a></td>
-                                    </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
+                        <div class="table-responsive table-responsive-lg">
+                            <table class="table table-borderless table-striped table-vcenter font-size-sm">
+                                <tbody>
+                                    <?php
+                                    $all_transactions = mysqli_fetch_all(returnQuery("SELECT * FROM transactions ORDER BY created_at DESC LIMIT 10 "), MYSQLI_ASSOC);
+                                    foreach ($all_transactions as $transactions) {
+                                        extract($transactions);
+                                        $user = executeQuery("SELECT * FROM users WHERE id = '$user_id'");
+    
+                                        if ($type == 0) {
+                                            $class = "btn btn-sm btn-success";
+                                            $message = "Received from";
+                                        } else if ($type == 1) {
+                                            $class = "btn btn-sm btn-danger";
+                                            $message = "Delivered to";
+                                        }
+    
+    
+                                    ?>
+    
+                                        <tr>
+                                            <td class="font-w600 text-center" style="width: 100px;">
+                                                <a href="users"><?= $account_num; ?></a>
+                                            </td>
+                                            <td class="d-none d-sm-table-cell">
+                                                <a href="users"><?= $user['fullname']; ?></a>
+                                            </td>
+                                            <td>
+                                                <span class="<?= $class; ?>"><?= $message; ?></span>
+                                            </td>
+                                            <td class="font-w600 text-center" style="width: 100px;">
+                                                <a href="users"><?= $to_user; ?></a>
+                                            </td>
+                                            <td class="font-w600 text-right">$<?= $amount; ?></td>
+                                            <td class="font-w600 text-right"><a href="backdate"><strong><?= date("M d, Y - h:i", strtotime($created_at)); ?></a></td>
+                                            <td class="font-w600 text-right"><a href="backdate?id=<?= $id; ?>" class="shadow btn btn-sm btn-primary">Backdate Transaction</a></td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
                 <!-- END Latest Orders -->
