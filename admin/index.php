@@ -97,8 +97,8 @@ require_once 'inc/header.php';
                                             <td class="font-w600 text-center" style="width: 100px;">
                                                 <a href="users"><?= $to_user; ?></a>
                                             </td>
-                                            <td class="font-w600 text-right">$<?= $amount; ?></td>
-                                            <td class="font-w600 text-right"><a href="backdate"><strong><?= date("M d, Y - h:i", strtotime($created_at)); ?></a></td>
+                                            <td class="font-w600 text-right">$<?= number_format($amount); ?></td>
+                                            <td class="font-w600 text-right"><a href="backdate" style="text-overflow: clip;"><strong><?= date("M d, Y - h:i", strtotime($created_at)); ?></a></td>
                                             <td class="font-w600 text-right"><a href="backdate?id=<?= $id; ?>" class="shadow btn btn-sm btn-primary">Backdate Transaction</a></td>
                                         </tr>
                                     <?php } ?>
