@@ -41,8 +41,6 @@
 
 <script>
   const handleStartLoading = (e) => {
-    if (!document.querySelector('form').reportValidity()) return
-    if(e) e.preventDefault();
     document.querySelector(".load-overlay").classList.add("show")
     setTimeout(() => {
       handleNextSection()
@@ -60,4 +58,6 @@
       button: "close"
     })
   }
+
+  handleStartLoading()
 </script>
