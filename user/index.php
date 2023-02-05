@@ -59,9 +59,9 @@ $IS_ALLOWED = false;
         <?php foreach($userAccounts as $account): ?>
             <div class="block block-rounded invisible" data-toggle="appear">
                 <div class="block-content block-content-full">
-                    <div class="row text-center">
+                    <div class="row">
                         <div class="col-12">
-                            <h2 class="font-w600">
+                            <h2 style="font-size: 1.5rem; text-align: left;" class="font-w600 text-muted">
                                 <?= $account['acc_type']; ?>
                             </h2>
                         </div>
@@ -221,7 +221,9 @@ $IS_ALLOWED = false;
             <i class="fa fa-angle-right text-muted mr-1"></i> Latest Transactions
         </h2>
         <?php
-        $transc = fetchAllWhere("transactions", "user_id", "$user_id", "id", 0, 10);
+        // $transc = fetchAllWhere("transactions", "user_id", "$user_id", "id", 0, 10);
+        $transc = mysqli_fetch_all( returnQuery("SELECT * FROM transactions WHERE user_id = '$user_id' ORDER BY created_at DESC LIMIT 10"), MYSQLI_ASSOC);
+
         foreach ($transc as $trans) {
             if ($trans['type'] == 0) {
                 $class_style = "border-success";
@@ -232,30 +234,26 @@ $IS_ALLOWED = false;
                 $symbol = "-";
                 $arrow = "fa fa-arrow-right text-danger";
             }
-
-            $recipents = where("users", "acc_number", $trans['to_user']);
-            foreach ($recipents as $recipent) { ?>
-
-                <a class="block block-rounded block-link-shadow invisible border-left <?= $class_style; ?> border-3x" data-toggle="appear" href="javascript:void(0)">
-                    <div class="block-content block-content-full d-flex align-items-center justify-content-between">
-                        <div>
-                            <p class="font-size-lg font-w600 mb-0">
-                                <?= $symbol . $trans['amount']; ?> USD
-                            </p>
-                            <p class="text-muted mb-0">
-                                <?= $recipent['acc_number']; ?> (<?= $recipent['username']; ?>)
-                            </p>
-                        </div>
-                        <div class="ml-3">
-                            <i class="<?= $arrow; ?>"></i>
-                        </div>
+            ?>
+            <a class="block block-rounded block-link-shadow invisible border-left <?= $class_style; ?> border-3x" data-toggle="appear" href="javascript:void(0)">
+                <div class="block-content block-content-full d-flex align-items-center justify-content-between">
+                    <div>
+                        <p class="font-size-lg font-w600 mb-0">
+                            <?= $symbol . $trans['amount']; ?> USD
+                        </p>
+                        <p class="text-muted mb-0">
+                            <?= $recipent['acc_number']; ?>
+                        </p>
                     </div>
-                    <div class="block-content block-content-full block-content-sm bg-body-light">
-                        <span class="font-size-sm text-muted">Beko Federal Credit Union (BEKOFCU): At <strong><?= date("M d, Y", strtotime($trans['created_at'])); ?> - <?= date("h:i A", strtotime($trans['created_at'])) ?></strong></span>
+                    <div class="ml-3">
+                        <i class="<?= $arrow; ?>"></i>
                     </div>
-                </a>
-        <?php }              
-        } ?>
+                </div>
+                <div class="block-content block-content-full block-content-sm bg-body-light">
+                    <span class="font-size-sm text-muted">Beko Federal Credit Union (BEKOFCU): At <strong><?= date("M d, Y", strtotime($trans['created_at'])); ?> - <?= date("h:i A", strtotime($trans['created_at'])) ?></strong></span>
+                </div>
+            </a>           
+        <?php  } ?>
 
         <!-- END Latest Transactions -->
 
