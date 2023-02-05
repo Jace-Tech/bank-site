@@ -31,7 +31,7 @@ require_once 'inc/header.php';
                     </h1>
                     <p class="text-muted">
                         <i class="fa fa-award text-warning mr-1"></i>
-                        <div class="d-flex align-items-center justify-content-center" style="gap: .5rem;">
+                        <div class="d-flex align-items-center justify-content-center" style="gap: 1rem;">
                             <?php for ($i = 0; $i < count($accountDetails); $i++): ?>
                                 <?php if($i >= (count($accountDetails) - 1)): ?>
                                     <div class="d-block">
