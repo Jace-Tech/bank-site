@@ -33,7 +33,7 @@ if(isset($_POST['allow-id'])) {
       <div class="col-12">
         <form action="" class="w-100" method="get">
           <div class="row">
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12">
               <div class="form-group">
                 <label for="user" class="label">User</label>
                 <select name="user" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
