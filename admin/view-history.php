@@ -126,7 +126,7 @@ if (isset($_GET['acc'])) {
         <?php if (count($TRANSACTIONS)) : ?>
           <?php foreach ($TRANSACTIONS as $transaction) : ?>
             <tr>
-              <td style="font-size: .9rem; font-weight: 500;"> $<?= number_format($transaction['amount']); ?> </td>
+              <td style="font-size: .9rem; font-weight: 600;"> $<?= number_format($transaction['amount']); ?> </td>
               <td style="font-size: .9rem; font-weight: 300;"> <?= ucfirst($transaction['kind']); ?> </td>
               <td style="font-size: .9rem; font-weight: 300;">
                 <?php $badge = ($transaction['status'] == "approved" ? "badge-success" : ($transaction['status'] == "pending" ? "badge-warning" : "badge-danger")) ?>
