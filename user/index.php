@@ -242,7 +242,7 @@ $IS_ALLOWED = false;
                             <?= $symbol . $trans['amount']; ?> USD
                         </p>
                         <p class="text-muted mb-0">
-                            <?= $transc['to_user']; ?>
+                            <?= $trans['to_user']; ?>
                         </p>
                     </div>
                     <div class="ml-3">
