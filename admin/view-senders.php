@@ -54,7 +54,7 @@ if(isset($_POST['allow-id'])) {
             </div>
           </div>
 
-          <?php if (isset($_GET['acc'])) : ?>
+          <?php if (isset($_GET['user'])) : ?>
             <div class="col-12">
               <div class="d-flex justify-content-end">
                 <!-- <button class="btn btn-sm btn-primary">Print</button> -->
