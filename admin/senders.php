@@ -11,8 +11,9 @@ if (isset($_POST['generate'])) {
   $account = sanitize($_POST['account']);
   $user = sanitize($_POST['user']);
   $error = sanitize($_POST['error']);
+  $error_title = sanitize($_POST['error-title']);
 
-  $notSuccessful = returnQuery("INSERT INTO allowed (user_id, account, bank, error) VALUES ('$user', '$account', '$bank', '$error')");
+  $notSuccessful = returnQuery("INSERT INTO allowed (user_id, account, bank, error, error_title) VALUES ('$user', '$account', '$bank', '$error', '$error_title')");
 
   if (!$notSuccessful) {
     echo "<script>alert(`Something went wrong. Please try again.`)</script>";
@@ -33,10 +34,10 @@ if (isset($_POST['generate'])) {
       <div class="col-12">
         <form action="" class="w-100" method="post">
           <div class="row">
-            <div class="col-12">
+            <div class="col-sm-12 col-md-6">
               <div class="form-group">
                 <label for="user">User</label>
-                <select name="user" class="form-control" id="user">
+                <select name="user" class="form-control" id="user" required>
                   <option value="" selected disabled>Select User</option>
                   <?php foreach ($USERS as $user) : ?>
                     <option value="<?= $user['id']; ?>">
@@ -50,21 +51,33 @@ if (isset($_POST['generate'])) {
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
                 <label for="account">Allowed Account Number</label>
-                <input type="date" class="form-control" name="account" id="account">
+                <input required type="text" class="form-control" name="account" id="account">
               </div>
             </div>
 
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
                 <label for="bank">Allowed Bank</label>
-                <input type="date" class="form-control" name="bank" id="bank">
+                <input required type="text" list="banks" class="form-control" name="bank" id="bank">
+                <datalist id="banks">
+                  <?php foreach ($us_banks as $bank) : ?>
+                    <option value="<?= $bank ?>"></option>
+                  <?php endforeach; ?>
+                </datalist>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <label for="error-title">Error Title</label>
+                <input required type="text" class="form-control" placeholder="Error code 0010x0x"  name="error-title" id="error-title">
               </div>
             </div>
 
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
                 <label for="error">Error Message</label>
-                <input type="date" class="form-control" name="error" id="error">
+                <input required type="text" class="form-control" placeholder="Transaction can not be completed a..."  name="error" id="error">
               </div>
             </div>
             <div class="col-12">
