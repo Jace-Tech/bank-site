@@ -6,8 +6,6 @@ require_once 'inc/header.php';
 
 $IS_ALLOWED = false;
 
-$TRANSFER = executeQuery("SELECT SUM(amount) as total FROM transactions WHERE user_id = '$user_id' AND type = 1");
-
 
 // $total_transfer = fetch_transactions(1, "$user_id");
 // foreach ($total_transfer as $transfer) {
@@ -60,7 +58,10 @@ $TRANSFER = executeQuery("SELECT SUM(amount) as total FROM transactions WHERE us
                 </div>
             </div>
         <?php } ?>
-        <?php foreach($userAccounts as $account): ?>
+        <?php foreach($userAccounts as $account): 
+            $ac = $account['acc_number'];
+            $TRANSFER = executeQuery("SELECT SUM(amount) as total FROM transactions WHERE user_id = '$user_id' AND type = 1 AND account_num = '$ac'");
+        ?>
             <div class="block block-rounded invisible" data-toggle="appear">
                 <div class="block-content block-content-full">
                     <div class="row">
