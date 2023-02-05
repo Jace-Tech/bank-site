@@ -49,8 +49,6 @@
   }
 
   const handleNextSection = () => {
-    const errorTitle = document.querySelector("[data-error-title]").value
-    const errorMsg = document.querySelector("[data-error-msg]").value
     // Close the modal
     document.querySelector(".load-overlay").remove();
     swal({
