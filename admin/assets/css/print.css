@@ -1,4 +1,4 @@
-div:not(.print-page) {
+#main-container {
   display: none !important;
 }
 
