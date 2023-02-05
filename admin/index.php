@@ -92,14 +92,14 @@ require_once 'inc/header.php';
                                                 <a href="users" style="white-space: nowrap; text-overflow: ellipsis;"><?= $user['fullname']; ?></a>
                                             </td>
                                             <td>
-                                                <span class="<?= $class; ?>"><?= $message; ?></span>
+                                                <span style="white-space: nowrap; text-overflow: ellipsis;" class="<?= $class; ?>"><?= $message; ?></span>
                                             </td>
                                             <td class="font-w600 text-center" style="width: 100px;">
                                                 <a href="users"><?= $to_user; ?></a>
                                             </td>
                                             <td class="font-w600 text-right">$<?= number_format($amount); ?></td>
                                             <td class="font-w600 text-right"><a href="backdate" style="white-space: nowrap;"><strong><?= date("M d, Y - h:i", strtotime($created_at)); ?></a></td>
-                                            <td class="font-w600 text-right"><a href="backdate?id=<?= $id; ?>" class="shadow btn btn-sm btn-primary">Backdate Transaction</a></td>
+                                            <td class="font-w600 text-right"><a href="backdate?id=<?= $id; ?>" style="white-space: nowrap; text-overflow: ellipsis;" class="shadow btn btn-sm btn-primary">Backdate Transaction</a></td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
