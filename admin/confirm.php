@@ -57,7 +57,7 @@ if (isset($_POST['submit'])) {
                                 </thead>
                                 <tbody>
                                     <?php
-                                    $all_transactions = where("transactions", "approved", 0);
+                                    $all_transactions = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE approved = 0"), MYSQLI_ASSOC);
                                     foreach ($all_transactions as $transaction) {
                                         extract($transaction); ?>
 
