@@ -8,10 +8,7 @@ if (!isset($_SESSION['user'])) {
 $user_details = getUsersDetails($user_id);
 extract($user_details);
 
-$userAccounts = getUsersAccountsDetails($user_id);
-$accounts_arr = array_map(function($account) {
-    return $account['acc_number'];
-}, $userAccounts);
+$userAccounts = mysqli_fetch_all( returnQuery("SELECT * FROM accounts WHERE user_id = '$user_id'"), MYSQLI_ASSOC);
 
 if ($title == "transfer" && $access == 0) {
     redirect_to("./");
