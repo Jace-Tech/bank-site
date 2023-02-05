@@ -54,60 +54,59 @@ if (isset($_POST['allow-id'])) {
           </div>
         </form>
       </div>
+    </div>
 
-      <div class="col-12">
-        <div class="row">
-
-          <?php if (isset($_GET['user'])) : ?>
-            <div class="col-12">
-              <div class="d-flex justify-content-end">
-                <!-- <button class="btn btn-sm btn-primary">Print</button> -->
-              </div>
+    <div class="">
+      <div class="row">
+        <?php if (isset($_GET['user'])) : ?>
+          <div class="col-12">
+            <div class="d-flex justify-content-end">
+              <!-- <button class="btn btn-sm btn-primary">Print</button> -->
             </div>
-            <div class="col-12">
-              <div class="table-responsive table-responsive-lg mt-4">
-                <table class="table w-100 table-striped w-full">
-                  <thead>
-                    <tr>
-                      <td style="font-weight: 600; font-size: .9rem;">User</td>
-                      <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Allowed Account</td>
-                      <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Allowed Bank</td>
-                      <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Error message</td>
-                      <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Error Title</td>
-                      <td style="font-weight: 600; font-size: .9rem;"></td>
-                    </tr>
-                  </thead>
+          </div>
+          <div class="col-12">
+            <div class="table-responsive table-responsive-lg mt-4">
+              <table class="table w-100 table-striped w-full">
+                <thead>
+                  <tr>
+                    <td style="font-weight: 600; font-size: .9rem;">User</td>
+                    <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Allowed Account</td>
+                    <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Allowed Bank</td>
+                    <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Error message</td>
+                    <td style="font-weight: 600; font-size: .9rem; white-space: nowrap; text-overflow: ellipsis;">Error Title</td>
+                    <td style="font-weight: 600; font-size: .9rem;"></td>
+                  </tr>
+                </thead>
 
-                  <tbody>
-                    <?php if (count($ALLOWEDS)) : ?>
-                      <?php foreach ($ALLOWEDS as $allow) :
-                        $user_details = executeQuery("SELECT * FROM users WHERE id = '$user_id'");
-                      ?>
-                        <tr>
-                          <td style="font-size: .9rem; font-weight: 500; white-space: nowrap; text-overflow: ellipsis;"> <?= $user_details['fullname']; ?> </td>
-                          <td style="font-size: .9rem; font-weight: 300;"> <?= $allow['account']; ?> </td>
-                          <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['bank']; ?> </td>
-                          <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['error']; ?> </td>
-                          <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['error_title']; ?> </td>
-                          <td style="font-size: .9rem; font-weight: 300;">
-                            <form method="post">
-                              <button class="btn btn-sm btn-danger" name="allow-id" value="<?= $allow['id']; ?>">delete</button>
-                            </form>
-                          </td>
-                        </tr>
-                      <?php endforeach; ?>
-                    <?php else : ?>
+                <tbody>
+                  <?php if (count($ALLOWEDS)) : ?>
+                    <?php foreach ($ALLOWEDS as $allow) :
+                      $user_details = executeQuery("SELECT * FROM users WHERE id = '$user_id'");
+                    ?>
                       <tr>
-                        <td class="py-4 text-center text-muted" colspan="5">No configs found</td>
+                        <td style="font-size: .9rem; font-weight: 500; white-space: nowrap; text-overflow: ellipsis;"> <?= $user_details['fullname']; ?> </td>
+                        <td style="font-size: .9rem; font-weight: 300;"> <?= $allow['account']; ?> </td>
+                        <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['bank']; ?> </td>
+                        <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['error']; ?> </td>
+                        <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['error_title']; ?> </td>
+                        <td style="font-size: .9rem; font-weight: 300;">
+                          <form method="post">
+                            <button class="btn btn-sm btn-danger" name="allow-id" value="<?= $allow['id']; ?>">delete</button>
+                          </form>
+                        </td>
                       </tr>
-                    <?php endif; ?>
-                  </tbody>
+                    <?php endforeach; ?>
+                  <?php else : ?>
+                    <tr>
+                      <td class="py-4 text-center text-muted" colspan="5">No configs found</td>
+                    </tr>
+                  <?php endif; ?>
+                </tbody>
 
-                </table>
-              </div>
+              </table>
             </div>
-          <?php endif; ?>
-        </div>
+          </div>
+        <?php endif; ?>
       </div>
     </div>
   </div>
