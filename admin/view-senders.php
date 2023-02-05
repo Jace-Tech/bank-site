@@ -36,7 +36,7 @@ if(isset($_POST['allow-id'])) {
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
                 <label for="user" class="label">User</label>
-                <select name="" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
+                <select name="user" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
                   <option value="" selected disabled>Select User</option>
                   <?php foreach ($USERS as $user) : ?>
                     <option value="<?= $user['id']; ?>">
