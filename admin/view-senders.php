@@ -80,7 +80,7 @@ if(isset($_POST['allow-id'])) {
                         $user_details = executeQuery("SELECT * FROM users WHERE id = '$user_id'");
                       ?>
                         <tr>
-                          <td style="font-size: .9rem; font-weight: 500; white-space: nowrap; text-overflow: ellipsis;"> <?= $user_details['fulllname']; ?> </td>
+                          <td style="font-size: .9rem; font-weight: 500; white-space: nowrap; text-overflow: ellipsis;"> <?= $user_details['fullname']; ?> </td>
                           <td style="font-size: .9rem; font-weight: 300;"> <?= $allow['account']; ?> </td>
                           <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['bank']; ?> </td>
                           <td style="font-size: .9rem; font-weight: 300; white-space: nowrap; text-overflow: ellipsis;"> <?= $allow['error']; ?> </td>
