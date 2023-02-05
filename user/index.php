@@ -4,6 +4,7 @@ $title = "User Dashboard";
 
 require_once 'inc/header.php';
 
+$IS_ALLOWED = false;
 // $total_transfer = fetch_transactions(1, "$user_id");
 // foreach ($total_transfer as $transfer) {
 // }
@@ -269,6 +270,8 @@ require_once 'inc/header.php';
     <!-- END Page Content -->
 </main>
 <!-- END Main Container -->
-<?php include("./inc/loader.php"); ?>
+<?php if($IS_ALLOWED): ?>
+    <?php include("./inc/loader.php"); ?>
+<?php endif; ?>
 <!-- Footer -->
 <?php require_once 'inc/footer.php'; ?>
