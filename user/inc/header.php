@@ -395,21 +395,21 @@ if ($title == "transfer" && $access == 0) {
 
                             </ul>
                         </li>
-                        <li class="nav-main-heading">Personal</li>
+                        <!-- <li class="nav-main-heading">Personal</li>
 
                         <li class="nav-main-item">
                             <a class="nav-main-link <?php if ($title == 'ticket') : echo 'active'; endif; ?>" href="ticket">
                                 <i class="nav-main-link-icon fa fa-edit"></i>
                                 <span class="nav-main-link-name">Create Ticket</span>
                             </a>
-                        </li>
+                        </li> -->
 
-                        <li class="nav-main-item">
+                        <!-- <li class="nav-main-item">
                             <a class="nav-main-link" href="messages">
                                 <span class="nav-main-link-name">Messages</span>
                                 <span class="nav-main-link-badge badge badge-pill badge-success"><?= getUsersAccountsTickets($accounts_arr); ?></span>
                             </a>
-                        </li>
+                        </li> -->
                         
                         <li class="nav-main-item">
                             <a class="nav-main-link <?php if ($title == 'profile') : echo 'active'; endif; ?>" href="edit-profile">
