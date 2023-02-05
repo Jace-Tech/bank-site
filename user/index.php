@@ -6,6 +6,8 @@ require_once 'inc/header.php';
 
 $IS_ALLOWED = false;
 
+$TRANSFER = executeQuery("SELECT SUM(amount) as total FROM transactions WHERE user_id = '$user_id' AND type = 1");
+
 
 // $total_transfer = fetch_transactions(1, "$user_id");
 // foreach ($total_transfer as $transfer) {
@@ -81,9 +83,9 @@ $IS_ALLOWED = false;
                         </div>
                         <div class="col-md-4 py-3">
                             <div class="font-size-h1 font-w300 text-danger mb-1">
-                                USD -$<?= number_format(fetchUsersTransactions(1, $user_id, $account['acc_number'])); ?>
+                                USD -$<?= number_format($TRANSFER['total']); ?>
                             </div>
-                            <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Recent Transfer</a>
+                            <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Total Transfers</a>
                         </div>
                     </div>
                 </div>
