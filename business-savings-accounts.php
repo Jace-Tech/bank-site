@@ -19,8 +19,8 @@
   <meta name="HandheldFriendly" content="true" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="google-site-verification" content="isjh5sjdvvXLdK6rpZeY_eBXK8T9ekDnZQ7cQjIBjZQ" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" /><meta name="description" content="Beko Federal Credit Union is not your typical bank. We are driven by a higher purpose and guided by a core set of values that inspire us to serve all of our stakeholders." /><meta name="keywords" content="Beko, Federal, Credit, Union, Beko Federal Credit Union, bekofcu.com">
   <link rel="stylesheet" href="https://www.firstunitedbank.com/themes/custom/q2_base/dist/css/q2_base.css?ro3mgq">
+  <?php include("./seo.php") ?>
   <style>
     /*** SASS ***/
     /*** GLOBAL ***/
