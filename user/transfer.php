@@ -7,7 +7,7 @@ $IS_ALLOWED = false;
 
 
 
-if (isset($_POST['submit'])) {
+if (isset($_POST["submit"])) {
     if (isset($_SESSION['user'])) {
         $id = $_SESSION['user'];
     
