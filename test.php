@@ -15,13 +15,13 @@
 //    echo "DATE ->> " . date_format($date, 'Y-m-d') . "\n";
 // }
 
-$success = [true, true, true, true, true, true, true];
+$data = [];
 
-$data = array_filter($success, function($item) {
-   return $item;
- });
+// $data = array_filter($success, function($item) {
+//    return $item;
+//  });
 
- print_r($data);
+//  print_r($data);
  if(!$data) print("EMPTY");
  else print("NOT EMPTY");
 ?>

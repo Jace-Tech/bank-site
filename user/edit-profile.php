@@ -4,9 +4,30 @@ $title = "profile";
 require_once 'inc/header.php';
 
 if (isset($_POST['submit'])) {
-    $response = updateProfileImage($_FILES, $id);
+    $errors = [];
 
-    if ($response === true) {
+    if ($_FILES['img']['name']) {
+        $profileImage =  time(). sanitize($_FILES['img']['name']);
+        $profileImageTmp = $_FILES['img']['tmp_name'];
+        move_uploaded_file($profileImageTmp, "../media/users/$profileImage");
+    } else {
+        $errors[] = "Profile Image is required";
+    }
+
+    if (!$errors) {
+        $sql = "UPDATE users SET profile_pic = '$profileImage' WHERE id = '$user_id'";
+        $query = validateQuery($sql);
+
+        if ($query) {
+            return true;
+        } else {
+            return "Failed to add image";
+        }
+    } else {
+        return $errors;
+    }
+
+    if ($errors) {
         echo "<script>alert('Profile Updated')</script>";
     } else if (is_array($response)) {
         foreach ($response as $err) {
