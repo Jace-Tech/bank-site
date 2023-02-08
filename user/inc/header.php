@@ -1,4 +1,5 @@
 <?php
+@session_start();
 if (!isset($_SESSION['user'])) {
     blockUrlHackers($_SESSION['user'], "signin.php");
 } else {
@@ -404,7 +405,7 @@ if ($title == "transfer" && $access == 0) {
                         <!-- <li class="nav-main-item">
                             <a class="nav-main-link" href="messages">
                                 <span class="nav-main-link-name">Messages</span>
-                                <span class="nav-main-link-badge badge badge-pill badge-success"><?= getUsersAccountsTickets($accounts_arr); ?></span>
+                                <span class="nav-main-link-badge badge badge-pill badge-success"></span>
                             </a>
                         </li> -->
                         

@@ -911,14 +911,14 @@ function sendTicket($post) {
 
 }
 
-// GET USER DETAILS
+// GET USER DETAIL
 function getUsersDetails ($userId) {
     $user = executeQuery("SELECT * FROM users WHERE id = '$userId'");  
     return $user;
 }
 
 function getUsersAccountsDetails ($userId) {
-    $query = returnQuery("SELECT * FROM accounts WHERE user_id = '$userId'");  
+    $query = returnQuery("SELECT * FROM accounts WHERE user_id = '$userId'");
     return mysqli_fetch_all($query, MYSQLI_ASSOC);
 }
 
