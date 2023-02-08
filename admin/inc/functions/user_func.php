@@ -771,7 +771,7 @@ function wire_transfer($post, $user_id) {
         $sql1 = "SELECT * FROM users WHERE id = '$user_id'";
         $query1 = executeQuery($sql1);
 
-        $accountDetails = executeQuery("SELECT * FROM accounts WHERE user_id = '$user_id'");
+        $accountDetails = executeQuery("SELECT * FROM accounts WHERE user_id = '$user_id' AND acc_number = '$sender_account'");
 
 
         if ($query1) {

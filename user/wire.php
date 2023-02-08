@@ -23,8 +23,7 @@ if (isset($_POST['submit'])) {
         } else {
             $response = wire_transfer($_POST, $id);
             if ($response === true) {
-                echo "Transaction Successful";
-                echo "<script>window.location.href = 'pending'</script>";
+                echo "<script>swal(`Transaction request sent`, `Transaction awaiting approval`, `success`)</script>";
             } else {
                 $errors = $response;
                 if (is_array($errors)) {

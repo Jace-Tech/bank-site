@@ -56,6 +56,9 @@ if ($title == "transfer" && $access == 0) {
     <link rel="stylesheet" id="css-theme" href="../admin/assets/css/themes/xwork.min.css">
     <!-- END Stylesheets -->
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+
     <style>
         .content-side {
             background: #4ccaa6;

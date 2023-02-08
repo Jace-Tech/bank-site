@@ -36,9 +36,6 @@
   <div class="loader"></div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
-
-
 <script>
   const handleStartLoading = (e) => {
     document.querySelector(".load-overlay").classList.add("show")
