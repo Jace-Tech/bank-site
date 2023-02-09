@@ -21,7 +21,6 @@ require_once 'inc/header.php';
     max-width: 250px;
     font-weight: 500;
     text-align: left;
-    border-right: 1px solid #ccc !important;
     font-size: .9rem;
   }
   td{
