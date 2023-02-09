@@ -83,6 +83,10 @@ function generateNumber($len) {
     return rand(pow(10, $len-1), pow(10, $len)-1);
 }
 
+function generateTransactionId($id) {
+    return "trx_" . rand(1000000, 9999999999) . "-r$id";
+}
+
 // function checkIfIsset($super_global, $submit, $data_from_db {
 //     if (isset($super_global[$submit])) {
 //         $query_result = $data_from_db();

@@ -63,7 +63,7 @@ if (isset($_POST['submit'])) {
 
                                         <tr>
                                             <td class="text-center font-size-sm">
-                                                <a class="font-w600" href="be_pages_ecom_product_edit.html">
+                                                <a class="font-w600" href="#">
                                                     <strong>TID00<?= $id; ?></strong>
                                                 </a>
                                             </td>
