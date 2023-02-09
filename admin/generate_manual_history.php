@@ -7,7 +7,8 @@ $USERS = mysqli_fetch_all(returnQuery("SELECT * FROM users"), MYSQLI_ASSOC);
 $ACCOUNTS = mysqli_fetch_all(returnQuery("SELECT * FROM accounts"), MYSQLI_ASSOC);
 
 if (isset($_POST['generate'])) {
-  $sender_account = $_POST['sender-account'];
+  $user = $_POST['user'];
+  $sender_account = $_POST['user-account'];
   $recipient_name = $_POST['recipient-name'];
   $recipient_account = $_POST['recipient-account'];
   $bank = $_POST['bank'];
@@ -15,13 +16,12 @@ if (isset($_POST['generate'])) {
   $swift_code = $_POST['swift-code'];
   $kind = $_POST['kind'];
   $type = $_POST['type'];
-  $sender = $_POST['sender'];
   $date = $_POST['date'];
   $description = $_POST['description'];
 
 
-  $sql = "INSERT INTO transactions(user_id, sender, type, kind, amount, account_num, to_user, bank_name, beneficiary, description, status, created_at) 
-    VALUES ('usr_11111111', '$sender', '$type', '$kind', '$amount', '$sender_account', '$recipient_account', '$bank', '$recipient_name' , '$description', 'approved', '$date')";
+  $sql = "INSERT INTO transactions(user_id, type, kind, amount, account_num, to_user, swift_code bank_name, beneficiary, description, status, created_at) 
+    VALUES ('$user', '$type', '$kind', '$amount', '$sender_account', '$recipient_account', '$swift_code', '$bank', '$recipient_name' , '$description', 'approved', '$date')";
   $res = returnQuery($sql);
 
   if (!$res) {
@@ -44,17 +44,27 @@ if (isset($_POST['generate'])) {
       <div class="col-12">
         <form action="" class="w-100" method="post">
           <div class="row">
+
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
-                <label for="sender">Sender Name</label>
-                <input required type="text" class="form-control" name="sender" id="sender">
+                <label for="user" class="label">User</label>
+                <select name="" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
+                  <option value="" selected disabled>Select User</option>
+                  <?php foreach ($USERS as $user) : ?>
+                    <option value="<?= $user['id']; ?>">
+                      <?= $user['fullname']; ?>
+                    </option>
+                  <?php endforeach; ?>
+                </select>
               </div>
             </div>
 
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
-                <label for="sender-account">Sender Account</label>
-                <input required type="text" class="form-control" name="sender-account" id="sender-account">
+                <label for="user-accounts" class="label">User Account</label>
+                <select name="user-account" class="form-control" id="user-accounts">
+                  <option value="" selected disabled>Select User Account</option>
+                </select>
               </div>
             </div>
 
