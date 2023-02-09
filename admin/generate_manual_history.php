@@ -38,7 +38,7 @@ if (isset($_POST['generate'])) {
 <main id="main-container">
 
   <!-- Page Content -->
-  <div class="content">
+  <div class="content pb-5">
     <!-- Quick Overview -->
     <div class="row row-deck">
       <div class="col-12">
@@ -147,7 +147,7 @@ if (isset($_POST['generate'])) {
               </div>
             </div>
 
-            <div class="col-12">
+            <div class="col-12 ">
               <div class="mt-3">
                 <button type="submit" name="generate" class="btn btn-primary">Generate History</button>
               </div>
