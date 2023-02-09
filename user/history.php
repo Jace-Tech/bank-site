@@ -21,7 +21,7 @@ require_once 'inc/header.php';
     max-width: 250px;
     font-weight: 500;
     text-align: left;
-    border-right: 1px solid #ccc;
+    border-right: 1px solid #999 !important;
   }
 </style>
 
@@ -55,27 +55,27 @@ require_once 'inc/header.php';
 
                   <tr>
                     <th>Account Name</th>
-                    <td class=" text-center"><?= $user['fullname'] ?></td>
+                    <td><?= $user['fullname'] ?></td>
                   </tr>
 
                   <tr>
                     <th>Account Number</th>
-                    <td class=" text-center"><?= $details['account_num'] ?? "<i>NULL</i>" ?></td>
+                    <td><?= $details['account_num'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
                     <th>Amount</th>
-                    <td class=" text-center"><?= $details['amount'] ?? "<i>NULL</i>" ?></td>
+                    <td><?= $details['amount'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
                     <th>Beneficiary Name</th>
-                    <td class=" text-center"><?= $details['beneficiary'] ?? "<i>NULL</i>" ?></td>
+                    <td><?= $details['beneficiary'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
                     <th>Beneficiary Account</th>
-                    <td class=" text-center"><?= $details['to_user'] ?? "<i>NULL</i>" ?></td>
+                    <td><?= $details['to_user'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
