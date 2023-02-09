@@ -124,15 +124,15 @@ if (isset($_POST['generate'])) {
 
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
-                <label for="date">Description</label>
-                <textarea class="form-control" class="form-control" name="description"></textarea>
+                <label for="date">Date</label>
+                <input required type="date" class="form-control" name="date" id="date">
               </div>
             </div>
 
-            <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12">
               <div class="form-group">
-                <label for="date">Date</label>
-                <input required type="date" class="form-control" name="date" id="date">
+                <label for="date">Description</label>
+                <textarea class="form-control" class="form-control" name="description"></textarea>
               </div>
             </div>
 
