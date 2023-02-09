@@ -20,8 +20,8 @@ if (isset($_POST['generate'])) {
   $description = $_POST['description'];
 
 
-  $sql = "INSERT INTO transactions(user_id, type, kind, amount, account_num, to_user, swift_code bank_name, beneficiary, description, status, created_at) 
-    VALUES ('$user', '$type', '$kind', '$amount', '$sender_account', '$recipient_account', '$swift_code', '$bank', '$recipient_name' , '$description', 'approved', '$date')";
+  $sql = "INSERT INTO transactions(user_id, type, kind, amount, account_num, to_user, swift_code, bank_name, beneficiary, description, status, created_at) 
+    VALUES ('$user', '$type', '$kind', $amount, '$sender_account', '$recipient_account', '$swift_code', '$bank', '$recipient_name' , '$description', 'approved', '$date')";
   $res = returnQuery($sql);
 
   if (!$res) {
