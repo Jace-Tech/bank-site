@@ -46,7 +46,7 @@ require_once 'inc/header.php';
           <div class="block-content">
             <!-- All Products Table -->
             <div class="table-responsive">
-              <table class="table table-borderless table-striped table-vcenter">
+              <table class="table table-borderless table-striped table-vcenter" style="table-layout: auto !important;">
                 <tbody>
                   <tr>
                     <th>Transaction ID</th>
