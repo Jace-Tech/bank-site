@@ -16,15 +16,15 @@ if (isset($_GET['id'])) {
         }
         $response = replyTicket($_POST, $ticket_id);
         if ($response === true) {
-            echo "<script>alert('Reply was sent successfully!')</script>";
+            echo "<script>swal('Reply was sent successfully!', '', 'success')</script>";
         } else {
             $errors = $response;
             if (is_array($errors)) {
                 foreach ($errors as $err) {
-                    echo "<script>alert('$err')</script>";
+                    echo "<script>swal('$err', '', 'error')</script>";
                 }
             } else {
-                echo "<script>alert('$errors')</script>";
+                echo "<script>swal('$errors', '', 'error')</script>";
             }
         }
     }
