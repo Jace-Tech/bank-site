@@ -22,6 +22,11 @@ require_once 'inc/header.php';
     font-weight: 500;
     text-align: left;
     border-right: 1px solid #ccc !important;
+    font-size: .9rem;
+  }
+  td{
+    font-size: .9rem;
+    color: #555;
   }
 </style>
 
