@@ -42,6 +42,7 @@ if (isset($_POST['generate'])) {
     <!-- Quick Overview -->
     <div class="row row-deck">
       <div class="col-12">
+      <input type="hidden" value='<?= json_encode($ACCOUNTS); ?>' id="accounts" />
         <form action="" class="w-100" method="post">
           <div class="row">
 
