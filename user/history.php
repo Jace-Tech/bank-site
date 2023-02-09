@@ -21,7 +21,7 @@ require_once 'inc/header.php';
     max-width: 250px;
     font-weight: 500;
     text-align: left;
-    border-right: 1px solid #999 !important;
+    border-right: 1px solid #ccc !important;
   }
 </style>
 
@@ -46,7 +46,7 @@ require_once 'inc/header.php';
           <div class="block-content">
             <!-- All Products Table -->
             <div class="table-responsive">
-              <table class="table table-borderless table-striped table-vcenter" style="table-layout: auto !important;">
+              <table class="table table-borderless table-striped" style="table-layout: auto !important;">
                 <tbody>
                   <tr>
                     <th>Transaction ID</th>
