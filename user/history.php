@@ -16,6 +16,13 @@ require_once 'inc/header.php';
 
 ?>
 <!-- END Header -->
+<style>
+  th {
+    max-width: 250px;
+    font-weight: 500;
+    text-align: left;
+  }
+</style>
 
 <!-- Main Container -->
 <main id="main-container">
@@ -41,63 +48,63 @@ require_once 'inc/header.php';
               <table class="table table-borderless table-striped table-vcenter">
                 <tbody>
                   <tr>
-                    <th class="text-center bg-info-lighter">Transaction ID</th>
-                    <td><?= $id ?></td>
+                    <th>Transaction ID</th>
+                    <td class="text-center"><?= $id ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-info-lighter text-center">Account Name</th>
-                    <td><?= $id ?></td>
+                    <th>Account Name</th>
+                    <td class=" text-center"><?= $user['fullname'] ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-info-lighter text-center">Account Number</th>
-                    <td><?= $details['account_num']; ?></td>
+                    <th>Account Number</th>
+                    <td class=" text-center"><?= $details['account_num'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-info-lighter text-center">Amount</th>
-                    <td><?= $details['amount']; ?></td>
+                    <th>Amount</th>
+                    <td class=" text-center"><?= $details['amount'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-info-lighter text-center">Beneficiary Name</th>
-                    <td><?= $details['beneficiary']; ?></td>
+                    <th>Beneficiary Name</th>
+                    <td class=" text-center"><?= $details['beneficiary'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-info-lighter text-center">Beneficiary Account</th>
-                    <td><?= $details['to_user']; ?></td>
+                    <th>Beneficiary Account</th>
+                    <td class=" text-center"><?= $details['to_user'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-light text-center">Bank Name</th>
-                    <td><?= $details['bank_name']; ?></td>
+                    <th>Bank Name</th>
+                    <td class="text-center"><?= $details['bank_name'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-light text-center">Swift Code</th>
-                    <td><?= $details['swift_code']; ?></td>
+                    <th>Swift Code</th>
+                    <td class="text-center"><?= $details['swift_code'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-light text-center">Transaction Type</th>
-                    <td><?= $details['type']; ?></td>
+                    <th>Transaction Type</th>
+                    <td class="text-center"><?= $details['type'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-light text-center">Transaction Kind</th>
-                    <td><?= $details['kind']; ?></td>
+                    <th>Transaction Kind</th>
+                    <td class="text-center"><?= $details['kind'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-light text-center">Transaction Date</th>
-                    <td><?= date("D d, M Y", strtotime($details['created_at'])); ?></td>
+                    <th>Transaction Date</th>
+                    <td class="text-center"><?= date("D d, M Y", strtotime($details['created_at'])) ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-light text-center">Description</th>
-                    <td><?= $details['description'];  ?></td>
+                    <th>Description</th>
+                    <td class="text-center"><?= $details['description'];  ?></td>
                   </tr>
 
                 </tbody>
@@ -116,5 +123,5 @@ require_once 'inc/header.php';
 <!-- END Main Container -->
 
 <!-- Footer -->
-<?php require_once 'inc/footer.php'; ?>
+<?php require_once 'inc/footer.php' ?? "<i>NULL</i>" ?>
 <script src="js/get_recipent.js"></script>
