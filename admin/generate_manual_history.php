@@ -77,7 +77,7 @@ if (isset($_POST['generate'])) {
                 <label for="bank">Recipient Bank</label>
                 <input required type="text" list="banks" class="form-control" name="bank" id="bank">
                 <datalist id="banks">
-                  <?php foreach ($banks as $bank): ?>
+                  <?php foreach ($us_banks as $bank) : ?>
                     <option value="<?= $bank; ?>"></option>
                   <?php endforeach; ?>
                 </datalist>
@@ -92,9 +92,11 @@ if (isset($_POST['generate'])) {
             </div>
 
 
-            <div class="form-group">
-              <label for="swift-code" class="form-input-label">Swift Code</label>
-              <input required required type="text" id="swift-code" class="form-control form-input-field" name="swift-code" />
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <label for="swift-code" class="form-input-label">Swift Code</label>
+                <input required required type="text" id="swift-code" class="form-control form-input-field" name="swift-code" />
+              </div>
             </div>
 
             <div class="col-sm-12 col-md-6">
