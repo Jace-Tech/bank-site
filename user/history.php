@@ -21,6 +21,7 @@ require_once 'inc/header.php';
     max-width: 250px;
     font-weight: 500;
     text-align: left;
+    border-right: 1px solid #ccc;
   }
 </style>
 
@@ -49,7 +50,7 @@ require_once 'inc/header.php';
                 <tbody>
                   <tr>
                     <th>Transaction ID</th>
-                    <td class="text-center"><?= $id ?></td>
+                    <td><?= $id ?></td>
                   </tr>
 
                   <tr>
@@ -79,32 +80,32 @@ require_once 'inc/header.php';
 
                   <tr>
                     <th>Bank Name</th>
-                    <td class="text-center"><?= $details['bank_name'] ?? "<i>NULL</i>" ?></td>
+                    <td><?= $details['bank_name'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
                     <th>Swift Code</th>
-                    <td class="text-center"><?= $details['swift_code'] ?? "<i>NULL</i>" ?></td>
+                    <td><?= $details['swift_code'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
                     <th>Transaction Type</th>
-                    <td class="text-center"><?= $details['type'] ?? "<i>NULL</i>" ?></td>
+                    <td><?= $details['type'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
                     <th>Transaction Kind</th>
-                    <td class="text-center"><?= $details['kind'] ?? "<i>NULL</i>" ?></td>
+                    <td><?= $details['kind'] ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
                     <th>Transaction Date</th>
-                    <td class="text-center"><?= date("D d, M Y", strtotime($details['created_at'])) ?? "<i>NULL</i>" ?></td>
+                    <td><?= date("D d, M Y", strtotime($details['created_at'])) ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
                     <th>Description</th>
-                    <td class="text-center"><?= $details['description'];  ?></td>
+                    <td><?= $details['description'];  ?></td>
                   </tr>
 
                 </tbody>
