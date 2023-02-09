@@ -6,7 +6,7 @@ $id = $_GET['trx-id'];
 $title = "History - $id";
 
 // Get transaction details
-$real_id = str_split($id, "-r")[1];
+$real_id = explode("-r", $id)[1];
 
 $details = executeQuery("SELECT * FROM transactions WHERE id = $real_id");
 $user_id = $details['user_id'];
@@ -41,32 +41,32 @@ require_once 'inc/header.php';
               <table class="table table-borderless table-striped table-vcenter">
                 <tbody>
                   <tr>
-                    <th class="text-center bg-light">Transaction ID</th>
+                    <th class="text-center bg-info-lighter">Transaction ID</th>
                     <td><?= $id ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-light text-center">Account Name</th>
+                    <th class="bg-info-lighter text-center">Account Name</th>
                     <td><?= $id ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-light text-center">Account Number</th>
+                    <th class="bg-info-lighter text-center">Account Number</th>
                     <td><?= $details['account_num']; ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-light text-center">Amount</th>
+                    <th class="bg-info-lighter text-center">Amount</th>
                     <td><?= $details['amount']; ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-light text-center">Beneficiary Name</th>
+                    <th class="bg-info-lighter text-center">Beneficiary Name</th>
                     <td><?= $details['beneficiary']; ?></td>
                   </tr>
 
                   <tr>
-                    <th class="bg-light text-center">Beneficiary Account</th>
+                    <th class="bg-info-lighter text-center">Beneficiary Account</th>
                     <td><?= $details['to_user']; ?></td>
                   </tr>
 

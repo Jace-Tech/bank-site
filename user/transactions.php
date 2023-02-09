@@ -45,8 +45,8 @@ require_once 'inc/header.php';
 
                                             <tr>
                                                 <td class="text-center font-size-sm">
-                                                    <a class="font-w600" href="./history.php?trx-id=<?= generateTransactionId($id); ?>">
-                                                        <strong><?= generateTransactionId($id); ?></strong>
+                                                    <a style="white-space: nowrap;" class="font-w600" href="./history.php?trx-id=<?= generateTransactionId($id); ?>">
+                                                        <strong style="white-space: nowrap;"><?= generateTransactionId($id); ?></strong>
                                                     </a>
                                                 </td>
                                                 <td class="d-none d-sm-table-cell text-center font-size-sm"><?= $created_at; ?></td>
