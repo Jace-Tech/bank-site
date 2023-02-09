@@ -8,17 +8,17 @@
     function handleReg($data){
         extract($data);
         if($confirm_pwd != $password) {
-            echo "<script>alert('Passwords do not match')</script>";
+            echo "<script>swal('Passwords do not match', '', 'error')</script>";
             return;
         }
         $password = encrypt($password);
         $sql = "INSERT INTO admins (fullname, email, password) VALUES ('$name', '$email', '$password')";
         $response = returnQuery($sql);
         if ($response) {
-            echo "<script>alert('entered')</script>";
+            echo "<script>swal('entered', '', 'success')</script>";
             redirect_to("signin.php");
         } else {
-            echo "<script>alert('error')</script>";
+            echo "<script>swal('error', '', 'error')</script>";
         }
     }
 

@@ -12,15 +12,15 @@ if (isset($_POST['submit'])) {
 	$amount = $_POST['amount'];
 	$response = credit_user_account(["id" => $id, "amount" => $amount, "account" => $account]);
 	if ($response === true) {
-		echo "<script>alert('Account have been credited!')</script>";
+		echo "<script>swal('Account have been credited!', '', 'success')</script>";
 	} else {
 		$errors = $response;
 		if (is_array($errors)) {
 			foreach ($errors as $err) {
-				echo "<script>alert('$err')</script>";
+				echo "<script>swal('$err', '', 'error')</script>";
 			}
 		} else {
-			echo "<script>alert('$errors')</script>";
+			echo "<script>alert('$errors', '', 'error')</script>";
 		}
 	}
 }

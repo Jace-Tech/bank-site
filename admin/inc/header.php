@@ -72,6 +72,7 @@ extract($admin_details);
         }
     </style>
     <link rel="stylesheet" href="assets/css/print.css" media="print">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 </head>
 
 <body>
@@ -214,7 +215,7 @@ extract($admin_details);
                             </a>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="./generate">
+                                    <a class="nav-main-link" href="./generate_manual_history">
                                         <span class="nav-main-link-name">Generate History</span>
                                     </a>
                                 </li>

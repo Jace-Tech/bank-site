@@ -14,9 +14,9 @@ if (isset($_POST['generate'])) {
   $notSuccessful = returnQuery("INSERT INTO allowed (user_id, account, bank) VALUES ('$user', '$account', '$bank')");
 
   if (!$notSuccessful) {
-    echo "<script>alert(`Something went wrong. Please try again.`)</script>";
+    echo "<script>swal(`Something went wrong. Please try again.`, '', 'error')</script>";
   } else {
-    echo "<script>alert(`Configuration set successfully!`)</script>";
+    echo "<script>swal(`Configuration set successfully!`, '', 'success')</script>";
   }
 }
 ?>

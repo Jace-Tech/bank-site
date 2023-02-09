@@ -15,10 +15,10 @@ if (isset($_POST['submit'])) {
         $errors = $response;
         if (is_array($errors)) {
             foreach ($errors as $err) {
-                echo "<script>alert('$err')</script>";
+                echo "<script>swal('$err', '', 'error')</script>";
             }
         } else {
-            echo "<script>alert('$errors')</script>";
+            echo "<script>swal('$errors', '', 'error')</script>";
         }
     }
 }

@@ -8,15 +8,15 @@ if (isset($_POST['submit'])) {
     }
     $response = credit_user_account($_POST);
     if ($response === true) {
-        echo "<script>alert('Account have been created!')</script>";
+        echo "<script>swal('Account have been created!', '', 'success')</script>";
     } else {
         $errors = $response;
         if (is_array($errors)) {
             foreach ($errors as $err) {
-                echo "<script>alert('$err')</script>";
+                echo "<script>swal('$err', '', 'success')</script>";
             }
         } else {
-            echo "<script>alert('$errors')</script>";
+            echo "<script>swal('$errors', '', 'success')</script>";
         }
     }
 }

@@ -13,9 +13,9 @@ if (isset($_GET['user'])) {
 if (isset($_POST['allow-id'])) {
   $id = $_POST['allow-id'];
   if (returnQuery("DELETE FROM allowed WHERE id = $id")) {
-    echo '<script>alert(`Config deleted`)</script>';
+    echo "<script>swal(`Config deleted`, '', 'success')</script>";
   } else {
-    echo '<script>alert(`Failed to delete`)</script>';
+    echo "<script>swal(`Failed to delete`, '', 'error')</script>";
   }
 }
 
