@@ -3256,30 +3256,7 @@
 
                 </nav>
               </div>
-              <div class="social-icons cell small-12 large-auto large-shrink">
-                <ul>
-                  <li>
-                    <a href="https://www.facebook.com/firstunited1" rel="nofollow">
-                      <i class="fab fa-facebook-square"></i><span class="sr-only">Facebook</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="http://www.linkedin.com/company/first-united-bank" rel="nofollow">
-                      <i class="fab fa-linkedin" aria-hidden="true"></i><span class="sr-only">LinkedIn</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://twitter.com/firstunitedbank" rel="nofollow">
-                      <i class="fab fa-twitter-square" aria-hidden="true"></i><span class="sr-only">Twitter</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.youtube.com/channel/UCOzUPOzm19BZq97V5jaB4Bw" rel="nofollow">
-                      <i class="fab fa-youtube-square" aria-hidden="true"></i><span class="sr-only">YouTube</span>
-                    </a>
-                  </li>
-                </ul>
-              </div>
+              
             </div>
           </div>
         </div>

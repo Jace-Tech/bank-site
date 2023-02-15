@@ -27,7 +27,7 @@ if (isset($_POST['submit'])) {
 }
 
 if (isset($_GET['bill'])) {
-    $title = $_GET['bill'];   
+    $title = $_GET['bill'];
 }
 
 $accountTypes = returnQuery("SELECT * FROM `account_type`");
@@ -50,114 +50,27 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
             <div class="col-lg-12 col-xl-12">
                 <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)">
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-address-card"></i>
-                                </span>
-                            </div>
-                            <input type="text" name="recipent" onblur="getRecipent()" class="form-control" id="account_number" placeholder="Account Number">
-                        </div>
+                        <label for="recipent" class="form-input-label">Biller</label>
+                        <input required type="text" name="biller" class="form-control form-input-field" id="recipent" />
                     </div>
 
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="far fa-user"></i>
-                                </span>
-                            </div>
-                            <input type="text" name="acc_name" class="form-control" placeholder="Enter account beneficiary name">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-building"></i>
-                                </span>
-                            </div>
-                            <input type="text" name="bank_name" class="form-control" placeholder="Enter bank name">
-                        </div>
-                    </div>
-                    
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-terminal"></i>
-                                </span>
-                            </div>
-                            <input type="text" name="swift_code" class="form-control" placeholder="Enter swift code">
-                        </div>
+                        <label for="account_name" class="form-input-label">Reference Number</label>
+                        <input required type="text" name="acc_name" id="reference_num" class="form-control form-input-field" />
                     </div>
 
                     <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-terminal"></i>
-                                </span>
-                            </div>
-                            <input type="hidden" name="kind" value="bill payment ">
-                            <input type="text" maxLength="9" name="routing_number" class="form-control" placeholder="Enter Routing number">
-                        </div>
+                        <label for="account_name" class="form-input-label">Amount</label>
+                        <input required type="text" name="amount" id="account_name" class="form-control form-input-field" />
                     </div>
 
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-piggy-bank"></i>
-                                </span>
-                            </div>
-                           
-                            <select name="type" name="type" class="form-control">
-                                <option value="" selected disabled>Select account type</option>
-                                <?php while($accountType = mysqli_fetch_assoc($accountTypes)): ?>
-                                    <option value="<?= $accountType['type']?>"> 
-                                        <?= $accountType['type'] ?>
-                                    </option>
-                                <?php endwhile; ?>
-                            </select>
-                            
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-dollar-sign"></i>
-                                </span>
-                            </div>
-                            <input type="text" class="form-control" name="amount" placeholder="Amount">
-                            <div class="input-group-append">
-                                <span class="input-group-text">.00</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="input-group">
-                            <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i class="fa fa-edit"></i>
-                                </span>
-                            </div>
-                            <textarea name="desc" class="form-control" placeholder="Enter transaction description"></textarea>
-                        </div>
-                    </div>
-
-                    <input type="hidden" id="user" value="<?= $_SESSION['user']?>" />
+                    <input type="hidden" id="user" value="<?= $_SESSION['user'] ?>" />
 
                     <hr>
-                    <div class="form-group" id="make_transfer" style="display: none;">
+                    <div class="form-group" id="make_transfer">
                         <div class="input-group">
-                            <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver">
                             <div class="input-group-append">
-                                <button type="submit" id="tbtn" name="submit" class="btn btn-alt-success">Make Transfer</button>
+                                <button type="submit" id="tbtn" name="submit" class="btn btn-alt-success">Proceed</button>
                             </div>
                         </div>
                     </div>

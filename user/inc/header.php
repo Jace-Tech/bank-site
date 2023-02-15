@@ -245,7 +245,9 @@ if ($title == "transfer" && $access == 0) {
                                 <span class="nav-main-link-name">Overview</span>
                             </a>
                         </li>
+
                         <li class="nav-main-heading">Manage</li>
+
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                                 <i class="nav-main-link-icon fa fa-piggy-bank"></i>
@@ -256,11 +258,19 @@ if ($title == "transfer" && $access == 0) {
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="signup.php">
                                         <i class="nav-main-link-icon fa fa-plus-circle"></i>
-                                        <span class="nav-main-link-name">New Account</span>
+                                        <span class="nav-main-link-name">View activities</span>
+                                    </a>
+                                </li>
+                                
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="signup.php">
+                                        <i class="nav-main-link-icon fa fa-plus-circle"></i>
+                                        <span class="nav-main-link-name">eStatement</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
+
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'transactions') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                                 <i class="nav-main-link-icon fa fa-money-check"></i>
@@ -285,12 +295,12 @@ if ($title == "transfer" && $access == 0) {
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'transfer') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                                 <i class="nav-main-link-icon fa fa-money-bill-wave-alt"></i>
-                                <span class="nav-main-link-name">Transfers</span>
+                                <span class="nav-main-link-name">Payments & Transfer</span>
                             </a>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="transfer">
-                                        <span class="nav-main-link-name">Domestic Transfer</span>
+                                        <span class="nav-main-link-name">Direct Deposit</span>
                                     </a>
                                 </li>
                                 <li class="nav-main-item">
@@ -303,31 +313,48 @@ if ($title == "transfer" && $access == 0) {
                                         <span class="nav-main-link-name">Wire Transfer</span>
                                     </a>
                                 </li>
-                                <!-- <li class="nav-main-item">
-                                    <a class="nav-main-link" href="">
-                                        <span class="nav-main-link-name">Loans</span>
-                                    </a>
-                                </li> -->
-                                <!-- <li class="nav-main-item">
-                                    <a class="nav-main-link" href="credit.php">
-                                        <span class="nav-main-link-name">Credit</span>
-                                    </a>
-                                </li> -->
-
                             </ul>
                         </li>
 
                         <li class="nav-main-item">
-                            <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'bill') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                                <i class="nav-main-link-icon fa fa-money-bill"></i>
-                                <span class="nav-main-link-name">Bill Payments</span>
+                            <a class="nav-main-link <?php if ($title == 'Mobile Deposit') : echo 'active'; endif; ?>" href="./mobile-deposit">
+                                <i class="nav-main-link-icon fa fa-rocket"></i>
+                                <span class="nav-main-link-name">Mobile Deposit</span>
+                            </a>
+                        </li>
+
+
+                        <li class="nav-main-item">
+                            <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'transfer') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                                <i class="nav-main-link-icon fa fa-money-bill-wave-alt"></i>
+                                <span class="nav-main-link-name">Manage Cards</span>
                             </a>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
+                                    <a class="nav-main-link" href="transfer">
+                                        <span class="nav-main-link-name">Block lost/stolen card</span>
+                                    </a>
+                                </li>
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="transfer">
+                                        <span class="nav-main-link-name">Request a new card</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-main-item">
+                            <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'bill') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                                <i class="nav-main-link-icon fa fa-money-bill"></i>
+                                <span class="nav-main-link-name">Services</span>
+                            </a>
+                            <ul class="nav-main-submenu">
+                                <!-- <li class="nav-main-item">
                                     <a class="nav-main-link" href="bill?bill=auto">
                                         <span class="nav-main-link-name">Auto Payment</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="bill?bill=electricity">
                                         <span class="nav-main-link-name">Electricity</span>
@@ -397,20 +424,6 @@ if ($title == "transfer" && $access == 0) {
                             </ul>
                         </li>
                         <li class="nav-main-heading">Personal</li>
-
-                        <!-- <li class="nav-main-item">
-                            <a class="nav-main-link <?php if ($title == 'ticket') : echo 'active'; endif; ?>" href="ticket">
-                                <i class="nav-main-link-icon fa fa-edit"></i>
-                                <span class="nav-main-link-name">Create Ticket</span>
-                            </a>
-                        </li> -->
-
-                        <!-- <li class="nav-main-item">
-                            <a class="nav-main-link" href="messages">
-                                <span class="nav-main-link-name">Messages</span>
-                                <span class="nav-main-link-badge badge badge-pill badge-success"></span>
-                            </a>
-                        </li> -->
                         
                         <li class="nav-main-item">
                             <a class="nav-main-link <?php if ($title == 'profile') : echo 'active'; endif; ?>" href="edit-profile">
@@ -420,17 +433,16 @@ if ($title == "transfer" && $access == 0) {
                         </li>
 
                         <li class="nav-main-item">
-                            <a class="nav-main-link" href="edit-profile">
+                            <a class="nav-main-link" href="/manage-profile">
                                 <i class="nav-main-link-icon fa fa-cog"></i>
                                 <span class="nav-main-link-name">Settings</span>
                             </a>
                         </li>
 
-                        <li class="nav-main-heading">Dashboards</li>
                         <li class="nav-main-item">
-                            <a class="nav-main-link" href="../">
-                                <i class="nav-main-link-icon fa fa-arrow-left"></i>
-                                <span class="nav-main-link-name">Go Back</span>
+                            <a class="nav-main-link" href="edit-profile">
+                                <i class="nav-main-link-icon fa fa-cog"></i>
+                                <span class="nav-main-link-name">Help Center</span>
                             </a>
                         </li>
                     </ul>

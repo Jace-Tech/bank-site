@@ -50,11 +50,10 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
     <div class="content">
         <!-- Quick Overview -->
         <h2 class="content-heading">
-            <i class="fa fa-angle-right text-muted mr-1"></i> Wire Transfer
+            <i class="fa fa-angle-right text-muted mr-1"></i> ACH Transfer
         </h2>
 
         <div class="row">
-
             <div class="col-lg-12 col-xl-12">
                 <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
                     <div class="form-group">
@@ -87,11 +86,6 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                                 <option value="<?= $bank ?>"></option>
                             <?php endforeach; ?>
                         </datalist>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="swift" class="form-input-label">Swift Code</label>
-                        <input type="text" required name="swift_code" id="swift" class="form-control form-input-field">
                     </div>
 
                     <div class="form-group">
