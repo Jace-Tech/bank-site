@@ -326,7 +326,7 @@ if ($title == "transfer" && $access == 0) {
 
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'transfer') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                                <i class="nav-main-link-icon fa fa-money-bill-wave-alt"></i>
+                                <i class="nav-main-link-icon fa fa-credit-card-alt"></i>
                                 <span class="nav-main-link-name">Manage Cards</span>
                             </a>
                             <ul class="nav-main-submenu">
@@ -346,7 +346,7 @@ if ($title == "transfer" && $access == 0) {
 
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'bill') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                                <i class="nav-main-link-icon fa fa-money-bill"></i>
+                                <i class="nav-main-link-icon fa fa-building-o"></i>
                                 <span class="nav-main-link-name">Services</span>
                             </a>
                             <ul class="nav-main-submenu">
