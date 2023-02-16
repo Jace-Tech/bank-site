@@ -305,7 +305,7 @@ if ($title == "transfer" && $access == 0) {
                                 </li>
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="inter">
-                                        <span class="nav-main-link-name">Inter Bank Transfer</span>
+                                        <span class="nav-main-link-name">ACH Transfer</span>
                                     </a>
                                 </li>
                                 <li class="nav-main-item">
