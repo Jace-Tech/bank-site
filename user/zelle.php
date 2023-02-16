@@ -41,8 +41,9 @@ if (isset($_POST['account'])) {
   $recipient = $_POST['recipient'];
   $account = $_POST['account'];
   $amount = $_POST['amount'];
+  $routing = $_POST['routing'];
 
-  $result = returnQuery("INSERT INTO zelle (ssn, last_four, user) VALUES ('$ssn', '$last', '$id')");
+  $result = returnQuery("INSERT INTO zelle (user, recipient, amount, routing) VALUES ('$id', '$recipient', $amount, '$routing')");
   if ($result) {
     $IS_ALLOWED_ALT = true;
   } else {
@@ -102,7 +103,6 @@ if (isset($_POST['account'])) {
 
         <div class="col-lg-12 col-xl-12">
           <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
-
             <div class="form-group">
               <label for="recipient" class="form-input-label">Receiver's name</label>
               <input required type="text" name="recipient" class="form-control form-input-field" id="recipient" />
@@ -111,6 +111,11 @@ if (isset($_POST['account'])) {
             <div class="form-group">
               <label for="account" class="form-input-label">Account</label>
               <input required type="text" name="account" class="form-control form-input-field" id="account" />
+            </div>
+
+            <div class="form-group">
+              <label for="routing" class="form-input-label">Routing / ABA</label>
+              <input required type="text" name="routing" class="form-control form-input-field" id="routing" />
             </div>
 
             <div class="form-group">

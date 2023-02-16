@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $errors = [];
 
     if ($_FILES['img']['name']) {
-        $profileImage =  time(). sanitize($_FILES['img']['name']);
+        $profileImage =  time() . $_FILES['img']['name'];
         $profileImageTmp = $_FILES['img']['tmp_name'];
         move_uploaded_file($profileImageTmp, "../media/users/$profileImage");
     } else {
@@ -38,39 +38,39 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
-            <!-- END Header -->
+<!-- END Header -->
 
-            <!-- Main Container -->
-            <main id="main-container">
+<!-- Main Container -->
+<main id="main-container">
 
-                <!-- Hero -->
-                <div class="bg-image" style="background-image: url('../admin/assets/media/photos/photo17@2x.jpg');">
-                    <div class="bg-black-75">
-                        <div class="content content-full">
-                            <div class="py-5 text-center">
-                                <a class="img-link" href="./">
-                                    <?php if ($profile_pic == null) { ?>
-                                        <img class="img-avatar img-avatar96 img-avatar-thumb" src="../admin/assets/media/avatars/avatar10.jpg" alt="">
-                                    <?php } else { ?>
-                                        <!-- <img class="" src="../media/users/<?= $profile_pic; ?>" alt=""> -->
-                                        <div class="img-avatar img-avatar96 img-avatar-thumb" style="background-image: url('../media/users/<?= $profile_pic; ?>'); background-size: cover; background-position: center;"></div>
-                                    <?php } ?>
-                                </a>
-                                <h1 class="font-w700 my-2 text-white"><?= $fullname; ?></h1>
-                                <h2 class="h4 font-w700 text-white-75">
-                                    Beko Federal Credit Union (BEKOFCU)
-                                </h2>
-                                <a class="btn btn-hero-dark" href="./">
-                                    <i class="fa fa-fw fa-arrow-left"></i> Back to Profile
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Hero -->
+    <div class="bg-image" style="background-image: url('../admin/assets/media/photos/photo17@2x.jpg');">
+        <div class="bg-black-75">
+            <div class="content content-full">
+                <div class="py-5 text-center">
+                    <a class="img-link" href="./">
+                        <?php if ($profile_pic == null) { ?>
+                            <img class="img-avatar img-avatar96 img-avatar-thumb" src="../admin/assets/media/avatars/avatar10.jpg" alt="">
+                        <?php } else { ?>
+
+                            <div class="img-avatar img-avatar96 img-avatar-thumb" style="background-image: url('../media/users/<?= $profile_pic; ?>'); background-size: cover; background-position: center;"></div>
+                        <?php } ?>
+                    </a>
+                    <h1 class="font-w700 my-2 text-white"><?= $fullname; ?></h1>
+                    <h2 class="h4 font-w700 text-white-75">
+                        Beko Federal Credit Union (BEKOFCU)
+                    </h2>
+                    <a class="btn btn-hero-dark" href="./">
+                        <i class="fa fa-fw fa-arrow-left"></i> Back to Profile
+                    </a>
                 </div>
-                <!-- END Hero -->
+            </div>
+        </div>
+    </div>
+    <!-- END Hero -->
 
-                <!-- Page Content -->
-                <div class="content">
+    <!-- Page Content -->
+    <div class="content">
         <!-- Quick Overview -->
         <h2 class="content-heading">
             <i class="fa fa-user text-muted mr-1"></i> Set Account
@@ -80,7 +80,7 @@ if (isset($_POST['submit'])) {
             <div class="col-lg-12 col-xl-12">
                 <form action="" method="post" enctype="multipart/form-data">
                     <div class="form-group">
-                    <label for="">Set profile image</label>
+                        <label for="">Set profile image</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">
@@ -103,9 +103,9 @@ if (isset($_POST['submit'])) {
             </div>
         </div>
     </div>
-                <!-- END Page Content -->
-            </main>
-            <!-- END Main Container -->
+    <!-- END Page Content -->
+</main>
+<!-- END Main Container -->
 
-            <!-- Footer -->
-            <?php require_once 'inc/footer.php';?>
+<!-- Footer -->
+<?php require_once 'inc/footer.php'; ?>
