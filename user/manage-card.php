@@ -165,10 +165,6 @@ if (isset($_POST['active'])) {
   <?php require_once 'inc/loader2.php'; ?>
 <?php endif; ?>
 
-<!-- Footer -->
-<?php if ($IS_ALLOWED) : ?>
-  <?php require_once 'inc/loader.php'; ?>
-<?php endif; ?>
 
 <?php require_once 'inc/footer.php'; ?>
 <script src="js/get_recipent.js"></script>
