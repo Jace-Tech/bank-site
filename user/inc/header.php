@@ -257,14 +257,14 @@ if ($title == "transfer" && $access == 0) {
                                 
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="signup.php">
-                                        <i class="nav-main-link-icon fa fa-plus-circle"></i>
+                                        <!-- <i class="nav-main-link-icon fa fa-plus-circle"></i> -->
                                         <span class="nav-main-link-name">View activities</span>
                                     </a>
                                 </li>
                                 
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="signup.php">
-                                        <i class="nav-main-link-icon fa fa-plus-circle"></i>
+                                        <!-- <i class="nav-main-link-icon fa fa-plus-circle"></i> -->
                                         <span class="nav-main-link-name">eStatement</span>
                                     </a>
                                 </li>
