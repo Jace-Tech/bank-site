@@ -358,19 +358,19 @@ if ($title == "transfer" && $access == 0) {
                             </a>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="zelle?page=block">
+                                    <a class="nav-main-link" href="zelle?page=phone">
                                         <span class="nav-main-link-name">Phone</span>
                                     </a>
                                 </li>
 
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="zelle?page=block">
+                                    <a class="nav-main-link" href="zelle?page=email">
                                         <span class="nav-main-link-name">Email</span>
                                     </a>
                                 </li>
 
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="zelle?page=new">
+                                    <a class="nav-main-link" href="zelle?page=account">
                                         <span class="nav-main-link-name">Account</span>
                                     </a>
                                 </li>
