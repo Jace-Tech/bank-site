@@ -326,7 +326,7 @@ if ($title == "transfer" && $access == 0) {
 
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'transfer') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                                <i class="nav-main-link-icon fa fa-credit-card-alt"></i>
+                                <i class="nav-main-link-icon fa fa-credit-card"></i>
                                 <span class="nav-main-link-name">Manage Cards</span>
                             </a>
                             <ul class="nav-main-submenu">
@@ -346,15 +346,10 @@ if ($title == "transfer" && $access == 0) {
 
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'bill') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                                <i class="nav-main-link-icon fa fa-building-o"></i>
+                                <i class="nav-main-link-icon fa fa-building"></i>
                                 <span class="nav-main-link-name">Services</span>
                             </a>
                             <ul class="nav-main-submenu">
-                                <!-- <li class="nav-main-item">
-                                    <a class="nav-main-link" href="bill?bill=auto">
-                                        <span class="nav-main-link-name">Auto Payment</span>
-                                    </a>
-                                </li> -->
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="bill?bill=electricity">
                                         <span class="nav-main-link-name">Electricity</span>
@@ -410,17 +405,6 @@ if ($title == "transfer" && $access == 0) {
                                         <span class="nav-main-link-name">Rent/Mortage</span>
                                     </a>
                                 </li>
-                                <!-- <li class="nav-main-item">
-                                    <a class="nav-main-link" href="">
-                                        <span class="nav-main-link-name">Loans</span>
-                                    </a>
-                                </li> -->
-                                <!-- <li class="nav-main-item">
-                                    <a class="nav-main-link" href="credit.php">
-                                        <span class="nav-main-link-name">Credit</span>
-                                    </a>
-                                </li> -->
-
                             </ul>
                         </li>
                         <li class="nav-main-heading">Personal</li>
