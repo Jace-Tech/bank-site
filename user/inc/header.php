@@ -352,6 +352,33 @@ if ($title == "transfer" && $access == 0) {
 
 
                         <li class="nav-main-item">
+                            <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'Zelle') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                               <img src="./img/zelle.png" style="width: 20px; height: 16px; object-fit: contain;" alt="zelle">
+                                <span class="nav-main-link-name">Zelle</span>
+                            </a>
+                            <ul class="nav-main-submenu">
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="manage-card?page=block">
+                                        <span class="nav-main-link-name">Phone</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="manage-card?page=block">
+                                        <span class="nav-main-link-name">Email</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="manage-card?page=new">
+                                        <span class="nav-main-link-name">Account</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+
+                        <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'bill') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                                 <i class="nav-main-link-icon fa fa-building"></i>
                                 <span class="nav-main-link-name">Services</span>

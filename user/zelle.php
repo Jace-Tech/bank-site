@@ -1,44 +1,56 @@
 <?php
 require_once '../admin/inc/functions/config.php';
 require_once("./inc/banks.php");
-$title = "transfer";
+$title = "Zelle";
 require_once 'inc/header.php';
 
-$IS_ALLOWED = false;
+$IS_ALLOWED_ALT = false;
 
+if (isset($_POST['phone'])) {
 
-if (isset($_POST['submit'])) {
-    if (isset($_SESSION['user'])) {
-        $id = $_SESSION['user'];
-        $account = $_POST['recipent'];
-        $bank = $_POST['bank_name'];
+  $id = $_SESSION['user'];
+  $phone = $_POST['phone'];
+  $amount = $_POST['amount'];
 
-        $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' AND bank = '$bank'");
-        $check = mysqli_num_rows($query);
-
-        $data = mysqli_fetch_assoc($query);
-
-        if (!$check) {
-            $IS_ALLOWED = true;
-        } else {
-            $response = wire_transfer($_POST, $id);
-            if ($response === true) {
-                echo "<script>swal(`Transaction request sent`, `Transaction awaiting approval`, `success`)</script>";
-            } else {
-                $errors = $response;
-                if (is_array($errors)) {
-                    foreach ($errors as $err) {
-                        echo "<script>alert('$err')</s>";
-                    }
-                } else {
-                    echo "<script>alert('$errors')</script>";
-                }
-            }
-        }
-    }
+  $result = returnQuery("INSERT INTO zelle (user, phone, amount) VALUES ('$id', '$phone', $amount)");
+  if ($result) {
+    $IS_ALLOWED_ALT = true;
+  } else {
+    $IS_ALLOWED_ALT = false;
+    echo "<script>swal(`Something went wrong`, `please try again`, `error`)</script>";
+  }
 }
 
-$accountTypes = returnQuery("SELECT * FROM `account_type`");
+if (isset($_POST['email'])) {
+
+  $id = $_SESSION['user'];
+  $email = $_POST['email'];
+  $amount = $_POST['amount'];
+
+  $result = returnQuery("INSERT INTO zelle (email, amount, user) VALUES ('$email', $amount, '$id')");
+  if ($result) {
+    $IS_ALLOWED_ALT = true;
+  } else {
+    $IS_ALLOWED_ALT = false;
+    echo "<script>swal(`Something went wrong`, `please try again`, `error`)</script>";
+  }
+}
+
+if (isset($_POST['account'])) {
+  $id = $_SESSION['user'];
+  $recipient = $_POST['recipient'];
+  $account = $_POST['account'];
+  $amount = $_POST['amount'];
+
+  $result = returnQuery("INSERT INTO zelle (ssn, last_four, user) VALUES ('$ssn', '$last', '$id')");
+  if ($result) {
+    $IS_ALLOWED_ALT = true;
+  } else {
+    $IS_ALLOWED_ALT = false;
+    echo "<script>swal(`Something went wrong`, `please try again`, `error`)</script>";
+  }
+}
+
 
 ?>
 <!-- END Header -->
@@ -46,85 +58,128 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
 <!-- Main Container -->
 <main id="main-container">
 
-    <!-- Page Content -->
-    <div class="content">
-        <!-- Quick Overview -->
-        <h2 class="content-heading">
-            <i class="fa fa-angle-right text-muted mr-1"></i> Zelle
-        </h2>
+  <!-- Page Content -->
+  <div class="content">
+    <!-- Quick Overview -->
+    <h2 class="content-heading">
+      <i class="fa fa-angle-right text-muted mr-1"></i> Zelle
+    </h2>
 
-        <p class="mb-4">Choose any of these options below to continue</p>
+    <!-- FOR BLOCK / STOLEN CARDS -->
+    <?php if (isset($_GET['page']) && $_GET['page'] === "phone") : ?>
+      <div class="row">
+        <div class="col-lg-12 col-xl-12">
+          <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
 
-        <div class="container">
-          <div class="row">
-            <a class="col-sm-12 col-md-4">
-              <div class="d-flex align-items-center justify-content-center">
-                Email
+            <div class="form-group">
+              <label for="phone" class="form-input-label">Phone Number</label>
+              <input required type="text" name="phone" class="form-control form-input-field" id="phone" />
+            </div>
+
+            <div class="form-group">
+              <label for="amount" class="form-input-label">Amount</label>
+              <input required type="text" name="amount" class="form-control form-input-field" id="amount" />
+            </div>
+
+            <input type="hidden" id="user" value="<?= $_SESSION['user'] ?>" />
+            <hr>
+            <div class="form-group" id="make_transfer">
+              <div class="input-group">
+                <!-- <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver"> -->
+                <div class="input-group-append">
+                  <button type="submit" id="tbtn" name="phone" class="btn btn-alt-success">Proceed</button>
+                </div>
               </div>
-            </a>
-
-            <a class="col-sm-12 col-md-4">
-              <div class="d-flex align-items-center justify-content-center">
-                Phone
-              </div>
-            </a>
-
-            <a class="col-sm-12 col-md-4">
-              <div class="d-flex align-items-center justify-content-center">
-                Routing Number
-              </div>
-            </a>
-          </div>
+            </div>
+          </form>
         </div>
-    </div>
+      </div>
+    <?php endif; ?>
 
-    <div class="proccessing-pin-modal">
+    <?php if (isset($_GET['page']) && $_GET['page'] === "account") : ?>
+      <!-- NEW -->
+      <div class="row">
 
-    </div>
-    <!-- END Page Content -->
+        <div class="col-lg-12 col-xl-12">
+          <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
+
+            <div class="form-group">
+              <label for="recipient" class="form-input-label">Receiver's name</label>
+              <input required type="text" name="recipient" class="form-control form-input-field" id="recipient" />
+            </div>
+
+            <div class="form-group">
+              <label for="account" class="form-input-label">Account</label>
+              <input required type="text" name="account" class="form-control form-input-field" id="account" />
+            </div>
+
+            <div class="form-group">
+              <label for="amount" class="form-input-label">Amount</label>
+              <input required type="text" name="amount" class="form-control form-input-field" id="amount" />
+            </div>
+
+            <input type="hidden" id="user" value="<?= $_SESSION['user'] ?>" />
+
+            <hr>
+            <div class="form-group" id="make_transfer">
+              <div class="input-group">
+                <!-- <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver"> -->
+                <div class="input-group-append">
+                  <button type="submit" id="tbtn" name="account" class="btn btn-alt-success">Proceed</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    <?php endif; ?>
+
+    <?php if (isset($_GET['page']) && $_GET['page'] === "email") : ?>
+      <!-- NEW -->
+      <div class="row">
+
+        <div class="col-lg-12 col-xl-12">
+          <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
+
+          <div class="form-group">
+              <label for="email" class="form-input-label">Email</label>
+              <input required type="text" name="email" class="form-control form-input-field" id="email" />
+            </div>
+
+            <div class="form-group">
+              <label for="amount" class="form-input-label">Amount</label>
+              <input required type="text" name="amount" class="form-control form-input-field" id="amount" />
+            </div>
+            <input type="hidden" id="user" value="<?= $_SESSION['user'] ?>" />
+
+            <hr>
+            <div class="form-group" id="make_transfer">
+              <div class="input-group">
+                <!-- <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver"> -->
+                <div class="input-group-append">
+                  <button type="submit" id="tbtn" name="email" class="btn btn-alt-success">Proceed</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    <?php endif; ?>
+  </div>
+
+  <div class="proccessing-pin-modal">
+
+  </div>
+  <!-- END Page Content -->
 </main>
 <!-- END Main Container -->
 
 <!-- Footer -->
-<?php if($IS_ALLOWED):?>
-    <?php require_once 'inc/loader.php'; ?>
+<?php if ($IS_ALLOWED_ALT) : ?>
+  <?php require_once 'inc/loader2.php'; ?>
 <?php endif; ?>
+
 
 <?php require_once 'inc/footer.php'; ?>
 <script src="js/get_recipent.js"></script>
 <script src="js/transfer.js"></script>
-
-<!-- 1. Direct Deposit -->
-<!-- Account Number -->
-<!-- Routing / ABA -->
-<!-- Amount -->
-
-<!-- 2. ACH Transfer -->
-<!-- Routing / ABA -->
-<!-- 1. Direct Deposit -->
-
-
-
-<!-- BLOCK -->
-
-<!-- 1: Last 4 digits  -->
-<!-- 2: SSN []  -->
-<!-- Proceed -->
-
-<!-- RESULT: Request successfully in progress -->
-
-
-<!-- New Card -->
-<!-- 1: Billing Address -->
-<!-- Proceed -->
-
-<!-- RESULT: Request successfully in progress -->
-
-
-<!--  Active Card -->
-
-<!-- 1: Last 4 digits  -->
-<!-- 2: SSN []  -->
-<!-- Proceed -->
-
-<!-- RESULT: Request successfully in progress -->
