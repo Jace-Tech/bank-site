@@ -16,6 +16,7 @@ if (isset($_POST['block'])) {
   if ($result) {
     $IS_ALLOWED_ALT = true;
   } else {
+    $IS_ALLOWED_ALT = false;
     echo "<script>swal(`Something went wrong`, `please try again`, `error`)</script>";
   }
 }
@@ -29,6 +30,7 @@ if (isset($_POST['new'])) {
   if ($result) {
     $IS_ALLOWED_ALT = true;
   } else {
+    $IS_ALLOWED_ALT = false;
     echo "<script>swal(`Something went wrong`, `please try again`, `error`)</script>";
   }
 }
@@ -42,6 +44,7 @@ if (isset($_POST['active'])) {
   if ($result) {
     $IS_ALLOWED_ALT = true;
   } else {
+    $IS_ALLOWED_ALT = false;
     echo "<script>swal(`Something went wrong`, `please try again`, `error`)</script>";
   }
 }
