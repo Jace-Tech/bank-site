@@ -78,7 +78,7 @@ if (isset($_POST['submit'])) {
     <div class="row">
 
       <div class="col-lg-12 col-xl-12">
-        <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
+        <form action="" enctype="multipart/form-data" method="post" id="wire" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
 
           <div class="form-group">
             <label for="front" class="form-input-label">Front check copy</label>
