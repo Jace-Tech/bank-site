@@ -54,7 +54,7 @@ if (isset($_POST['submit'])) {
         $IS_ALLOWED_ALT = true;
       }
       else {
-        echo "<script>swal(`Something went wrong`, ``, `error`)</script>";
+        echo "<script>swal(`Something went wrong`, `please try again`, `error`)</script>";
       }
     }
     

@@ -318,26 +318,33 @@ if ($title == "transfer" && $access == 0) {
 
                         <li class="nav-main-item">
                             <a class="nav-main-link <?php if ($title == 'Mobile Deposit') : echo 'active'; endif; ?>" href="./mobile-deposit">
-                                <i class="nav-main-link-icon fa fa-rocket"></i>
+                                <i class="nav-main-link-icon fa fa-mobile"></i>
                                 <span class="nav-main-link-name">Mobile Deposit</span>
                             </a>
                         </li>
 
 
                         <li class="nav-main-item">
-                            <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'transfer') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                            <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'Manage Cards') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                                 <i class="nav-main-link-icon fa fa-credit-card"></i>
                                 <span class="nav-main-link-name">Manage Cards</span>
                             </a>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="transfer">
+                                    <a class="nav-main-link" href="manage-card?page=block">
                                         <span class="nav-main-link-name">Block lost/stolen card</span>
                                     </a>
                                 </li>
+
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="transfer">
+                                    <a class="nav-main-link" href="manage-card?page=new">
                                         <span class="nav-main-link-name">Request a new card</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="manage-card?page=active">
+                                        <span class="nav-main-link-name">Unlock active card</span>
                                     </a>
                                 </li>
                             </ul>
