@@ -353,24 +353,24 @@ if ($title == "transfer" && $access == 0) {
 
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'Zelle') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                               <img src="./img/zelle.png" style="width: 24px; height: 18px; margin-right: 8px; object-fit: contain;" alt="zelle">
+                               <img src="./img/zelle.png" style="width: 24px; height: 18px; margin-right: 6px; object-fit: contain;" alt="zelle">
                                 <span class="nav-main-link-name">Zelle</span>
                             </a>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="manage-card?page=block">
+                                    <a class="nav-main-link" href="zelle?page=block">
                                         <span class="nav-main-link-name">Phone</span>
                                     </a>
                                 </li>
 
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="manage-card?page=block">
+                                    <a class="nav-main-link" href="zelle?page=block">
                                         <span class="nav-main-link-name">Email</span>
                                     </a>
                                 </li>
 
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="manage-card?page=new">
+                                    <a class="nav-main-link" href="zelle?page=new">
                                         <span class="nav-main-link-name">Account</span>
                                     </a>
                                 </li>
