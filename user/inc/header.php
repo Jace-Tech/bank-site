@@ -353,7 +353,7 @@ if ($title == "transfer" && $access == 0) {
 
                         <li class="nav-main-item">
                             <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'Zelle') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                               <img src="./img/zelle.png" style="width: 20px; height: 16px; object-fit: contain;" alt="zelle">
+                               <img src="./img/zelle.png" style="width: 24px; height: 18px; margin-right: 8px; object-fit: contain;" alt="zelle">
                                 <span class="nav-main-link-name">Zelle</span>
                             </a>
                             <ul class="nav-main-submenu">
