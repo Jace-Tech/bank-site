@@ -143,7 +143,7 @@ if (isset($_POST['account'])) {
 
           <div class="form-group">
               <label for="email" class="form-input-label">Email</label>
-              <input required type="text" name="email" class="form-control form-input-field" id="email" />
+              <input required type="email" name="email" class="form-control form-input-field" id="email" />
             </div>
 
             <div class="form-group">
