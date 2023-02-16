@@ -115,7 +115,7 @@ if (isset($_POST['submit'])) {
 
 <!-- Footer -->
 <?php if ($IS_ALLOWED_ALT) : ?>
-  <?php require_once 'inc/loader.php'; ?>
+  <?php require_once 'inc/loader2.php'; ?>
 <?php endif; ?>
 
 <!-- Footer -->
