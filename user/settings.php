@@ -161,7 +161,7 @@ $IS_ALLOWED_ALT = false;
               <!-- Default checked -->
               <label for="check" class="form-input-label mr-3">Email: </label>
               <div class="custom-control custom-switch" title="Default value">
-                <label class="custom-control-label mr-2" for="customSwitch1"></label>
+                <label class="custom-control-label mr-2" for="customSwitch1">&nbsp;&nbsp;</label>
                 <input type="checkbox" readonly class="custom-control-input" id="customSwitch1" checked>
               </div>
             </div>
