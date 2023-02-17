@@ -458,7 +458,7 @@ if ($title == "transfer" && $access == 0) {
                         </li>
 
                         <li class="nav-main-item">
-                            <a class="nav-main-link" href="edit-profile">
+                            <a class="nav-main-link <?php if ($title == 'Help Center') : echo 'active'; endif; ?>" href="./help-center">
                                 <i class="nav-main-link-icon fa fa-cog"></i>
                                 <span class="nav-main-link-name">Help Center</span>
                             </a>
