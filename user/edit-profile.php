@@ -5,7 +5,16 @@ require_once 'inc/header.php';
 
 ?>
 <!-- END Header -->
+<?php   
+    if(isset($_SESSION['ALERT'])) {
+        $alert = json_decode($_SESSION['ALERT'], true);
+        $type = $alert['type'];
+        $msg = $alert['msg'];
+        echo "<script>swal(`$msg`, ``, `$type`)</script>";
 
+        unset($_SESSION['ALERT']);
+    }
+?>
 <!-- Main Container -->
 <main id="main-container">
 
