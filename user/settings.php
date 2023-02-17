@@ -160,8 +160,9 @@ $IS_ALLOWED_ALT = false;
             <div class="d-flex align-items-center ">
               <!-- Default checked -->
               <label for="check" class="form-input-label mr-3">Email: </label>
-              <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="check" disabled checked="true"  />
+              <div class="custom-control custom-switch" title="Default value">
+                <label class="custom-control-label mr-2" for="customSwitch1"></label>
+                <input type="checkbox" readonly class="custom-control-input" id="customSwitch1" checked>
               </div>
             </div>
 
