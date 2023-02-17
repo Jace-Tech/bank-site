@@ -7,6 +7,15 @@ require_once 'inc/header.php';
 
 <!-- Main Container -->
 <main id="main-container">
+    <?php  
+        if(isset($_SESSION['ALERT'])){
+            $alert = json_decode($_SESSION['ALERT'], true);
+            extract($alert);
+            echo "<script>swal(`$msg`, ``, `$type`)</script>";
+
+            unset($_SESSION['ALERT']);
+        }
+    ?>
 
     <!-- Hero -->
     <div class="bg-image" style="background-image: url('../admin/assets/media/photos/photo17@2x.jpg');">
@@ -43,7 +52,7 @@ require_once 'inc/header.php';
 
         <div class="row">
             <div class="col-lg-12 col-xl-12">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="./handler/edit-handler.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="">Set profile image</label>
                         <div class="input-group">
