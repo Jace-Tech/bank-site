@@ -36,18 +36,18 @@ $IS_ALLOWED_ALT = false;
             <div for="fullname" class="form-input-label">Phone No.</div>
             <div class="row">
               <div class="col-12">
-                <p class="text-sm">
+                <p class="text-sm mb-0">
                   <a href="tel:+14433325687" style="text-decoration: none; font-weight: 300; font-size: .85rem;">+1-800-BEKOFCU</a>
                 </p>
               </div>
             </div>
           </div>
-          
+
           <div class="mb-2">
             <div for="fullname" class="form-input-label">Customer Care Email.</div>
             <div class="row">
               <div class="col-12">
-                <p class="text-sm">
+                <p class="text-sm mb-2">
                   <a href="mailto:customercare@bekofcu.com" style="text-decoration: none; font-weight: 300; font-size: .85rem;">customercare@bekofcu.com</a>
                 </p>
                 <p class="text-sm mt-1">
