@@ -111,7 +111,7 @@ $IS_ALLOWED_ALT = false;
       <div class="row">
         <div class="col-lg-12 col-xl-12">
           <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
-            <h3 class="h4 text-uppercase mb-4">Personal Information</h3>
+            <h3 class="h5 text-uppercase mb-4">Personal Information</h3>
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <div class="form-group">
@@ -156,7 +156,7 @@ $IS_ALLOWED_ALT = false;
               </div>
             </div>
             
-            <h3 class="h4 text-uppercase my-4">Notification Option</h3>
+            <h3 class="h5 text-uppercase my-4">Notification Option</h3>
             <div class="d-flex align-items-center ">
               <!-- Default checked -->
               <label for="check" class="form-input-label mr-3">Email: </label>
