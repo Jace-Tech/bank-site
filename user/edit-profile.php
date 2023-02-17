@@ -3,31 +3,6 @@ require_once '../admin/inc/functions/config.php';
 $title = "profile";
 require_once 'inc/header.php';
 
-if (isset($_POST['submit'])) {
-    $errors = [];
-
-    if ($_FILES['img']['name']) {
-        $profileImage =  time() . $_FILES['img']['name'];
-        $profileImageTmp = $_FILES['img']['tmp_name'];
-        move_uploaded_file($profileImageTmp, "../media/users/$profileImage");
-    } else {
-        $errors[] = "Profile Image is required";
-    }
-
-    if (!$errors) {
-        $sql = "UPDATE users SET profile_pic = '$profileImage' WHERE id = '$user_id'";
-        $query = validateQuery($sql);
-
-        if ($query) {
-            header("Location: ./edit-profile");
-        } else {
-            echo "<script>swal(`Failed to update profile`, ``, `error`);</script>";
-        }
-    } else {
-        $err = $errors[0];
-        echo "<script>swal(`$err`, ``, `error`)</script>";
-    }
-}
 ?>
 <!-- END Header -->
 
@@ -69,7 +44,7 @@ if (isset($_POST['submit'])) {
 
         <div class="row">
             <div class="col-lg-12 col-xl-12">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="./handler/edit-handler.php" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="">Set profile image</label>
                         <div class="input-group">
