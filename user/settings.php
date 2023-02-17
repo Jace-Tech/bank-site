@@ -159,9 +159,8 @@ $IS_ALLOWED_ALT = false;
             <h3 style="font-size: 1rem;"  class="h6 text-uppercase my-4">Notification Option</h3>
             <div class="d-flex align-items-center ">
               <!-- Default checked -->
-              <label for="check" class="form-input-label mr-3">Email: </label>
               <div class="custom-control custom-switch" title="Default value">
-                <label class="custom-control-label mr-2" for="customSwitch1">&nbsp;&nbsp;</label>
+                <label class="custom-control-label mr-2" for="customSwitch1">Email</label>
                 <input type="checkbox" readonly class="custom-control-input" id="customSwitch1" checked>
               </div>
             </div>
