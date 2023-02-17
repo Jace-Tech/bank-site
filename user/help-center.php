@@ -37,7 +37,7 @@ $IS_ALLOWED_ALT = false;
             <div class="row">
               <div class="col-12">
                 <p class="text-sm mb-0">
-                  <a href="tel:+14433325687" style="text-decoration: none; font-weight: 300; font-size: .85rem;">+1-800-BEKOFCU</a>
+                  <a href="tel:+14433325687" style="text-decoration: none; font-size: .85rem;">+1-800-BEKOFCU</a>
                 </p>
               </div>
             </div>
@@ -48,10 +48,10 @@ $IS_ALLOWED_ALT = false;
             <div class="row">
               <div class="col-12">
                 <p class="text-sm mb-2">
-                  <a href="mailto:customercare@bekofcu.com" style="text-decoration: none; font-weight: 300; font-size: .85rem;">customercare@bekofcu.com</a>
+                  <a href="mailto:customercare@bekofcu.com" style="text-decoration: none; font-size: .85rem;">customercare@bekofcu.com</a>
                 </p>
                 <p class="text-sm mt-1">
-                  <a href="mailto:relations@bekofcu.com" style="text-decoration: none; font-weight: 300; font-size: .85rem;">relations@bekofcu.com</a>
+                  <a href="mailto:relations@bekofcu.com" style="text-decoration: none; font-size: .85rem;">relations@bekofcu.com</a>
                 </p>
               </div>
             </div>
