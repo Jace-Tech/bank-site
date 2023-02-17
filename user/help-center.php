@@ -62,7 +62,7 @@ $IS_ALLOWED_ALT = false;
           <h3 style="font-size: 1rem;" class="h6 text-uppercase my-4">Send us a message</h3>
           <div class="row">
             <div class="col-lg-12 col-xl-12">
-              <form action="./handler/profile.php" method="post" >
+              <form action="./handler/message.php" method="post" >
                 <div class="row">
                   <div class="col-sm-12 col-md-6">
                     <div class="form-group">
@@ -78,7 +78,7 @@ $IS_ALLOWED_ALT = false;
                     </div>
                   </div>
 
-                  <div class="col-sm-12 col-md-6">
+                  <div class="col-12">
                     <div class="form-group">
                       <label for="message" class="form-input-label">Message</label>
                       <textarea rows="5" style="resize: vertical;" name="message" class="form-control form-input-field" id="username"></textarea>
