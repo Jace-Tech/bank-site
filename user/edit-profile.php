@@ -7,16 +7,7 @@ require_once 'inc/header.php';
 
 <!-- Main Container -->
 <main id="main-container">
-    <?php  
-        if(isset($_SESSION['ALERT'])){
-            $alert = json_decode($_SESSION['ALERT'], true);
-            extract($alert);
-            echo "<script>swal(`$msg`, ``, `$type`)</script>";
-
-            unset($_SESSION['ALERT']);
-        }
-    ?>
-
+<?php include("./inc/alert.php"); ?>
     <!-- Hero -->
     <div class="bg-image" style="background-image: url('../admin/assets/media/photos/photo17@2x.jpg');">
         <div class="bg-black-75">

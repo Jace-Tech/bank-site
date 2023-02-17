@@ -17,6 +17,7 @@ $IS_ALLOWED_ALT = false;
 
 <!-- Main Container -->
 <main id="main-container">
+  <?php include("./inc/alert.php"); ?>
 
   <!-- Page Content -->
   <div class="content">
@@ -161,7 +162,7 @@ $IS_ALLOWED_ALT = false;
               <div class="input-group">
                 <!-- <input type="text" disabled class="form-control form-control-alt" id="recipent_name" name="example-group3-input2-alt2" placeholder="Receiver"> -->
                 <div class="input-group-append">
-                  <button type="submit" id="tbtn" name="phone" class="btn btn-alt-success">Edit</button>
+                  <a href="?page=edit" class="btn btn-alt-success">Edit</a>
                 </div>
               </div>
             </div>

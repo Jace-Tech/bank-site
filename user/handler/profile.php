@@ -17,10 +17,10 @@ if(isset($_POST['update'])) {
 
   if($result) {
     $_SESSION['ALERT'] = json_encode(["msg" => "Profile Updated", "type" => "success"]);
-    header("Location: ../edit-profile");
+    header("Location: ../settings");
   }
   else {
     $_SESSION['ALERT'] = json_encode(["msg" => "Failed to update profile", "type" => "error"]);
-    header("Location: ../edit-profile");
+    header("Location: ../settings");
   }
 }
