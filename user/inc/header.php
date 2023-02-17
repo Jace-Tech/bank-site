@@ -61,22 +61,22 @@ if ($title == "transfer" && $access == 0) {
 
     <style>
         .content-side {
-            background: #1b2c57;
+            background: #1b2c5740;
         }
 
         .nav-main-link-name {
-            color: #e8e4c9;
+            color: #000;
         }
 
         .nav-main-link:hover {
             background: #28755f;
         }
         .nav-main-link-icon {
-            color: #e8e4c9 !important;
+            color: #000 !important;
         }
 
         .nav-main-submenu .nav-main-link.active, .nav-main-submenu .nav-main-link:hover {
-            color: #1b2c57 !important;
+            color: #fff !important;
             background-color: #4ccaa6;
             padding-left: 10px;
         }
