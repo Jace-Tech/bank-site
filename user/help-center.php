@@ -32,7 +32,7 @@ $IS_ALLOWED_ALT = false;
         <div class="p-3 pt-4 rounded-sm bg-white">
           <h3 style="font-size: 1rem;" class="h6 text-uppercase mb-4">Bank Information</h3>
 
-          <div class="mb-2">
+          <div class="mb-3">
             <div for="fullname" class="form-input-label">Phone No.</div>
             <div class="row">
               <div class="col-12">
