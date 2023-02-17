@@ -32,7 +32,7 @@ $IS_ALLOWED_ALT = false;
         <div class="p-3 pt-4 rounded-sm bg-white">
           <h3 style="font-size: 1rem;" class="h6 text-uppercase mb-4">Bank Information</h3>
 
-          <div class="mb-3">
+          <div class="mb-2">
             <div for="fullname" class="form-input-label">Phone No.</div>
             <div class="row">
               <div class="col-12">
@@ -42,16 +42,15 @@ $IS_ALLOWED_ALT = false;
               </div>
             </div>
           </div>
-          <div class="mb-3">
+          
+          <div class="mb-2">
             <div for="fullname" class="form-input-label">Customer Care Email.</div>
             <div class="row">
               <div class="col-12">
                 <p class="text-sm">
                   <a href="mailto:customercare@bekofcu.com" style="text-decoration: none; font-weight: 300; font-size: .85rem;">customercare@bekofcu.com</a>
                 </p>
-              </div>
-              <div class="col-12">
-                <p class="text-sm">
+                <p class="text-sm mt-1">
                   <a href="mailto:relations@bekofcu.com" style="text-decoration: none; font-weight: 300; font-size: .85rem;">relations@bekofcu.com</a>
                 </p>
               </div>
