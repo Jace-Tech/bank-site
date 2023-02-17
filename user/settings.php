@@ -111,7 +111,7 @@ $IS_ALLOWED_ALT = false;
       <div class="row">
         <div class="col-lg-12 col-xl-12">
           <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
-            <h3 style="font-size: 1rem;"  class="h6 text-uppercase mb-4">Personal Information</h3>
+            <h3 style="font-size: 1rem;" class="h6 text-uppercase mb-4">Personal Information</h3>
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <div class="form-group">
@@ -155,13 +155,13 @@ $IS_ALLOWED_ALT = false;
                 </div>
               </div>
             </div>
-            
-            <h3 style="font-size: 1rem;"  class="h6 text-uppercase my-4">Notification Option</h3>
+
+            <h3 style="font-size: 1rem;" class="h6 text-uppercase my-4">Notification Option</h3>
             <div class="d-flex align-items-center ">
               <!-- Default checked -->
-              <div class="custom-control custom-switch" title="Default value">
-                <label class="custom-control-label mr-2" for="customSwitch1">Email</label>
-                <input type="checkbox" readonly class="custom-control-input" id="customSwitch1" checked>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitches" checked readonly>
+                <label class="custom-control-label" style="font-size: .9rem;" for="customSwitches">Email</label>
               </div>
             </div>
 
