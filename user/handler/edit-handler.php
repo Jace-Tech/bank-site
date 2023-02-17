@@ -5,6 +5,8 @@ if (isset($_POST['submit'])) {
   if ($_FILES['img']['name']) {
     $profileImage =  time() . $_FILES['img']['name'];
     $profileImageTmp = $_FILES['img']['tmp_name'];
+
+    $user_id = $_SESSION['user'];
     $uploaded = move_uploaded_file($profileImageTmp, "../../media/users/$profileImage");
 
     if ($uploaded) {
