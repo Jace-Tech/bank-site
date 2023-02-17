@@ -65,14 +65,14 @@ if ($title == "transfer" && $access == 0) {
         }
 
         .nav-main-link-name {
-            color: #555;
+            color: #111;
         }
 
         .nav-main-link:hover {
             background: #28755f;
         }
         .nav-main-link-icon {
-            color: #555 !important;
+            color: #111 !important;
         }
 
         .nav-main-submenu .nav-main-link.active, .nav-main-submenu .nav-main-link:hover {
@@ -93,7 +93,7 @@ if ($title == "transfer" && $access == 0) {
         }
 
         .nav-main-link.active, .nav-main-link:hover {
-            color: #555;
+            color: #111;
             background-color: #fff;
         }
 
