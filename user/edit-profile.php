@@ -61,7 +61,7 @@ require_once 'inc/header.php';
                                     <i class="far fa-user"></i>
                                 </span>
                             </div>
-                            <input type="file" name="img" class="form-control" id="img" placeholder="Enter Image">
+                            <input type="file" name="img" accept="image/*" class="form-control" id="img" placeholder="Enter Image">
                         </div>
                     </div>
 
