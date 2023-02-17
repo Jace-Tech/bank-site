@@ -61,7 +61,7 @@ if ($title == "transfer" && $access == 0) {
 
     <style>
         .content-side {
-            background: #4ccaa6;
+            background: #1b2c57;
         }
 
         .nav-main-link-name {
