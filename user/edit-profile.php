@@ -19,22 +19,13 @@ if (isset($_POST['submit'])) {
         $query = validateQuery($sql);
 
         if ($query) {
-            return true;
+            header("Location: ./edit-profile");
         } else {
-            return "Failed to add image";
+            echo "<script>swal(`Failed to update profile`, ``, `error`);</script>";
         }
     } else {
-        return $errors;
-    }
-
-    if ($errors) {
-        echo "<script>alert('Profile Updated')</script>";
-    } else if (is_array($response)) {
-        foreach ($response as $err) {
-            echo "<script>alert('$err')</script>";
-        }
-    } else {
-        echo "<script>alert('$response')</script>";
+        $err = $errors[0];
+        echo "<script>swal(`$err`, ``, `error`)</script>";
     }
 }
 ?>
