@@ -249,22 +249,20 @@ if ($title == "transfer" && $access == 0) {
                         <li class="nav-main-heading">Manage</li>
 
                         <li class="nav-main-item">
-                            <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                            <a class="nav-main-link nav-main-link-submenu <?php if ($title == 'Account') : echo 'active'; endif; ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                                 <i class="nav-main-link-icon fa fa-piggy-bank"></i>
                                 <span class="nav-main-link-name">Accounts</span>
                             </a>
                             <ul class="nav-main-submenu">
                                 
-                                <li class="nav-main-item">
+                                <!-- <li class="nav-main-item">
                                     <a class="nav-main-link" href="signup.php">
-                                        <!-- <i class="nav-main-link-icon fa fa-plus-circle"></i> -->
                                         <span class="nav-main-link-name">View activities</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="signup.php">
-                                        <!-- <i class="nav-main-link-icon fa fa-plus-circle"></i> -->
+                                    <a class="nav-main-link" href="e-statement.php">
                                         <span class="nav-main-link-name">eStatement</span>
                                     </a>
                                 </li>
