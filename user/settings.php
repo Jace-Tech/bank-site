@@ -23,7 +23,7 @@ $IS_ALLOWED_ALT = false;
   <div class="content">
     <!-- Quick Overview -->
     <h2 class="content-heading">
-      <i class="fa fa-angle-right text-muted mr-1"></i> Zelle
+      <i class="fa fa-angle-right text-muted mr-1"></i> Settings
     </h2>
     <?php if (isset($_GET['page']) && $_GET['page'] == "edit") : ?>
       <div class="row">
@@ -76,7 +76,7 @@ $IS_ALLOWED_ALT = false;
                 <div class="form-group">
                   <label for="security-question" class="form-input-label">Security Question</label>
                   <select name="security_question" class="form-control form-input-field" id="security_question">
-                    <?php foreach ($QUESTIONS as $question): ?>
+                    <?php foreach ($QUESTIONS as $question) : ?>
                       <option value="<?= $question ?>" <?= $user_details['security_question'] == $question ? " selected" : "" ?>>
                         <?= $question ?>
                       </option>
@@ -111,6 +111,7 @@ $IS_ALLOWED_ALT = false;
       <div class="row">
         <div class="col-lg-12 col-xl-12">
           <form action="" method="post" id="wire" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
+            <h3 class="h4 text-uppercase mb-4">Personal Information</h3>
             <div class="row">
               <div class="col-sm-12 col-md-6">
                 <div class="form-group">
@@ -153,7 +154,15 @@ $IS_ALLOWED_ALT = false;
                   <input required readonly type="text" name="dob" class="form-control form-input-field" id="dob" value="<?= $user_details['dob'] ?>" />
                 </div>
               </div>
+            </div>
 
+            <h3 class="h4 text-uppercase my-4">Notification Option</h3>
+            <div class="d-flex align-items-center ">
+              <!-- Default checked -->
+              <div class="custom-control custom-switch">
+                <label class="custom-control-label mr-2" for="customSwitch1">Email: </label>
+                <input type="checkbox" disabled class="custom-control-input" id="customSwitch1" checked>
+              </div>
             </div>
 
             <input type="hidden" id="user" value="<?= $_SESSION['user'] ?>" />
