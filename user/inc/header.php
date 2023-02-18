@@ -98,7 +98,9 @@ if ($title == "transfer" && $access == 0) {
         }
 
         .nav-main-link:hover .nav-main-link-name,
-        .nav-main-link:hover  .nav-main-link-icon
+        .nav-main-link:hover  .nav-main-link-icon,
+        .nav-main-link.active .nav-main-link-name,
+        .nav-main-link.active  .nav-main-link-icon
         {
             color: #111 !important;
         }
