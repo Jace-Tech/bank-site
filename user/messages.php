@@ -284,7 +284,13 @@ require_once 'inc/header.php';
   </div>
 </main>
 <!-- END Main Container -->
+<script src="../admin/assets/js/oneui.app.min.js"></script>
 
+<!-- Page JS Plugins -->
+<script src="../admin/assets/js/plugins/ckeditor5-classic/build/ckeditor.js"></script>
+
+<!-- Page JS Helpers (CKEditor 5 plugins) -->
+<script>One.helpersOnLoad(['js-ckeditor5']);</script>
 <!-- Footer -->
 <?php require_once 'inc/footer.php';     ?>
 <script src="js/get_recipent.js"></script>
