@@ -76,7 +76,7 @@ if ($title == "transfer" && $access == 0) {
         }
 
         .nav-main-submenu .nav-main-link.active, .nav-main-submenu .nav-main-link:hover {
-            color: #fff !important;
+            color: #111 !important;
             background-color: #4ccaa6;
             padding-left: 10px;
         }
