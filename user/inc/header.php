@@ -97,6 +97,12 @@ if ($title == "transfer" && $access == 0) {
             background-color: #fff;
         }
 
+        .nav-main-link:hover .nav-main-link-name,
+        .nav-main-link:hover  .nav-main-link-icon
+        {
+            color: #111 !important;
+        }
+
 
         .form-input-label {
             display: flex;
