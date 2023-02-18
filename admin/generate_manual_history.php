@@ -136,7 +136,7 @@ if (isset($_POST['generate'])) {
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
                 <label for="date">Date</label>
-                <input required type="date" class="form-control" name="date" id="date">
+                <input required type="datetime" class="form-control" name="date" id="date">
               </div>
             </div>
 
