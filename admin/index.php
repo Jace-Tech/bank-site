@@ -92,7 +92,7 @@ require_once 'inc/header.php';
                                                 <a href="users" style="white-space: nowrap; text-overflow: ellipsis;"><?= $user ? $user['fullname'] : "<i>Nill</i>"; ?></a>
                                             </td>
                                             <td>
-                                                <span style="white-space: nowrap; text-overflow: ellipsis;" class="<?= $class; ?>"><?= $description || "<i>No description</i>"; ?></span>
+                                                <span style="white-space: nowrap; text-overflow: ellipsis;" class="<?= $class; ?>"><?= $description ? $description : "<i>No description</i>"; ?></span>
                                             </td>
                                             <td class="font-w600 text-center" style="width: 100px;">
                                                 <a href="users"><?= $to_user; ?></a>
