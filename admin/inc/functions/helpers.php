@@ -31,6 +31,11 @@ function capitalize($str) {
     return strtoupper($my_arr[0]) . strtolower(join("", array_slice($my_arr, 1)));
 }
 
+function sub_word(string $word, int $len = 5):string {
+    $words = explode(" ", $word);
+    return count($words) > 1 ? implode(" ", array_slice($words, 0, $len)) . "..." : $words[0];
+}
+
 function get_image_path(Array $file = null,  &$err)
 {
     $err_flag = false;
