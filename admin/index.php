@@ -89,10 +89,10 @@ require_once 'inc/header.php';
                                                 <a href="users"><?= $account_num; ?></a>
                                             </td>
                                             <td class="d-none d-sm-table-cell">
-                                                <a href="users" style="white-space: nowrap; text-overflow: ellipsis;"><?= $user['fullname']; ?></a>
+                                                <a href="users" style="white-space: nowrap; text-overflow: ellipsis;"><?= $user ? $user['fullname'] : "<i>Nill</i>"; ?></a>
                                             </td>
                                             <td>
-                                                <span style="white-space: nowrap; text-overflow: ellipsis;" class="<?= $class; ?>"><?= $message; ?></span>
+                                                <span style="white-space: nowrap; text-overflow: ellipsis;" class="<?= $class; ?>"><?= $description || "<i>No description</i>"; ?></span>
                                             </td>
                                             <td class="font-w600 text-center" style="width: 100px;">
                                                 <a href="users"><?= $to_user; ?></a>
