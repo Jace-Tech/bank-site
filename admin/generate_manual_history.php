@@ -33,6 +33,7 @@ if (isset($_POST['generate'])) {
 
 ?>
 <link href="./assets/date/jquery.datetimepicker.min.css" rel="stylesheet" />
+<script src="./assets/date/jquery.js"></script>
 <!-- END Header -->
 
 <!-- Main Container -->
