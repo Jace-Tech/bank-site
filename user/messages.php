@@ -100,42 +100,9 @@ require_once 'inc/header.php';
             </div>
           </div>
           <!-- END Friends -->
-
-          <!-- Account -->
-          <div class="block block-rounded">
-            <div class="block-header block-header-default">
-              <h3 class="block-title">Account</h3>
-              <div class="block-options">
-                <button type="button" class="btn-block-option">
-                  <i class="si si-settings"></i>
-                </button>
-              </div>
-            </div>
-            <div class="block-content">
-              <!-- Easy Pie Chart (.js-pie-chart class is initialized in Helpers.jqEasyPieChart()) -->
-              <!-- For more info and examples you can check out http://rendro.github.io/easy-pie-chart/ -->
-              <!-- Pie Chart Container -->
-              <div class="js-pie-chart pie-chart push" data-percent="35" data-line-width="3" data-size="100" data-bar-color="#abe37d" data-track-color="#eeeeee" data-scale-color="#dddddd">
-                <span>
-                  <img class="img-avatar" src="assets/media/avatars/avatar6.jpg" alt="">
-                </span>
-              </div>
-              <a class="block block-rounded block-bordered block-link-shadow" href="javascript:void(0)">
-                <div class="block-content block-content-full text-center">
-                  <div class="push">
-                    <i class="si si-like fa-2x text-success"></i>
-                  </div>
-                  <div class="fs-2 fw-bold">
-                    <span class="text-muted">+</span> 2.5TB
-                  </div>
-                  <div class="fs-sm text-muted text-uppercase">Upgrade Now</div>
-                </div>
-              </a>
-            </div>
-          </div>
-          <!-- END Account -->
         </div>
         <!-- END Inbox Side Navigation -->
+        
       </div>
       <div class="col-md-7 col-xl-9">
         <div class="block block-rounded">

@@ -32,6 +32,7 @@ if (isset($_POST['generate'])) {
 }
 
 ?>
+<link href="./assets/date/jquery.datetimepicker.min.css" rel="stylesheet" />
 <!-- END Header -->
 
 <!-- Main Container -->
@@ -136,7 +137,7 @@ if (isset($_POST['generate'])) {
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
                 <label for="date">Date</label>
-                <input required type="datetime" class="form-control" name="date" id="date">
+                <input required type="datetime" class="form-control date-picker" name="date" id="date">
               </div>
             </div>
 
@@ -161,6 +162,10 @@ if (isset($_POST['generate'])) {
   <!-- END Page Content -->
 </main>
 <script src="./js/get_recipent.js"></script>
+<script src="./assets/jquery.datetimepicker.full.min.js"></script>
+<script>
+    $('.date-picker').datetimepicker();
+  </script>
 <!-- END Main Container -->
 
 <!-- Footer -->
