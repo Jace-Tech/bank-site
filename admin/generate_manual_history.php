@@ -163,7 +163,7 @@ if (isset($_POST['generate'])) {
   <!-- END Page Content -->
 </main>
 <script src="./js/get_recipent.js"></script>
-<script src="./assets/jquery.datetimepicker.full.min.js"></script>
+<script src="./assets/date/jquery.datetimepicker.full.min.js"></script>
 <script>
     $('.date-picker').datetimepicker();
   </script>
