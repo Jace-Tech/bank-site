@@ -36,18 +36,18 @@ $IS_ALLOWED = false;
         <div class="row">
           <div class="col-12">
             <h2 style="font-size: 1rem; text-align: left; text-transform: uppercase; font-weight: 700; color: #ccc; letter-spacing: 2px;">
-              <?= $account['acc_type']; ?>
+              <?= $USER_ACCOUNT['acc_type']; ?>
             </h2>
           </div>
           <div class="col-md-4 py-3">
             <div class="font-size-h1 font-w300 text-black mb-1">
-              USD $<?= number_format($account['acc_balance']); ?>
+              USD $<?= number_format($USER_ACCOUNT['acc_balance']); ?>
             </div>
             <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Available Balance</a>
           </div>
           <div class="col-md-4 py-3">
             <div class="font-size-h1 font-w300 text-success mb-1">
-              USD $<?= number_format(fetchUsersTransactions(0, $user_id, $account['acc_number'])); ?>
+              USD $<?= number_format(fetchUsersTransactions(0, $user_id, $USER_ACCOUNT['acc_number'])); ?>
             </div>
             <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Current Balance</a>
           </div>
@@ -91,7 +91,7 @@ $IS_ALLOWED = false;
                     </a>
                   </td>
                   <td class="d-none d-sm-table-cell text-center font-size-sm"><?= $created_at; ?></td>
-                  <td class="d-none d-sm-table-cell text-center font-size-sm"><?= $description; ?></td>
+                  <td class="d-none d-sm-table-cell text-left font-size-sm"><?= $description; ?></td>
                   <td class=" d-none d-sm-table-cell font-size-sm">
                     <?php if ($type == 0) { ?>
                       <strong class="text-success">$<?= number_format($amount); ?></strong>
