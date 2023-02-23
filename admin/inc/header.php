@@ -215,7 +215,26 @@ extract($admin_details);
                             </a>
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="./generate_manual_history">
+                                    <a class="nav-main-link" href="./generate-manual-history">
+                                        <span class="nav-main-link-name">Generate History</span>
+                                    </a>
+                                </li>
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="./view-history">
+                                        <span class="nav-main-link-name">View History</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-main-item">
+                            <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
+                                <i class="nav-main-link-icon fa fa-boxes"></i>
+                                <span class="nav-main-link-name">PDF History</span>
+                            </a>
+                            <ul class="nav-main-submenu">
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="./generate-pdf-history.php">
                                         <span class="nav-main-link-name">Generate History</span>
                                     </a>
                                 </li>
