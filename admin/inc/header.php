@@ -239,7 +239,7 @@ extract($admin_details);
                                     </a>
                                 </li>
                                 <li class="nav-main-item">
-                                    <a class="nav-main-link" href="./view-history">
+                                    <a class="nav-main-link" href="./view-pdf-history">
                                         <span class="nav-main-link-name">View History</span>
                                     </a>
                                 </li>
