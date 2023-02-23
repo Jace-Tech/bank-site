@@ -3,15 +3,20 @@ require_once 'inc/functions/config.php';
 require_once 'inc/header.php';
 require_once "../user/inc/banks.php";
 
+$USERS = mysqli_fetch_all(returnQuery("SELECT * FROM users"), MYSQLI_ASSOC);
+$ACCOUNTS = mysqli_fetch_all(returnQuery("SELECT * FROM accounts"), MYSQLI_ASSOC);
+
 if (isset($_POST['generate'])) {
-  $account = $_POST['account-type'];
+  $user_account = $_POST['user-account'];
+  $user = $_POST['user'];
   $name = $_POST['recipient-name'];
   $amount = $_POST['amount'];
+  $type = $_POST['type'];
   $date = $_POST['date'];
   $description = $_POST['description'];
 
-
-  $sql = "INSERT INTO pdf(name, account_type, amount, description, date) VALUES ('$name', '$account', $amount, '$description', '$date')";
+  $sql = "INSERT INTO transactions (user_id, account_num, type, amount, description, is_pdf, status, created_at) 
+          VALUES ('$user', '$user_account', $type,  $amount, '$description', 1, 'approved', '$date')";
   $res = returnQuery($sql);
 
   if (!$res) {
@@ -34,20 +39,41 @@ if (isset($_POST['generate'])) {
     <!-- Quick Overview -->
     <div class="row row-deck">
       <div class="col-12">
+      <input type="hidden" value='<?= json_encode($ACCOUNTS); ?>' id="accounts" />
         <form action="" class="w-100" method="post">
           <div class="row">
 
-            <div class="col-sm-12 col-md-6">
+          <div class="col-sm-12 col-md-6">
               <div class="form-group">
-                <label for="recipient-name">Name</label>
-                <input required type="text" class="form-control" name="recipient-name" id="recipient-name">
+                <label for="user" class="label">User</label>
+                <select name="user" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
+                  <option value="" selected disabled>Select User</option>
+                  <?php foreach ($USERS as $user) : ?>
+                    <option value="<?= $user['id']; ?>">
+                      <?= $user['fullname']; ?>
+                    </option>
+                  <?php endforeach; ?>
+                </select>
               </div>
             </div>
 
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
-                <label for="account-type">Account Type</label>
-                <input required type="text" class="form-control" name="account-type" id="account-type">
+                <label for="user-accounts" class="label">User Account</label>
+                <select name="user-account" class="form-control" id="user-accounts">
+                  <option value="" selected disabled>Select User Account</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+              <div class="form-group">
+                <label for="type" class="label">Transaction Type</label>
+                <select name="type" class="form-control" id="type">
+                  <option value="" selected disabled>Select transaction type</option>
+                  <option value="1">Debit</option>
+                  <option value="0">Credit</option>
+                </select>
               </div>
             </div>
 

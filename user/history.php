@@ -49,7 +49,50 @@ require_once 'inc/header.php';
 
           <div class="block-content">
             <!-- All Products Table -->
-            <div class="table-responsive">
+            <?php if($details['is_pdf']): ?>
+              <div class="table-responsive">
+              <table class="table table-borderless table-striped" style="table-layout: auto !important;">
+                <tbody>
+                  <tr>
+                    <th>Transaction ID</th>
+                    <td><?= $id ?></td>
+                  </tr>
+
+                  <tr>
+                    <th>Account Name</th>
+                    <td><?= $user['fullname'] ?></td>
+                  </tr>
+
+                  <tr>
+                    <th>Account Number</th>
+                    <td><?= $details['account_num'] ?? "<i>NULL</i>" ?></td>
+                  </tr>
+
+                  <tr>
+                    <th>Amount</th>
+                    <td><?= $details['amount'] ?? "<i>NULL</i>" ?></td>
+                  </tr>
+
+                  <tr>
+                    <th>Transaction Type</th>
+                    <td><?= $details['type'] ?? "<i>NULL</i>" ?></td>
+                  </tr>
+
+                  <tr>
+                    <th>Transaction Date</th>
+                    <td><?= date("D d, M Y", strtotime($details['created_at'])) ?? "<i>NULL</i>" ?></td>
+                  </tr>
+
+                  <tr>
+                    <th>Description</th>
+                    <td><?= $details['description'];  ?></td>
+                  </tr>
+
+                </tbody>
+              </table>
+            </div>
+            <?php else: ?>
+              <div class="table-responsive">
               <table class="table table-borderless table-striped" style="table-layout: auto !important;">
                 <tbody>
                   <tr>
@@ -115,6 +158,7 @@ require_once 'inc/header.php';
                 </tbody>
               </table>
             </div>
+            <?php endif; ?>
             <!-- END All Products Table -->
 
           </div>

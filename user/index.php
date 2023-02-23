@@ -196,7 +196,7 @@ $IS_ALLOWED = false;
             foreach ($userAccounts as $account) { ?>
                 <div class="col-lg-6 invisible" data-toggle="appear">
                     <!-- Bank Account #1 -->
-                    <a class="block block-rounded block-link-shadow" href="javascript:void(0)">
+                    <a class="block block-rounded block-link-shadow" href="./account-view?acc=<?= $account['acc_number'] ?>">
                         <div class="block-content block-content-full d-flex align-items-center justify-content-between">
                             <div>
                                 <p class="font-size-lg font-w600 mb-0">
@@ -227,7 +227,7 @@ $IS_ALLOWED = false;
         </h2>
         <?php
         // $transc = fetchAllWhere("transactions", "user_id", "$user_id", "id", 0, 10);
-        $transc = mysqli_fetch_all( returnQuery("SELECT * FROM transactions WHERE user_id = '$user_id' ORDER BY created_at DESC LIMIT 10"), MYSQLI_ASSOC);
+        $transc = mysqli_fetch_all( returnQuery("SELECT * FROM transactions WHERE user_id = '$user_id' ORDER BY created_at DESC LIMIT 5"), MYSQLI_ASSOC);
 
         foreach ($transc as $trans) {
             if ($trans['type'] == 0) {
