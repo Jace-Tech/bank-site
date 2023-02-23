@@ -60,6 +60,7 @@ $TRANSACTIONS = mysqli_fetch_all(returnQuery("SELECT * FROM pdf ORDER BY date DE
                       </tr>
                     <?php endif; ?>
                   </tbody>
+
                 </table>
               </div>
             </div>
