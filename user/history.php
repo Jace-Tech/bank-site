@@ -49,7 +49,9 @@ require_once 'inc/header.php';
 
           <div class="block-content">
             <!-- All Products Table -->
-            <?php if($details['is_pdf']): ?>
+            <?php if($details['is_pdf']): 
+              $trxType =   $details['type'] == '0' ? "Credit" : "Debit";
+            ?>
               <div class="table-responsive">
               <table class="table table-borderless table-striped" style="table-layout: auto !important;">
                 <tbody>
@@ -75,7 +77,7 @@ require_once 'inc/header.php';
 
                   <tr>
                     <th>Transaction Type</th>
-                    <td><?= $details['type'] ?? "<i>NULL</i>" ?></td>
+                    <td><?= $trxType ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
