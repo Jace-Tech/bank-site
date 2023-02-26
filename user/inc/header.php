@@ -81,6 +81,7 @@ if ($title == "transfer" && $access == 0) {
             padding-left: 10px;
         }
 
+
         /* .nav-main-submenu .nav-main-link {
             background: #31608c;
         } */
@@ -93,7 +94,7 @@ if ($title == "transfer" && $access == 0) {
         }
 
         .nav-main-link.active, .nav-main-link:hover {
-            color: #111;
+            color: #111 !important;
             background-color: #fff;
         }
 
@@ -121,6 +122,11 @@ if ($title == "transfer" && $access == 0) {
             font-size: .9rem;
             height: fit-content !important;
             min-height: 40px;
+        }
+
+
+        .nav-main-submenu.open > * a {
+            color: #fff !important;
         }
     </style>
 </head>
