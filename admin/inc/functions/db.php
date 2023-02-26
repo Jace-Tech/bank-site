@@ -264,7 +264,7 @@ function getTotalQuote($table, $optional = null, $optionValue = null) {
 }
 
 function blockUrlHackers($user, $url) {
-    if (!isset($_SESSION[$user])) {
+    if (!($user)) {
         redirect_to("$url");
     }
 }

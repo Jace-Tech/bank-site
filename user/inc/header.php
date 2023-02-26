@@ -1,7 +1,7 @@
 <?php
 @session_start();
 if (!isset($_SESSION['user'])) {
-    blockUrlHackers($_SESSION['user'], "signin.php");
+    blockUrlHackers(null, "signin.php");
 } else {
     $user_id = $_SESSION['user'];
 }

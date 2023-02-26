@@ -1,6 +1,6 @@
 <?php
 if (!isset($_SESSION['admin'])) {
-    blockUrlHackers($_SESSION['admin'], "signin.php");
+    blockUrlHackers(null, "signin.php");
 } else {
     $admin_id = $_SESSION['admin'];
 }
