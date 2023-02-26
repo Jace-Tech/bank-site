@@ -6,7 +6,7 @@ $id = $_GET['trx-id'];
 $title = "History - $id";
 
 // Get transaction details
-$real_id = explode("-r", $id)[1];
+$real_id = explode("-r", $_GET['trx-id'])[1];
 
 $details = executeQuery("SELECT * FROM transactions WHERE id = $real_id ORDER BY created_at DESC");
 $user_id = $details['user_id'];
@@ -36,7 +36,7 @@ require_once 'inc/header.php';
   <div class="content">
     <!-- Quick Overview -->
     <h2 class="content-heading">
-      <i class="fa fa-angle-right text-muted mr-1"></i> Transactions Details [<?= $id ?>]</h2>
+      <i class="fa fa-angle-right text-muted mr-1"></i> Transactions Details [<?= $_GET['trx-id'] ?>]</h2>
     </h2>
 
     <div class="row">
@@ -55,7 +55,7 @@ require_once 'inc/header.php';
                 <tbody>
                   <tr>
                     <th>Transaction ID</th>
-                    <td><?= $id ?></td>
+                    <td><?= $_GET['trx-id'] ?></td>
                   </tr>
 
                   <tr>
