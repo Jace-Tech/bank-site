@@ -16,10 +16,6 @@ if (isset($_POST['generate'])) {
   $date = $_POST['date'];
   $description = $_POST['description'];
 
-  print_r($_POST);
-  die();
-
-
   $sql = "INSERT INTO transactions (user_id, account_num, type, amount, description, is_pdf, status, created_at) 
           VALUES ('$user', '$user_account', $type,  $amount, '$description', 1, 'approved', '$date')";
   $res = returnQuery($sql);
