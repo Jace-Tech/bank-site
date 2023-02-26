@@ -842,7 +842,7 @@ function credit_account($post, $user_id) {
 }
 
 function Transactions($user_id, $status) {
-    $sql = "SELECT * FROM transactions WHERE user_id = '$user_id' AND status = '$status' AND description != NULL ORDER BY created_at DESC";
+    $sql = "SELECT * FROM transactions WHERE user_id = '$user_id' AND status = '$status' ORDER BY created_at DESC";
     $result = returnQuery($sql);
 
     if ($result) {
