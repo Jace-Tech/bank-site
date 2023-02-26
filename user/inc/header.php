@@ -286,13 +286,13 @@ if ($title == "transfer" && $access == 0) {
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="transactions">
                                         <span class="nav-main-link-name">Approved</span>
-                                        <span class="nav-main-link-badge badge badge-pill badge-success"><?= getTotalAnd("transactions", "approved", 1, "user_id", "$user_id"); ?></span>
+                                        <span class="nav-main-link-badge badge badge-pill badge-success"><?= getTotalAnd("transactions", "status", "approved", "user_id", "$user_id"); ?></span>
                                     </a>
                                 </li>
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="pending">
                                         <span class="nav-main-link-name">Pending</span>
-                                        <span class="nav-main-link-badge badge badge-pill badge-warning"><?= getTotalAnd("transactions", "approved", 0, "user_id", "$user_id"); ?></span>
+                                        <span class="nav-main-link-badge badge badge-pill badge-warning"><?= getTotalAnd("transactions", "status", "pending", "user_id", "$user_id"); ?></span>
                                     </a>
                                 </li>
                             </ul>
