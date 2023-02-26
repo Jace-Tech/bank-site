@@ -130,10 +130,9 @@ if ($title == "transfer" && $access == 0) {
         }
        
 
-
-        .nav-main-submenu.open {
+        /* .nav-main-submenu.open {
             background-color: #aaa !important;
-        }
+        } */
     </style>
 </head>
 
