@@ -131,7 +131,7 @@ if ($title == "transfer" && $access == 0) {
 
 
         .nav-main-submenu.open {
-            background-color: #aaa;
+            background-color: #aaa !important;
         }
     </style>
 </head>
