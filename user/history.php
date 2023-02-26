@@ -85,7 +85,7 @@ require_once 'inc/header.php';
 
                   <tr>
                     <th>Description</th>
-                    <td><?= $details['description'];  ?></td>
+                    <td><?= $details['description'] ?? "<i>NULL</i>"  ?></td>
                   </tr>
 
                 </tbody>
@@ -152,7 +152,7 @@ require_once 'inc/header.php';
 
                   <tr>
                     <th>Description</th>
-                    <td><?= $details['description'];  ?></td>
+                    <td><?= $details['description'] ?? "<i>NULL</i>";  ?></td>
                   </tr>
 
                 </tbody>
