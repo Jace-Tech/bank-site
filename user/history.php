@@ -8,7 +8,7 @@ $title = "History - $id";
 // Get transaction details
 $real_id = explode("-r", $id)[1];
 
-$details = executeQuery("SELECT * FROM transactions WHERE id = $real_id");
+$details = executeQuery("SELECT * FROM transactions WHERE id = $real_id ORDER BY created_at DESC");
 $user_id = $details['user_id'];
 $user = executeQuery("SELECT * FROM users WHERE id = '$user_id'");
 

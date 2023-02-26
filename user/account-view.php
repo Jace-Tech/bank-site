@@ -79,7 +79,7 @@ $IS_ALLOWED = false;
           </thead>
           <tbody>
             <?php
-            $all_transactions = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE account_num = '$ACCOUNT' AND status = 'approved' AND user_id = '$user_id'"), MYSQLI_ASSOC);
+            $all_transactions = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE account_num = '$ACCOUNT' AND status = 'approved' AND user_id = '$user_id' ORDER BY created_at DESC"), MYSQLI_ASSOC);
             if (count($all_transactions)) {
               foreach ($all_transactions as $transaction) {
                 extract($transaction); ?>
