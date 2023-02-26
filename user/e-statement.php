@@ -88,7 +88,7 @@ if (isset($_POST['print'])) {
                         <strong style="white-space: nowrap;"><?= generateTransactionId($id); ?></strong>
                       </a>
                     </td>
-                    <td class="d-none d-sm-table-cell text-center font-size-sm"><?= $created_at; ?></td>
+                    <td class="d-none d-sm-table-cell text-center font-size-sm"><?= date("D j, M Y", strtotime($created_at)) ?></td>
 
                     <td>
                       <?php if ($type == 0) { ?>

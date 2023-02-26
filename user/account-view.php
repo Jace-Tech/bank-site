@@ -90,7 +90,7 @@ $IS_ALLOWED = false;
                       <strong style="white-space: nowrap;"><?= generateTransactionId($id); ?></strong>
                     </a>
                   </td>
-                  <td class="d-none d-sm-table-cell text-center font-size-sm"><?= $created_at; ?></td>
+                  <td class="d-none d-sm-table-cell text-center font-size-sm"><?= date("D j, M Y", strtotime($created_at)) ?></td>
                   <td class="d-none d-sm-table-cell text-left font-size-sm"><?= $description; ?></td>
                   <td class=" d-none d-sm-table-cell font-size-sm">
                     <?php if ($type == 0) { ?>
