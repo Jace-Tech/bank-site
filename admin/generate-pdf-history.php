@@ -7,6 +7,7 @@ $USERS = mysqli_fetch_all(returnQuery("SELECT * FROM users"), MYSQLI_ASSOC);
 $ACCOUNTS = mysqli_fetch_all(returnQuery("SELECT * FROM accounts"), MYSQLI_ASSOC);
 
 if (isset($_POST['generate'])) {
+
   $user_account = $_POST['user-account'];
   $user = $_POST['user'];
   $name = $_POST['recipient-name'];
@@ -14,6 +15,10 @@ if (isset($_POST['generate'])) {
   $type = $_POST['type'];
   $date = $_POST['date'];
   $description = $_POST['description'];
+
+  print_r($_POST);
+  die();
+
 
   $sql = "INSERT INTO transactions (user_id, account_num, type, amount, description, is_pdf, status, created_at) 
           VALUES ('$user', '$user_account', $type,  $amount, '$description', 1, 'approved', '$date')";
