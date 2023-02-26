@@ -125,7 +125,7 @@ if ($title == "transfer" && $access == 0) {
         }
 
 
-        .nav-main-item.open > .nav-main-submenu .nav-main-item .nav-main-link {
+        .nav-main-item.open > .nav-main-submenu .nav-main-item .nav-main-link .nav-main-link-name {
             color: #111 !important;
         }
        
