@@ -72,7 +72,7 @@ require_once 'inc/header.php';
                                     foreach ($all_transactions as $transactions) {
                                         extract($transactions);
                                         $user = executeQuery("SELECT * FROM users WHERE id = '$user_id'");
-    
+
                                         if ($type == 0) {
                                             $class = "text-success";
                                             $message = "Received from";
@@ -80,13 +80,13 @@ require_once 'inc/header.php';
                                             $class = "text-danger";
                                             $message = "Delivered to";
                                         }
-    
-    
+
+
                                     ?>
-    
+
                                         <tr>
                                             <td class="font-w600 text-center" style="width: 100px;">
-                                                <a href="#" style="white-space: nowrap;"><?=  generateTransactionId($id); ?></a>
+                                                <a href="#" style="white-space: nowrap;"><?= generateTransactionId($id); ?></a>
                                             </td>
                                             <td class="d-none d-sm-table-cell">
                                                 <a href="#" style="white-space: nowrap; text-overflow: ellipsis;"><?= $user ? $user['fullname'] : "<i>Nill</i>"; ?></a>
@@ -96,7 +96,14 @@ require_once 'inc/header.php';
                                             </td>
                                             <td class="font-w600 text-right <?= $class ?>">$<?= number_format($amount); ?></td>
                                             <td class="font-w600 text-right"><a href="backdate" style="white-space: nowrap;"><strong><?= date("M d, Y - h:i", strtotime($created_at)); ?></a></td>
-                                            <td class="font-w600 text-right"><a href="backdate?id=<?= $id; ?>" style="white-space: nowrap; text-overflow: ellipsis;" class="shadow btn btn-sm btn-primary">Backdate Transaction</a></td>
+                                            <td>
+                                            <td class="font-w600 text-right">
+                                                <div class="d-flex align-items-center">
+                                                    <a href="backdate?id=<?= $transactions['id']; ?>" style="white-space: nowrap; text-overflow: ellipsis;" class="shadow btn btn-sm btn-primary">Backdate Transaction</a>
+                                                    <a href="?delete=<?= $transactions['id']; ?>" style="white-space: nowrap; text-overflow: ellipsis;" class="shadow btn btn-sm btn-danger ml-6">Delete Transaction</a>
+                                                </div>
+                                            </td>
+                                            </td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
