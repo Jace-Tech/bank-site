@@ -1,5 +1,8 @@
-<?php 
+<?php
 @session_start();
+require_once("../inc/functions/helpers.php");
+require_once("../inc/functions/user_func.php");
+
 
 if (isset($_GET['delete'])) {
   $del_id = $_GET['delete'];
