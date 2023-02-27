@@ -184,6 +184,11 @@ extract($admin_details);
                             <ul class="nav-main-submenu">
                                 <li class="nav-main-item">
                                     <a class="nav-main-link" href="confirm.php">
+                                        <span class="nav-main-link-name">All Transactions</span>
+                                    </a>
+                                </li>
+                                <li class="nav-main-item">
+                                    <a class="nav-main-link" href="confirm.php">
                                         <span class="nav-main-link-name">Confirm Transactions</span>
                                     </a>
                                 </li>

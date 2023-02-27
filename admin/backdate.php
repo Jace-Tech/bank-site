@@ -49,7 +49,7 @@ if (isset($_GET['id'])) {
                                     <i class="far fa-gear"></i>
                                 </span>
                             </div>
-                            <input type="date" name="date" class="form-control" placeholder="Backdate Transaction">
+                            <input type="text" name="date" class="form-control date-picker" placeholder="Backdate Transaction">
                         </div>
                     </div>
                     <hr>
@@ -72,3 +72,7 @@ if (isset($_GET['id'])) {
 <?php require_once 'inc/footer.php'; ?>
 <script src="js/delete_user.js"></script>
 <script src="js/get_recipent.js"></script>
+<script src="./assets/date/jquery.datetimepicker.full.min.js"></script>
+<script>
+    $('.date-picker').datetimepicker();
+  </script>
