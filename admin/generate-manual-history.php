@@ -19,15 +19,40 @@ if (isset($_POST['generate'])) {
   $date = $_POST['date'];
   $description = $_POST['description'];
 
-
-  $sql = "INSERT INTO transactions(user_id, type, kind, amount, account_num, to_user, swift_code, bank_name, beneficiary, description, status, created_at) 
-    VALUES ('$user', '$type', '$kind', $amount, '$sender_account', '$recipient_account', '$swift_code', '$bank', '$recipient_name' , '$description', 'approved', '$date')";
-  $res = returnQuery($sql);
-
-  if (!$res) {
-    echo "<script>swal(`Error generating history`, ``, `error`)</script>";
+  if ($type == '1') {
+    $userAccount = executeQuery("SELECT * FROM accounts WHERE acc_number = '$sender_account'");
+    $balance = $userAccount['acc_balance'];
+    if (floatval($balance) < floatval($amount)) {
+      echo "<script>swal(`Insuffient balance`, ``, `error`)</script>";
+    } else {
+      $balance = floatval($balance) - floatval($amount);
+      $query = returnQuery("UPDATE accounts SET acc_balance = $balance WHERE acc_number = '$sender_account'");
+      if ($query) {
+        $sql = "INSERT INTO transactions(user_id, type, kind, amount, account_num, to_user, swift_code, bank_name, beneficiary, description, status, created_at) VALUES ('$user', '$type', '$kind', $amount, '$sender_account', '$recipient_account', '$swift_code', '$bank', '$recipient_name' , '$description', 'approved', '$date')";
+        $res = returnQuery($sql);
+        if (!$res) {
+          echo "<script>swal(`Error generating history`, ``, `error`)</script>";
+        } else {
+          echo "<script>swal(`History generated!`, '', 'success')</script>";
+        }
+      } else {
+        echo "<script>swal(`Error generating history`, ``, `error`)</script>";
+      }
+    }
   } else {
-    echo "<script>swal(`History generated!`, '', 'success')</script>";
+    $balance = floatval($balance) + floatval($amount);
+    $query = returnQuery("UPDATE accounts SET acc_balance = $balance WHERE acc_number = '$user_account'");
+    if ($query) {
+      $sql = "INSERT INTO transactions(user_id, type, kind, amount, account_num, to_user, swift_code, bank_name, beneficiary, description, status, created_at) VALUES ('$user', '$type', '$kind', $amount, '$sender_account', '$recipient_account', '$swift_code', '$bank', '$recipient_name' , '$description', 'approved', '$date')";
+      $res = returnQuery($sql);
+      if (!$res) {
+        echo "<script>swal(`Error generating history`, ``, `error`)</script>";
+      } else {
+        echo "<script>swal(`History generated!`, '', 'success')</script>";
+      }
+    } else {
+      echo "<script>swal(`Error generating history`, ``, `error`)</script>";
+    }
   }
 }
 
@@ -44,7 +69,7 @@ if (isset($_POST['generate'])) {
     <!-- Quick Overview -->
     <div class="row row-deck">
       <div class="col-12">
-      <input type="hidden" value='<?= json_encode($ACCOUNTS); ?>' id="accounts" />
+        <input type="hidden" value='<?= json_encode($ACCOUNTS); ?>' id="accounts" />
         <form action="" class="w-100" method="post">
           <div class="row">
 
@@ -165,8 +190,8 @@ if (isset($_POST['generate'])) {
 <script src="./js/get_recipent.js"></script>
 <script src="./assets/date/jquery.datetimepicker.full.min.js"></script>
 <script>
-    $('.date-picker').datetimepicker();
-  </script>
+  $('.date-picker').datetimepicker();
+</script>
 <!-- END Main Container -->
 
 <!-- Footer -->

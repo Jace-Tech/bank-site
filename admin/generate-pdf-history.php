@@ -16,14 +16,41 @@ if (isset($_POST['generate'])) {
   $date = $_POST['date'];
   $description = $_POST['description'];
 
-  $sql = "INSERT INTO transactions (user_id, account_num, type, amount, description, is_pdf, status, created_at) 
-          VALUES ('$user', '$user_account', $type,  $amount, '$description', 1, 'approved', '$date')";
-  $res = returnQuery($sql);
+  $userAccount = executeQuery("SELECT * FROM accounts WHERE acc_number = '$user_account'");
+  $balance = $userAccount['acc_balance'];
 
-  if (!$res) {
-    echo "<script>swal(`Error generating history`, ``, `error`)</script>";
+  if ($type == '1') {
+    if (floatval($balance) < floatval($amount)) {
+      echo "<script>swal(`Insuffient balance`, ``, `error`)</script>";
+    } else {
+      $balance = floatval($balance) - floatval($amount);
+      $query = returnQuery("UPDATE accounts SET acc_balance = $balance WHERE acc_number = '$user_account'");
+      if ($query) {
+        $sql = "INSERT INTO transactions (user_id, account_num, type, amount, description, is_pdf, status, created_at) VALUES ('$user', '$user_account', $type,  $amount, '$description', 1, 'approved', '$date')";
+        $res = returnQuery($sql);
+        if (!$res) {
+          echo "<script>swal(`Error generating history`, ``, `error`)</script>";
+        } else {
+          echo "<script>swal(`History generated!`, '', 'success')</script>";
+        }
+      } else {
+        echo "<script>swal(`Error generating history`, ``, `error`)</script>";
+      }
+    }
   } else {
-    echo "<script>swal(`History generated!`, '', 'success')</script>";
+    $balance = floatval($balance) + floatval($amount);
+    $query = returnQuery("UPDATE accounts SET acc_balance = $balance WHERE acc_number = '$user_account'");
+    if ($query) {
+      $sql = "INSERT INTO transactions (user_id, account_num, type, amount, description, is_pdf, status, created_at) VALUES ('$user', '$user_account', $type,  $amount, '$description', 1, 'approved', '$date')";
+      $res = returnQuery($sql);
+      if (!$res) {
+        echo "<script>swal(`Error generating history`, ``, `error`)</script>";
+      } else {
+        echo "<script>swal(`History generated!`, '', 'success')</script>";
+      }
+    } else {
+      echo "<script>swal(`Error generating history`, ``, `error`)</script>";
+    }
   }
 }
 
@@ -40,11 +67,11 @@ if (isset($_POST['generate'])) {
     <!-- Quick Overview -->
     <div class="row row-deck">
       <div class="col-12">
-      <input type="hidden" value='<?= json_encode($ACCOUNTS); ?>' id="accounts" />
+        <input type="hidden" value='<?= json_encode($ACCOUNTS); ?>' id="accounts" />
         <form action="" class="w-100" method="post">
           <div class="row">
 
-          <div class="col-sm-12 col-md-6">
+            <div class="col-sm-12 col-md-6">
               <div class="form-group">
                 <label for="user" class="label">User</label>
                 <select name="user" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
@@ -115,8 +142,8 @@ if (isset($_POST['generate'])) {
 <script src="./js/get_recipent.js"></script>
 <script src="./assets/date/jquery.datetimepicker.full.min.js"></script>
 <script>
-    $('.date-picker').datetimepicker();
-  </script>
+  $('.date-picker').datetimepicker();
+</script>
 <!-- END Main Container -->
 
 <!-- Footer -->
