@@ -69,7 +69,7 @@ require_once 'inc/header.php';
                       <td class="font-w600 text-right">
                         <div class="d-flex align-items-center">
                           <a href="backdate?id=<?= $transactions['id']; ?>" style="white-space: nowrap; text-overflow: ellipsis;" class="shadow btn btn-sm btn-primary">Backdate Transaction</a>
-                          <a href="?delete=<?= $transactions['id']; ?>" style="white-space: nowrap; text-overflow: ellipsis;" class="shadow btn btn-sm btn-danger ml-2">Delete Transaction</a>
+                          <a href="./handler/delete?delete=<?= $transactions['id']; ?>" style="white-space: nowrap; text-overflow: ellipsis;" class="shadow btn btn-sm btn-danger ml-2">Delete Transaction</a>
                         </div>
                       </td>
                     </tr>
