@@ -7,6 +7,7 @@ require_once 'inc/header.php';
 
 <!-- Main Container -->
 <main id="main-container">
+    <?php include("./inc/alert.php"); ?>
 
     <!-- Page Content -->
     <div class="content">
