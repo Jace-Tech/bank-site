@@ -49,7 +49,7 @@ require_once 'inc/header.php';
                             <strong style="white-space: nowrap;"><?= generateTransactionId($id); ?></strong>
                           </a>
                         </td>
-                        <td class="d-none d-sm-table-cell text-center font-size-sm"><?= date("D j, M Y", strtotime($created_at)) ?></td>
+                        <td class="d-none d-sm-table-cell text-center font-size-sm"><?= date("D j, M Y - H:i:s", strtotime($created_at)) ?></td>
                         <td class="d-none d-sm-table-cell text-left font-size-sm"><?= $description ?? "<i>NILL</i>";  ?></td>
                         <td class=" d-none d-sm-table-cell font-size-sm">
                           <?php if ($type == 0) { ?>

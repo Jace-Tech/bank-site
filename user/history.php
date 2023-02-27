@@ -82,7 +82,7 @@ require_once 'inc/header.php';
 
                   <tr>
                     <th>Transaction Date</th>
-                    <td><?= date("D d, M Y", strtotime($details['created_at'])) ?? "<i>NULL</i>" ?></td>
+                    <td><?= date("D d, M Y - H:i:s", strtotime($details['created_at'])) ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
