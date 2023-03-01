@@ -21,7 +21,7 @@ if (isset($_POST['download'])) {
   // Convert to CSV
   $filename = generate_file_name();
 
-  print_r($TRANSACTIONS);
+  print_r($arr);
   
   // create_csv($filename, $arr)
   // Download
