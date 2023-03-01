@@ -10,7 +10,8 @@ if (isset($_POST['download'])) {
   $id = $_POST['id'];
   $account = $_POST['account'];
 
-  $TRANSACTIONS = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE user_id = '$id' AND account_num = '$account' ORDER BY created_at DESC"), MYSQLI_ASSOC);
+  $TRANSACTIONS = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE user_id = '$id' AND account_num = '$account' AND is_credit = 0 ORDER BY created_at DESC"), MYSQLI_ASSOC);
+  
   // Remove the user_id AND account 
   $arr = array_map(function ($item) {
     unset($item['user_id']);
@@ -20,7 +21,7 @@ if (isset($_POST['download'])) {
   // Convert to CSV
   $filename = generate_file_name();
 
-  print_r($arr);
+  print_r($TRANSACTIONS);
   
   // create_csv($filename, $arr)
   // Download
