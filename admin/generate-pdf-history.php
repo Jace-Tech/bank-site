@@ -108,7 +108,7 @@ if (isset($_POST['generate'])) {
             <div class="col-sm-12 col-md-6">
               <div class="form-group">
                 <label for="amount">Amount</label>
-                <input required type="number" class="form-control" name="amount" id="amount">
+                <input required type="text" class="form-control" name="amount" id="amount">
               </div>
             </div>
 
