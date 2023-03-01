@@ -32,5 +32,5 @@ if (isset($_POST['download'])) {
 
   // Delete
   unlink($filename);
-  header("Location: ../download-history");
+  // header("Location: ../download-history");
 }
