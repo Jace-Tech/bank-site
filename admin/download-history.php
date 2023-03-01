@@ -6,27 +6,6 @@ require_once 'inc/header.php';
 $USERS = mysqli_fetch_all(returnQuery("SELECT * FROM users"), MYSQLI_ASSOC);
 $ACCOUNTS = mysqli_fetch_all(returnQuery("SELECT * FROM accounts"), MYSQLI_ASSOC);
 
-if (isset($_POST['submit'])) {
-	// Get users transaction history
-  $id = $_POST['id'];
-  $account = $_POST['account'];
-
-  $TRANSACTIONS = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE user_id = '$id' AND account_num = '$account' ORDER BY created_at DESC"), MYSQLI_ASSOC);
-  // Remove the user_id AND account 
-  $arr = array_map(function ($item) {
-    unset($item['user_id']);
-    unset($item['account_num']);
-    return $item;
-  }, $TRANSACTIONS);
-  // Convert to CSV
-  $filename = generate_file_name();
-
-  print_r($arr);
-  
-  // create_csv($filename, $arr)
-  // Download
-  // Delete
-}
 
 ?>
 <!-- END Header -->
@@ -44,7 +23,7 @@ if (isset($_POST['submit'])) {
 		<div class="row">
 
 			<div class="col-lg-12 col-xl-12">
-				<form action="" method="post" enctype="multipart/form-data" class="row">
+				<form action="./handler/download.php" method="post" enctype="multipart/form-data" class="row">
 					<div class="col-12">
 						<input type="hidden" value='<?= json_encode($ACCOUNTS); ?>' id="accounts" />
 						<div class="form-group">
@@ -71,7 +50,7 @@ if (isset($_POST['submit'])) {
 
 					<div class="col-12">
 						<div class="input-group mt-4">
-							<button type="submit" name="upload" class="btn btn-alt-success">Download</button>
+							<button type="submit" name="download" class="btn btn-alt-success">Download</button>
 						</div>
 					</div>
 				</form>
