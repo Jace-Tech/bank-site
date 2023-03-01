@@ -21,7 +21,7 @@ if (isset($_POST['upload'])) {
       if (!$item) return NULL;
       return $item;
     }, $rows);
-    
+
     // Check type
     $sender = $rows[0];
     $type = $rows[1];
@@ -45,9 +45,9 @@ if (isset($_POST['upload'])) {
     $balance = floatval($accountDetails['acc_balance']);
 
     if ($type == 1) {
-      $balance = $balance + floatval($transaction['amount']);
+      $balance = $balance + floatval($amount);
     } else {
-      $balance = $balance - floatval($transaction['amount']);
+      $balance = $balance - floatval($amount);
     }
 
     // Update balance
