@@ -10,11 +10,8 @@ if (isset($_GET['delete'])) {
 
   $transaction = executeQuery("SELECT * FROM transactions WHERE id = '$del_id'");
 
-  print_r($transaction);
-  die();
-
   $user_id = $transaction['user_id'];
-  $account = $transaction['account_num'];
+  $account = $transaction['account_num'] ?? $transaction['to_user'];
 
   $accountDetails = executeQuery("SELECT * FROM accounts WHERE acc_number = '$account' AND user_id = '$user_id'");
   print_r($accountDetails);
