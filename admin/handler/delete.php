@@ -9,6 +9,10 @@ if (isset($_GET['delete'])) {
   $del_id = $_GET['delete'];
 
   $transaction = executeQuery("SELECT * FROM transactions WHERE id = '$del_id'");
+
+  print_r($transaction);
+  die();
+
   $user_id = $transaction['user_id'];
   $account = $transaction['account_num'];
 
