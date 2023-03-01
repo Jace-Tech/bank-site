@@ -17,12 +17,14 @@ if (isset($_POST['upload'])) {
   // Loop to the end
   while (!feof($handler)) {
     $rows = fgetcsv($handler, 1000);
-    print_r($rows);
-    die();
+    
     $newItems = array_map(function ($item) {
       if (!$item) return NULL;
       return $item;
     }, $rows);
+
+    print_r($newItems);
+    die();
 
     // Check type
     $sender = $newItems[0];
