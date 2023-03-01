@@ -2,6 +2,7 @@
 @session_start();
 require_once("../inc/functions/helpers.php");
 require_once("../inc/functions/user_func.php");
+require_once("../inc/functions/db.php");
 
 
 if (isset($_GET['delete'])) {
