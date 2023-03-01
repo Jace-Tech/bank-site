@@ -30,8 +30,8 @@ if (isset($_POST['upload'])) {
 					<div class="col-12">
 						<input type="hidden" value='<?= json_encode($ACCOUNTS); ?>' id="accounts" />
 						<div class="form-group">
-							<label for="user" class="label">User</label>
-							<select name="user" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
+							<label for="id" class="label">User</label>
+							<select name="id" onchange="handleFetchUsersAccount(event)" class="form-control" id="user">
 								<option value="" selected disabled>Select User</option>
 								<?php foreach ($USERS as $user) : ?>
 									<option value="<?= $user['id']; ?>">
