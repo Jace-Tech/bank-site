@@ -31,6 +31,8 @@ if (isset($_POST['download'])) {
   readfile($filename);
 
   // Delete
+
+  sleep(4000);
   unlink($filename);
   // header("Location: ../download-history");
 }
