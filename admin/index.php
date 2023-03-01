@@ -69,7 +69,7 @@ require_once 'inc/header.php';
                             <table class="table table-borderless table-striped table-vcenter font-size-sm">
                                 <tbody>
                                     <?php
-                                    $all_transactions = mysqli_fetch_all(returnQuery("SELECT * FROM transactions ORDER BY created_at DESC LIMIT 10"), MYSQLI_ASSOC);
+                                    $all_transactions = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE is_credit = 0 ORDER BY created_at DESC LIMIT 10"), MYSQLI_ASSOC);
                                     foreach ($all_transactions as $transactions) {
                                         extract($transactions);
                                         $user = executeQuery("SELECT * FROM users WHERE id = '$user_id'");

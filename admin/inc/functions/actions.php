@@ -160,6 +160,9 @@ function credit_user_account($post)
             $sql = "UPDATE accounts SET acc_balance = '$update_balance' WHERE acc_number = '$acc_number' AND user_id = '$id'";
             $result = validateQuery($sql);
 
+            // UPDATE THE TRANSACTIONS
+            returnQuery("INSERT INTO transactions(user_id, type, amount, account_num, status, is_credit) VALUES ('$id', 0, $amount, '$account', 'approved', 1)");
+
             $username = $user['fullname'];
             $date = date("d-M-Y");
             $time = date("H:i:s: A");

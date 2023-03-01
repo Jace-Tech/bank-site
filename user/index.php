@@ -227,7 +227,7 @@ $IS_ALLOWED = false;
         </h2>
         <?php
         // $transc = fetchAllWhere("transactions", "user_id", "$user_id", "id", 0, 10);
-        $transc = mysqli_fetch_all( returnQuery("SELECT * FROM transactions WHERE user_id = '$user_id' ORDER BY created_at DESC LIMIT 5"), MYSQLI_ASSOC);
+        $transc = mysqli_fetch_all( returnQuery("SELECT * FROM transactions WHERE user_id = '$user_id' AND is_credit = 0 ORDER BY created_at DESC LIMIT 5"), MYSQLI_ASSOC);
 
         foreach ($transc as $trans) {
             if ($trans['type'] == 0) {

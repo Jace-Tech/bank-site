@@ -40,7 +40,7 @@ require_once 'inc/header.php';
                 </thead>
                 <tbody>
                   <?php
-                  $all_transactions = mysqli_fetch_all(returnQuery("SELECT * FROM transactions ORDER BY created_at DESC"), MYSQLI_ASSOC);
+                  $all_transactions = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE is_credit = 0 ORDER BY created_at DESC"), MYSQLI_ASSOC);
                   foreach ($all_transactions as $transactions) {
                     $u_id = $transactions['user_id'];
                     $user = executeQuery("SELECT * FROM users WHERE id = '$u_id'");

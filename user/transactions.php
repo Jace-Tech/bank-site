@@ -38,7 +38,7 @@ require_once 'inc/header.php';
                 </thead>
                 <tbody>
                   <?php
-                  $all_transactions = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE user_id = '$user_id' AND status = 'approved' ORDER BY created_at DESC"), MYSQLI_ASSOC);
+                  $all_transactions = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE user_id = '$user_id' AND is_credit = 0 AND status = 'approved' ORDER BY created_at DESC"), MYSQLI_ASSOC);
                   if (count($all_transactions)) {
                     foreach ($all_transactions as $transaction) {
                       extract($transaction); ?>

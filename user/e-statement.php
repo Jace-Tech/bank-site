@@ -12,7 +12,7 @@ if (isset($_POST['print'])) {
   $end = sanitize($_POST['end']);
   $id = sanitize($_POST['id']);
 
-  $query = returnQuery("SELECT * FROM transactions WHERE created_at >= '$start' AND created_at <= '$end' AND status = 'approved' ORDER BY created_at DESC");
+  $query = returnQuery("SELECT * FROM transactions WHERE created_at >= '$start' AND created_at <= '$end' AND status = 'approved' AND is_credit = 0 ORDER BY created_at DESC");
   $transactions = mysqli_fetch_all($query, MYSQLI_ASSOC);
 
   if (!$transactions) {

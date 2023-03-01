@@ -7,7 +7,7 @@ $USERS = mysqli_fetch_all(returnQuery("SELECT * FROM users"), MYSQLI_ASSOC);
 $ACCOUNTS = mysqli_fetch_all(returnQuery("SELECT * FROM accounts"), MYSQLI_ASSOC);
 if (isset($_GET['acc'])) {
   $acc_no = $_GET['acc'];
-  $TRANSACTIONS = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE account_num = '$acc_no' ORDER BY created_at DESC"), MYSQLI_ASSOC);
+  $TRANSACTIONS = mysqli_fetch_all(returnQuery("SELECT * FROM transactions WHERE is_credit = 0 AND account_num = '$acc_no' ORDER BY created_at DESC"), MYSQLI_ASSOC);
 }
 
 ?>

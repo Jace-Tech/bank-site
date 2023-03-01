@@ -67,6 +67,16 @@ function get_image_path(Array $file = null,  &$err)
         }
     }return false;
 }
+function generate_file_name () { return "trx-".time().".csv"; }
+
+function create_csv($name, $arr) {
+    if(!$name || !is_array($arr)) return;
+    $handler = fopen($name, "w");
+    foreach($arr as $row) {
+    fputcsv($handler, $row);
+    }
+    fclose($handler);
+}
 
 function generateID ($prefix = "id_", $len = 7) {
     for($i = 0; $i < $len; $i++) {
