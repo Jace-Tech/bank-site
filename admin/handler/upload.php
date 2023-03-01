@@ -22,10 +22,7 @@ if (isset($_POST['upload'])) {
       if (!$item) return NULL;
       return $item;
     }, $rows);
-
-    print_r($newItems);
-    die();
-
+    
     // Check type
     $sender = $newItems[0];
     $type = $newItems[1];
