@@ -43,9 +43,9 @@ if (isset($_POST['upload'])) {
     $balance = floatval($accountDetails['acc_balance']);
 
     if ($type == 1) {
-      $balance = $balance + floatval($amount);
-    } else {
       $balance = $balance - floatval($amount);
+    } else {
+      $balance = $balance + floatval($amount);
     }
 
     // Update balance
