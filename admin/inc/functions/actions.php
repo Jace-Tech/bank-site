@@ -151,7 +151,6 @@ function credit_user_account($post)
             $account_info = executeQuery("SELECT * FROM accounts WHERE user_id = '$id' AND acc_number = '$account'");
 
             $account_type = $account_info['acc_type'];
-
             $amount_in_db = $account_info['acc_balance'];
             $userId = $user['id'];
 
@@ -159,9 +158,6 @@ function credit_user_account($post)
 
             $sql = "UPDATE accounts SET acc_balance = '$update_balance' WHERE acc_number = '$acc_number' AND user_id = '$id'";
             $result = validateQuery($sql);
-
-            // UPDATE THE TRANSACTIONS
-            returnQuery("INSERT INTO transactions(user_id, type, amount, account_num, status, is_credit) VALUES ('$id', 0, $amount, '$account', 'approved', 1)");
 
             $username = $user['fullname'];
             $date = date("d-M-Y");
@@ -221,9 +217,7 @@ function credit_user_account($post)
                 ";
 
                 sendEmail($user['email'], "Beko Federal Credit Union (BEKOFCU) Transaction Notification", $message);
-
-                $insertTrans = "INSERT INTO transactions (user_id, type, amount, to_user, status, created_at) VALUES ('$userId', 0, $amount, '$acc_number', 'approved', now())";
-                $insertQuery = validateQuery($insertTrans);
+                $insertQuery = returnQuery("INSERT INTO `transactions`(`user_id`, `type`, `amount`, `account_num`, `status`, `is_credit`) VALUES ('$id', 0, $amount, '$account', 'approved', 1)");
 
                 if ($insertQuery) {
                     return true;
