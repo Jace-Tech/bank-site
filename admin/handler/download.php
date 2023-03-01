@@ -20,20 +20,21 @@ if (isset($_POST['download'])) {
     return $item;
   }, $TRANSACTIONS);
 
-  // Convert to CSV
-  $filename = generate_file_name();
-  create_csv($filename, $arr);
-  // Download
-  header('Content-Type: application/octet-stream');
-  header("Content-Transfer-Encoding: utf-8");
-  header("Content-disposition: attachment; filename=\"" . basename($filename) . "\"");
+  print_r($arr);
 
-  readfile($filename);
+  // Convert to CSV
+  // $filename = generate_file_name();
+  // create_csv($filename, $arr);
+  // Download
+  // header('Content-Type: application/octet-stream');
+  // header("Content-Transfer-Encoding: utf-8");
+  // header("Content-disposition: attachment; filename=\"" . basename($filename) . "\"");
+
+  // readfile($filename);
 
   // Delete
 
   // sleep(4);
-  set_time_limit(0);
-  unlink($filename);
-  // header("Location: ../download-history");
+  // set_time_limit(0);
+  // unlink($filename);
 }
