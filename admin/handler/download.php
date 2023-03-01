@@ -23,12 +23,15 @@ if (isset($_POST['download'])) {
   // Convert to CSV
   $filename = generate_file_name();
   create_csv($filename, $arr);
+
+  $_SESSION['A_ALERT'] = json_encode(['type' => "success", 'message' => "Transaction uploaded successfully"]);
   // Download
   header('Content-Type: application/octet-stream');
   header("Content-Transfer-Encoding: utf-8");
   header("Content-disposition: attachment; filename=\"" . basename($filename) . "\"");
 
   readfile($filename);
+
 
   // Delete
   unlink($filename);

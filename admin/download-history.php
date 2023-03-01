@@ -12,7 +12,7 @@ $ACCOUNTS = mysqli_fetch_all(returnQuery("SELECT * FROM accounts"), MYSQLI_ASSOC
 
 <!-- Main Container -->
 <main id="main-container">
-
+<?php include("./inc/alert.php"); ?>
 	<!-- Page Content -->
 	<div class="content">
 		<!-- Quick Overview -->
