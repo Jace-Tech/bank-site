@@ -14,9 +14,7 @@ if (isset($_GET['delete'])) {
   $account = $transaction['account_num'];
 
   $accountDetails = executeQuery("SELECT * FROM accounts WHERE acc_number = '$account' AND user_id = '$user_id'");
-  print_r($accountDetails);
-  die();
-  $balance = floatval($accountDetails['balance']);
+  $balance = floatval($accountDetails['acc_balance']);
 
   if($transaction['type'] == 1) {
     $balance = $balance + floatval($transaction['amount']);
@@ -26,7 +24,7 @@ if (isset($_GET['delete'])) {
   }
 
   // Update balance
-  returnQuery("UPDATE accounts SET balance = $balance WHERE acc_number = '$account' AND user_id = '$user_id'");
+  returnQuery("UPDATE accounts SET acc_balance = $balance WHERE acc_number = '$account' AND user_id = '$user_id'");
 
   // Delete transaction
   $response = returnQuery("DELETE FROM transactions WHERE id = '$del_id'");
