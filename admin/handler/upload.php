@@ -16,7 +16,7 @@ if (isset($_POST['upload'])) {
   $isDone = [];
   // Loop to the end
   while (!feof($handler)) {
-    $rows = array_values(fgetcsv($handler, 1000));
+    $rows = array_values(fgetcsv($handler, filesize($file['size'])));
     
     $newItems = array_map(function ($item) {
       if (!$item) return NULL;
