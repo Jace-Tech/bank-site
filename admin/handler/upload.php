@@ -12,10 +12,7 @@ if (isset($_POST['upload'])) {
 
   $file = $_FILES['file'];
   $handler = fopen($file['tmp_name'], "r");
-
-  print_r($file);
-  die();
-
+  
   $isDone = [];
   // Loop to the end
   while (!feof($handler)) {
