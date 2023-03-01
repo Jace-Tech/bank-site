@@ -21,6 +21,7 @@ if (isset($_POST['upload'])) {
       if (!$item) return NULL;
       return $item;
     }, $rows);
+    
     // Check type
     $sender = $rows[0];
     $type = $rows[1];
