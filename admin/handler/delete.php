@@ -13,6 +13,8 @@ if (isset($_GET['delete'])) {
   $account = $transaction['account_num'];
 
   $accountDetails = executeQuery("SELECT * FROM accounts WHERE acc_number = '$account' AND user_id = '$user_id'");
+  print_r($accountDetails);
+  die();
   $balance = floatval($accountDetails['balance']);
 
   if($transaction['type'] == 1) {
