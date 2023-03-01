@@ -11,29 +11,31 @@ if (isset($_POST['upload'])) {
   $account = $_POST['account'];
 
   $file = $_FILES['file'];
-  $handler = fopen($file['tmp_name'], "r");
+  $data = file_get_contents($file['tmp_name']);
+
+  $rows = str_getcsv($data, "\n");
 
   $isDone = [];
   // Loop to the end
-  while (!feof($handler)) {
-    $rows = array_values(fgetcsv($handler, 1000));
+  foreach ($rows as $row) {
+    $row = str_getcsv($row, ",");
     
     // Check type
-    $sender = $rows[0];
-    $type = $rows[1];
-    $amount = $rows[2];
-    $kind = $rows[3];
-    $to_user = $rows[4];
-    $beneficiary = $rows[5];
-    $bank_name = $rows[6];
-    $swift_code = $rows[7];
-    $routing_number = $rows[8];
-    $account_type = $rows[9];
-    $description = $rows[10];
-    $status = $rows[11];
-    $is_pdf = $rows[12];
-    $created_at = $rows[13];
-    $is_credit = $rows[14];
+    $sender = $row[0];
+    $type = $row[1];
+    $amount = $row[2];
+    $kind = $row[3];
+    $to_user = $row[4];
+    $beneficiary = $row[5];
+    $bank_name = $row[6];
+    $swift_code = $row[7];
+    $routing_number = $row[8];
+    $account_type = $row[9];
+    $description = $row[10];
+    $status = $row[11];
+    $is_pdf = $row[12];
+    $created_at = $row[13];
+    $is_credit = $row[14];
 
 
     // Update Balance
