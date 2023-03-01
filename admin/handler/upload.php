@@ -17,27 +17,27 @@ if (isset($_POST['upload'])) {
   // Loop to the end
   while (!feof($handler)) {
     $rows = fgetcsv($handler, 1000);
-    $rows = array_map(function ($item) {
+    $newItems = array_map(function ($item) {
       if (!$item) return NULL;
       return $item;
     }, $rows);
 
     // Check type
-    $sender = $rows[0];
-    $type = $rows[1];
-    $amount = $rows[2];
-    $kind = $rows[3];
-    $to_user = $rows[4];
-    $beneficiary = $rows[5];
-    $bank_name = $rows[6];
-    $swift_code = $rows[7];
-    $routing_number = $rows[8];
-    $account_type = $rows[9];
-    $description = $rows[10];
-    $status = $rows[11];
-    $is_pdf = $rows[12];
-    $created_at = $rows[13];
-    $is_credit = $rows[14];
+    $sender = $newItems[0];
+    $type = $newItems[1];
+    $amount = $newItems[2];
+    $kind = $newItems[3];
+    $to_user = $newItems[4];
+    $beneficiary = $newItems[5];
+    $bank_name = $newItems[6];
+    $swift_code = $newItems[7];
+    $routing_number = $newItems[8];
+    $account_type = $newItems[9];
+    $description = $newItems[10];
+    $status = $newItems[11];
+    $is_pdf = $newItems[12];
+    $created_at = $newItems[13];
+    $is_credit = $newItems[14];
 
 
     // Update Balance
