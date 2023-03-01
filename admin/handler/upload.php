@@ -15,7 +15,18 @@ if (isset($_POST['upload'])) {
   // Loop to the end
   while (!feof($handler)) {
     $rows = fgetcsv($handler, filesize($file['size']));
-    print_r($rows);
+    $modified = 
+    $rows = array_map(function ($item){
+      if(!$item) return NULL;
+      return $item;
+    }, $rows);
+
+    var_dump($rows);
+    die();
+
+    // Check type
+    $type = $rows[1];
+    $amount = $rows[2];
   }
 
   // Add to Database
