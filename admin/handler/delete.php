@@ -11,9 +11,11 @@ if (isset($_GET['delete'])) {
   $transaction = executeQuery("SELECT * FROM transactions WHERE id = '$del_id'");
 
   $user_id = $transaction['user_id'];
-  $account = $transaction['account_num'] ?? $transaction['to_user'];
+  $account = $transaction['account_num'];
 
   $accountDetails = executeQuery("SELECT * FROM accounts WHERE acc_number = '$account' AND user_id = '$user_id'");
+  print_r($accountDetails);
+  die();
   $balance = floatval($accountDetails['balance']);
 
   if($transaction['type'] == 1) {

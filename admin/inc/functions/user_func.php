@@ -339,7 +339,7 @@ function confirmPin($post) {
                             <h3 style='color: #fff !important'>You just logged in to your account!</h3> 
                             <p><i>Didn't initiate this?</i></p> <hr>
                 
-                            <a style='background: blue; color: #fff !important; padding: 7px; text-decoration: none;' href='bekofcu.com.com/user/logout'>Logout User</a>
+                            <a style='background: blue; color: #fff !important; padding: 7px; text-decoration: none;' href='bekofcu.com/user/logout'>Logout User</a>
                 
                             <p class='text-center mt-2'><i>Beko Federal Credit Union (BEKOFCU)</i></p>
                         </div>
