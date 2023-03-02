@@ -10,7 +10,6 @@ if (isset($_POST['generate'])) {
 
   $user_account = $_POST['user-account'];
   $user = $_POST['user'];
-  $name = $_POST['recipient-name'];
   $amount = $_POST['amount'];
   $type = $_POST['type'];
   $date = $_POST['date'];
