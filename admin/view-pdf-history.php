@@ -45,7 +45,7 @@ $TRANSACTIONS = mysqli_fetch_all(returnQuery("SELECT * FROM pdf ORDER BY date DE
                           <td style="font-size: .9rem; font-weight: 300;"> <?= ucwords($transaction['name']); ?> </td>
                           <td style="font-size: .9rem; font-weight: 300;"> <?= ucfirst($transaction['description']); ?> </td>
                           <td style="font-size: .9rem; font-weight: 300;"> <?= ucfirst($transaction['account_type']); ?> </td>
-                          <td style="font-size: .9rem; font-weight: 500;"> $<?= number_format($transaction['amount']); ?> </td>
+                          <td style="font-size: .9rem; font-weight: 500;"> $<?= number_format($transaction['amount'], ($transaction['amount'] == (int)$transaction['amount']) ? 0 : 2); ?> </td>
                         </tr>
                       <?php endforeach; ?>
                       <tr>
@@ -87,7 +87,7 @@ $TRANSACTIONS = mysqli_fetch_all(returnQuery("SELECT * FROM pdf ORDER BY date DE
       <?php if (count($TRANSACTIONS)) : ?>
         <?php foreach ($TRANSACTIONS as $transaction) : ?>
           <tr>
-            <td style="font-size: .9rem; font-weight: 600;"> $<?= number_format($transaction['amount']); ?> </td>
+            <td style="font-size: .9rem; font-weight: 600;"> $<?= number_format($transaction['amount'], ($transaction['amount'] == (int)$transaction['amount']) ? 0 : 2); ?> </td>
             <td style="font-size: .9rem; font-weight: 300;"> <?= ucfirst($transaction['kind']); ?> </td>
             <td style="font-size: .9rem; font-weight: 300;">
               <?php $badge = ($transaction['status'] == "approved" ? "badge-success" : ($transaction['status'] == "pending" ? "badge-warning" : "badge-danger")) ?>

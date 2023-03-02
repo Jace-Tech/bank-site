@@ -64,7 +64,7 @@ require_once 'inc/header.php';
                       <td>
                         <span style="white-space: nowrap; text-overflow: ellipsis;"><?= $transactions['description'] ? sub_word($transactions['description'], 8) : "<i>No description</i>"; ?></span>
                       </td>
-                      <td class="font-w600 text-right <?= $class ?>">$<?= number_format($transactions['amount']); ?></td>
+                      <td class="font-w600 text-right <?= $class ?>">$<?= number_format($transactions['amount'],  ($transactions['amount'] == (int)$transactions['amount']) ? 0 : 2); ?></td>
                       <td class="font-w600 text-right"><a href="backdate" style="white-space: nowrap;"><strong><?= date("M d, Y - h:i", strtotime($transactions['created_at'])); ?></a></td>
                       <td class="font-w600 text-right">
                         <div class="d-flex align-items-center">

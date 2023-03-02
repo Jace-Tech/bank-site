@@ -41,13 +41,13 @@ $IS_ALLOWED = false;
           </div>
           <div class="col-md-4 py-3">
             <div class="font-size-h1 font-w300 text-black mb-1">
-              USD $<?= number_format($USER_ACCOUNT['acc_balance']); ?>
+              USD $<?= number_format($USER_ACCOUNT['acc_balance'], ($USER_ACCOUNT['acc_balance'] == (int)$USER_ACCOUNT['acc_balance']) ? 0 : 2); ?>
             </div>
             <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Available Balance</a>
           </div>
           <div class="col-md-4 py-3">
             <div class="font-size-h1 font-w300 text-success mb-1">
-              USD $<?= number_format(fetchUsersTransactions(0, $user_id, $USER_ACCOUNT['acc_number'])); ?>
+              USD $<?= number_format(fetchUsersTransactions(0, $user_id, $USER_ACCOUNT['acc_number']), ); ?>
             </div>
             <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Current Balance</a>
           </div>

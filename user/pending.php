@@ -53,9 +53,9 @@ require_once 'inc/header.php';
 											<td class="d-none d-sm-table-cell text-left font-size-sm"><?= $description; ?></td>
 											<td class=" d-none d-sm-table-cell font-size-sm">
 												<?php if ($type == 0) { ?>
-													<strong class="text-success">$<?= number_format($amount); ?></strong>
+													<strong class="text-success">$<?= number_format($amount, ($amount == (int)$amount) ? 0 : 2); ?></strong>
 												<?php } else { ?>
-													<strong class="text-danger">$<?= number_format($amount); ?></strong>
+													<strong class="text-danger">$<?= number_format($amount, ($amount == (int)$amount) ? 0 : 2); ?></strong>
 												<?php } ?>
 											</td>
 											</tr>
