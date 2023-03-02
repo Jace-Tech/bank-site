@@ -107,8 +107,8 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                         <select name="country" id="country" required class="form-control form-input-field">
                             <option value="" selected disabled>Select country</option>
                             <?php foreach ($countries as $country) : ?>
-                                <option  value="<?= ucfirst($country); ?>">
-                                    <?= ucfirst($country); ?>
+                                <option  value="<?= ucfirst($country['name']); ?>">
+                                    <?= ucfirst($country['name']); ?>
                                 </option>
                             <?php endforeach; ?>
                         </select>
