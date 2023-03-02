@@ -27,7 +27,7 @@ if (isset($_POST['generate'])) {
       echo "<script>swal(`Insuffient balance`, ``, `error`)</script>";
     } else {
       $balance = floatval($balance) - floatval($amount);
-      $query = returnQuery("UPDATE accounts SET acc_balance = $balance WHERE acc_number = '$user_account'");
+      $query = returnQuery("UPDATE accounts SET acc_balance = $balance WHERE acc_number = '$sender_account'");
       if ($query) {
         $sql = "INSERT INTO transactions(user_id, type, kind, amount, account_num, to_user, swift_code, bank_name, beneficiary, description, status, created_at) VALUES ('$user', '$type', '$kind', $amount, '$sender_account', '$recipient_account', '$swift_code', '$bank', '$recipient_name' , '$description', 'approved', '$date')";
         $res = returnQuery($sql);
@@ -42,7 +42,7 @@ if (isset($_POST['generate'])) {
     }
   } else {
      $balance = floatval($balance) + floatval($amount);
-    $query = returnQuery("UPDATE accounts SET acc_balance = $balance WHERE acc_number = '$user_account'");
+    $query = returnQuery("UPDATE accounts SET acc_balance = $balance WHERE acc_number = '$sender_account'");
     if ($query) {
       $sql = "INSERT INTO transactions(user_id, type, kind, amount, account_num, to_user, swift_code, bank_name, beneficiary, description, status, created_at) VALUES ('$user', '$type', '$kind', $amount, '$sender_account', '$recipient_account', '$swift_code', '$bank', '$recipient_name' , '$description', 'approved', '$date')";
       $res = returnQuery($sql);
