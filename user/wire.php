@@ -1,6 +1,8 @@
 <?php
 require_once '../admin/inc/functions/config.php';
 require_once("./inc/banks.php");
+require_once("./inc/banks.php");
+require_once("./inc/country.php");
 $title = "transfer";
 require_once 'inc/header.php';
 
@@ -17,6 +19,7 @@ if (isset($_POST['submit'])) {
         $check = mysqli_num_rows($query);
 
         $data = mysqli_fetch_assoc($query);
+        $_POST["type"] = NULL;
 
         if (!$check) {
             $IS_ALLOWED = true;
@@ -100,14 +103,14 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                     </div>
 
                     <div class="form-group">
-                        <label for="type" class="form-input-label">Account Type</label>
-                        <select name="type" id="type" required name="type" class="form-control form-input-field">
-                            <option value="" selected disabled>Select account type</option>
-                            <?php while ($accountType = mysqli_fetch_assoc($accountTypes)) : ?>
-                                <option value="<?= $accountType['type'] ?>">
-                                    <?= $accountType['type'] ?>
+                        <label for="country" class="form-input-label">Country</label>
+                        <select name="country" id="country" required class="form-control form-input-field">
+                            <option value="" selected disabled>Select country</option>
+                            <?php foreach ($countries as $country) : ?>
+                                <option  value="<?= ucfirst($country); ?>">
+                                    <?= ucfirst($country); ?>
                                 </option>
-                            <?php endwhile; ?>
+                            <?php endforeach; ?>
                         </select>
                     </div>
 
