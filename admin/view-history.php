@@ -125,7 +125,7 @@ if (isset($_GET['acc'])) {
     </thead>
 
     <tbody>
-      <?php if (count($TRANSACTIONS)) : ?>
+      <?php if (isset($_GET['acc']) && count($TRANSACTIONS)) : ?>
         <?php foreach ($TRANSACTIONS as $transaction) : ?>
           <tr>
             <td style="font-size: .9rem; font-weight: 600;"> $<?= number_format($transaction['amount']); ?> </td>
