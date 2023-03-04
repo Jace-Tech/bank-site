@@ -47,7 +47,7 @@ $IS_ALLOWED = false;
           </div>
           <div class="col-md-4 py-3">
             <div class="font-size-h1 font-w300 text-success mb-1">
-              USD $<?= number_format(fetchUsersTransactions(0, $user_id, $USER_ACCOUNT['acc_number']), ); ?>
+              USD $<?= number_format(fetchUsersTransactions(0, $user_id, $USER_ACCOUNT['acc_number'])); ?>
             </div>
             <a class="link-fx font-size-sm font-w700 text-uppercase text-muted" href="javascript:void(0)">Current Balance</a>
           </div>

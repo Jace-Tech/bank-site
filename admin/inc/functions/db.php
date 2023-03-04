@@ -88,7 +88,7 @@ function fetch_transactions($type, $user_id) {
 }
 
 function fetchUsersTransactions($type, $user_id, $account) {
-    $sql = "SELECT sum(amount) as total FROM transactions WHERE type = $type AND user_id = '$user_id' AND account_from = '$account'";
+    $sql = "SELECT sum(amount) as total FROM transactions WHERE type = $type AND user_id = '$user_id' AND account_num = '$account'";
     $result = returnQuery($sql);
 
     if ($result) {
