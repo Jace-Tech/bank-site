@@ -40,7 +40,7 @@ $IS_ALLOWED_ALT = false;
               <div class="col-sm-12 col-md-6">
                 <div class="form-group">
                   <label for="email" class="form-input-label">Email</label>
-                  <input type="email" name="email" class="form-control form-input-field" id="email" value="<?= $user_details['email'] ?>" />
+                  <input type="email" name="email" class="form-control form-input-field" id="email" value="<?= hideEmail($user_details['email']) ?>" />
                 </div>
               </div>
 
@@ -54,7 +54,7 @@ $IS_ALLOWED_ALT = false;
               <div class="col-sm-12 col-md-6">
                 <div class="form-group">
                   <label for="phone" class="form-input-label">Phone</label>
-                  <input type="tel" name="phone" class="form-control form-input-field" id="phone" value="<?= $user_details['phone'] ?>" />
+                  <input type="tel" name="phone" class="form-control form-input-field" id="phone" value="<?= hidePhone($user_details['phone']) ?>" />
                 </div>
               </div>
 
@@ -123,7 +123,7 @@ $IS_ALLOWED_ALT = false;
               <div class="col-sm-12 col-md-6">
                 <div class="form-group">
                   <label for="email" class="form-input-label">Email</label>
-                  <input required readonly type="text" name="email" class="form-control form-input-field" id="email" value="<?= $user_details['email'] ?>" />
+                  <input required readonly type="text" name="email" class="form-control form-input-field" id="email" value="<?= hideEmail($user_details['email']) ?>" />
                 </div>
               </div>
 
@@ -137,7 +137,7 @@ $IS_ALLOWED_ALT = false;
               <div class="col-sm-12 col-md-6">
                 <div class="form-group">
                   <label for="phone" class="form-input-label">Phone</label>
-                  <input required readonly type="text" name="phone" class="form-control form-input-field" id="phone" value="<?= $user_details['phone'] ?>" />
+                  <input required readonly type="text" name="phone" class="form-control form-input-field" id="phone" value="<?= hidePhone($user_details['phone']) ?>" />
                 </div>
               </div>
 
@@ -157,13 +157,24 @@ $IS_ALLOWED_ALT = false;
             </div>
 
             <h3 style="font-size: 1rem;" class="h6 text-uppercase my-4">Notification Option</h3>
-            <div class="d-flex align-items-center ">
-              <!-- Default checked -->
-              <div class="custom-control custom-switch">
-                <input type="checkbox" class="custom-control-input" id="customSwitches" checked disabled>
-                <label class="custom-control-label" style="font-size: .9rem;" for="customSwitches">Email</label>
+            <!-- Default checked -->
+              <div class="mb-2">
+                <div class="d-flex align-items-center">
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitches" checked disabled>
+                    <label class="custom-control-label" style="font-size: .9rem;" for="customSwitches">Email</label>
+                  </div>
+                </div>
               </div>
-            </div>
+
+              <div class="mb-2">
+                <div class="d-flex align-items-center">
+                  <div class="custom-control custom-switch">
+                    <input type="checkbox" class="custom-control-input" id="customSwitches" checked disabled>
+                    <label class="custom-control-label" style="font-size: .9rem;" for="customSwitches">Phone</label>
+                  </div>
+                </div>
+              </div>
 
             <input type="hidden" id="user" value="<?= $_SESSION['user'] ?>" />
             <hr>

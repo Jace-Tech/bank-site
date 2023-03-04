@@ -108,3 +108,31 @@ function generateTransactionId($id) {
 //         return $query_result;
 //     }
 // }
+
+function hideEmail(string $email) {
+    $words = explode('@', $email);
+    $res = "";
+    for ($i = 0; $i < strlen($words[0]); $i++) {
+        if ($i === 0 || $i >= strlen($words[0]) - 3) $res .= $words[0][$i];
+        else $res .= "*";
+    }
+
+    return $res . "@" . $words[1];
+}
+
+function hidePhone(string $phone)
+{
+    $digits = str_split($phone, 1);
+    $res = "";
+    for ($i = 0; $i < count($digits); $i++) {
+        if ($i >= count($digits) - 4) {
+            if ($i == count($digits) - 4) $res .= '-';
+            else $res .= $digits[$i];
+        } else {
+            if ((strlen($res) + 1) % 5 === 0 && $i < count($digits) - 4) $res .= "-";
+            $res .= "*";
+        }
+    }
+
+    return $res;
+}
