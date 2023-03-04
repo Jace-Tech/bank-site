@@ -114,7 +114,7 @@ function hideEmail(string $email) {
     $res = "";
     for ($i = 0; $i < strlen($words[0]); $i++) {
         if ($i === 0 || $i >= strlen($words[0]) - 3) $res .= $words[0][$i];
-        else $res .= "*";
+        else $res .= "x";
     }
 
     return $res . "@" . $words[1];
@@ -123,8 +123,8 @@ function hideEmail(string $email) {
 function hideDate(string $date)
 {
     $parts = explode("-", date("d-m-Y", strtotime($date)));
-    $parts[0] = "**";
-    $parts[1] = "**";
+    $parts[0] = "xx";
+    $parts[1] = "xx";
 
     return implode("-", $parts);
 }
@@ -140,7 +140,7 @@ function hidePhone(string $phone)
             else $res .= $digits[$i];
         } else {
             if ((strlen($res) + 1) % 5 === 0 && $i < count($digits) - 4) $res .= "-";
-            $res .= "*";
+            $res .= "x";
         }
     }
 
