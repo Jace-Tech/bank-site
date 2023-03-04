@@ -120,6 +120,16 @@ function hideEmail(string $email) {
     return $res . "@" . $words[1];
 }
 
+function hideDate(string $date)
+{
+    $parts = explode("-", date("d-m-Y", strtotime($date)));
+    $parts[0] = "**";
+    $parts[1] = "**";
+
+    return implode("-", $parts);
+}
+  
+
 function hidePhone(string $phone)
 {
     $digits = str_split($phone, 1);

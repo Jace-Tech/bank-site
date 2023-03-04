@@ -26,23 +26,14 @@ $data = [];
  else print("NOT EMPTY");
 
 
-function hidePhone(string $phone) {
-  $digits = str_split($phone, 1);
-  $res = "";
-  for ($i = 0; $i < count($digits); $i++) {
-      if($i >= count($digits) - 4){
-        if($i == count($digits) - 4) $res .= '-'; 
-        else $res .= $digits[$i];
-      }
-      else {
-          if((strlen($res) + 1) % 5 === 0 && $i < count($digits) - 4) $res .= "-";
-          $res .= "*";
-      }
-  }
+function hideDate(string $date) {
+  $parts = explode("-", date("d-m-Y", strtotime($date)));
+  $parts[0] = "**";
+  $parts[1] = "**";
 
-  return $res;
+  return implode("-", $parts);
 }
 
 
-echo "\n\n" . hidePhone("09052541151");
+echo "\n\n" . hideDate("23/04/2001");
 ?>

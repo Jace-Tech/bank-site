@@ -68,7 +68,7 @@ $IS_ALLOWED_ALT = false;
               <div class="col-sm-12 col-md-6">
                 <div class="form-group">
                   <label for="dob" class="form-input-label">Date Of Birth</label>
-                  <input type="date" name="dob" class="form-control form-input-field" id="dob" value="<?= $user_details['dob'] ?>" />
+                  <input type="date" name="dob" class="form-control form-input-field" id="dob" value="<?= hideDate($user_details['dob']) ?>" />
                 </div>
               </div>
 
@@ -151,7 +151,7 @@ $IS_ALLOWED_ALT = false;
               <div class="col-sm-12 col-md-6">
                 <div class="form-group">
                   <label for="dob" class="form-input-label">Date Of Birth</label>
-                  <input required readonly type="text" name="dob" class="form-control form-input-field" id="dob" value="<?= $user_details['dob'] ?>" />
+                  <input required readonly type="text" name="dob" class="form-control form-input-field" id="dob" value="<?= hideDate($user_details['dob']) ?>" />
                 </div>
               </div>
             </div>
