@@ -3319,7 +3319,7 @@
 
                               <div class="align-center media-image">
 
-                                <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/mobile-online-banking.png?VersionId=xY3AfF2KeraegTj0BIrjwdnl1FXio11U" width="361" height="250" alt="Gray smartphone with Beko Federal Credit Union (BEKOFCU) website on it" loading="lazy" typeof="foaf:Image" class="img-fluid" style="fliter: blur(4px);"/>
+                                <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/mobile-online-banking.png?VersionId=xY3AfF2KeraegTj0BIrjwdnl1FXio11U" width="361" height="250" alt="Gray smartphone with Beko Federal Credit Union (BEKOFCU) website on it" loading="lazy" typeof="foaf:Image" class="img-fluid" style="filter: blur(4px);"/>
                               </div>
                               <div class="button-container align-left"><span class="lead-text">Available now.</span> <a aria-label="Download on the App Store" href="https://itunes.apple.com/us/app/bekofcu-bank-mobile/id1076548973?mt=8" rel="nofollow" target="_blank"><img alt="Download on the App Store" class="app-icon" src="https://q2-canvas-stg-files.s3.amazonaws.com/firstunitedbank/files/2021-04/appstore-icon.png" /></a> <a aria-label="Get it on Google Play" href="https://play.google.com/store/apps/details?id=com.bekofcubank4915.mobile" rel="nofollow" target="_blank"><img alt="Get it on Google Play" class="app-icon" src="https://q2-canvas-stg-files.s3.amazonaws.com/firstunitedbank/files/2021-04/googleplay-icon.png" /></a></div>
 

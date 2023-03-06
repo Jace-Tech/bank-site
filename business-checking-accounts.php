@@ -3383,7 +3383,7 @@
 
                               <div class="align-center media-image">
 
-                                <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/mobile-online-banking.png?VersionId=xY3AfF2KeraegTj0BIrjwdnl1FXio11U" width="361" height="250" alt="Gray smartphone with Beko Federal Credit Union (BEKOFCU) website on it" loading="lazy" typeof="foaf:Image" class="img-fluid" style="fliter: blur(4px);"/>
+                                <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/mobile-online-banking.png?VersionId=xY3AfF2KeraegTj0BIrjwdnl1FXio11U" width="361" height="250" alt="Gray smartphone with Beko Federal Credit Union (BEKOFCU) website on it" loading="lazy" typeof="foaf:Image" class="img-fluid" style="filter: blur(4px);"/>
                               </div>
 
 
