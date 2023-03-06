@@ -3319,9 +3319,9 @@
 
                               <div class="align-center media-image">
 
-                                <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/mobile-online-banking.png?VersionId=xY3AfF2KeraegTj0BIrjwdnl1FXio11U" width="361" height="250" alt="Gray smartphone with Beko Federal Credit Union (BEKOFCU) website on it" loading="lazy" typeof="foaf:Image" class="img-fluid" />
+                                <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/2021-03/mobile-online-banking.png?VersionId=xY3AfF2KeraegTj0BIrjwdnl1FXio11U" width="361" height="250" alt="Gray smartphone with Beko Federal Credit Union (BEKOFCU) website on it" loading="lazy" typeof="foaf:Image" class="img-fluid" style="fliter: blur(4px);"/>
                               </div>
-                              <div class="button-container align-left"><span class="lead-text">Available now.</span> <a aria-label="Download on the App Store" href="https://itunes.apple.com/us/app/first-united-bank-mobile/id1096940973?mt=8" rel="nofollow" target="_blank"><img alt="Download on the App Store" class="app-icon" src="https://q2-canvas-stg-files.s3.amazonaws.com/firstunitedbank/files/2021-04/appstore-icon.png" /></a> <a aria-label="Get it on Google Play" href="https://play.google.com/store/apps/details?id=com.firstunitedbank3715.mobile" rel="nofollow" target="_blank"><img alt="Get it on Google Play" class="app-icon" src="https://q2-canvas-stg-files.s3.amazonaws.com/firstunitedbank/files/2021-04/googleplay-icon.png" /></a></div>
+                              <div class="button-container align-left"><span class="lead-text">Available now.</span> <a aria-label="Download on the App Store" href="https://itunes.apple.com/us/app/bekofcu-bank-mobile/id1076548973?mt=8" rel="nofollow" target="_blank"><img alt="Download on the App Store" class="app-icon" src="https://q2-canvas-stg-files.s3.amazonaws.com/firstunitedbank/files/2021-04/appstore-icon.png" /></a> <a aria-label="Get it on Google Play" href="https://play.google.com/store/apps/details?id=com.bekofcubank4915.mobile" rel="nofollow" target="_blank"><img alt="Get it on Google Play" class="app-icon" src="https://q2-canvas-stg-files.s3.amazonaws.com/firstunitedbank/files/2021-04/googleplay-icon.png" /></a></div>
 
 
 
@@ -3541,7 +3541,7 @@
 
 
                     <p style="padding-bottom:0.3rem;"><strong><a href="tel:+14333325687" aria-label="Beko Federal Credit Union (BEKOFCU) telephone number (433)-332-5687"> (433)-332-5687</a></strong></p>
-                    <a href="https://www.essentialaccessibility.com/first-united-bank?utm_source=firstunitedbankhomepage&amp;utm_medium=iconlarge&amp;utm_term=eachannelpage&amp;utm_content=header&amp;utm_campaign=firstunitedbank" rel="nofollow" target="_blank">
+                    <a href="#" rel="nofollow" target="_blank">
                       <div class="ea-icon media-image">
 
                         <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/eA_icon.png?VersionId=SsLITZS5uBlpllnDlprzko7T.ASz1bJT" width="134" height="50" alt="This icon serves as a link to download the eSSENTIAL Accessibility assistive technology app for individuals with physical disabilities. It is featured as part of our commitment to diversity and inclusion." loading="lazy" typeof="foaf:Image" class="img-fluid" />

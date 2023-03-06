@@ -468,12 +468,12 @@
     <div class="oc-bottom">
       <div class="grid-x align-center">
         <div class="cell small-5 text-center">
-          <a href="https://itunes.apple.com/us/app/first-united-bank-mobile/id1096940973?mt=8" rel="nofollow">
+          <a href="https://itunes.apple.com/us/app/bekofcu-bank-mobile/id1076548973?mt=8" rel="nofollow">
             <img src="sites/default/themes/firstunitedbank-com/images/apple-app.png" alt="Download our app from the App Store.">
           </a>
         </div>
         <div class="cell small-5 text-center oc-app">
-          <a href="https://play.google.com/store/apps/details?id=com.firstunitedbank3715.mobile" rel="nofollow">
+          <a href="https://play.google.com/store/apps/details?id=com.bekofcubank4915.mobile" rel="nofollow">
             <img src="sites/default/themes/firstunitedbank-com/images/google-app.png" alt="Download our app from the Google Play Store.">
           </a>
         </div>

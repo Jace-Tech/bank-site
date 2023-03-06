@@ -3205,7 +3205,7 @@
 
 
                     <p style="padding-bottom:0.3rem;"><strong><a href="tel:+14333325687" aria-label="Beko Federal Credit Union (BEKOFCU) telephone number (433)-332-5687"> (433)-332-5687</a></strong></p>
-                    <a href="https://www.essentialaccessibility.com/first-united-bank?utm_source=firstunitedbankhomepage&amp;utm_medium=iconlarge&amp;utm_term=eachannelpage&amp;utm_content=header&amp;utm_campaign=firstunitedbank" rel="nofollow" target="_blank">
+                    <a href="#" rel="nofollow" target="_blank">
                       <div class="ea-icon media-image">
 
                         <img src="https://trabian-canvas-prd-files.s3.amazonaws.com/firstunitedbank-com/files/image/eA_icon.png?VersionId=SsLITZS5uBlpllnDlprzko7T.ASz1bJT" width="134" height="50" alt="This icon serves as a link to download the eSSENTIAL Accessibility assistive technology app for individuals with physical disabilities. It is featured as part of our commitment to diversity and inclusion." loading="lazy" typeof="foaf:Image" class="img-fluid" />

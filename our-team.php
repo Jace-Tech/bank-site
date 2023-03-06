@@ -3493,7 +3493,7 @@
                     <p style="padding-bottom:0.3rem;"><strong><a href="tel:2022397063"
                           aria-label="Beko Federal Credit Union (BEKOFCU) telephone number (433)-332-5687"> (202)
                           239-7063</a></strong></p>
-                    <a href="https://www.essentialaccessibility.com/first-united-bank?utm_source=firstunitedbankhomepage&amp;utm_medium=iconlarge&amp;utm_term=eachannelpage&amp;utm_content=header&amp;utm_campaign=firstunitedbank"
+                    <a href="#"
                       rel="nofollow" target="_blank">
                       <div class="ea-icon media-image">
 

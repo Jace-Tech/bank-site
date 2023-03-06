@@ -109,7 +109,7 @@ function user_register($post) {
                     "accountPin" => generateNumber(5),
                     "accountCot" => generateNumber(4),
                     "accountImf" => generateNumber(4),
-                    "accountType" => "Savings Account"
+                    "accountType" => "Business Savings Account"
                 ]
                 ];
 
