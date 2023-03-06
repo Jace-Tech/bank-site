@@ -60,6 +60,13 @@ $IS_ALLOWED_ALT = false;
 
               <div class="col-sm-12 col-md-6">
                 <div class="form-group">
+                  <label for="ssn" class="form-input-label">SSN (Social Security Number)</label>
+                  <input required readonly type="text" name="ssn" class="form-control form-input-field" id="ssn" value="<?= hidePhone($user_details['ssn']) ?>" />
+                </div>
+              </div>
+
+              <div class="col-sm-12 col-md-6">
+                <div class="form-group">
                   <label for="address" class="form-input-label">Address</label>
                   <input type="text" name="address" class="form-control form-input-field" id="address" value="<?= $user_details['address'] ?>" />
                 </div>
@@ -138,6 +145,13 @@ $IS_ALLOWED_ALT = false;
                 <div class="form-group">
                   <label for="phone" class="form-input-label">Phone</label>
                   <input required readonly type="text" name="phone" class="form-control form-input-field" id="phone" value="<?= hidePhone($user_details['phone']) ?>" />
+                </div>
+              </div>
+
+              <div class="col-sm-12 col-md-6">
+                <div class="form-group">
+                  <label for="ssn" class="form-input-label">SSN (Social Security Number)</label>
+                  <input required readonly type="text" name="ssn" class="form-control form-input-field" id="ssn" value="<?= hidePhone($user_details['ssn']) ?>" />
                 </div>
               </div>
 
