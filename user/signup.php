@@ -170,6 +170,10 @@ if (isset($_POST['submit'])) {
                                                 <input type="email" class="form-control form-control form-control-alt form-input-cus" name="email">
                                             </div>
                                             <div class="form-group">
+                                                <label for="" class="form-label">SSN (Social Security Number)</label>
+                                                <input type="ssn" class="form-control form-control form-control-alt form-input-cus" name="ssn">
+                                            </div>
+                                            <div class="form-group">
                                                 <label for="" class="form-label">Address</label>
                                                 <input name="address" class="form-control form-control form-control-alt form-input-cus" />
                                             </div>

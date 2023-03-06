@@ -59,6 +59,12 @@ function user_register($post) {
     } else {
         $errors[] = "Enter password!";
     }
+    
+    if (!empty($ssn)) {
+        $ssn = sanitize($ssn);
+    } else {
+        $errors[] = "Enter SSN!";
+    }
 
     if (!empty($confirm_pwd)) {
         $confirm_pwd = sanitize($confirm_pwd);
@@ -83,9 +89,9 @@ function user_register($post) {
         $access = 1;
 
         // Add new user
-        $sql = "INSERT INTO `users`(`id`, `fullname`, `email`, `username`, `phone`, `address`, `dob`, `password`, `access`, `created_at`, `updated_at`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        $sql = "INSERT INTO `users`(`id`, `fullname`, `email`, `username`, `phone`, `ssn`, `address`, `dob`, `password`, `access`, `created_at`, `updated_at`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
         $stmt = mysqli_prepare($link, $sql);
-        mysqli_stmt_bind_param($stmt, 'ssssssssdss', $userId, $fullname, $email, $username, $phone, $address, $dob, $password, $access, $now, $now);
+        mysqli_stmt_bind_param($stmt, 'ssssssssdss', $userId, $fullname, $email, $username, $phone, $ssn, $address, $dob, $password, $access, $now, $now);
         $result = mysqli_stmt_execute($stmt);
         
         if ($result === true) {
