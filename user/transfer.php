@@ -14,6 +14,7 @@ if (isset($_POST["submit"])) {
     $amount = $_POST['amount'];
     $userAccount = $_POST['sender_account'];
     $routing_number = $_POST['routing_number'];
+    $bank = $_POST['bank'] || NULL;
 
     $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' or bank = '$bank'");
         $check = mysqli_num_rows($query);
