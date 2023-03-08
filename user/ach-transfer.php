@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
             else {
                 try{
                     $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, bank_name, beneficiary, amount, to_user, routing_number, account_type, description, created_at, kind) 
-                    VALUES ('$id', 1, '$userAccount', '$bank', '$acc_name', $amount, '$account', '$routing_number', $account_type, '$desc', now(), 'ach transfer')");
+                    VALUES ('$id', 1, '$userAccount', '$bank', '$acc_name', $amount, '$account', '$routing_number', '$account_type', '$desc', now(), 'ach transfer')");
                     if ($response) echo "<script>swal(`Transaction request sent`, `Transaction awaiting approval`, `success`)</script>";
                     else echo "<script>swal(`Transaction failed`, ``, `error`)</script>";
                 }
