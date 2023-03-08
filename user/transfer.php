@@ -32,8 +32,8 @@ if (isset($_POST["submit"])) {
       }
       else {
         try {
-          $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, amount, to_user, routing_number, created_at, kind) 
-          VALUES ('$id', 1, '$userAccount', $amount, '$account', '$routing_number', now(), 'direct deposit')");
+          $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, amount, to_user, routing_number, kind) 
+          VALUES ('$id', 1, '$userAccount', $amount, '$account', '$routing_number', 'direct deposit')");
           if ($response) $IS_ALLOWED_2 = true;
           else echo "<script>swal(`Transaction failed`, ``, `error`)</script>";
         }

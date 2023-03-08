@@ -50,6 +50,10 @@ function executeQuery($statement)
 }
 
 
+function parseQuote($str) {
+    return str_replace("'", "\'", $str);
+}
+
 function encrypt($password) {
     $initialEncryption = md5($password);
     $finalEncryption = sha1($initialEncryption);
