@@ -32,7 +32,9 @@ if (isset($_POST["submit"])) {
       try {
         $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, amount, to_user, routing_number, kind) 
           VALUES ('$id', 1, '$userAccount', $amount, '$account', '$routing_number', 'direct deposit')");
-        if ($response) $IS_ALLOWED_2 = true;
+        if ($response) {
+          $IS_ALLOWED_2 = true;
+        }
         else echo "<script>swal(`Transaction failed`, ``, `error`)</script>";
       } catch (Exception $err) {
         echo "<script>swal(`$err`, ``, `error`)</script>";
@@ -104,13 +106,13 @@ if (isset($_POST["submit"])) {
 </main>
 <!-- END Main Container -->
 
+<?php if ($IS_ALLOWED_2) : ?>
+  <?php require_once 'inc/loader2.php'; ?>
+<?php endif; ?>
+
 <!-- Footer -->
 <?php if ($IS_ALLOWED) : ?>
   <?php require_once 'inc/loader.php'; ?>
-<?php endif; ?>
-
-<?php if ($IS_ALLOWED_2) : ?>
-  <?php require_once 'inc/loader2.php'; ?>
 <?php endif; ?>
 
 
