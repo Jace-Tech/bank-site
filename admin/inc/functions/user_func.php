@@ -328,6 +328,9 @@ function confirmPin($post) {
         $sql = "SELECT * FROM accounts WHERE acc_pin = '$pin' AND user_id = '$user_id'";
         $result = executeQuery($sql);
 
+        $user = executeQuery("SELECT * FROM users WHERE id = '$user_id'");
+        $email = $user['email'];
+
         if ($result) {
             $_SESSION['user'] = $user_id;
             $message = "

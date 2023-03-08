@@ -17,7 +17,7 @@ if (isset($_POST["submit"])) {
     $bank = NULL;
 
     $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' OR bank = '$bank'");
-        $check = mysqli_num_rows($query);
+    $check = mysqli_num_rows($query);
 
     if (!$check) {
       $IS_ALLOWED = true;
