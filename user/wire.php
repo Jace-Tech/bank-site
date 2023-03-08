@@ -24,6 +24,7 @@ if (isset($_POST['submit'])) {
         if (!$check) {
             $IS_ALLOWED = true;
         } else {
+            $IS_ALLOWED = false;
             $response = wire_transfer($_POST, $id);
             if ($response === true) {
                 echo "<script>swal(`Transaction request sent`, `Transaction awaiting approval`, `success`)</script>";

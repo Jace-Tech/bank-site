@@ -27,6 +27,7 @@ if (isset($_POST['submit'])) {
         if (!$check) {
             $IS_ALLOWED = true;
         } else {
+            $IS_ALLOWED = false;
             $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, bank_name, beneficiary, amount, to_user, routing_number, account_type, description, created_at, kind) 
             VALUES ('$id', 1, '$userAccount', '$bank', '$acc_name', $amount, '$account', '$routing_number', $account_type, '$desc', now(), 'ach transfer')");
             if ($response) {
