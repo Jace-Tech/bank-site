@@ -1,6 +1,8 @@
 <?php  
 
-include("./admin/inc/functions/db.php")
+include("./admin/inc/functions/user_func.php");
+
+handleReportIp();
 // $data = realpath(dirname("/admin/signin.php"));
 
 // echo $data;
