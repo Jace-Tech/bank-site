@@ -76,11 +76,6 @@ require_once 'inc/header.php';
                   </tr>
 
                   <tr>
-                    <th>Transaction Type</th>
-                    <td><?= $trxType ?? "<i>NULL</i>" ?></td>
-                  </tr>
-
-                  <tr>
                     <th>Transaction Date</th>
                     <td><?= date("D d, M Y - H:i:s", strtotime($details['created_at'])) ?? "<i>NULL</i>" ?></td>
                   </tr>
@@ -133,13 +128,13 @@ require_once 'inc/header.php';
                   </tr>
 
                   <tr>
-                    <th>Swift Code</th>
-                    <td><?= $details['swift_code'] ?? "<i>NULL</i>" ?></td>
-                  </tr>
-
-                  <tr>
-                    <th>Transaction Type</th>
-                    <td><?= $details['type'] ?? "<i>NULL</i>" ?></td>
+                    <?php if($details['kind'] === "ach transfer"): ?>
+                      <th>Routing / ABA</th>
+                      <td class="font-weight-bold font-w600"><?= strtoupper($details['swift_code']) ?? "<i>NULL</i>" ?></td>
+                    <?php else: ?>
+                      <th>Swift Code</th>
+                      <td><?= $details['swift_code'] ?? "<i>NULL</i>" ?></td>
+                    <?php endif; ?>
                   </tr>
 
                   <tr>
