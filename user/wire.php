@@ -31,10 +31,10 @@ if (isset($_POST['submit'])) {
                 $errors = $response;
                 if (is_array($errors)) {
                     foreach ($errors as $err) {
-                        echo "<script>alert('$err')</s>";
+                        echo "<script>alert(`$err`)</script>";
                     }
                 } else {
-                    echo "<script>alert('$errors')</script>";
+                    echo "<script>alert(`$errors`)</script>";
                 }
             }
         }
@@ -98,9 +98,11 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                     </div>
 
                     <div class="form-group">
-                        <label for="routing" class="form-input-label">Routing / ABA</label>
-                        <input type="text" required maxLength="9" id="routing" name="routing_number" class="form-control form-input-field">
+                        <label for="swift" class="form-input-label">Swift Code</label>
+                        <input type="text" required name="swift_code" id="swift" class="form-control form-input-field">
                     </div>
+
+                    <input type="hidden" value="1" name="type" />
 
                     <div class="form-group">
                         <label for="country" class="form-input-label">Country</label>

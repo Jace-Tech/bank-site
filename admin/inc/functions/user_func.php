@@ -737,7 +737,7 @@ function wire_transfer($post, $user_id) {
         $errors[] = "Enter bank name!";
     }
 
-    if (!empty($type)) {
+    if (!empty($swift_code)) {
         $swift_code = sanitize($swift_code);
     } else {
         $err_flag = true;
