@@ -37,7 +37,7 @@ if (isset($_POST["submit"])) {
           else echo "<script>swal(`Transaction failed`, ``, `error`)</script>";
         }
         catch(Exception $err) {
-            echo "<script>swal(`$err`, ``, `error`)</script>";
+          echo "<script>swal(`$err`, ``, `error`)</script>";
         }
       }
     }
