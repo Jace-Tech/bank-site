@@ -7,7 +7,11 @@ if (isset($_GET['tid']) && isset($_GET['userid']) && isset($_GET['amount']) && i
 
     // TODO: FIX THE USERS / ACCOUNTS SLASH
 
-    $sql = "UPDATE transactions SET approved = 1 WHERE id = '$t_id'";
+    // get the account
+    $trx = executeQuery("SELECT * FROM transactions WHERE id = '$t_id'");
+    $account = $trx['account_num'];
+
+    $sql = "UPDATE transactions SET status = 'approved' WHERE id = '$t_id'";
     $query = validateQuery($sql);
 
     if ($query === true) {
@@ -15,7 +19,7 @@ if (isset($_GET['tid']) && isset($_GET['userid']) && isset($_GET['amount']) && i
         $id = $_GET['userid'];
         $amount = $_GET['amount'];
 
-        $sql2 = "SELECT * FROM users WHERE id = '$id'";
+        $sql2 = "SELECT * FROM accounts WHERE user_id = '$id' AND acc_number = '$account'";
         $query2 = executeQuery($sql2);
 
         if ($query2) {
@@ -25,35 +29,15 @@ if (isset($_GET['tid']) && isset($_GET['userid']) && isset($_GET['amount']) && i
 
             $updated_bal = $current_bal - $amount;
 
-            $sql3 = "UPDATE users SET acc_balance = '$updated_bal' WHERE id = '$id'";
+            $sql3 = "UPDATE accounts SET acc_balance = '$updated_bal' WHERE user_id = '$id' AND acc_number = '$account'";
             $query3 = validateQuery($sql3);
 
             if ($query3 === true) {
-
-                $recipent = $_GET['to'];
-
-                $sql4 = "SELECT * FROM users WHERE acc_number = '$recipent'";
-                $query4 = executeQuery($sql4);
-
-                if ($query4) {
-                    $recp = $query4;
-
-                    $recp_bal = $recp['acc_balance'];
-
-                    $update_recp = $recp_bal + $amount;
-
-                    $sql5 = "UPDATE users SET acc_balance = '$update_recp' WHERE acc_number = '$recipent'";
-                    $query5 = validateQuery($sql5);
-
-                    if ($query5 === true) {
-                        echo "true";
-                    } else {
-                        echo "false";
-                    }
-                }
-            } 
+                echo "true";
+            } else {
+                echo "false";
+            }
         }
         
-
     }
 }

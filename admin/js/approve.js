@@ -26,10 +26,10 @@ const approve = (element) => {
 
     fetch(`api/approve.php?tid=${tid}&userid=${userid}&amount=${amount}&to=${to}`).then(e => e).then(e => e.text()).then(e => {
         if (e == "true") {
-            alert("Transaction Approved!");
+            swal("Transaction Approved!", "", "success");
             element.parentElement.parentElement.remove();
         } else {
-            alert("Error! Try again!");
+            swal("Error! Try again!", "", "error");
         }
     })
 }
