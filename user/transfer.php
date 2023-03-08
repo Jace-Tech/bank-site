@@ -24,7 +24,7 @@ if (isset($_POST["submit"])) {
     } else {
       // 
       $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, amount, to_user, routing_number, created_at, kind) 
-      VALUES ($id, 1, '$userAccount', $amount, '$account', '$routing_number', now(), 'direct deposit')");
+      VALUES ('$id', 1, '$userAccount', $amount, '$account', '$routing_number', now(), 'direct deposit')");
       if ($response === true) {
         echo "<script>swal(`Transaction request sent`, `Transaction awaiting approval`, `success`)</script>";
       } else {
