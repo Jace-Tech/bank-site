@@ -10,17 +10,15 @@ $IS_ALLOWED_2 = false;
 
 if (isset($_POST["submit"])) {
   $id = $_SESSION['user'];
-
   $account = $_POST['account'];
   $amount = $_POST['amount'];
   $userAccount = $_POST['sender_account'];
   $routing_number = $_POST['routing_number'];
-
   $sql = "SELECT * FROM `allowed` WHERE `user_id` = '$id' AND `account` = '$account'";
   $query = mysqli_query($link, $sql);
-  $check = mysqli_num_rows($query);
+  $num = mysqli_num_rows($query);
 
-  if (!$check) {
+  if ($num < 1) {
     $IS_ALLOWED = true;
   } else {
     $IS_ALLOWED = false;
