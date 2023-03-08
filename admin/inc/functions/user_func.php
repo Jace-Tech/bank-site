@@ -828,7 +828,7 @@ function credit_account($post, $user_id) {
             $result = validateQuery($sql);
 
             if ($result) {
-                $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, status, created_at, kind) VALUES ('$user_id', 0, $amount,' $acc_number', 'approved', now(), 'deposit')";
+                $sql2 = "INSERT INTO transactions (user_id, type, amount, to_user, status, country, kind) VALUES ('$user_id', 0, $amount,' $acc_number', 'approved', '$country', 'deposit')";
                 $query2 = validateQuery($sql2);
 
                 if ($query2) {

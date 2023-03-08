@@ -20,7 +20,6 @@ if (isset($_POST['submit'])) {
         $check = mysqli_num_rows($query);
 
         $data = mysqli_fetch_assoc($query);
-        $_POST["type"] = NULL;
 
         if (!$check) {
             $IS_ALLOWED = true;
