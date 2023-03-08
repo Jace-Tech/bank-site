@@ -94,7 +94,7 @@ require_once 'inc/header.php';
                 <tbody>
                   <tr>
                     <th>Transaction ID</th>
-                    <td><?= $id ?></td>
+                    <td><?= $_GET['trx-id'] ?></td>
                   </tr>
 
                   <tr>
