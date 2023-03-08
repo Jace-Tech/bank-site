@@ -110,7 +110,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                     <div class="form-group">
                         <label for="type" class="form-input-label">Account Type</label>
                         <select id="type" required name="account_type" class="form-control form-input-field">
-                            <option value="" selected disabled>Select account type</option>
+                            <option value="" disabled>Select account type</option>
                             <?php while ($accountType = mysqli_fetch_assoc($accountTypes)) : ?>
                                 <option value="<?= $accountType['type'] ?>">
                                     <?= $accountType['type'] ?>
