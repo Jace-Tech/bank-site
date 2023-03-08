@@ -7,6 +7,7 @@ $title = "transfer";
 require_once 'inc/header.php';
 
 $IS_ALLOWED = false;
+$IS_ALLOWED_2 = false;
 
 
 if (isset($_POST['submit'])) {
@@ -27,7 +28,7 @@ if (isset($_POST['submit'])) {
             $IS_ALLOWED = false;
             $response = wire_transfer($_POST, $id);
             if ($response === true) {
-                echo "<script>swal(`Transaction request sent`, `Transaction awaiting approval`, `success`)</script>";
+                $IS_ALLOWED_2 = true;
             } else {
                 $errors = $response;
                 if (is_array($errors)) {
@@ -149,6 +150,10 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
 <!-- Footer -->
 <?php if($IS_ALLOWED):?>
     <?php require_once 'inc/loader.php'; ?>
+<?php endif; ?>
+
+<?php if($IS_ALLOWED_2):?>
+    <?php require_once 'inc/loader2.php'; ?>
 <?php endif; ?>
 
 <?php require_once 'inc/footer.php'; ?>
