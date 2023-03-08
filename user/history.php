@@ -130,7 +130,7 @@ require_once 'inc/header.php';
                   <tr>
                     <?php if($details['kind'] === "ach transfer"): ?>
                       <th>Routing / ABA</th>
-                      <td class="font-weight-bold font-w600"><?= strtoupper($details['swift_code']) ?? "<i>NULL</i>" ?></td>
+                      <td class=""><?= $details['swift_code'] ?? "<i>NULL</i>" ?></td>
                     <?php else: ?>
                       <th>Swift Code</th>
                       <td><?= $details['swift_code'] ?? "<i>NULL</i>" ?></td>
@@ -139,7 +139,7 @@ require_once 'inc/header.php';
 
                   <tr>
                     <th>Transaction Kind</th>
-                    <td><?= $details['kind'] ?? "<i>NULL</i>" ?></td>
+                    <td style="font-weight: 600;"><?= strtoupper($details['kind']) ?? "<i>NULL</i>" ?></td>
                   </tr>
 
                   <tr>
