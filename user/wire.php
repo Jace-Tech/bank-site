@@ -39,6 +39,7 @@ if (isset($_POST['submit'])) {
             }
         }
     }
+    unset($_POST['submit']);
 }
 
 $accountTypes = returnQuery("SELECT * FROM `account_type`");

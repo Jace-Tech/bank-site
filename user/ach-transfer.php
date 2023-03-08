@@ -10,8 +10,14 @@ $IS_ALLOWED = false;
 if (isset($_POST['submit'])) {
     if (isset($_SESSION['user'])) {
         $id = $_SESSION['user'];
+        $userAccount = $_POST['sender_account'];
         $account = $_POST['recipent'];
+        $amount = $_POST['amount'];
         $bank = $_POST['bank_name'];
+        $acc_name = $_POST['acc_name'];
+        $desc = $_POST['desc'];
+        $account_type = $_POST['account_type'];
+        $routing_number = $_POST['routing_number'];
 
         $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' AND bank = '$bank'");
         $check = mysqli_num_rows($query);
@@ -21,10 +27,11 @@ if (isset($_POST['submit'])) {
         if (!$check) {
             $IS_ALLOWED = true;
         } else {
-            $response = wire_transfer($_POST, $id);
+            $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, bank_name, beneficiary, amount, to_user, routing_number, account_type, description, created_at, kind) 
+            VALUES ('$id', 1, '$userAccount', '$bank', '$acc_name', $amount, '$account', '$routing_number', $account_type, '$desc', now(), 'ach transfer')");
             if ($response === true) {
                 echo "<script>swal(`Transaction request sent`, `Transaction awaiting approval`, `success`)</script>";
-            } else {
+            } else { 
                 $errors = $response;
                 if (is_array($errors)) {
                     foreach ($errors as $err) {
@@ -36,6 +43,7 @@ if (isset($_POST['submit'])) {
             }
         }
     }
+    unset($_POST['submit']);
 }
 
 $accountTypes = returnQuery("SELECT * FROM `account_type`");
@@ -95,7 +103,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
 
                     <div class="form-group">
                         <label for="type" class="form-input-label">Account Type</label>
-                        <select name="type" id="type" required name="type" class="form-control form-input-field">
+                        <select name="type" id="type" required name="account_type" class="form-control form-input-field">
                             <option value="" selected disabled>Select account type</option>
                             <?php while ($accountType = mysqli_fetch_assoc($accountTypes)) : ?>
                                 <option value="<?= $accountType['type'] ?>">
@@ -115,7 +123,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                         <textarea name="desc" id="desc" class="form-control form-input-field"></textarea>
                     </div>
 
-                    <input type="hidden" id="user" value="<?= $_SESSION['user'] ?>" />
+                    <input type="hidden" id="user" name="user" value="<?= $_SESSION['user'] ?>" />
 
                     <hr>
                     <div class="form-group" id="make_transfer">

@@ -14,9 +14,8 @@ if (isset($_POST["submit"])) {
     $amount = $_POST['amount'];
     $userAccount = $_POST['sender_account'];
     $routing_number = $_POST['routing_number'];
-    $bank = NULL;
 
-    $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' OR bank = '$bank'");
+    $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account'");
     $check = mysqli_num_rows($query);
 
     if (!$check) {
@@ -40,6 +39,7 @@ if (isset($_POST["submit"])) {
       }
     }
   }
+  unset($_POST['submit']);
 }
 
 
