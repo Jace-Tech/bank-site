@@ -9,7 +9,7 @@ $IS_ALLOWED_2 = false;
 
 
 if (isset($_POST["submit"])) {
-  $id = $_SESSION['user'];
+  echo $id = $_SESSION['user'];
 
   $account = $_POST['account'];
   $amount = $_POST['amount'];
