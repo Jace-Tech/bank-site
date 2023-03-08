@@ -744,13 +744,6 @@ function wire_transfer($post, $user_id) {
         $errors[] = "Enter swift code!";
     }
     
-    if (!empty($type)) {
-        $type = sanitize($type);
-    } else {
-        $err_flag = true;
-        $errors[] = "Enter account type!";
-    }
-    
     if (!empty($sender_account)) {
         $sender_account = sanitize($sender_account);
     } else {
