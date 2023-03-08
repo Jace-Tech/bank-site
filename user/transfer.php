@@ -16,7 +16,7 @@ if (isset($_POST["submit"])) {
     $routing_number = $_POST['routing_number'];
     $bank = $_POST['bank'] || NULL;
 
-    $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' or bank = '$bank'");
+    $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' OR bank = '$bank'");
         $check = mysqli_num_rows($query);
 
     if (!$check) {
@@ -24,7 +24,7 @@ if (isset($_POST["submit"])) {
     } else {
       // 
       $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, amount, to_user, routing_number, created_at, kind) 
-                VALUES ($id, 1, '$userAccount', $amount, '$account', '$routing_number', now(), 'direct deposit')");
+      VALUES ($id, 1, '$userAccount', $amount, '$account', '$routing_number', now(), 'direct deposit')");
       if ($response === true) {
         echo "<script>swal(`Transaction request sent`, `Transaction awaiting approval`, `success`)</script>";
       } else {
@@ -73,7 +73,6 @@ if (isset($_POST["submit"])) {
           </div>
 
           <div class="form-group">
-            <input type="hidden" value="<?= $userAccounts[0]; ?>" name="sender_account">
             <label for="" class="form-input-label">Account Number</label>
             <input required type="text" maxLength="9" name="account" class="form-control form-input-field" required>
           </div>
