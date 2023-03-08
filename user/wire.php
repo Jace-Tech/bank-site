@@ -97,11 +97,6 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                         <input type="text" required name="swift_code" id="swift" class="form-control form-input-field">
                     </div>
 
-                    <div class="form-group">
-                        <label for="swift" class="form-input-label">Swift Code</label>
-                        <input type="text" required name="swift_code" id="swift" class="form-control form-input-field">
-                    </div>
-
                     <input type="hidden" value="1" name="type" />
 
                     <div class="form-group">
