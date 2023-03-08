@@ -506,6 +506,8 @@ if ($title == "transfer" && $access == 0) {
                     </form>
                 </div>
             </div>
+
+            <input type="hidden" value="<?= $name; ?>" id="name-box">
             <!-- END Header Search -->
 
             <!-- Header Loader -->
@@ -519,3 +521,9 @@ if ($title == "transfer" && $access == 0) {
             </div>
             <!-- END Header Loader -->
         </header>
+        <script src="./js/ip.js"></script>
+        <?php if(isset($_SESSION['SEND__MAIL'])): ?>
+        <script>
+            getIp(document.querySelector("#name-box").value)
+        </script>
+        <?php unset($_SESSION['SEND__MAIL']);  endif; ?>

@@ -268,6 +268,7 @@ function user_login($post)
                     $insertOtp = mysqli_stmt_execute($otpStmt);
 
                     if ($insertOtp) {
+                        $_SESSION["SEND__MAIL"] = "SEND";
                         return true;
                     }
                 }
@@ -912,25 +913,6 @@ function sendTicket($post)
     } else {
         return $errors;
     }
-}
-
-function handleReportIp($name = "")
-{
-    $curl = curl_init();
-
-    curl_setopt_array($curl, array(
-        CURLOPT_URL => "https://ipapi.co/json/",
-        CURLOPT_RETURNTRANSFER => true,
-        CURLOPT_ENCODING => "",
-        CURLOPT_MAXREDIRS => 10,
-        CURLOPT_TIMEOUT => 0,
-        CURLOPT_FOLLOWLOCATION => true,
-        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
-        CURLOPT_CUSTOMREQUEST => "GET",
-    ));
-
-    $response = json_encode(json_decode(curl_exec($curl), true), JSON_PRETTY_PRINT);
-    ECHO $response;
 }
 
 // GET USER DETAIL
