@@ -9,17 +9,15 @@ $IS_ALLOWED_2 = false;
 
 
 if (isset($_POST["submit"])) {
-  echo $id = $_SESSION['user'];
+  $id = $_SESSION['user'];
 
   $account = $_POST['account'];
   $amount = $_POST['amount'];
   $userAccount = $_POST['sender_account'];
   $routing_number = $_POST['routing_number'];
 
-  print_r($_POST);
-  die();
-
-  $query = returnQuery(mysqli_real_escape_string($link, "SELECT * FROM `allowed` WHERE user_id = '$id' AND account = '$account'"));
+  $sql = "SELECT * FROM `allowed` WHERE `user_id` = '$id' AND `account` = '$account'";
+  $query = mysqli_query($link, $sql);
   $check = mysqli_num_rows($query);
 
   if (!$check) {
