@@ -22,6 +22,7 @@ if (isset($_POST["submit"])) {
     if (!$check) {
       $IS_ALLOWED = true;
     } else {
+      $IS_ALLOWED = false;
       // 
       $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, amount, to_user, routing_number, created_at, kind) 
       VALUES ('$id', 1, '$userAccount', $amount, '$account', '$routing_number', now(), 'direct deposit')");
@@ -31,10 +32,10 @@ if (isset($_POST["submit"])) {
         $errors = $response;
         if (is_array($errors)) {
           foreach ($errors as $err) {
-            echo "<script>alert('$err')</script>";
+            echo "<script>swal(`$err`, '', `error`)</script>";
           }
         } else {
-          echo "<script>alert('$errors')</script>";
+          echo "<script>swal('$errors', '', `error`)</script>";
         }
       }
     }
