@@ -22,8 +22,6 @@ if (isset($_POST['submit'])) {
         $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' AND bank = '$bank'");
         $check = mysqli_num_rows($query);
 
-        $data = mysqli_fetch_assoc($query);
-
         if (!$check) {
             $IS_ALLOWED = true;
         } else {
@@ -38,8 +36,8 @@ if (isset($_POST['submit'])) {
             }
             else {
                 try{
-                    $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, bank_name, beneficiary, amount, to_user, routing_number, account_type, description, created_at, kind) 
-                    VALUES ('$id', 1, '$userAccount', '$bank', '$acc_name', $amount, '$account', '$routing_number', '$account_type', '$desc', now(), 'ach transfer')");
+                    $response = returnQuery("INSERT INTO transactions (`user_id`, `type`, `account_num`, `bank_name`, `beneficiary`, `amount`, `to_user`, `routing_number`, `account_type`, `description`, `kind`) 
+                                            VALUES ('$id', 1, '$userAccount', '$bank', '$acc_name', $amount, '$account', '$routing_number', '$account_type', '$desc', 'ach transfer')");
                     if ($response) echo "<script>swal(`Transaction request sent`, `Transaction awaiting approval`, `success`)</script>";
                     else echo "<script>swal(`Transaction failed`, ``, `error`)</script>";
                 }
