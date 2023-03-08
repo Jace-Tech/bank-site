@@ -777,7 +777,7 @@ function wire_transfer($post, $user_id) {
             $total_balance = $accountDetails['acc_balance'];
 
             if ($amount <= $total_balance) {
-                $sql2 = "INSERT INTO transactions (user_id, type, amount, account_num, to_user, created_at, kind) VALUES ('$user_id', 1, $amount, '$sender_account', '$acc_number', now(), '$kind')";
+                $sql2 = "INSERT INTO transactions (user_id, type, amount, account_num, to_user, desc, created_at, kind) VALUES ('$user_id', 1, $amount, '$sender_account', '$acc_number', '$desc', now(), '$kind')";
                 $query2 = validateQuery($sql2);
 
                 if ($query2) {
