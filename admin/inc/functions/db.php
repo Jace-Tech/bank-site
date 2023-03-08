@@ -22,8 +22,8 @@ function returnQuery($statement)
 {
     global $link;
 
-    $sql = mysqli_real_escape_string($link, $statement);
-
+    $sql = "$statement";
+    
     $query = mysqli_query($link, $sql);
 
     if ($query) {
@@ -38,7 +38,7 @@ function executeQuery($statement)
 {
     global $link;
 
-    $sql = mysqli_real_escape_string($link, $statement);
+    $sql = "$statement";
     $query = mysqli_query($link, $sql);
 
     if (mysqli_num_rows($query) > 0) {
