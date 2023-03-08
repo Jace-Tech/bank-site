@@ -29,16 +29,16 @@ if (isset($_POST['submit'])) {
         } else {
             $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, bank_name, beneficiary, amount, to_user, routing_number, account_type, description, created_at, kind) 
             VALUES ('$id', 1, '$userAccount', '$bank', '$acc_name', $amount, '$account', '$routing_number', $account_type, '$desc', now(), 'ach transfer')");
-            if ($response === true) {
+            if ($response) {
                 echo "<script>swal(`Transaction request sent`, `Transaction awaiting approval`, `success`)</script>";
             } else { 
                 $errors = $response;
                 if (is_array($errors)) {
                     foreach ($errors as $err) {
-                        echo "<script>alert('$err')</s>";
+                        echo "<script>swal(`$err`, ``, `error`)</script>";
                     }
                 } else {
-                    echo "<script>alert('$errors')</script>";
+                    echo "<script>swal(`$err`, ``, `error`)</script>";
                 }
             }
         }
