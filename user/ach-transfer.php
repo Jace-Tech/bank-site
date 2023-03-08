@@ -157,7 +157,7 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
     <?php require_once 'inc/loader.php'; ?>
 <?php endif; ?>
 
-<?php if($$IS_ALLOWED_2):?>
+<?php if($IS_ALLOWED_2):?>
     <?php require_once 'inc/loader2.php'; ?>
 <?php endif; ?>
 
