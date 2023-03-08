@@ -54,7 +54,7 @@
       icon: "success",
       button: "close"
     }).then((click) => {
-      location.href = "./user/"
+      location.href = "./"
     })
   }
 
