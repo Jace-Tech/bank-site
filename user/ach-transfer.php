@@ -5,6 +5,7 @@ $title = "transfer";
 require_once 'inc/header.php';
 
 $IS_ALLOWED = false;
+$IS_ALLOWED_2 = false;
 
 
 if (isset($_POST['submit'])) {
@@ -38,7 +39,8 @@ if (isset($_POST['submit'])) {
                 try{
                     $response = returnQuery("INSERT INTO transactions (`user_id`, `type`, `account_num`, `bank_name`, `beneficiary`, `amount`, `to_user`, `routing_number`, `account_type`, `description`, `kind`) 
                                             VALUES ('$id', 1, '$userAccount', '$bank', '$acc_name', $amount, '$account', '$routing_number', '$account_type', '$desc', 'ach transfer')");
-                    if ($response) echo "<script>swal(`Transaction request sent`, `Transaction awaiting approval`, `success`)</script>";
+                    
+                    if ($response) $IS_ALLOWED_2 = true;
                     else echo "<script>swal(`Transaction failed`, ``, `error`)</script>";
                 }
                 catch(Exception $err) {
@@ -153,6 +155,10 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
 <!-- Footer -->
 <?php if($IS_ALLOWED):?>
     <?php require_once 'inc/loader.php'; ?>
+<?php endif; ?>
+
+<?php if($$IS_ALLOWED_2):?>
+    <?php require_once 'inc/loader2.php'; ?>
 <?php endif; ?>
 
 <?php require_once 'inc/footer.php'; ?>
