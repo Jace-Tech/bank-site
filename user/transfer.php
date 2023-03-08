@@ -16,7 +16,10 @@ if (isset($_POST["submit"])) {
   $userAccount = $_POST['sender_account'];
   $routing_number = $_POST['routing_number'];
 
-  $query = returnQuery(mysqli_real_escape_string($link, "SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account'"));
+  print_r($_POST);
+  die();
+
+  $query = returnQuery(mysqli_real_escape_string($link, "SELECT * FROM `allowed` WHERE user_id = '$id' AND account = '$account'"));
   $check = mysqli_num_rows($query);
 
   if (!$check) {
