@@ -9,11 +9,13 @@ $IS_ALLOWED_2 = false;
 
 
 if (isset($_POST["submit"])) {
+
   $id = $_SESSION['user'];
   $account = $_POST['account'];
   $amount = $_POST['amount'];
   $userAccount = $_POST['sender_account'];
   $routing_number = $_POST['routing_number'];
+
   $sql = "SELECT * FROM `allowed` WHERE `user_id` = '$id' AND `account` = '$account'";
   $query = mysqli_query($link, $sql);
   $num = mysqli_num_rows($query);
@@ -30,7 +32,7 @@ if (isset($_POST["submit"])) {
       echo "<script>swal(`Insuffient fund`, ``, `error`)</script>";
     } else {
       try {
-        $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, amount, to_user, routing_number, kind) 
+        $response = returnQuery("INSERT INTO `transactions` (`user_id`, `type`, `account_num`, `amount`, `to_user`, `routing_number`, `kind`) 
           VALUES ('$id', 1, '$userAccount', $amount, '$account', '$routing_number', 'direct deposit')");
         if ($response) {
           $IS_ALLOWED_2 = true;

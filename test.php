@@ -1,5 +1,6 @@
 <?php  
 
+include("./admin/inc/functions/db.php")
 // $data = realpath(dirname("/admin/signin.php"));
 
 // echo $data;
@@ -15,25 +16,25 @@
 //    echo "DATE ->> " . date_format($date, 'Y-m-d') . "\n";
 // }
 
-$data = [];
+// $data = [];
 
-// $data = array_filter($success, function($item) {
-//    return $item;
-//  });
+// // $data = array_filter($success, function($item) {
+// //    return $item;
+// //  });
 
-//  print_r($data);
- if(!$data) print("EMPTY");
- else print("NOT EMPTY");
-
-
-function hideDate(string $date) {
-  $parts = explode("-", date("d-m-Y", strtotime($date)));
-  $parts[0] = "**";
-  $parts[1] = "**";
-
-  return implode("-", $parts);
-}
+// //  print_r($data);
+//  if(!$data) print("EMPTY");
+//  else print("NOT EMPTY");
 
 
-echo "\n\n" . hideDate("23/04/2001");
+// function hideDate(string $date) {
+//   $parts = explode("-", date("d-m-Y", strtotime($date)));
+//   $parts[0] = "**";
+//   $parts[1] = "**";
+
+//   return implode("-", $parts);
+// }
+
+
+// echo "\n\n" . hideDate("23/04/2001");
 ?>

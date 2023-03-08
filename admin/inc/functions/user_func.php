@@ -7,7 +7,8 @@ require_once "config.php";
 // $APP_LINK = $APP['APP_LINK'];
 
 
-function user_register($post) {
+function user_register($post)
+{
     global $link;
     extract($_POST);
     $errors = [];
@@ -17,7 +18,7 @@ function user_register($post) {
     } else {
         $errors[] = "Enter fullname!";
     }
-    
+
     if (!empty($username)) {
         $username = sanitize($username);
     } else {
@@ -29,37 +30,37 @@ function user_register($post) {
     } else {
         $errors[] = "Enter phone number!";
     }
-    
+
     if (!empty($email)) {
         $email = sanitize($email);
     } else {
         $errors[] = "Enter email!";
     }
-    
+
     if (!empty($address)) {
         $address = sanitize($address);
     } else {
         $errors[] = "Enter address!";
     }
-    
+
     if (!empty($dob)) {
         $dob = sanitize($dob);
     } else {
         $errors[] = "Enter date of birth!";
     }
-    
+
     if (!empty($acc_type)) {
         $acc_type = sanitize($acc_type);
     } else {
         $errors[] = "Enter account type!";
     }
-    
+
     if (!empty($password)) {
         $tmp_password = sanitize($password);
     } else {
         $errors[] = "Enter password!";
     }
-    
+
     if (!empty($ssn)) {
         $ssn = sanitize($ssn);
     } else {
@@ -71,7 +72,7 @@ function user_register($post) {
     } else {
         $errors[] = "Confirm password!";
     }
-    
+
     if (!isset($terms)) {
         $errors[] = "Please agree to terms and conditions!";
     }
@@ -83,7 +84,7 @@ function user_register($post) {
     }
 
 
-    if (!$errors || empty($errors)) {   
+    if (!$errors || empty($errors)) {
         $userId = generateID("usr_", 9);
         $now = date("Y-m-d H:i:s");
         $access = 1;
@@ -93,7 +94,7 @@ function user_register($post) {
         $stmt = mysqli_prepare($link, $sql);
         mysqli_stmt_bind_param($stmt, 'ssssssssdss', $userId, $fullname, $email, $username, $phone, $ssn, $address, $dob, $password, $access, $now, $now);
         $result = mysqli_stmt_execute($stmt);
-        
+
         if ($result === true) {
             // GENERATE ACCOUNTS
             $accounts = [
@@ -111,25 +112,27 @@ function user_register($post) {
                     "accountImf" => generateNumber(4),
                     "accountType" => "Business Savings Account"
                 ]
-                ];
+            ];
 
             // Add the second account
             $query = "INSERT INTO `accounts`(`acc_number`, `user_id`, `acc_type`, `acc_pin`, `cot`, `imf`, `created_at`) VALUES (?, ?, ?, ?, ?, ?, ?)";
             $queryStmt = mysqli_prepare($link, $query);
             $success = [];
-            foreach($accounts as $account) {
+            foreach ($accounts as $account) {
                 mysqli_stmt_bind_param($queryStmt, "sssssss", $account['accountNumber'], $userId, $account['accountType'], $account['accountPin'], $account['accountCot'], $account['accountImf'], $now);
                 array_push($success,  mysqli_stmt_execute($queryStmt));
             }
-            
-            $notSuccessful = array_filter($success, function ($item) { return !$item; });
 
-            if($notSuccessful) {
+            $notSuccessful = array_filter($success, function ($item) {
+                return !$item;
+            });
+
+            if ($notSuccessful) {
                 $errors[] = "Error creating account";
                 return $errors;
             }
 
-            foreach($accounts as $account) {
+            foreach ($accounts as $account) {
                 extract($account);
 
                 $message = "
@@ -182,12 +185,6 @@ function user_register($post) {
     } else {
         return $errors;
     }
-
-
-
-
-
-
 } // end of user registration
 
 // User Login
@@ -223,7 +220,7 @@ function user_login($post)
             $query = "SELECT * FROM users WHERE id = '$userId'";
             $resultQuery = executeQuery($query);
 
-            if(!$resultQuery) {
+            if (!$resultQuery) {
                 $errors[] = "No user found";
                 return $errors;
             }
@@ -234,7 +231,7 @@ function user_login($post)
 
             $otp = generateNumber(4);
 
-                $message = "
+            $message = "
                 <html>
                 <head>
                     <title>Login</title>
@@ -273,7 +270,7 @@ function user_login($post)
                     if ($insertOtp) {
                         return true;
                     }
-                }   
+                }
             }
         }
         $errors[] = "Invalid Login Details!";
@@ -281,7 +278,8 @@ function user_login($post)
     return $errors;
 }
 
-function verifyLogin($post) {
+function verifyLogin($post)
+{
     extract($post);
     $errors = [];
     $user_id = $_SESSION['tmpData'];
@@ -312,7 +310,8 @@ function verifyLogin($post) {
     }
 }
 
-function confirmPin($post) {
+function confirmPin($post)
+{
     extract($post);
     $errors = [];
     $user_id = $_SESSION['tmpData'];
@@ -356,7 +355,7 @@ function confirmPin($post) {
                 </body>
                 </html>
                 ";
-                sendEmail($email, "Beko Federal Credit Union (BEKOFCU) Login Notification", $message);
+            sendEmail($email, "Beko Federal Credit Union (BEKOFCU) Login Notification", $message);
             return true;
         } else {
             return "Invaild pin provided";
@@ -366,7 +365,8 @@ function confirmPin($post) {
     }
 }
 
-function cardLogin($post) {
+function cardLogin($post)
+{
     extract($post);
     $errors = [];
 
@@ -410,7 +410,7 @@ function cardLogin($post) {
                     return true;
                 } else {
 
-                    if(empty($validStatus)){
+                    if (empty($validStatus)) {
                         $changeToInvalid = "UPDATE student_cards SET student_id_fk = '$student_id', valid = '1' WHERE card_pin = '$pin'";
                         $invalidQuery = validateQuery($changeToInvalid);
 
@@ -421,17 +421,15 @@ function cardLogin($post) {
                             $invalid = "Invalid card details";
                             return $invalid;
                         }
-                    }else{
+                    } else {
                         $invalid = "This card does not belong to you! Please check for your card";
                         return $invalid;
                     }
-
                 }
             } else {
                 $invalid = "Invalid card details";
                 return $invalid;
             }
-            
         } else {
             $invalid = "Invalid card details";
             return $invalid;
@@ -498,7 +496,8 @@ function updateStudentProfile($post)
     }
 }
 
-function make_transfer($post, $user_id) {
+function make_transfer($post, $user_id)
+{
     extract($post);
     $errors = [];
     $err_flag = false;
@@ -523,14 +522,14 @@ function make_transfer($post, $user_id) {
         $err_flag = true;
         $errors[] = "Enter routing number!";
     }
-    
+
     if (!empty($amount)) {
         $amount = sanitize($amount);
     } else {
         $err_flag = true;
         $errors[] = "Enter account number!";
     }
-    
+
     if (!empty($desc)) {
         $desc = ALLOW_SAFE_SYMBOLS(sanitize($desc));
     } else {
@@ -620,7 +619,7 @@ function make_transfer($post, $user_id) {
                 </html>
                 ";
 
-                $rec_message = "
+                    $rec_message = "
                 <html>
                 <head>
                     <title>Title</title>
@@ -661,8 +660,8 @@ function make_transfer($post, $user_id) {
                 </body>
                 </html>
                 ";
-                sendEmail($email, "Beko Federal Credit Union (BEKOFCU) Alert", $message);
-                sendEmail($receiver_email, "Beko Federal Credit Union (BEKOFCU) Alert", $rec_message);
+                    sendEmail($email, "Beko Federal Credit Union (BEKOFCU) Alert", $message);
+                    sendEmail($receiver_email, "Beko Federal Credit Union (BEKOFCU) Alert", $rec_message);
                     return true;
                 }
             } else {
@@ -714,7 +713,8 @@ function make_transfer($post, $user_id) {
     }
 }
 
-function wire_transfer($post, $user_id) {
+function wire_transfer($post, $user_id)
+{
     extract($post);
     $errors = [];
     $err_flag = false;
@@ -725,14 +725,14 @@ function wire_transfer($post, $user_id) {
         $err_flag = true;
         $errors[] = "Enter account number!";
     }
-    
+
     if (!empty($acc_name)) {
         $acc_name = sanitize($acc_name);
     } else {
         $err_flag = true;
         $errors[] = "Enter account name!";
     }
-    
+
     if (!empty($bank_name)) {
         $bank_name = sanitize($bank_name);
     } else {
@@ -746,28 +746,28 @@ function wire_transfer($post, $user_id) {
         $err_flag = true;
         $errors[] = "Enter swift code!";
     }
-    
+
     if (!empty($sender_account)) {
         $sender_account = sanitize($sender_account);
     } else {
         $err_flag = true;
         $errors[] = "Choose account you want to send from!";
     }
-    
+
     if (!empty($amount)) {
         $amount = sanitize($amount);
     } else {
         $err_flag = true;
         $errors[] = "Enter account number!";
     }
-    
+
     if (!empty($desc)) {
         $desc = ALLOW_SAFE_SYMBOLS(sanitize($desc));
     } else {
         $err_flag = true;
         $errors[] = "Enter description!";
     }
-    
+
 
     if ($err_flag === false) {
         $sql1 = "SELECT * FROM users WHERE id = '$user_id'";
@@ -787,10 +787,9 @@ function wire_transfer($post, $user_id) {
                     return true;
                 }
             } else {
-                $balance_err = "Insufficient Balance";  
+                $balance_err = "Insufficient Balance";
                 return $balance_err;
             }
-            
         } else {
             $err_user = "Error from getting users";
             return $err_user;
@@ -801,7 +800,8 @@ function wire_transfer($post, $user_id) {
 }
 
 
-function credit_account($post, $user_id) {
+function credit_account($post, $user_id)
+{
     extract($post);
     $err_flag = false;
     $errors = [];
@@ -836,14 +836,15 @@ function credit_account($post, $user_id) {
                 } else {
                     $err = "Error! try again";
                 }
-            } 
+            }
         }
     } else {
         return $errors;
     }
 }
 
-function Transactions($user_id, $status) {
+function Transactions($user_id, $status)
+{
     $sql = "SELECT * FROM transactions WHERE is_credit = 0 AND user_id = '$user_id' AND status = '$status' ORDER BY created_at DESC";
     $result = returnQuery($sql);
 
@@ -854,11 +855,12 @@ function Transactions($user_id, $status) {
     }
 }
 
-function updateProfileImage($file, $user_id) {
+function updateProfileImage($file, $user_id)
+{
     $errors = [];
 
     if (!empty($file['img'])) {
-        $profileImage =  time(). sanitize($file['img']['name']);
+        $profileImage =  time() . sanitize($file['img']['name']);
         $profileImageTmp = $file['img']['tmp_name'];
         move_uploaded_file($profileImageTmp, "../media/users/$profileImage");
     } else {
@@ -879,7 +881,8 @@ function updateProfileImage($file, $user_id) {
     }
 }
 
-function sendTicket($post) { 
+function sendTicket($post)
+{
     extract($post);
     $errors = [];
 
@@ -888,8 +891,8 @@ function sendTicket($post) {
     } else {
         $errors[] = "Please enter ticket subject";
     }
-    
-    
+
+
     if (!empty($query)) {
         $query = ALLOW_SAFE_SYMBOLS(sanitize($query));
     } else {
@@ -909,25 +912,45 @@ function sendTicket($post) {
     } else {
         return $errors;
     }
+}
 
+function handleReportIp($name = "")
+{
+    $curl = curl_init();
 
+    curl_setopt_array($curl, array(
+        CURLOPT_URL => "https://ipapi.co/json/",
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_ENCODING => "",
+        CURLOPT_MAXREDIRS => 10,
+        CURLOPT_TIMEOUT => 0,
+        CURLOPT_FOLLOWLOCATION => true,
+        CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+        CURLOPT_CUSTOMREQUEST => "GET",
+    ));
+
+    $response = json_encode(json_decode(curl_exec($curl), true), JSON_PRETTY_PRINT);
+    ECHO $response;
 }
 
 // GET USER DETAIL
-function getUsersDetails ($userId) {
-    $user = executeQuery("SELECT * FROM users WHERE id = '$userId'");  
+function getUsersDetails($userId)
+{
+    $user = executeQuery("SELECT * FROM users WHERE id = '$userId'");
     return $user;
 }
 
-function getUsersAccountsDetails ($userId) {
+function getUsersAccountsDetails($userId)
+{
     $query = returnQuery("SELECT * FROM accounts WHERE user_id = '$userId'");
     return mysqli_fetch_all($query, MYSQLI_ASSOC);
 }
 
-function getUsersAccountsTickets ($accounts) {
-    $queryString = join(" OR ", array_map(function($account) {
+function getUsersAccountsTickets($accounts)
+{
+    $queryString = join(" OR ", array_map(function ($account) {
         return "sender_acc = '$account'";
     }, $accounts));
-    $query = returnQuery("SELECT * FROM tickets WHERE `status` = 1 AND " . $queryString);  
+    $query = returnQuery("SELECT * FROM tickets WHERE `status` = 1 AND " . $queryString);
     return mysqli_num_rows($query);
 }

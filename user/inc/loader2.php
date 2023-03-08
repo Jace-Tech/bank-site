@@ -53,6 +53,8 @@
       text: "",
       icon: "success",
       button: "close"
+    }).then((click) => {
+      console.log("Request successfully")
     })
   }
 
