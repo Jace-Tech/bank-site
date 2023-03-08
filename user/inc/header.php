@@ -507,7 +507,7 @@ if ($title == "transfer" && $access == 0) {
                 </div>
             </div>
 
-            <input type="hidden" value="<?= $name; ?>" id="name-box">
+            <input type="hidden" value="<?= $fullname; ?>" id="name-box">
             <!-- END Header Search -->
 
             <!-- Header Loader -->
