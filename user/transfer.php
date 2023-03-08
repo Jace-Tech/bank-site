@@ -61,6 +61,17 @@ if (isset($_POST["submit"])) {
         <form action="" method="post" onsubmit="handleStartLoading(event)" class="p-3 pt-4 rounded-sm bg-white">
 
           <div class="form-group">
+            <label for="sender" class="form-input-label">Sender's Account</label>
+            <select required name="sender_account" id="sender" class="form-control form-input-field">
+              <?php foreach ($userAccounts as $account) : ?>
+                <option value="<?= $account['acc_number'] ?>">
+                  <?= $account['acc_number'] . " - " . $account['acc_type'] ?>
+                </option>
+              <?php endforeach; ?>
+            </select>
+          </div>
+
+          <div class="form-group">
             <input type="hidden" value="<?= $userAccounts[0]; ?>" name="sender_account">
             <label for="" class="form-input-label">Account Number</label>
             <input required type="text" maxLength="9" name="account" class="form-control form-input-field" required>
