@@ -9,37 +9,34 @@ $IS_ALLOWED_2 = false;
 
 
 if (isset($_POST["submit"])) {
-  if (isset($_SESSION['user'])) {
-    $id = $_SESSION['user'];
-    $account = $_POST['account'];
-    $amount = $_POST['amount'];
-    $userAccount = $_POST['sender_account'];
-    $routing_number = $_POST['routing_number'];
+  $id = $_SESSION['user'];
 
-    $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account'");
-    $check = mysqli_num_rows($query);
+  $account = $_POST['account'];
+  $amount = $_POST['amount'];
+  $userAccount = $_POST['sender_account'];
+  $routing_number = $_POST['routing_number'];
 
-    if (!$check) {
-      $IS_ALLOWED = true;
+  $query = returnQuery(mysqli_real_escape_string($link, "SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account'"));
+  $check = mysqli_num_rows($query);
+
+  if (!$check) {
+    $IS_ALLOWED = true;
+  } else {
+    $IS_ALLOWED = false;
+    // Check balance
+    $accountDetails = executeQuery("SELECT * FROM accounts WHERE user_id = '$id' AND acc_number = '$userAccount'");
+    $balance = floatval($accountDetails['acc_balance']);
+
+    if ($balance < floatval($amount)) {
+      echo "<script>swal(`Insuffient fund`, ``, `error`)</script>";
     } else {
-      $IS_ALLOWED = false;
-      // Check balance
-      $accountDetails = executeQuery("SELECT * FROM accounts WHERE user_id = '$id' AND acc_number = '$userAccount'");
-      $balance = floatval($accountDetails['acc_balance']);
-
-      if($balance < floatval($amount)){
-          echo "<script>swal(`Insuffient fund`, ``, `error`)</script>";
-      }
-      else {
-        try {
-          $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, amount, to_user, routing_number, kind) 
+      try {
+        $response = returnQuery("INSERT INTO transactions (user_id, type, account_num, amount, to_user, routing_number, kind) 
           VALUES ('$id', 1, '$userAccount', $amount, '$account', '$routing_number', 'direct deposit')");
-          if ($response) $IS_ALLOWED_2 = true;
-          else echo "<script>swal(`Transaction failed`, ``, `error`)</script>";
-        }
-        catch(Exception $err) {
-          echo "<script>swal(`$err`, ``, `error`)</script>";
-        }
+        if ($response) $IS_ALLOWED_2 = true;
+        else echo "<script>swal(`Transaction failed`, ``, `error`)</script>";
+      } catch (Exception $err) {
+        echo "<script>swal(`$err`, ``, `error`)</script>";
       }
     }
   }
@@ -79,17 +76,17 @@ if (isset($_POST["submit"])) {
 
           <div class="form-group">
             <label for="" class="form-input-label">Account Number</label>
-            <input required type="text" maxLength="9" name="account" class="form-control form-input-field" required>
+            <input required type="text" maxLength="9" name="account" class="form-control form-input-field">
           </div>
 
           <div class="form-group">
             <label for="" class="form-input-label">Routing / ABA</label>
-            <input required type="text" maxLength="9" name="routing_number" class="form-control form-input-field" required>
+            <input required type="text" maxLength="9" name="routing_number" class="form-control form-input-field">
           </div>
 
           <div class="form-group">
             <label for="" class="form-input-label">Amount</label>
-            <input required type="text" class="form-control form-input-field" name="amount" required />
+            <input required type="text" class="form-control form-input-field" name="amount" />
           </div>
 
           <hr>
