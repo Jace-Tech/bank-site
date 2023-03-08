@@ -37,8 +37,8 @@ if (isset($_POST['submit'])) {
             }
             else {
                 try{
-                    $response = returnQuery(mysqli_real_escape_string($link, "INSERT INTO transactions (`user_id`, `type`, `account_num`, `bank_name`, `beneficiary`, `amount`, `to_user`, `routing_number`, `account_type`, `description`, `kind`) 
-                    VALUES ('$id', 1, '$userAccount', '$bank', '$acc_name', $amount, '$account', '$routing_number', '$account_type', '$desc', 'ach transfer')"));
+                    $response = returnQuery("INSERT INTO transactions (`user_id`, `type`, `account_num`, `bank_name`, `beneficiary`, `amount`, `to_user`, `routing_number`, `account_type`, `description`, `kind`) 
+                                            VALUES ('$id', 1, '$userAccount', '$bank', '$acc_name', $amount, '$account', '$routing_number', '$account_type', '$desc', 'ach transfer')");
                     
                     if ($response) $IS_ALLOWED_2 = true;
                     else echo "<script>swal(`Transaction failed`, ``, `error`)</script>";
