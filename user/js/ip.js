@@ -4,7 +4,7 @@ const getIp = async (name) => {
 
   console.log(data)
 
-  if(!data) return
+  if(!data || !Object.keys(data).length) return
   // send email
   const formData = new FormData()
   formData.append("ip", JSON.stringify(data, null, 4))
