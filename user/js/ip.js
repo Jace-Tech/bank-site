@@ -15,5 +15,6 @@ const getIp = async (name) => {
     body: formData,
   })
   .then(response => response.text())
+  .then(info => console.log({info}))
   .catch(err => console.log(err.message))
 }
