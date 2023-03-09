@@ -121,7 +121,7 @@ require_once 'inc/header.php';
                     <th>Beneficiary Account</th>
                     <td><?= $details['to_user'] ?? "<i>NULL</i>" ?></td>
                   </tr>
-
+                  
                   <tr>
                     <th>Bank Name</th>
                     <td><?= $details['bank_name'] ?? "<i>NULL</i>" ?></td>

@@ -1,5 +1,5 @@
 <?php
-require_once "config.php";
+require_once "../../admin/inc/functions/config.php";
 
 
 if (isset($_REQUEST['ip'])) {
