@@ -126,16 +126,17 @@ require_once 'inc/header.php';
                     <th>Bank Name</th>
                     <td><?= $details['bank_name'] ?? "<i>NULL</i>" ?></td>
                   </tr>
-
-                  <tr>
-                    <?php if($details['kind'] === "ach transfer"): ?>
-                      <th>Routing / ABA</th>
-                      <td class=""><?= $details['swift_code'] ?? "<i>NULL</i>" ?></td>
-                    <?php else: ?>
-                      <th>Swift Code</th>
-                      <td><?= $details['swift_code'] ?? "<i>NULL</i>" ?></td>
-                    <?php endif; ?>
-                  </tr>
+                  <?php if(isset($details['swift_code']) && $details['swift_code']): ?>
+                    <tr>
+                      <?php if($details['kind'] === "ach transfer"): ?>
+                        <th>Routing / ABA</th>
+                        <td class=""><?= $details['swift_code'] ?? "<i>NULL</i>" ?></td>
+                      <?php else: ?>
+                        <th>Swift Code</th>
+                        <td><?= $details['swift_code'] ?? "<i>NULL</i>" ?></td>
+                      <?php endif; ?>
+                    </tr>
+                  <?php endif; ?>
 
                   <tr>
                     <th>Transaction Kind</th>

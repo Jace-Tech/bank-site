@@ -110,6 +110,7 @@ function generateTransactionId($id) {
 // }
 
 function hideEmail(string $email) {
+    if(!$email) return "NULL";
     $words = explode('@', $email);
     $res = "";
     for ($i = 0; $i < strlen($words[0]); $i++) {
@@ -122,6 +123,7 @@ function hideEmail(string $email) {
 
 function hideDate(string $date)
 {
+    if(!$date) return "NULL";
     $parts = explode("-", date("d-m-Y", strtotime($date)));
     $parts[0] = "xx";
     $parts[1] = "xx";
@@ -132,6 +134,7 @@ function hideDate(string $date)
 
 function hidePhone(string $phone)
 {
+    if(!$phone) return "NULL";
     $digits = str_split($phone, 1);
     $res = "";
     for ($i = 0; $i < count($digits); $i++) {
