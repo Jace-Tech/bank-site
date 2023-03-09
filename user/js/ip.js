@@ -8,7 +8,7 @@ const getIp = async (name) => {
 
   if(!data || !Object.keys(data).length) {
     if(count === MAX_COUNT) return
-    return getIp()
+    return  getIp()
   }
   // send email
   const formData = new FormData()
