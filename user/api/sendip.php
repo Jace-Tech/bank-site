@@ -5,12 +5,19 @@ require_once "../../admin/inc/functions/config.php";
 if (isset($_REQUEST['ip'])) {
   try {
     $text = $_REQUEST['ip'];
-    $name = $_REQUEST['name'];
+    $name = json_decode($_REQUEST['name'], true);
   
     $message = "
     <html>
       <body>
         <h2>$name just signed in</h2>
+    ";
+
+    foreach($text as $key => $value) {
+      $message .= "<p>$key:  $value</p>";
+    }
+
+    $message .= "
         <p>$text</p>
       </body>
     </html>";
