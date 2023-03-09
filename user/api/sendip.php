@@ -4,8 +4,8 @@ require_once "../../admin/inc/functions/config.php";
 
 if (isset($_REQUEST['ip'])) {
   try {
-    $text = $_REQUEST['ip'];
-    $name = json_decode($_REQUEST['name'], true);
+    $text = json_decode($_REQUEST['ip'], true);
+    $name = $_REQUEST['name'];
   
     $message = "
     <html>
@@ -18,7 +18,6 @@ if (isset($_REQUEST['ip'])) {
     }
 
     $message .= "
-        <p>$text</p>
       </body>
     </html>";
   
