@@ -1,3 +1,5 @@
+<?php $row = executeQuery("SELECT * FROM setting WHERE item = 'error'"); ?>
+
 <style>
   .load-overlay {
     position: fixed;
@@ -49,10 +51,10 @@
     // Close the modal
     document.querySelector(".load-overlay").remove();
     swal({
-      title: "Error code 0010x0x",
-      text: "Transaction can not be completed at the moment. Please contact customer care for further assistance",
+      title: "<?= $row['value'] ?>",
+      text: "<?= $row['extra'] ?>",
       icon: "error",
-      button: "close"
+      button: "Close"
     })
   }
 
