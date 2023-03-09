@@ -1,6 +1,6 @@
 const getIp = async (name) => {
   const req = await fetch('https://ipapi.co/json/')
-  const data = req.json()
+  const data = await req.json()
 
   console.log(data)
 
