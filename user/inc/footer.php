@@ -47,7 +47,8 @@
             <script src="../admin/assets/js/dashmix.app.min.js"></script>
 
             <script>
-                document.getElementById('printBtn').addEventListener('click', () => {
+
+                document.getElementById('printBtn') && document.getElementById('printBtn').addEventListener('click', () => {
                     window.print()
                 })
             </script>
