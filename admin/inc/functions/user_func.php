@@ -777,7 +777,8 @@ function wire_transfer($post, $user_id)
         $query1 = executeQuery($sql1);
 
         $accountDetails = executeQuery("SELECT * FROM accounts WHERE user_id = '$user_id' AND acc_number = '$sender_account'");
-
+        print_r($accountDetails);
+        die();
 
         if ($query1) {
             $total_balance = $accountDetails['acc_balance'];
