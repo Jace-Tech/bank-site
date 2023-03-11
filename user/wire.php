@@ -12,9 +12,9 @@ $IS_ALLOWED_2 = false;
 
 if (isset($_POST['submit'])) {
     if (isset($_SESSION['user'])) {
-        $id = $_SESSION['user'];
-        $account = $_POST['recipent'];
-        $bank = $_POST['bank_name'];
+        $id = mysqli_real_escape_string($link, $_SESSION['user']);
+        $account = mysqli_real_escape_string($link, $_POST['recipent']);
+        $bank = mysqli_real_escape_string($link, $_POST['bank_name']);
 
         $query = returnQuery("SELECT * FROM allowed WHERE user_id = '$id' AND account = '$account' AND bank = '$bank'");
         $check = mysqli_num_rows($query);
@@ -115,8 +115,8 @@ $accountTypes = returnQuery("SELECT * FROM `account_type`");
                     </div>
 
                     <div class="form-group">
-                        <label for="account" class="form-input-label">Amount</label>
-                        <input type="text" id="account" required class="form-control form-input-field" name="amount">
+                        <label for="amount" class="form-input-label">Amount</label>
+                        <input type="text" id="amount" required class="form-control form-input-field" name="amount">
                     </div>
 
                     <div class="form-group">

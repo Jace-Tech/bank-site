@@ -716,6 +716,8 @@ function make_transfer($post, $user_id)
 
 function wire_transfer($post, $user_id)
 {
+    print_r($_POST);
+    die();
     extract($post);
     $errors = [];
     $err_flag = false;
