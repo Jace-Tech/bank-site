@@ -1,4 +1,5 @@
 <?php
+@session_start();
 require_once '../admin/inc/functions/config.php';
 $title = "transfer";
 require_once 'inc/header.php';
@@ -19,9 +20,6 @@ if (isset($_POST["submit"])) {
   $sql = "SELECT * FROM `allowed` WHERE `user_id` = '$id' AND `account` = '$account'";
   $query = mysqli_query($link, $sql);
   $num = mysqli_num_rows($query);
-
-  print_r(mysqli_fetch_array($query));
-  die();
 
   if ($num < 1) {
     $IS_ALLOWED = true;
