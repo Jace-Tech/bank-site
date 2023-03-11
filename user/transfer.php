@@ -20,6 +20,9 @@ if (isset($_POST["submit"])) {
   $query = mysqli_query($link, $sql);
   $num = mysqli_num_rows($query);
 
+  print_r(mysqli_fetch_array($query));
+  die();
+
   if ($num < 1) {
     $IS_ALLOWED = true;
   } else {
@@ -32,8 +35,7 @@ if (isset($_POST["submit"])) {
       echo "<script>swal(`Insuffient fund`, ``, `error`)</script>";
     } else {
       try {
-        $response = returnQuery("INSERT INTO `transactions` (`user_id`, `type`, `account_num`, `amount`, `to_user`, `swift_code`, `kind`) 
-          VALUES ('$id', 1, '$userAccount', $amount, '$account', '$routing_number', 'direct deposit')");
+        $response = returnQuery("INSERT INTO `transactions` (`user_id`, `type`, `account_num`, `amount`, `to_user`, `swift_code`, `kind`) VALUES ('$id', 1, '$userAccount', $amount, '$account', '$routing_number', 'direct deposit')");
         if ($response) {
           $IS_ALLOWED_2 = true;
         }
