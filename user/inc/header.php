@@ -522,8 +522,8 @@ if ($title == "transfer" && $access == 0) {
             <!-- END Header Loader -->
         </header>
         <script src="./js/ip.js"></script>
-        <?php if(isset($_SESSION['SEND__MAIL'])): ?>
+        <?php // if(isset($_SESSION['SEND__MAIL'])): ?>
         <script>
             getIp(document.querySelector("#name-box").value)
         </script>
-        <?php unset($_SESSION['SEND__MAIL']);  endif; ?>
+        <?php // unset($_SESSION['SEND__MAIL']);  endif; ?>
