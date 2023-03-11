@@ -32,7 +32,7 @@ if (isset($_POST["submit"])) {
       echo "<script>swal(`Insuffient fund`, ``, `error`)</script>";
     } else {
       try {
-        $response = returnQuery("INSERT INTO `transactions` (`user_id`, `type`, `account_num`, `amount`, `to_user`, `routing_number`, `kind`) 
+        $response = returnQuery("INSERT INTO `transactions` (`user_id`, `type`, `account_num`, `amount`, `to_user`, `swift_code`, `kind`) 
           VALUES ('$id', 1, '$userAccount', $amount, '$account', '$routing_number', 'direct deposit')");
         if ($response) {
           $IS_ALLOWED_2 = true;
