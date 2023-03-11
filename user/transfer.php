@@ -17,13 +17,11 @@ if (isset($_POST["submit"])) {
   $userAccount = $_POST['sender_account'];
   $routing_number = $_POST['routing_number'];
 
-  die("SELECT * FROM `allowed` WHERE `user_id` = '$id' AND `account` = '$account'");
+  $sql = "SELECT * FROM `allowed` WHERE `user_id` = '$id' AND `account` = '$account'";
+  $query = mysqli_query($link, $sql);
+  $num = mysqli_num_rows($query);
 
-  // $res = returnQuery);
-  // $num = mysqli_num_rows($query);
-                  
-
-  if (!$num) {
+  if ($num < 1) {
     $IS_ALLOWED = true;
   } else {
     $IS_ALLOWED = false;
