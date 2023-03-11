@@ -773,19 +773,16 @@ function wire_transfer($post, $user_id)
 
 
     if ($err_flag === false) {
-        $sql1 = "SELECT * FROM users WHERE id = '$user_id'";
-        $query1 = executeQuery($sql1);
+        // $sql1 = "SELECT * FROM users WHERE id = '$user_id'";
+        // $query1 = executeQuery($sql1);
 
         $accountDetails = executeQuery("SELECT * FROM accounts WHERE user_id = '$user_id' AND acc_number = '$sender_account'");
-        print_r($accountDetails);
-        die();
 
-
-        if ($query1) {
+        // if ($query1) {
             $total_balance = $accountDetails['acc_balance'];
 
             if ($amount <= $total_balance) {
-                $sql2 = "INSERT INTO transactions (user_id, type, amount, account_num, to_user, desc, created_at, kind) VALUES ('$user_id', 1, $amount, '$sender_account', '$acc_number', '$desc', now(), '$kind')";
+                $sql2 = "INSERT INTO transactions(`user_id`, `type`, `amount`, `account_num`, `to_user`, `description`, `kind`) VALUES ('$user_id', 1, $amount, '$sender_account', '$acc_number', '$desc', '$kind')";
                 $query2 = validateQuery($sql2);
 
                 if ($query2) {
@@ -795,10 +792,10 @@ function wire_transfer($post, $user_id)
                 $balance_err = "Insufficient Balance";
                 return $balance_err;
             }
-        } else {
-            $err_user = "Error from getting users";
-            return $err_user;
-        }
+        // } else {
+        //     $err_user = "Error from getting users";
+        //     return $err_user;
+        // }
     } else {
         return $errors;
     }
